@@ -127,42 +127,38 @@
           h(
             "div",
             { class: "list-item" },
-            i === 0
-              ? null
-              : h(
-                  "div",
-                  {
-                    class: "item-up list-item-button",
-                    onclick: () =>
-                      store.update(path, (o) => {
-                        if (i == 0) return o;
-                        o = [...o];
-                        let tmp = o[i - 1];
-                        o[i - 1] = o[i];
-                        o[i] = tmp;
-                        return o;
-                      }),
-                  },
-                  "↑"
-                ),
-            i === data.length - 1
-              ? null
-              : h(
-                  "div",
-                  {
-                    class: "item-down list-item-button",
-                    onclick: () =>
-                      store.update(path, (o) => {
-                        if (i == o.length - 1) return o;
-                        o = [...o];
-                        let tmp = o[i + 1];
-                        o[i + 1] = o[i];
-                        o[i] = tmp;
-                        return o;
-                      }),
-                  },
-                  "↓"
-                ),
+            i === 0 ? null : h(
+              "div",
+              {
+                class: "item-up list-item-button",
+                onclick: () =>
+                  store.update(path, (o) => {
+                    if (i == 0) return o;
+                    o = [...o];
+                    let tmp = o[i - 1];
+                    o[i - 1] = o[i];
+                    o[i] = tmp;
+                    return o;
+                  }),
+              },
+              "↑",
+            ),
+            i === data.length - 1 ? null : h(
+              "div",
+              {
+                class: "item-down list-item-button",
+                onclick: () =>
+                  store.update(path, (o) => {
+                    if (i == o.length - 1) return o;
+                    o = [...o];
+                    let tmp = o[i + 1];
+                    o[i + 1] = o[i];
+                    o[i] = tmp;
+                    return o;
+                  }),
+              },
+              "↓",
+            ),
             h(
               "div",
               {
@@ -174,9 +170,9 @@
                     });
                 },
               },
-              "🗑"
+              "🗑",
             ),
-            ...form.slice(2).map((f) => render_form(f, path + "/" + i))
+            ...form.slice(2).map((f) => render_form(f, path + "/" + i)),
           )
         );
         result = [
@@ -190,7 +186,7 @@
                   return [...(o || []), {}];
                 }),
             },
-            "+"
+            "+",
           ),
         ];
         break;
@@ -198,11 +194,10 @@
         result = [
           h("textarea", {
             style: {
-              height:
-                Math.min(
-                  window.innerHeight * 0.95,
-                  (form[1].lines || 1) * lineheight + 8
-                ) + "px",
+              height: Math.min(
+                window.innerHeight * 0.95,
+                (form[1].lines || 1) * lineheight + 8,
+              ) + "px",
             },
 
             value: data || "",
@@ -225,23 +220,23 @@
                   value: f,
                   selected: data === f,
                 },
-                f
+                f,
               )
-            )
+            ),
           ),
         ];
         break;
       case "upload":
         result = [
           (data?.startsWith("data:audio") || data?.endsWith(".mp3")) &&
-            h("audio", { src: data, controls: true }),
+          h("audio", { src: data, controls: true }),
           (data?.startsWith("data:image") || data?.endsWith(".jpg")) &&
-            h("img", {
-              src: data,
-              style: {
-                maxHeight: 128,
-              },
-            }),
+          h("img", {
+            src: data,
+            style: {
+              maxHeight: 128,
+            },
+          }),
           h("br"),
           h("input", {
             type: "file",
@@ -265,7 +260,7 @@
       "div",
       { class: `form-${form[0]}` },
       form[1].title && h("div", { class: "title" }, form[1].title, ":"),
-      ...result
+      ...result,
     );
   }
 
@@ -283,9 +278,9 @@
               padding: 10,
             },
           },
-          "Error: veduz-api not available on site"
+          "Error: veduz-api not available on site",
         ),
-        element
+        element,
       );
     } else if (!self.veduz.user) {
       render(
@@ -298,9 +293,9 @@
               rerender();
             },
           },
-          "Login"
+          "Login",
         ),
-        element
+        element,
       );
     } else {
       render(h("div", { class: "appeditor" }, render_form(form, "")), element);
@@ -352,12 +347,12 @@
         line-height: ${lineheight}px;
         width: 98%;
         font-family: sans-serif;
-    `
+    `,
   );
-  v.updata.init = function({cur}) {
-    cur.set("../form", form)
-    return {cur};
-  }
+  v.updata.init = function ({ cur }) {
+    cur.set("../form", form);
+    return { cur };
+  };
 
   function main({ elem }) {
     if (elem) {
