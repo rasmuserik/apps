@@ -1,4 +1,4 @@
-(async function() {
+(async function () {
   if (!self.veduz) self.veduz = {};
   let v = self.veduz;
 
@@ -7,9 +7,12 @@
   //////////////////////
   v.sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   v.load = async function (url) {
-    if(!url.startsWith('http')) {
-      let baseUrl = location.hostname === '127.0.0.1' || location.hostname === 'localhost' ? location.origin : 'https://veduz.com';
-      url = baseUrl + '/apps/' + url;
+    if (!url.startsWith("http")) {
+      let baseUrl =
+        location.hostname === "127.0.0.1" || location.hostname === "localhost"
+          ? location.origin
+          : "https://veduz.com";
+      url = baseUrl + "/apps/" + url;
     }
 
     let script = document.createElement("script");
@@ -21,12 +24,101 @@
     btoa(o).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
   v.utob = (o) => atob(o.replace(/-/g, "+").replace(/_/g, "/"));
   v.log = function log(type, obj = {}) {
-    v.emit({ ...obj, type: "log", dst: 0, log_type: type});
-  }
+    v.emit({ ...obj, type: "log", dst: 0, log_type: type });
+  };
 
   ////////////////////
   // Cursor
   //////////////////
+  function normalisePath(path) {
+    return ("/" + path + "/")
+      .replace(/\/+/g, "/")
+      .replace(/\/\.\//g, "/")
+      .replace(/\/[^/]+\/..\//g, "/")
+      .slice(1, -1);
+  }
+  v.Cursor = function (root, path) {
+    this.root = root;
+    this.path = normalisePath(path || "/");
+  };
+  v.Cursor.prototype.cd = function cd (path) {
+    return new v.Cursor(this.root, normalisePath(this.path + "/" + path));
+  }
+  v.Cursor.prototype.get  = function get(path) {
+    if(path) return this.cd(path).get(undefined);
+    let t = this.root;
+    for(const k of this.path.split('/')) {
+      t = t[k];
+      if(!t) break;
+    }
+    return t;
+  }
+  function updateIn(o, path, fn) {
+    console.log('update-in', o, path)
+    if(path.length === 0) {
+      return fn(o);
+    }
+    let result;
+    if(o instanceof Array) {
+      result = [...o];
+    } else if(o instanceof Object) {
+      result = {...o};
+    } else {
+      result = {};
+    }
+    let k = path[0];
+    let val = updateIn(result[k], path.slice(1), fn);
+    if(val === undefined) {
+      delete result[k];
+    } else {
+      result[k] = val;
+    }
+    return result;
+  }
+  v.Cursor.prototype.update = function update(path, fn) {
+    let absPath = normalisePath(this.path + '/' + path).split('/');
+    return new v.Cursor(updateIn(this.root, absPath, fn), this.path);
+  }
+  v.Cursor.prototype.set = function set(path, val) {
+    return this.update(path, () => val)
+  }
+
+  ///////////////
+  // state
+  //////////////
+  v.state = v.state || {};
+
+  v._renderers = v.renderers || {}
+  v._rerender = function _render() {
+    if(v.state !== v._prevState) {
+      console.log('rerender');
+      for(const id in v._renderers) {
+        let elem = document.getElementById(id);
+        if(!elem) {
+          elem = document.createElement('div');
+          elem.id = id;
+          document.appendChild(elem);
+        }
+        let view = v._renderers[id]({cur: new Cursor(v.state, "elem_" + id)});
+      }
+      v._prevState = v.state;
+    }
+  }
+  v.render = function render(id, fn) {
+    v.renderers[id] = fn;
+  }
+  if(!v._renderLoopStarted) {
+    v._renderLoopStarted = true;
+    async function renderLoop() {
+      try {
+        await v._rerender();
+      } catch(e) {
+        console.error(e);
+      }
+      requestAnimationFrame(renderLoop)
+    }
+    renderLoop();
+  }
 
   ////////////////////
   // Connect to veduz,
@@ -125,13 +217,14 @@
     return resolve(res.result);
   });
 
-
   ////////////////////
   // Message passing :
   // expose, emit, call
   ////////////////////
   v.expose("any", "ua", () => ({ result: navigator.userAgent }));
-  v.expose("system", "sys:eval", async (msg)  => ({result: new Function(msg.code)()}));
+  v.expose("system", "sys:eval", async (msg) => ({
+    result: new Function(msg.code)(),
+  }));
 
   //////////////////////
   // Login functionality (old code)
@@ -142,15 +235,15 @@
 
     async function login(site = "https://solsort.com") {
       let app_name = `Veduz WP Client (ID:${
-      location.host + location.pathname
-    }-${v.btou(
-      String.fromCharCode(...crypto.getRandomValues(new Uint8Array(6)))
-    )})`;
+        location.host + location.pathname
+      }-${v.btou(
+        String.fromCharCode(...crypto.getRandomValues(new Uint8Array(6)))
+      )})`;
       let api_url = site + "/wp-json/";
       let api_info = await (await fetch(api_url)).json();
       let auth_url =
         api_info.authentication?.["application-passwords"]?.endpoints
-        ?.authorization || site + "/wp-admin/authorize-application.php";
+          ?.authorization || site + "/wp-admin/authorize-application.php";
       let auth_request =
         auth_url +
         `?app_name=${encodeURIComponent(
@@ -203,7 +296,7 @@
       return await (await fetch(path, opt)).json();
     }
   }
-  
+
   if (!v.data) {
     v.data = {
       get(path) {
@@ -225,13 +318,18 @@
     await v.sleep(400);
     let t0 = Date.now();
     let pong = await v.call(0, "ping", {});
-    v.log("ping-time", { numeric: Date.now() - t0, drift: Date.now() - Date.parse(pong.now) });
+    v.log("ping-time", {
+      numeric: Date.now() - t0,
+      drift: Date.now() - Date.parse(pong.now),
+    });
 
     let peers = await v.call(0, "peers", {});
     for (const peer of peers) {
-      if(peer === v._peer_id) continue;
+      if (peer === v._peer_id) continue;
       console.log("peer", peer, await v.call(peer, "ua", {}));
-      v.call(peer, "sys:eval", { code: "alert('hello from ' + location.href)" });
+      v.call(peer, "sys:eval", {
+        code: "alert('hello from ' + location.href)",
+      });
     }
   }
   //  main();
