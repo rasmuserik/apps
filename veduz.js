@@ -6,7 +6,10 @@
   // Utility functions
   //////////////////////
   v.sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  v._loading = {};
   v.load = async function (url) {
+    console.log('start-load', url);
+    if (v._loading[url]) return v._loading[url];
     if (!url.startsWith("http")) {
       let baseUrl =
         location.hostname === "127.0.0.1" || location.hostname === "localhost"
@@ -18,7 +21,26 @@
     let script = document.createElement("script");
     script.src = url;
     document.head.appendChild(script);
-    await new Promise((resolve) => (script.onload = resolve));
+    let promise = new Promise((resolve) => (script.onload = resolve))
+    v._loading[url] = promise;
+    await promise;
+    promise.isResolved = true;
+
+    while(Object.values(v._loading).some(p => !p.isResolved)) {
+      await Promise.all(Object.values(v._loading));
+    }
+    
+    /*
+    while(v._loading.length > 0) {
+      console.log(v._)
+      while(v._loading[0].isResolved) {
+        v._loading.shift();
+      }
+      await Promise.all(v._loading);
+    }
+    */
+    console.log('end-load', url);
+
   };
   v.btou = (o) =>
     btoa(o).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
@@ -58,7 +80,6 @@
     return t;
   };
   function updateIn(o, path, fn) {
-    console.log("update-in", o, path);
     if (path.length === 0) {
       return fn(o);
     }
@@ -101,7 +122,6 @@
   v._renderers = v.renderers || {};
   v._rerender = function _rerender() {
     if (v.state !== v._prevState) {
-      console.log("rerender");
       for (const id in v._renderers) {
         let appName = v._renderers[id];
         let elem = document.getElementById(id);
@@ -182,13 +202,13 @@
     permission = ("system " + (permission || "local")).split(" ");
     v._exposed[name] = { fn, permission };
   };
-  async function apply_to_state(fn, msg) {
-    let o = (await fn({...msg, state: new v.Cursor(v.state, '/')})) || {};
-    let state = o?.state;
-    if(state && state._root !== v.state) {
-      v.state = state._root;
+  async function apply_to_state(fn, msg, path = "/") {
+    let o = (await fn({...msg, cur: new v.Cursor(v.state, path)})) || {};
+    let cur= o?.cur;
+    if(cur&& cur._root !== v.state) {
+      v.state = cur._root;
     }
-    if(state) delete o.state;
+    if(cur) delete o.cur;
     return o;
   }
   v.emit = async function (msg) {
@@ -288,7 +308,6 @@
       }
 
       let user = await api("wp/v2/users/me");
-      console.log(user);
 
       v.user = {
         username: user.name,
@@ -373,7 +392,6 @@
     o.src.endsWith("veduz.js")
   );
   for (const script of scriptTags) {
-    console.log(script);
     let appName = script.getAttribute("app") || script.dataset["app"];
     if (appName) {
       let elemId = script.getAttribute("elem") || script.dataset["elem"];
@@ -389,8 +407,9 @@
         script.parentNode.insertBefore(elem, script);
       }
       if (!v[appName]) await v.load(`${appName}/${appName}.js`);
-      console.log("here");
-      await v[appName]?.init({cur: new v.Cursor(v.state, `/${appName}/elem_${id}`)});
+      if(v[appName]?.init) {
+        await apply_to_state(v[appName].init, {}, `/${appName}/elem_${elemId}`);
+      }
       v._render(elemId, appName);
     }
   }
