@@ -37,38 +37,42 @@
       .replace(/\/[^/]+\/..\//g, "/")
       .slice(1, -1);
   }
+  function addPath(a, b) {
+    if(b.startsWith("/")) return b;
+    return a + "/" + b;
+  } 
   v.Cursor = function (root, path) {
-    this.root = root;
-    this.path = normalisePath(path || "/");
+    this._root = root;
+    this._path = normalisePath(path || "/");
   };
-  v.Cursor.prototype.cd = function cd (path) {
-    return new v.Cursor(this.root, normalisePath(this.path + "/" + path));
-  }
-  v.Cursor.prototype.get  = function get(path) {
-    if(path) return this.cd(path).get(undefined);
-    let t = this.root;
-    for(const k of this.path.split('/')) {
+  v.Cursor.prototype.cd = function cd(path) {
+    return new v.Cursor(this._root, addPath(this._path, path));
+  };
+  v.Cursor.prototype.get = function get(path) {
+    if (path) return this.cd(path).get(undefined);
+    let t = this._root;
+    for (const k of this._path.split("/")) {
       t = t[k];
-      if(!t) break;
+      if (!t) break;
     }
     return t;
-  }
+  };
   function updateIn(o, path, fn) {
-    console.log('update-in', o, path)
-    if(path.length === 0) {
+    console.log("update-in", o, path);
+    if (path.length === 0) {
       return fn(o);
     }
     let result;
-    if(o instanceof Array) {
+    if (o instanceof Array) {
       result = [...o];
-    } else if(o instanceof Object) {
-      result = {...o};
+    } else if (o instanceof Object) {
+      result = { ...o };
     } else {
       result = {};
     }
     let k = path[0];
     let val = updateIn(result[k], path.slice(1), fn);
-    if(val === undefined) {
+    if (val === undefined) {
       delete result[k];
     } else {
       result[k] = val;
@@ -76,11 +80,14 @@
     return result;
   }
   v.Cursor.prototype.update = function update(path, fn) {
-    let absPath = normalisePath(this.path + '/' + path).split('/');
-    return new v.Cursor(updateIn(this.root, absPath, fn), this.path);
-  }
+    let absPath = normalisePath(addPath(this._path, path)).split("/");
+    return new v.Cursor(updateIn(this._root, absPath, fn), this._path);
+  };
   v.Cursor.prototype.set = function set(path, val) {
-    return this.update(path, () => val)
+    return this.update(path, () => val);
+  };
+  v.Cursor.prototype.path = function path() {
+    return this._path;
   }
 
   ///////////////
@@ -88,36 +95,56 @@
   //////////////
   v.state = v.state || {};
 
-  v._renderers = v.renderers || {}
-  v._rerender = function _render() {
-    if(v.state !== v._prevState) {
-      console.log('rerender');
-      for(const id in v._renderers) {
+  ////////////////////
+  // Rendering
+  ////////////////////
+  v._renderers = v.renderers || {};
+  v._rerender = function _rerender() {
+    if (v.state !== v._prevState) {
+      console.log("rerender");
+      for (const id in v._renderers) {
+        let appName = v._renderers[id];
         let elem = document.getElementById(id);
-        if(!elem) {
-          elem = document.createElement('div');
-          elem.id = id;
-          document.appendChild(elem);
+        let view = veduz?.[appName]?.render({
+          cur: new v.Cursor(v.state, `/${appName}/elem_${id}`),
+          elem,
+        });
+        if (view?.html) {
+          elem.innerHTML = view.html;
+        } else if (view?.preact) {
+          v.preact.render(view.preact, elem);
         }
-        let view = v._renderers[id]({cur: new Cursor(v.state, "elem_" + id)});
       }
       v._prevState = v.state;
     }
-  }
-  v.render = function render(id, fn) {
-    v.renderers[id] = fn;
-  }
-  if(!v._renderLoopStarted) {
+  };
+  v._render = function _render(id, appName) {
+    v._renderers[id] = appName;
+  };
+  if (!v._renderLoopStarted) {
     v._renderLoopStarted = true;
     async function renderLoop() {
       try {
         await v._rerender();
-      } catch(e) {
+      } catch (e) {
         console.error(e);
       }
-      requestAnimationFrame(renderLoop)
+      requestAnimationFrame(renderLoop);
     }
     renderLoop();
+  }
+  v.style = function(id, style) {
+    let elem = document.getElementById(id);
+    if(!elem) {
+      elem = document.createElement("style");
+      elem.id = id;
+      document.head.appendChild(elem);
+    }
+    if(typeof style === "string") {
+      elem.innerHTML = style;
+    } else {
+      throw new Error("TODO: style object");
+    }
   }
 
   ////////////////////
@@ -155,23 +182,28 @@
     permission = ("system " + (permission || "local")).split(" ");
     v._exposed[name] = { fn, permission };
   };
+  async function apply_to_state(fn, msg) {
+    let o = (await fn({...msg, state: new v.Cursor(v.state, '/')})) || {};
+    let state = o?.state;
+    if(state && state._root !== v.state) {
+      v.state = state._root;
+    }
+    if(state) delete o.state;
+    return o;
+  }
   v.emit = async function (msg) {
+    if(typeof msg === "function") {
+      return apply_to_state(msg, {});
+    };
     if (msg.dst !== undefined && msg.dst !== v._peer_id) return v._send(msg);
     msg = { ...msg };
     msg.retries = Math.max(msg.retries || 10, 100) - 1;
     msg.roles = ["any", ...(msg.roles || ["local"])];
-    msg.state = v.state;
 
     let { fn, permission } = v._exposed[msg.type] || {};
     if (!fn) return;
     if (!permission.some((p) => msg.roles.includes(p))) return;
-    let { state, result, error } = (await fn(msg)) || {};
-    if (state && v.state !== state) {
-      if (msg.retries > 0) {
-        Math.max(msg.retries--, 100);
-        return v.emit(msg);
-      }
-    }
+    let { result, error } = apply_to_state(fn, msg)
     if (msg.rid) {
       v.emit({
         dst: msg.src,
@@ -333,4 +365,34 @@
     }
   }
   //  main();
+
+  ////////////////////
+  // main
+
+  let scriptTags = Array.from(document.querySelectorAll("script")).filter((o) =>
+    o.src.endsWith("veduz.js")
+  );
+  for (const script of scriptTags) {
+    console.log(script);
+    let appName = script.getAttribute("app") || script.dataset["app"];
+    if (appName) {
+      let elemId = script.getAttribute("elem") || script.dataset["elem"];
+      if (!elemId) {
+        elemId = Math.random().toString(36).slice(2);
+        script.dataset["elem"] = elemId;
+      }
+      let elem = document.getElementById(elemId);
+      if (!elem) {
+        elem = document.createElement("div");
+        elem.className = "veduz-app veduz-app-" + appName;
+        elem.id = elemId;
+        script.parentNode.insertBefore(elem, script);
+      }
+      if (!v[appName]) await v.load(`${appName}/${appName}.js`);
+      console.log("here");
+      await v[appName]?.init({cur: new v.Cursor(v.state, `/${appName}/elem_${id}`)});
+      v._render(elemId, appName);
+    }
+  }
+  setTimeout(() => (v.state = { ...v.state }), 100);
 })();
