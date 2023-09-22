@@ -1,7 +1,7 @@
 (async () => {
   let v = self.veduz;
   v.user = {}
-  await v.importScripts("deps/preact.js");
+  await v.load("deps/preact.js");
 let { Component, h, render } = v.preact;
 let lineheight = 20;
 let element;

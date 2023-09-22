@@ -1,7 +1,7 @@
 (async () => {
   let v = self.veduz;
-  await v.importScripts("deps/marked.js");
-  await v.importScripts("deps/mustache.js");
+  await v.load("deps/marked.js");
+  await v.load("deps/mustache.js");
 
   let templates = {};
   async function load_templates(url) {
@@ -257,11 +257,11 @@
       person,
       messages: msg,
       feedback:
-      response === person.country ? msg.feedback.correct : msg.feedback.wrong,
+        response === person.country ? msg.feedback.correct : msg.feedback.wrong,
       from:
-      person.country === "de"
-      ? msg.feedback.from_germany
-      : msg.feedback.from_denmark,
+        person.country === "de"
+          ? msg.feedback.from_germany
+          : msg.feedback.from_denmark,
       stat_de: correct,
       stat_dk: 100 - correct,
     });
@@ -292,7 +292,7 @@
     //await feedback();
   }
 
-  let elem = document.createElement('div');
+  let elem = document.createElement("div");
   document.body.appendChild(elem);
-  main({elem});
+  main({ elem });
 })();

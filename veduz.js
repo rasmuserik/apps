@@ -1,8 +1,12 @@
 (async function() {
   if (!self.veduz) self.veduz = {};
   let v = self.veduz;
+
+  //////////////////////
+  // Utility functions
+  //////////////////////
   v.sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-  v.importScripts = async function (url) {
+  v.load = async function (url) {
     if(!url.startsWith('http')) {
       let baseUrl = location.hostname === '127.0.0.1' || location.hostname === 'localhost' ? location.origin : 'https://veduz.com';
       url = baseUrl + '/apps/' + url;
@@ -16,8 +20,20 @@
   v.btou = (o) =>
     btoa(o).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
   v.utob = (o) => atob(o.replace(/-/g, "+").replace(/_/g, "/"));
+  v.log = function log(type, obj = {}) {
+    v.emit({ ...obj, type: "log", dst: 0, log_type: type});
+  }
+
+  ////////////////////
+  // Cursor
+  //////////////////
+
+  ////////////////////
+  // Connect to veduz,
+  // v.expose, v.emit, v.call
+  ////////////////////
   v._connect = async function connect() {
-    if (!v.cborx) await v.importScripts("deps/cborx.js");
+    if (!v.cborx) await v.load("deps/cborx.js");
     if (!v._socket || v._socket.readyState !== WebSocket.OPEN) {
       v._reconnectTime = Math.min(v._reconnectTime * 1.5, 30000);
       v._socket = new WebSocket("wss://ws.veduz.com/ws");
@@ -40,7 +56,7 @@
   };
   if (!v._reconnectTime) {
     v._reconnectTime = 500;
-    v._connect();
+    setTimeout(v._connect, 0);
   }
   v._exposed = v._exposed || {};
   v.expose = function expose(permission, name, fn) {
@@ -76,10 +92,50 @@
     }
   };
 
-  v.expose("system", "sys:eval", async function (msg) {
-    new Function(msg.code)();
+  if (!v._calls) v._calls = new Map();
+  if (!v._next_rid) v._next_rid = 1;
+  v.call = function call(...args) {
+    let dst = args.length > 2 ? args[args.length - 3] : undefined;
+    let type = args.length > 1 ? args[args.length - 2] : undefined;
+    let req = args[args.length - 1];
+    let rid = v._next_rid++;
+
+    req = { ...req, dst, type, rid };
+    let resolve, reject;
+    let result = new Promise((res, rej) => {
+      resolve = res;
+      reject = rej;
+    });
+
+    let timeout = setTimeout(() => {
+      v._calls.delete(rid);
+      reject({ error: "timeout" });
+    }, 20000);
+    v._calls.set(rid, { req, reject, resolve, timeout });
+    v.emit(req);
+    return result;
+  };
+
+  v.expose("any", "reply", async function (res) {
+    if (!v._calls.has(res.id)) return;
+    let { req, reject, resolve, timeout } = v._calls.get(res.id);
+    clearTimeout(timeout);
+    if (req.dst !== res.src) return;
+    if (res.error) return reject(res.error);
+    return resolve(res.result);
   });
 
+
+  ////////////////////
+  // Message passing :
+  // expose, emit, call
+  ////////////////////
+  v.expose("any", "ua", () => ({ result: navigator.userAgent }));
+  v.expose("system", "sys:eval", async (msg)  => ({result: new Function(msg.code)()}));
+
+  //////////////////////
+  // Login functionality (old code)
+  //////////////////////
   if (!v.login) {
     let app_id = "48a7de57-c558-4092-ba78-57e9d5f5a4dc";
     let session = JSON.parse(sessionStorage.getItem(app_id) || "{}");
@@ -87,7 +143,7 @@
     async function login(site = "https://solsort.com") {
       let app_name = `Veduz WP Client (ID:${
       location.host + location.pathname
-    }-${btoa(
+    }-${v.btou(
       String.fromCharCode(...crypto.getRandomValues(new Uint8Array(6)))
     )})`;
       let api_url = site + "/wp-json/";
@@ -141,44 +197,13 @@
       path = session.auth.site_url + "/wp-json/" + path;
       opt = opt || {};
       opt.headers = opt.headers || {};
-      opt.headers.Authorization = `Basic ${btoa(
+      opt.headers.Authorization = `Basic ${v.btou(
         session.auth.user_login + ":" + session.auth.password
       )}`;
       return await (await fetch(path, opt)).json();
     }
   }
-  if (!v._calls) v._calls = new Map();
-  if (!v._next_rid) v._next_rid = 1;
-  v.call = function call(...args) {
-    let dst = args.length > 2 ? args[args.length - 3] : undefined;
-    let type = args.length > 1 ? args[args.length - 2] : undefined;
-    let req = args[args.length - 1];
-    let rid = v._next_rid++;
-
-    req = { ...req, dst, type, rid };
-    let resolve, reject;
-    let result = new Promise((res, rej) => {
-      resolve = res;
-      reject = rej;
-    });
-
-    let timeout = setTimeout(() => {
-      v._calls.delete(rid);
-      reject({ error: "timeout" });
-    }, 20000);
-    v._calls.set(rid, { req, reject, resolve, timeout });
-    v.emit(req);
-    return result;
-  };
-  v.expose("any", "reply", async function (res) {
-    if (!v._calls.has(res.id)) return;
-    let { req, reject, resolve, timeout } = v._calls.get(res.id);
-    clearTimeout(timeout);
-    if (req.dst !== res.src) return;
-    if (res.error) return reject(res.error);
-    return resolve(res.result);
-  });
-
+  
   if (!v.data) {
     v.data = {
       get(path) {
@@ -193,10 +218,9 @@
     };
   }
 
-  v.log = function log(type, obj = {}) {
-    v.emit({ ...obj, type: "log", dst: 0, log_type: type});
-  }
-  v.expose("any", "ua", () => ({ result: navigator.userAgent }));
+  //////////////////////
+  // main / test
+  /////////////////////
   async function main() {
     await v.sleep(400);
     let t0 = Date.now();
