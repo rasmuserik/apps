@@ -1,0 +1,410 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./icon.svg" type="image/x-icon" />
+</head>
+
+<body id="templates">
+  <style>
+    body>div {
+      position: relative;
+      width: 360px;
+      height: 600px;
+      /* drop-shadow */
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+  <h1>style</h1>
+  <style id="style">
+    body::-webkit-scrollbar {
+      display: none;
+      /* for Chrome, Safari, and Opera */
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 18px;
+      height: 100%;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    div {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .app {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .button {
+      background-color: white;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      cursor: pointer;
+      text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+      overflow: hidden;
+      border-radius: 8px;
+      min-height: 44px;
+      min-width: 44px;
+      box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.5);
+      outline: 0.5px solid white;
+      /* flex center children */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      margin: 8px;
+      /* full width */
+      width: 100%;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+
+    .parallel {
+      /* flex children has 50% of width each */
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .parallel>div {
+      margin: 8px;
+    }
+
+    .container {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .german {
+      /*background: url(./de-button.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat; */
+    }
+
+    .danish {
+      /* background: url(./dk-button.png);
+      background-size: 100% 100%; */
+    }
+
+    .default_background {
+      overflow: auto;
+      background: url(./background.webp);
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      background-attachment: fixed;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .bottom_bar {
+      /* top inset box shadow */
+      box-shadow: inset 0px 6px 4px -4px rgba(0, 0, 0, 0.5);
+      background: #eee;
+      position: absolute;
+      box-sizing: border-box;
+      bottom: 0;
+      margin: 0;
+      padding: 16px 16px 0px 16px;
+      width: 100%;
+      height: 132px;
+    }
+
+    .topic_feedback {
+      position: absolute;
+      margin: 4px;
+      right: 0;
+      bottom: 0;
+      transform: scale(0.5);
+      transform-origin: bottom right;
+    }
+
+    .person_main {
+      bottom: 132px;
+      width: 100%;
+      top: 0;
+      position: absolute;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .bg_overlay {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .person_content {
+      position: absolute;
+      max-height: 80%;
+      overflow: auto;
+      bottom: 0;
+      margin: 16px;
+      padding: 16px;
+      text-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .title {
+      width: 100%;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 12px 0px 12px 0px;
+      margin: 48px 0px 16px 0px;
+
+      font-size: 30px;
+      font-weight: bold;
+      box-sizing: border-box;
+      text-shadow: 1px 1px 4px rgba(255, 255, 255, 1),
+        3px 3px 6px rgba(255, 255, 255, 1);
+    }
+
+    .bar-head {
+      margin: .5em 0em .2em -1em;
+      font-weight: bold;
+
+    }
+
+    .bar-title {
+      display: inline-block;
+      text-align: right;
+      width: 120px;
+      margin-left: -40px;
+      margin-right: 4px;
+    }
+
+    .bar {
+      display: inline-block;
+      background: #63c;
+      height: 1.2ex;
+      margin-right: 10px;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      outline: 0.5px solid rgba(255, 255, 255, 0.5);
+    }
+  </style>
+  <img src="./icon.svg">
+  <h1>start_screen</h1>
+  <div id="start_screen">
+    <div class="default_background" style="
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+      ">
+
+      <div class="bg_overlay" style="padding: 0px 8px 12px 8px; margin-bottom: 80px;">
+        <center>
+          <h1>{{app_name}}</h1>
+          <div class="parallel">
+            <div>Was ist deine Sprache?</div>
+            <div>Hvad er dit sprog?</div>
+          </div>
+          <div class="parallel" style="margin: -4px;">
+            <div id="danish" class="danish button"> Dansk </div>
+            <div id="german" class="german button"> Deutsch </div>
+          </div>
+        </center>
+      </div>
+    </div>
+  </div>
+  <h1>choose_topic</h1>
+  <div id="choose_topic">
+    <div class="default_background" style="
+    ">
+      <div class="title">
+        {{{messages.intro}}}
+      </div>
+      <div class="column" style="margin: 0px 0 16px 0">
+        {{#topics}}
+        <div id="{{id}}" class="bg_overlay button" style="width: auto;">
+          {{title}}
+        </div>
+        {{/topics}}
+      </div>
+      <div class="bg_overlay column" style="
+      width: 100%; padding: 0px 20px 0px 20px;
+      box-sizing: border-box;
+      ">
+        {{{messages.footer}}}
+      </div>
+    </div>
+
+  </div>
+  <h1>topic</h1>
+  <div id="topic" class="container">
+    <div id="start_screen" class="default_background">
+      <div class="title">
+        {{topic.title}}
+      </div>
+      <div class="column">
+        {{#topic.people}}
+        <div id="{{id}}" class="bg_overlay button" style="
+          position: relative;
+          padding-left: 90px; width: 95%; height: 80px;
+          box-sizing: border-box; ">
+          <img src="{{img}}" style="position: absolute; top: 0; left: 0; height: 80px;">
+          <div style="margin-right: 30px;">
+            {{person}}
+          </div>
+          <div class="topic_feedback">
+            {{#correct_answer}}
+            <svg height="50" width="50">
+              <path d="M5 25 L20 40 L45 5" stroke="green" stroke-width="10" fill="none" />
+            </svg>
+            {{/correct_answer}}
+            {{#wrong_answer}}
+            <svg height="50" width="50">
+              <line x1="5" y1="5" x2="45" y2="45" stroke="red" stroke-width="10" />
+              <line x1="45" y1="5" x2="5" y2="45" stroke="red" stroke-width="10" />
+            </svg>
+            {{/wrong_answer}}
+          </div>
+        </div>
+        {{/topic.people}}
+      </div>
+      <div id="change_topic" class="bg_overlay button" style="width:auto; padding-left: 20px; padding-right: 20px;">
+        {{messages.change_topic}}
+      </div>
+
+      <div class="bg_overlay column" style="
+      width: 100%; padding: 0px 20px 40px 20px; margin-top: 20px;
+      box-sizing: border-box;
+      ">
+        {{#all_answered}}
+        {{{topic.background}}}
+        {{/all_answered}}
+        {{^all_answered}}
+        <div style="margin-top: 20px">
+          {{messages.answer_all}}
+        </div>
+        {{/all_answered}}
+      </div>
+    </div>
+  </div>
+  <h1>person</h1>
+  <div id="person">
+    <div class="person_main" style="background-image:url({{person.img}})">
+      <div class="bg_overlay person_content">
+        <i>{{person.person}}:</i>
+        <p>{{person.statement}}</p>
+        <div class="parallel" style="margin:0px -8px 0px -8px">
+          {{#messages.language_buttons}}
+          <div id="listen_{{lang}}" class="{{class}} button" style="padding: 8px">
+            <span>
+              <svg style="margin:0;padding:0" width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="0,0 20,15 0,30" fill="black" />
+              </svg></span>
+            <span style="display: inline-block; margin:0; padding: 0;">
+              <small>
+                {{{listen}}}
+              </small>
+            </span>
+          </div>
+          {{/messages.language_buttons}}
+        </div>
+      </div>
+    </div>
+    <div class="bottom_bar">
+      <big>
+        <center><b>{{messages.choose_country}}</b></center>
+      </big>
+      <div class="parallel">
+        {{#messages.language_buttons}}
+        <div id="answer_{{lang}}" class="x{{class}} button" style="background-color: white">
+          {{country}}
+        </div>
+        {{/messages.language_buttons}}
+      </div>
+    </div>
+    <audio id="audio"></audio>
+  </div>
+  </div>
+  <h1>feedback</h1>
+  <div id="feedback">
+    <div class="container" style="
+      min-width: 100%;
+      min-height: 100%;
+      background-image: url({{person.img}});
+      background-size: cover;
+      height: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; ">
+      <div class="bg_overlay" style="
+      min-width:80%;
+      /* align middle */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      margin: 16px;
+      ">
+        <h1>{{feedback}}</h1>
+        <p>{{from}}</p>
+        <h2 style="/*margin:8px*/">{{messages.feedback.stats}}</h5>
+          <div>
+            <!--div class="bar-head">Alle</div-->
+            <div>
+              <span class="bar-title">{{messages.germany}}:</span>
+              <span class="bar" style="width: {{stat_de}}px;"></span><span class="bar-percent">{{stat_de}}%</span>
+            </div>
+            <div>
+              <span class="bar-title">{{messages.denmark}}:</span>
+              <span class="bar" style="width: {{stat_dk}}px;"></span><span class="bar-percent">{{stat_dk}}%</span>
+            </div>
+            <em>(currently just dummy data)</em>
+            <!--div class="bar-head">Tysktalende</div>
+      <div>
+        <span class="bar-title">Tyskland:</span>
+        <span class="bar" style="width: 50px;"></span><span class="bar-percent">50%</span>
+      </div>
+      <div>
+        <span class="bar-title">Danmark:</span>
+        <span class="bar" style="width: 50px;"></span><span class="bar-percent">50%</span>
+      </div>
+        <div class="bar-head">Dansktalende:</div>
+      <div>
+        <span class="bar-title">Tyskland:</span>
+        <span class="bar" style="width: 0px;"></span><span class="bar-percent">0%</span>
+      </div>
+      <div>
+        <span class="bar-title">Danmark:</span>
+        <span class="bar" style="width: 100px;"></span><span class="bar-percent">100%</span>
+      </div-->
+          </div>
+          <p>
+
+
+          <div id="back" class="button">{{messages.feedback.back}}</div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>

@@ -1,0 +1,17 @@
+{
+  "name": "DE/DK Kultur App",
+  "short_name": "Kultur App",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#cccccc",
+  "background_color": "#cccccc",
+  "description": "Deutsch/Dansk Kultur App",
+  "icons": [
+    {
+      "src": "icon.webp",
+      "sizes": "48x48 72x72 96x96 128x128 256x256",
+      "type": "image/webp"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "id": "dubbing",
+  "title": { "da": "Filmdubbing", "de": "Filmsynchronisation" },
+  "people": [
+    {
+      "person": {
+        "da": "26-årig kvindelig studerende i en gågade",
+        "de": "26jährige Studentin in einer Fußgängerzone"
+      },
+      "statement": {
+        "da": "Jeg så Almodovars nye film i originalen med undertekster i sidste uge og blev blæst væk. Jeg har engang taget et spanskkursus, så jeg kunne følge med sådan okay. Jeg kan simpelthen ikke vænne mig til undertekster. Jeg synes også, at noget af handlingen går tabt.",
+        "de": "Ich habe letzte Woche den neuen Film von Almodovar im Original mit Untertiteln gesehen und war hin und weg. Ich habe mal einen Spanischkurs gemacht und konnte daher ganz gut folgen. Ans Untertitellesen kann ich mich nicht gewöhnen. Ich finde auch, dass ich dann was von der Handlung verpasse."
+      },
+      "id": "person1",
+      "audio": {
+        "da": "https://veduz.com/tyskultur/release/data/files/person1-da.mp3",
+        "de": "https://veduz.com/tyskultur/release/data/files/person1-de.mp3"
+      },
+      "img": "https://veduz.com/tyskultur/release/data/files/person1.jpg",
+      "country": "de"
+    },
+    {
+      "person": {
+        "de": "70jähriger Rentner an der Tankstelle",
+        "da": "70-årig pensionist på tankstationen"
+      },
+      "statement": {
+        "de": "Das Fernsehprogramm ist auch nicht mehr das, was es mal war. Immer diese Wiederholungen! Aber Krimis schaue ich mir immer noch gerne an. Vor allem die alten Columbofilme mit Peter Falk. Seine Stimme war immer so besonders. Vor allem die in den alten Episoden.",
+        "da": "TV er heller ikke, hvad det har været. Altid disse gentagelser! Men jeg nyder stadig at se krimier. Især de gamle Columbo-film med Peter Falk. Hans stemme var altid noget helt særligt. Især den i de gamle afsnit."
+      },
+      "id": "person2",
+      "audio": {
+        "da": "https://veduz.com/tyskultur/release/data/files/person2-da.mp3",
+        "de": "https://veduz.com/tyskultur/release/data/files/person2-de.mp3"
+      },
+      "img": "https://veduz.com/tyskultur/release/data/files/person2.jpg",
+      "country": "de"
+    },
+    {
+      "person": {
+        "de": "5jähriger Junge auf dem Weg zum Kindergarten am Freitag",
+        "da": "5-årig dreng på vej til børnehaven på en fredag"
+      },
+      "statement": {
+        "de": "Ich darf noch nicht so viel fernsehen, aber mit Papa schauen wir jeden Sonntag eine Folge Gurli Grunz. Das ist sooo lustig!",
+        "da": "Jeg må ikke se så meget fjernsyn endnu, men vi ser et afsnit af Gurli Gris sammen med far hver søndag. Det er sååå sjovt!"
+      },
+      "id": "person3",
+      "audio": {
+        "da": "https://veduz.com/tyskultur/release/data/files/person3-da.mp3",
+        "de": "https://veduz.com/tyskultur/release/data/files/person3-de.mp3"
+      },
+      "img": "https://veduz.com/tyskultur/release/data/files/person3.jpg",
+      "country": "da"
+    },
+    {
+      "person": {
+        "de": "30jährige Frau, die vor zwei Jahren aus Syrien geflüchtet ist",
+        "da": "30-årig kvinde, der flygtede fra Syrien for to år siden"
+      },
+      "statement": {
+        "de": "Man kann Untertitel im Teletext finden. Das mach ich immer, wenn ich fernsehe. Manchmal kann ich nur schwer verstehen, was die Leute sagen, deshalb ist es leichter, wenn ich mitlesen kann.",
+        "da": "Man kan finde underteksterne på tekst-tv. Det gør jeg altid, når jeg ser fjernsyn. Tit har jeg svært ved at forstå, hvad folk siger, derfor er det lettere, når jeg kan læse med."
+      },
+      "id": "person4",
+      "audio": {
+        "da": "https://veduz.com/tyskultur/release/data/files/person4-da.mp3",
+        "de": "https://veduz.com/tyskultur/release/data/files/person4-de.mp3"
+      },
+      "img": "https://veduz.com/tyskultur/release/data/files/person4.jpg",
+      "country": "de"
+    }
+  ],
+  "background": {
+    "de": "# Hintergrund\n\nDeutschland gehört mir Italien, Frankreich und Spanien zu den Ländern, in denen fast alle internationalen Produktionen synchronisiert werden. In Deutschland begann das gleich nach der Ära der Stummfilme in den 30er Jahren. Allerdings hat es einige Zeit gedauert, bis sich die Zuschauer daran gewöhnt hatten, dass ihre Stars deutsch sprachen. Inzwischen ist es der Normalfall. Die Deutschen haben also vergessen müssen, dass derjenige der spricht, nicht identisch ist mit dem, den man sieht. Manchmal geht das so weit, dass die Zuschauer die Synchronstimme eines Schauspielers sogar oder passender finden als die echte. Denn es ist in der Regel so, dass ein Schauspieler immer von demselben Synchronsprecher synchronisiert wird und man ihn deshalb trotzdem an der Stimme erkennen kann. Dabei ist es meist das bundesdeutsche Deutsch, das gewählt wird, aber laut Wikipedia gibt es Arielle, die Meerjungfrau sowohl eine bundesdeutsche als auch eine österreichische Fassung. \n\n In Dänemark, wie auch die anderen nordischen Länder, aber auch Großbritannien, die Niederlande oder Belgien ist es der Normalfall, dass internationale Filme im Original bleiben und untertitelt werden. Nur für Kinderfilme gibt es Ausnahmen, wenn diese noch nicht lesen können, wie zum Beispiel Gurli Gris, die im englischen Original Peppa Pig heißt und im Peppa Wutz heißt. \n\n In Deutschland ist es hingegen etwas Besonderes, einen Film im Original mit Untertiteln (abgekürzt OmU) zu finden. Und wenn, dann ist das meist für das Arthouse-Kino der Fall. Da es in Dänemark der Normalfall ist, klingt es sehr komisch, wenn jemand darauf hinweist, dass der Film im Original zu hören war. \n\n In beiden Ländern ist es über den Teletext möglich, Untertitel zur nationalen Standardsprache hinzuzuschalten, was vor allem Gehörlosen, die Möglichkeit bietet, der Handlung zu folgen. Aber auch für Menschen, die gerade Deutsch oder Dänisch lernen, ist das nützlich. In Deutschland gibt es diese Funktion auch bei synchronisierten Filmen, sodass man auch liest, was man hört, während man in Dänemark eine Übersetzung liest.",
+    "da": "# Baggrund\n\nSammen med Italien, Frankrig og Spanien er Tyskland et af de lande, hvor næsten alle internationale produktioner bliver dubbet. I Tyskland begyndte det lige efter stumfilmens æra i 1930'erne. Der gik dog noget tid for publikum at vænne sig til, at deres stjerner talte tysk. I mellemtiden er det blevet normen. Så tyskerne har været nødt til at glemme, at den, der taler, ikke er identisk med den, man ser. Nogle gange går det så vidt, at seerne endda finder en skuespillers dubbede stemme mere passende end den rigtige. For det er som regel sådan, at en skuespiller altid bliver dubbet af den samme tyske skuespiller, og man derfor stadig kan genkende ham på stemmen. I dette tilfælde er det som regel det tysk, som tales i forbundsrepublikken Tyskland, der vælges, men ifølge Wikipedia har Arielle, die Meerjungfrau både en forbundstysk og en østrigsktysk version. \n\n I Danmark, som i de andre nordiske lande, men også i Storbritannien, Holland og Belgien, er det normalt, at internationale film forbliver på originalsproget og bliver tekstet. Der er kun undtagelser for børnefilm, hvis de endnu ikke kan læse, som fx Gurli Gris, der hedder Peppa Pig på den engelske original og Peppa Wutz på den tyske. \n\n I Tyskland er det derimod noget særligt at finde en film på originalsproget med undertekster (forkortet OmU). Og hvis det er tilfældet, er det som regel arthouse-film. Da det er det normale i Danmark, lyder det meget mærkeligt, når nogen påpeger, at filmen blev hørt i originalen. \n\n I begge lande er det muligt at tilføje undertekster til det nationale standardsprog via tekst-tv, hvilket gør det muligt for især døve at følge med i handlingen. Men det er også nyttigt for folk, der er ved at lære tysk eller dansk. I Tyskland er denne funktion også tilgængelig for dubbede film, så man også læser, hvad man hører, mens man i Danmark læser en oversættelse."
+  }
+}

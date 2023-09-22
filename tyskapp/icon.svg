@@ -1,0 +1,22 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient id="gradientTransition" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="48%" stop-color="white" />
+            <stop offset="52%" stop-color="black" />
+        </linearGradient>
+        <mask id="fuzzyMask">
+            <rect x="0" y="0" width="200" height="200" fill="url(#gradientTransition)" />
+        </mask>
+    </defs>
+    <g>
+        <rect x="0" y="0" width="200" height="66.67" fill="black"/>
+        <rect x="0" y="66.67" width="200" height="66.67" fill="#c00"/>
+        <rect x="0" y="133.33" width="200" height="66.67" fill="#c90"/>
+    </g>
+    <g mask="url(#fuzzyMask)">
+        <rect x="0" y="0" width="200" height="200" fill="#c00"/>
+        <rect x="70" y="0" width="30" height="200" fill="white"/>
+        <rect x="0" y="85" width="200" height="30" fill="white"/>
+    </g>
+</svg>
+
