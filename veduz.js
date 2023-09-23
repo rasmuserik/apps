@@ -56,7 +56,7 @@
     return ("/" + path + "/")
       .replace(/\/+/g, "/")
       .replace(/\/\.\//g, "/")
-      .replace(/\/[^/]+\/..\//g, "/")
+      .replace(/\/[^/]+\/\.\.\//g, "/")
       .slice(1, -1);
   }
   function addPath(a, b) {
@@ -68,7 +68,7 @@
     this._path = normalisePath(path || "/");
   };
   v.Cursor.prototype.cd = function cd(path) {
-    return new v.Cursor(this._root, addPath(this._path, path));
+    return new v.Cursor(this._root, addPath(this._path, String(path)));
   };
   v.Cursor.prototype.get = function get(path) {
     if (path) return this.cd(path).get(undefined);
@@ -122,6 +122,7 @@
   v._renderers = v.renderers || {};
   v._rerender = function _rerender() {
     if (v.state !== v._prevState) {
+      v._prevState = v.state;
       for (const id in v._renderers) {
         let appName = v._renderers[id];
         let elem = document.getElementById(id);
@@ -135,7 +136,6 @@
           v.preact.render(view.preact, elem);
         }
       }
-      v._prevState = v.state;
     }
   };
   v._render = function _render(id, appName) {

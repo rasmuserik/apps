@@ -114,9 +114,13 @@
     },
   };
 
-  function render_form(form, path) {
-    if (form[1].path) path = path + "/" + form[1].path;
-    let data = store.get(path);
+  function render_form(form, cur) {
+    console.log('c', cur.path(), form[1].path);
+    if (form[1].path) {
+      let t = cur.cd(form[1].path);
+      cur = t;
+    }
+    let data = store.get(cur.path());
     let result = [];
     switch (form[0]) {
       case "list":
@@ -132,7 +136,7 @@
                   {
                     class: "item-up list-item-button",
                     onclick: () =>
-                      store.update(path, (o) => {
+                      store.update(cur.path(), (o) => {
                         if (i == 0) return o;
                         o = [...o];
                         let tmp = o[i - 1];
@@ -150,7 +154,7 @@
                   {
                     class: "item-down list-item-button",
                     onclick: () =>
-                      store.update(path, (o) => {
+                      store.update(cur.path(), (o) => {
                         if (i == o.length - 1) return o;
                         o = [...o];
                         let tmp = o[i + 1];
@@ -167,14 +171,14 @@
                 class: "item-delete list-item-button",
                 onclick: () => {
                   window.confirm("Er du sikker på at du vil slette dette?") &&
-                    store.update(path, (o) => {
+                    store.update(cur.path(), (o) => {
                       return o.filter((_, j) => j != i);
                     });
                 },
               },
               "🗑"
             ),
-            ...form.slice(2).map((f) => render_form(f, path + "/" + i))
+            ...form.slice(2).map((f) => render_form(f, cur.cd(i)))
           )
         );
         result = [
@@ -184,7 +188,7 @@
             {
               class: "list-item-button list-append-button",
               onclick: () =>
-                store.update(path, (o) => {
+                store.update(cur.path(), (o) => {
                   return [...(o || []), {}];
                 }),
             },
@@ -204,7 +208,7 @@
             },
 
             value: data || "",
-            oninput: (e) => store.update(path, () => e.target.value),
+            oninput: (e) => store.update(cur.path(), () => e.target.value),
           }),
         ];
         break;
@@ -214,7 +218,7 @@
             "select",
             {
               value: data,
-              onchange: (e) => store.update(path, () => e.target.value),
+              onchange: (e) => store.update(cur.path(), () => e.target.value),
             },
             ...form.slice(2).map((f) =>
               h(
@@ -248,7 +252,7 @@
               const reader = new FileReader();
               reader.onload = function (e) {
                 const dataUrl = e.target.result;
-                store.update(path, () => dataUrl);
+                store.update(cur.path(), () => dataUrl);
               };
               reader.readAsDataURL(file);
             },
@@ -352,14 +356,13 @@
     state = {
       topics: [await (await fetch("./topic1.json")).json()],
     };
-    console.log("HERE");
     cur = cur.set("../form", form);
     cur = cur.set("../data", state);
     return { cur };
   };
   v.updata.render = function ({ cur }) {
     console.log("updata.render", cur);
-    return { preact: h("div", { class: "appeditor" }, render_form(form, "")) };
+    return { preact: h("div", { class: "appeditor" }, render_form(cur.get("../form"), cur.cd("/"))) };
   };
 
   function main({ elem }) {
@@ -367,7 +370,7 @@
       element = elem;
     }
     style();
-    rerender();
+    //rerender();
   }
 
   let elem = document.createElement("div");
