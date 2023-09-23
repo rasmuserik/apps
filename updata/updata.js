@@ -1,13 +1,10 @@
 (async () => {
   let v = self.veduz;
   await v.load("deps/preact.js");
-  let { h, render } = v.preact;
-
+  let { h } = v.preact;
   v.updata = v.updata || {};
 
   let lineheight = 20;
-  let element;
-
   let form = [
     "list",
     { title: "Emne/Thema", path: "topics" },
@@ -59,62 +56,8 @@
       },
     ],
   ];
-
-  let state;
-
-  function normalize_path(path) {
-    if (typeof path === "string") {
-      path = path.replace(/[^/]+\/\.\.\//g, "");
-      path = path.split("/");
-      path = path.filter((s) => s);
-      path = path.map((s) => (s === "0" || s.match(/^[1-9][0-9]*$/) ? +s : s));
-    }
-    return path;
-  }
-
-  let store = {
-    get: (path, o) => {
-      path = normalize_path(path);
-      if (!o) o = state;
-      if (path.length == 0) return o;
-      let child = o[path[0]];
-      if (path.length == 1) return child;
-      return store.get(path.slice(1), child || {});
-    },
-    update(path, fn, o) {
-      path = normalize_path(path);
-      let isRoot = !o;
-      let result;
-      if (path.length == 0) {
-        result = fn(o);
-      } else {
-        if (!o) o = state;
-        let key = path[0];
-        if (typeof o !== "object") {
-          if (typeof key == "number") o = [];
-          else o = {};
-        }
-        let child = o[key];
-        if (path.length > 1 && typeof child !== "object") {
-          child = typeof path[0] == "number" ? [] : {};
-        }
-        if (Array.isArray(o)) {
-          o = [...o];
-          o[key] = store.update(path.slice(1), fn, child);
-        } else {
-          o = { ...o, [key]: store.update(path.slice(1), fn, child) };
-        }
-        result = o;
-      }
-      if (isRoot) {
-        state = result;
-        rerender();
-      }
-      return result;
-    },
-  };
-
   function render_form(form, cur) {
+    if(!form) return h("h1", {}, "Loading..."  )
     if (form[1].path) {
       let t = cur.cd(form[1].path);
       cur = t;
@@ -269,44 +212,6 @@
       ...result
     );
   }
-
-  function rerender() {
-    return;
-    console.log("rerender", state);
-    if (!self.veduz) {
-      render(
-        h(
-          "h1",
-          {
-            style: {
-              background: "red",
-              margin: 10,
-              padding: 10,
-            },
-          },
-          "Error: veduz-api not available on site"
-        ),
-        element
-      );
-    } else if (!self.veduz.user) {
-      render(
-        h(
-          "button",
-          {
-            class: "button",
-            onclick: async () => {
-              await veduz.login();
-              rerender();
-            },
-          },
-          "Login"
-        ),
-        element
-      );
-    } else {
-      render(h("div", { class: "appeditor" }, render_form(form, "")), element);
-    }
-  }
   v.style(
     "updata-stylel",
     `
@@ -351,28 +256,13 @@
         font-family: sans-serif;
     `
   );
-  v.updata.init = async function ({cur}) {
-    state = {
+
+  v.updata.init = async ({cur})  => cur.set("../form", form)
+      .set("../data", {
       topics: [await (await fetch("./topic1.json")).json()],
-    };
-    cur = cur.set("../form", form);
-    cur = cur.set("../data", state);
-    return cur;
-  };
+    });
   v.updata.render = function ({ cur }) {
     console.log("updata.render", cur);
     return { preact: h("div", { class: "appeditor" }, render_form(cur.get("../form"), cur.cd("../data"))) };
   };
-
-  function main({ elem }) {
-    if (elem) {
-      element = elem;
-    }
-    style();
-    //rerender();
-  }
-
-  let elem = document.createElement("div");
-  document.body.appendChild(elem);
-  //  main({ elem });
 })();

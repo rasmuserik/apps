@@ -69,14 +69,14 @@
   v.Cursor.prototype.cd = function cd(path) {
     return new v.Cursor(this._root, addPath(this._path, String(path)));
   };
-  v.Cursor.prototype.get = function get(path) {
+  v.Cursor.prototype.get = function get(path, defaultValue) {
     if (path) return this.cd(path).get();
     let t = this._root;
     for (const k of this._path.split("/")) {
       t = t[k];
       if (!t) break;
     }
-    return t;
+    return t === undefined ? defaultValue : t;
   };
   function updateIn(o, path, fn) {
     if (path.length === 0) {
@@ -412,7 +412,7 @@
       }
       if (!v[appName]) await v.load(`${appName}/${appName}.js`);
       if (v[appName]?.init) {
-        await v.update_state(
+        v.update_state(
           `/${appName}/elem_${elemId}`,
           v[appName].init,
           {}
