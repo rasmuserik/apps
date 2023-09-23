@@ -115,12 +115,11 @@
   };
 
   function render_form(form, cur) {
-    console.log('c', cur.path(), form[1].path);
     if (form[1].path) {
       let t = cur.cd(form[1].path);
       cur = t;
     }
-    let data = store.get(cur.path());
+    let data = cur.get();
     let result = [];
     switch (form[0]) {
       case "list":
@@ -136,14 +135,15 @@
                   {
                     class: "item-up list-item-button",
                     onclick: () =>
-                      store.update(cur.path(), (o) => {
+                      v.update_state(cur.path(), ({cur}) =>
+                      cur.update(o => {
                         if (i == 0) return o;
                         o = [...o];
                         let tmp = o[i - 1];
                         o[i - 1] = o[i];
                         o[i] = tmp;
                         return o;
-                      }),
+                      })),
                   },
                   "↑"
                 ),
@@ -154,14 +154,15 @@
                   {
                     class: "item-down list-item-button",
                     onclick: () =>
-                      store.update(cur.path(), (o) => {
+                      v.update_state(cur.path(), ({cur}) =>
+                      cur.update(o => {
                         if (i == o.length - 1) return o;
                         o = [...o];
                         let tmp = o[i + 1];
                         o[i + 1] = o[i];
                         o[i] = tmp;
                         return o;
-                      }),
+                      })),
                   },
                   "↓"
                 ),
@@ -169,12 +170,11 @@
               "div",
               {
                 class: "item-delete list-item-button",
-                onclick: () => {
+                onclick: () => 
                   window.confirm("Er du sikker på at du vil slette dette?") &&
-                    store.update(cur.path(), (o) => {
-                      return o.filter((_, j) => j != i);
-                    });
-                },
+                  v.update_state(cur.path(), ({cur}) =>
+                    cur.update(o => o.filter((_, j) => j != i)))
+                ,
               },
               "🗑"
             ),
@@ -188,9 +188,8 @@
             {
               class: "list-item-button list-append-button",
               onclick: () =>
-                store.update(cur.path(), (o) => {
-                  return [...(o || []), {}];
-                }),
+                v.update_state(cur.path(), ({cur}) => 
+                  cur.update(o => [...o || [], {}]))
             },
             "+"
           ),
@@ -208,7 +207,7 @@
             },
 
             value: data || "",
-            oninput: (e) => store.update(cur.path(), () => e.target.value),
+            oninput: (e) => v.update_state(cur.path(), ({cur}) => cur.set("", e.target.value) ),
           }),
         ];
         break;
@@ -218,7 +217,7 @@
             "select",
             {
               value: data,
-              onchange: (e) => store.update(cur.path(), () => e.target.value),
+              onchange: (e) => v.update_state(cur.path(), ({cur}) => cur.set(e.target.value))
             },
             ...form.slice(2).map((f) =>
               h(
@@ -252,7 +251,7 @@
               const reader = new FileReader();
               reader.onload = function (e) {
                 const dataUrl = e.target.result;
-                store.update(cur.path(), () => dataUrl);
+                v.update_state(cur.path(), ({cur}) => cur.set(dataUrl));
               };
               reader.readAsDataURL(file);
             },
@@ -352,17 +351,17 @@
         font-family: sans-serif;
     `
   );
-  v.updata.init = async function ({ cur }) {
+  v.updata.init = async function ({cur}) {
     state = {
       topics: [await (await fetch("./topic1.json")).json()],
     };
     cur = cur.set("../form", form);
     cur = cur.set("../data", state);
-    return { cur };
+    return cur;
   };
   v.updata.render = function ({ cur }) {
     console.log("updata.render", cur);
-    return { preact: h("div", { class: "appeditor" }, render_form(cur.get("../form"), cur.cd("/"))) };
+    return { preact: h("div", { class: "appeditor" }, render_form(cur.get("../form"), cur.cd("../data"))) };
   };
 
   function main({ elem }) {

@@ -8,7 +8,7 @@
   v.sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   v._loading = {};
   v.load = async function (url) {
-    console.log('start-load', url);
+    console.log("start-load", url);
     if (v._loading[url]) return v._loading[url];
     if (!url.startsWith("http")) {
       let baseUrl =
@@ -21,15 +21,15 @@
     let script = document.createElement("script");
     script.src = url;
     document.head.appendChild(script);
-    let promise = new Promise((resolve) => (script.onload = resolve))
+    let promise = new Promise((resolve) => (script.onload = resolve));
     v._loading[url] = promise;
     await promise;
     promise.isResolved = true;
 
-    while(Object.values(v._loading).some(p => !p.isResolved)) {
+    while (Object.values(v._loading).some((p) => !p.isResolved)) {
       await Promise.all(Object.values(v._loading));
     }
-    
+
     /*
     while(v._loading.length > 0) {
       console.log(v._)
@@ -39,8 +39,7 @@
       await Promise.all(v._loading);
     }
     */
-    console.log('end-load', url);
-
+    console.log("end-load", url);
   };
   v.btou = (o) =>
     btoa(o).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
@@ -60,9 +59,9 @@
       .slice(1, -1);
   }
   function addPath(a, b) {
-    if(b.startsWith("/")) return b;
+    if (b.startsWith("/")) return b;
     return a + "/" + b;
-  } 
+  }
   v.Cursor = function (root, path) {
     this._root = root;
     this._path = normalisePath(path || "/");
@@ -71,7 +70,7 @@
     return new v.Cursor(this._root, addPath(this._path, String(path)));
   };
   v.Cursor.prototype.get = function get(path) {
-    if (path) return this.cd(path).get(undefined);
+    if (path) return this.cd(path).get();
     let t = this._root;
     for (const k of this._path.split("/")) {
       t = t[k];
@@ -100,16 +99,20 @@
     }
     return result;
   }
-  v.Cursor.prototype.update = function update(path, fn) {
+  v.Cursor.prototype.update = function update(...args) {
+    let fn = args.pop();
+    let path = args.pop() || "";
     let absPath = normalisePath(addPath(this._path, path)).split("/");
     return new v.Cursor(updateIn(this._root, absPath, fn), this._path);
   };
-  v.Cursor.prototype.set = function set(path, val) {
+  v.Cursor.prototype.set = function set(...args) {
+    let val = args.pop();
+    let path = args.pop() || "";
     return this.update(path, () => val);
   };
   v.Cursor.prototype.path = function path() {
     return this._path;
-  }
+  };
 
   ///////////////
   // state
@@ -153,19 +156,19 @@
     }
     renderLoop();
   }
-  v.style = function(id, style) {
+  v.style = function (id, style) {
     let elem = document.getElementById(id);
-    if(!elem) {
+    if (!elem) {
       elem = document.createElement("style");
       elem.id = id;
       document.head.appendChild(elem);
     }
-    if(typeof style === "string") {
+    if (typeof style === "string") {
       elem.innerHTML = style;
     } else {
       throw new Error("TODO: style object");
     }
-  }
+  };
 
   ////////////////////
   // Connect to veduz,
@@ -202,19 +205,20 @@
     permission = ("system " + (permission || "local")).split(" ");
     v._exposed[name] = { fn, permission };
   };
-  async function apply_to_state(fn, msg, path = "/") {
-    let o = (await fn({...msg, cur: new v.Cursor(v.state, path)})) || {};
-    let cur= o?.cur;
-    if(cur&& cur._root !== v.state) {
+  v.update_state = async function update_state(path, fn, msg = {}) {
+    let o = (await fn({ ...msg, cur: new v.Cursor(v.state, path)})) || {};
+    if (o instanceof v.Cursor && o._root !== v.state) {
+      v.state = o._root;
+      return {};
+    }
+    let cur = o?.cur;
+    if (cur && cur._root !== v.state) {
       v.state = cur._root;
     }
-    if(cur) delete o.cur;
+    if (cur) delete o.cur;
     return o;
-  }
+  };
   v.emit = async function (msg) {
-    if(typeof msg === "function") {
-      return apply_to_state(msg, {});
-    };
     if (msg.dst !== undefined && msg.dst !== v._peer_id) return v._send(msg);
     msg = { ...msg };
     msg.retries = Math.max(msg.retries || 10, 100) - 1;
@@ -223,7 +227,7 @@
     let { fn, permission } = v._exposed[msg.type] || {};
     if (!fn) return;
     if (!permission.some((p) => msg.roles.includes(p))) return;
-    let { result, error } = apply_to_state(fn, msg)
+    let { result, error } = v.update_state("/", fn, msg);
     if (msg.rid) {
       v.emit({
         dst: msg.src,
@@ -407,8 +411,12 @@
         script.parentNode.insertBefore(elem, script);
       }
       if (!v[appName]) await v.load(`${appName}/${appName}.js`);
-      if(v[appName]?.init) {
-        await apply_to_state(v[appName].init, {}, `/${appName}/elem_${elemId}`);
+      if (v[appName]?.init) {
+        await v.update_state(
+          `/${appName}/elem_${elemId}`,
+          v[appName].init,
+          {}
+        );
       }
       v._render(elemId, appName);
     }
