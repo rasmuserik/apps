@@ -272,8 +272,16 @@
   async function main({ elem }) {
     rootElem = elem;
     elem.className = "app";
+    setStyle("style", template("style", {}));
+    await start_screen();
+  }
+
+  v.tyskapp = v.tyskapp || {};
+  v.tyskapp.init = async ({cur}) => {
+    console.log('here', cur);
     await load_templates("templates.html");
-    topics = [
+    cur = cur.set('../topics',
+    [
       await (await fetch("./topic1.json")).json(),
       { title: "Tema 2", id: "theme1" },
       { title: "Tema 3", id: "theme2" },
@@ -281,18 +289,21 @@
       { title: "Tema 5", id: "theme3" },
       { title: "Tema 6", id: "theme3" },
       { title: "...", id: "theme5" },
-    ];
-    setStyle("style", template("style", {}));
+    ]
+    );
+    cur = cur.set('../messages', messages);
+    topics = cur.get('../topics')
     language = "da";
     topic_id = "dubbing";
     person_id = "person1";
-    await start_screen();
-    //await topic();
-    // await person();
-    //await feedback();
+    return cur;
   }
-
-  let elem = document.createElement("div");
-  document.body.appendChild(elem);
-  main({ elem });
+  let started = false;
+  v.tyskapp.render = (({elem, cur}) => {
+    if(!cur.get("../messages")
+       ||!cur.get('../topics')) return {html:"<h1>Loading...</h1>"}
+    if(started) return;
+    started = true;
+    main({elem});
+  });
 })();

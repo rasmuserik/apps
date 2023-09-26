@@ -15,7 +15,7 @@
         location.hostname === "127.0.0.1" || location.hostname === "localhost"
           ? location.origin
           : "https://veduz.com";
-      url = baseUrl + "/apps/" + url;
+      url = baseUrl + "/" + url;
     }
 
     let script = document.createElement("script");
@@ -49,6 +49,16 @@
   };
 
   ////////////////////
+  // Any
+  //////////////////
+  v.Any = Any;
+  function Any(type = "", data = "", children = {}) {
+    this._type = type;
+    this._data= data;
+    this._children = children;
+  }
+
+  ////////////////////
   // Cursor
   //////////////////
   function normalisePath(path) {
@@ -73,7 +83,11 @@
     if (path) return this.cd(path).get();
     let t = this._root;
     for (const k of this._path.split("/")) {
-      t = t[k];
+      if (t instanceof Any) {
+        t = t._children[k];
+      } else {
+        t = t[k];
+      }
       if (!t) break;
     }
     return t === undefined ? defaultValue : t;
@@ -82,20 +96,41 @@
     if (path.length === 0) {
       return fn(o);
     }
+    let k = path[0];
     let result;
-    if (o instanceof Array) {
+    let prev_val;
+    let val;
+    if (o instanceof Any) {
+      let new_children = { ...o._children };
+      val = updateIn(o.children[k], path.slice(1), fn);
+      if (val !== undefined) {
+        new_children[k] = val;
+      } else {
+        delete new_children[k];
+      }
+      result = new Any(o._type, o._data, new_children);
+    } else if (o instanceof Array) {
       result = [...o];
+      val = updateIn(o[k], path.slice(1), fn);
+      if (val !== undefined) {
+        result[k] = val;
+      } else {
+        delete result[k];
+      }
     } else if (o instanceof Object) {
       result = { ...o };
+      val = updateIn(o[k], path.slice(1), fn);
+      if (val !== undefined) {
+        result[k] = val;
+      } else {
+        delete result[k];
+      }
     } else {
       result = {};
-    }
-    let k = path[0];
-    let val = updateIn(result[k], path.slice(1), fn);
-    if (val === undefined) {
-      delete result[k];
-    } else {
-      result[k] = val;
+      val = updateIn(undefined, path.slice(1), fn);
+      if (val !== undefined) {
+        result[k] = val;
+      }
     }
     return result;
   }
@@ -206,7 +241,7 @@
     v._exposed[name] = { fn, permission };
   };
   v.update_state = async function update_state(path, fn, msg = {}) {
-    let o = (await fn({ ...msg, cur: new v.Cursor(v.state, path)})) || {};
+    let o = (await fn({ ...msg, cur: new v.Cursor(v.state, path) })) || {};
     if (o instanceof v.Cursor && o._root !== v.state) {
       v.state = o._root;
       return {};
@@ -412,11 +447,7 @@
       }
       if (!v[appName]) await v.load(`${appName}/${appName}.js`);
       if (v[appName]?.init) {
-        v.update_state(
-          `/${appName}/elem_${elemId}`,
-          v[appName].init,
-          {}
-        );
+        v.update_state(`/${appName}/elem_${elemId}`, v[appName].init, {});
       }
       v._render(elemId, appName);
     }
