@@ -53,8 +53,8 @@
   //////////////////
   v.Any = Any;
   function Any(type, data = "", children = {}) {
-    if(type) this._type_ = type;
-    if(data !== undefined) this._data_ = data;
+    if (type) this._type_ = type;
+    if (data !== undefined) this._data_ = data;
     this._children_ = children || {};
   }
 
