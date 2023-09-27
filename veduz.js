@@ -5,6 +5,8 @@
   //////////////////////
   // Utility functions
   //////////////////////
+  v._prevTime = 0;
+  v.uniqueTime = () => (v._prevTime = Math.max(Date.now(), v._prevTime + 1));
   v.sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   v._loading = {};
   v.load = async function (url) {
@@ -99,7 +101,6 @@
     }
     let k = path[0];
     let result;
-    let prev_val;
     let val;
     if (o instanceof Any) {
       let new_children = { ...o._children_ };
@@ -210,6 +211,14 @@
   // Connect to veduz,
   // v.expose, v.emit, v.call
   ////////////////////
+  v._unsent = {};
+  v._send = async function _send(msg) {
+    if(v._socket?.readyState === WebSocket.OPEN) {
+      v._socket.send(v.cborx.encode(msg));
+    } else {
+      v._unsent[v.uniqueTime()] = msg;
+    }
+  }
   v._connect = async function connect() {
     if (!v.cborx) await v.load("deps/cborx.js");
     if (!v._socket || v._socket.readyState !== WebSocket.OPEN) {
@@ -222,12 +231,21 @@
       });
       if (v._socket.readyState === WebSocket.OPEN) {
         v._reconnectTime = 500;
-        v._send = (data) => v._socket.send(v.cborx.encode(data));
         v._socket.onmessage = (e) => {
           let msg = v.cborx.decode(new Uint8Array(e.data));
           v._peer_id = msg.dst;
           v.emit(msg);
         };
+
+        let unsent = v._unsent;
+        v._unsent = {};
+        console.log('connect');
+        let t = String(Date.now() - 10000);
+        console.log(unsent);
+        for(const ts in unsent) {
+          console.log('sending', ts > t);
+          if(ts > t) v._send(unsent[ts]);
+        }
       }
     }
     setTimeout(() => v._connect(), v._reconnectTime);
