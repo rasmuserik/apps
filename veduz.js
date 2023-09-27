@@ -52,10 +52,10 @@
   // Any
   //////////////////
   v.Any = Any;
-  function Any(type = "", data = "", children = {}) {
-    this._type = type;
-    this._data= data;
-    this._children = children;
+  function Any(type, data = "", children = {}) {
+    if(type) this._type = type;
+    if(data !== undefined) this._data = data;
+    this._children = children || {};
   }
 
   ////////////////////
