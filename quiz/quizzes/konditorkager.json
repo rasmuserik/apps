@@ -1,0 +1,235 @@
+{
+  "title": "Konditorkager",
+  "questions": [
+    {
+      "question": "Hvilken konditorkage er kendt for sin spiralformede struktur?",
+      "correct_answer": "Kanelsnegl",
+      "wrong_answers": [
+        "Mazarin",
+        "Napoleonshat",
+        "Spandauer",
+        "Brunsviger",
+        "Kajkage",
+        "Sarah Bernhardt"
+      ],
+      "silly_answers": ["Spiralgalakse", "Vortex Muffin", "Quantum Croissant"],
+      "explanation": "Kanelsneglen er kendt for sin spiralformede struktur. Den er lavet af sød gærdej og smurt med en blanding af sukker, smør og kanel."
+    },
+    {
+      "question": "Hvad er en Sarah Bernhardt kage typisk toppet med?",
+      "correct_answer": "Chokolade",
+      "wrong_answers": [
+        "Flødeskum",
+        "Kanel",
+        "Sukker",
+        "Glasyr",
+        "Marcipan",
+        "Kirsebær"
+      ],
+      "silly_answers": ["Ketchup", "Bacon", "Guldfisk"],
+      "explanation": "En Sarah Bernhardt kage er typisk toppet med chokolade. Det er en delikat dessert, der består af en mandelbund, chokolademousse og chokoladeovertræk."
+    },
+    {
+      "question": "Hvilket land er oprindeligt hjemsted for Wienerbrød?",
+      "correct_answer": "Østrig",
+      "wrong_answers": [
+        "Danmark",
+        "Tyskland",
+        "Frankrig",
+        "USA",
+        "Italien",
+        "Holland"
+      ],
+      "silly_answers": ["Mars", "Atlantis", "Asien"],
+      "explanation": "Selvom Wienerbrød er meget populært i Danmark, stammer det oprindeligt fra Østrig. Deraf navnet 'Wienerbrød', som betyder 'Vienna Bread'."
+    },
+    {
+      "question": "Hvilken kage er kendt for sin rige brug af marcipan?",
+      "correct_answer": "Kransekage",
+      "wrong_answers": [
+        "Spandauer",
+        "Kanelsnegl",
+        "Napoleonshat",
+        "Brunsviger",
+        "Kajkage",
+        "Hindbærsnitte"
+      ],
+      "silly_answers": ["Marcipan Mountain", "Mars-Bar", "Vildsvin"],
+      "explanation": "Kransekagen er kendt for sin rige brug af marcipan. Denne dessert er ofte at finde ved festlige lejligheder som nytår og bryllupper."
+    },
+    {
+      "question": "Hvad er hovedingrediensen i en Brunsviger?",
+      "correct_answer": "Brun farin",
+      "wrong_answers": [
+        "Chokolade",
+        "Hindbær",
+        "Æble",
+        "Mandler",
+        "Kanel",
+        "Flødeskum"
+      ],
+      "silly_answers": ["Brun maling", "Sushi", "Brun sovs"],
+      "explanation": "Brunsviger er en traditionel dansk kage lavet med en gærdej base og en topping af brun farin og smør."
+    },
+    {
+      "question": "Hvilken frugt findes oftest i en Æblekage?",
+      "correct_answer": "Æble",
+      "wrong_answers": [
+        "Banan",
+        "Pære",
+        "Blåbær",
+        "Fersken",
+        "Kirsebær",
+        "Jordbær"
+      ],
+      "silly_answers": ["Tomat", "Agurk", "Chili"],
+      "explanation": "Æblekage er en populær dansk dessert, der typisk indeholder lag af æbler, rasp, sukker og undertiden flødeskum eller vanilje."
+    },
+    {
+      "question": "Hvilken konditorkage er opkaldt efter en fransk militær leder?",
+      "correct_answer": "Napoleonshat",
+      "wrong_answers": [
+        "Sarah Bernhardt",
+        "Kransekage",
+        "Brunsviger",
+        "Kajkage",
+        "Hindbærsnitte",
+        "Spandauer"
+      ],
+      "silly_answers": ["General Custard", "Admiral Éclair", "Sergeant Donut"],
+      "explanation": "Napoleonshat er en dansk konditorkage opkaldt efter den franske militærleder Napoleon Bonaparte. Den er typisk lavet af mørdej og fyldt med marcipan."
+    },
+    {
+      "question": "Hvilken ingrediens anvendes IKKE i en Spandauer?",
+      "correct_answer": "Chokolade",
+      "wrong_answers": [
+        "Marcipan",
+        "Vanilje",
+        "Gærdej",
+        "Sukker",
+        "Æg",
+        "Smør"
+      ],
+      "silly_answers": ["Sardiner", "Pizza topping", "Sten"],
+      "explanation": "Spandauer er en populær dansk konditorkage, men den indeholder ikke chokolade. De typiske ingredienser inkluderer en gærdej base, et marcipanfyld og ofte en vanilje eller hindbær midte."
+    },
+    {
+      "question": "Hvilken slags fyld bruges typisk i en Hindbærsnitte?",
+      "correct_answer": "Hindbær",
+      "wrong_answers": [
+        "Chokolade",
+        "Vanilje",
+        "Fløde",
+        "Karamel",
+        "Citron",
+        "Æble"
+      ],
+      "silly_answers": ["Lakrids", "Bønner", "Sild"],
+      "explanation": "Hindbærsnitte, som navnet antyder, bruger typisk en hindbærfyld mellem to lag af shortcrust dej."
+    },
+    {
+      "question": "Hvad er hovedingrediensen i en Flødekage?",
+      "correct_answer": "Fløde",
+      "wrong_answers": [
+        "Chokolade",
+        "Hindbær",
+        "Æble",
+        "Mandler",
+        "Kanel",
+        "Brun Farin"
+      ],
+      "silly_answers": ["Mayonnaise", "Sriracha Sauce", "Ost"],
+      "explanation": "Flødekage, som navnet antyder, har fløde som hovedingrediens. Denne danske dessert er ofte dekoreret med forskellige frugter og bær."
+    },
+    {
+      "question": "Hvilken slags kage er typisk formet som en fisk?",
+      "correct_answer": "Kajkage",
+      "wrong_answers": [
+        "Brunsviger",
+        "Hindbærsnitte",
+        "Kanelsnegl",
+        "Napoleonshat",
+        "Sarah Bernhardt",
+        "Spandauer"
+      ],
+      "silly_answers": ["Hajbøf", "Krabbeklør", "Østers Ø"],
+      "explanation": "Kajkage er en dansk kage, der er formet som en fisk. Den er typisk lavet af marcipan, chokolade og en creme-fyld."
+    },
+    {
+      "question": "Hvilken kage har en midte lavet af syltetøj?",
+      "correct_answer": "Hindbærsnitte",
+      "wrong_answers": [
+        "Brunsviger",
+        "Kransekage",
+        "Kajkage",
+        "Napoleonshat",
+        "Sarah Bernhardt",
+        "Kanelsnegl"
+      ],
+      "silly_answers": [
+        "Syltetøj Sandwich",
+        "Jamboree Jello",
+        "Konserves Karamel"
+      ],
+      "explanation": "En Hindbærsnitte har typisk en midte lavet af hindbærsyltetøj mellem to lag af mørdej."
+    },
+    {
+      "question": "Hvilken kage er opkaldt efter en berømt skuespillerinde?",
+      "correct_answer": "Sarah Bernhardt",
+      "wrong_answers": [
+        "Spandauer",
+        "Kanelsnegl",
+        "Napoleonshat",
+        "Brunsviger",
+        "Kajkage",
+        "Hindbærsnitte"
+      ],
+      "silly_answers": [
+        "Meryl Streep Muffin",
+        "Judi Dench Donut",
+        "Cate Blanchett Biscuit"
+      ],
+      "explanation": "Sarah Bernhardt kage er opkaldt efter den berømte franske skuespillerinde. Den består af en mandelbund, chokolademousse og chokoladeovertræk."
+    },
+    {
+      "question": "Hvilken kage indeholder typisk både syltetøj og creme?",
+      "correct_answer": "Lagkage",
+      "wrong_answers": [
+        "Spandauer",
+        "Kanelsnegl",
+        "Napoleonshat",
+        "Brunsviger",
+        "Kajkage",
+        "Hindbærsnitte"
+      ],
+      "silly_answers": ["Tandpasta Tart", "Sennep Sundae", "Ketchup Kage"],
+      "explanation": "Lagkage er en traditionel dansk dessert, der normalt indeholder lag af kage med syltetøj, creme og undertiden chokolade eller nødder."
+    },
+    {
+      "question": "Hvilken kage er kendt for sin karakteristiske brun farve?",
+      "correct_answer": "Brunsviger",
+      "wrong_answers": [
+        "Spandauer",
+        "Kanelsnegl",
+        "Napoleonshat",
+        "Sarah Bernhardt",
+        "Kajkage",
+        "Hindbærsnitte"
+      ],
+      "silly_answers": [
+        "Chokolade Cheeseburger",
+        "Kaffe Ketchup",
+        "Brun Bønne Brød"
+      ],
+      "explanation": "Brunsviger er en traditionel dansk kage, der er kendt for sin karakteristiske brun farve, der stammer fra brugen af brun farin og smør i toppen."
+    }
+  ],
+  "feedback": {
+    "everything_correct": "Du er en sand konditorkage-ekspert! Du har sandsynligvis brugt flere år i et skjult konditor-laboratorium i de dybe skove af Danmark. Hvis du skærer dig, bløder du sandsynligvis med vaniljecreme og dit hjerte er formet som en perfekt Kanelsnegl. Fantastisk arbejde!",
+    "very_good": "Imponerende! Du har en omfattende viden om konditorkager, som tyder på, at du enten er en erfaren konditor eller en seriøs kageentusiast. Det ville ikke være overraskende, hvis du drømmer om Kajkager svømme i et hav af flødeskum om natten. Flot arbejde!",
+    "good": "Godt gået! Du har en fin forståelse for konditorkager. Måske bager du en gang imellem en Hindbærsnitte, eller også er du bare rigtig god til at spise kager! Hvis du var en superhelt, ville dit superkraft sandsynligvis være at omdanne skurke til lækre småkager med et enkelt blik.",
+    "bad": "Åh åh! Det ser ud til, at du har brug for at forbedre din konditorkage-viden. Måske har du været for optaget af at undgå Wienerbrød-krigere fra det fjerne Østrig, eller du har været for travlt med at forhandle med marcipangrisene. Bedre held næste gang!",
+    "very_bad": "Ups! Det ser ud til, at du forveksler konditorkager med frisbees. Måske har du brugt for meget tid på at forsøge at flyve på en kæmpe Kransekage, eller prøve at kommunikere med rumvæsener gennem tegnsprog og Flødekager. Men fortvivl ikke, der er altid plads til forbedring!",
+    "everything_wrong": "Oh nej! Det ser ud til, at du har misforstået konceptet af konditorkager fuldstændig. Du har sandsynligvis prøvet at bruge en Napoleonshat som en faktisk hat, eller forsøgt at grave en tunnel til Kina ved hjælp af Brunsviger. Men husk, hver dag er en ny chance for at lære noget nyt!"
+  }
+}

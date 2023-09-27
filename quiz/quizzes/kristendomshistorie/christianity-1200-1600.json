@@ -1,0 +1,215 @@
+{
+  "title": "Kristendomshistorie år 1200-1600",
+  "questions": [
+    {
+      "question": "Hvilken bevægelse i det 14. århundrede kritiserede det gejstlige hierarki og foreslog religiøs reform?",
+      "correct_answer": "Lollarderne",
+      "wrong_answers": [
+        "Katharerne",
+        "Gnostikerne",
+        "Dominikanerne",
+        "Franciskanerne",
+        "Jesuitterne",
+        "Bogomilerne"
+      ],
+      "silly_answers": ["Futuristerne", "Cubisterne", "Impressionisterne"],
+      "explanation": "Lollarderne, ledet af John Wycliffe i England, var en religiøs bevægelse, der kritiserede det gejstlige hierarki og korruptionen i Kirken og opfordrede til bibelsk simplicitet og fromhed i det 14. århundrede."
+    },
+    {
+      "question": "Hvem startede den protestantiske reformation i det 16. århundrede?",
+      "correct_answer": "Martin Luther",
+      "wrong_answers": [
+        "John Calvin",
+        "Ulrich Zwingli",
+        "John Wycliffe",
+        "Jan Hus",
+        "Thomas Cranmer",
+        "John Knox"
+      ],
+      "silly_answers": [
+        "Martin Scorsese",
+        "Luther Vandross",
+        "Martin Lawrence"
+      ],
+      "explanation": "Martin Luther, en tysk munk og teolog, startede den protestantiske reformation i det 16. århundrede med hans '95 teser', som kritiserede salget af aflad og andre praksis i den Romersk-katolske Kirke."
+    },
+    {
+      "question": "Hvilken religiøs orden blev grundlagt af Ignatius af Loyola i det 16. århundrede?",
+      "correct_answer": "Jesuitterne",
+      "wrong_answers": [
+        "Dominikanerne",
+        "Franciskanerne",
+        "Benediktinerne",
+        "Karmeliterne",
+        "Cistercienserne",
+        "Augustinerne"
+      ],
+      "silly_answers": [
+        "Orderen af det flyvende spaghetti-monster",
+        "Jedi-orderen",
+        "Orderen af Phoenix"
+      ],
+      "explanation": "Ignatius af Loyola grundlagde Jesuitterordenen (også kendt som 'Selskabet af Jesus') i det 16. århundrede. Jesuitterne blev kendt for deres pædagogiske, missionske og intellektuelle arbejde i tjeneste for Kirken."
+    },
+    {
+      "question": "Hvilket møde i det 16. århundrede søgte at adressere kritikken fra Reformationen og reformere den katolske kirke?",
+      "correct_answer": "Koncilet i Trento",
+      "wrong_answers": [
+        "Koncilet i Nicaea",
+        "Koncilet i Chalcedon",
+        "Koncilet i Ephesus",
+        "Koncilet i Vatikanet",
+        "Koncilet i Lyon",
+        "Koncilet i Konstantinopel"
+      ],
+      "silly_answers": [
+        "Det årlige møde i Hogwarts' Storråd",
+        "Det intergalaktiske møde på planeten Xanadu",
+        "Det hemmelige møde i Illuminati"
+      ],
+      "explanation": "Koncilet i Trento (1545-1563) blev afholdt som reaktion på den protestantiske reformation og indførte betydelige reformer i den katolske kirke for at imødegå kritikken og styrke den katolske tro."
+    },
+    {
+      "question": "Hvilken berømt katedral i Frankrig blev påbegyndt i det 12. århundrede og færdiggjort i det 13. århundrede?",
+      "correct_answer": "Notre-Dame de Paris",
+      "wrong_answers": [
+        "Sainte-Chapelle",
+        "Amiens Katedralen",
+        "Reims Katedralen",
+        "Chartres Katedralen",
+        "Rouen Katedralen",
+        "Strasbourg Katedralen"
+      ],
+      "silly_answers": [
+        "Bobs Burgere",
+        "Mickey Mouses Klubhus",
+        "Spongebobs Ananas"
+      ],
+      "explanation": "Notre-Dame de Paris er en af de mest berømte gotiske katedraler i verden. Byggeriet begyndte i det 12. århundrede og blev færdiggjort i det 13. århundrede."
+    },
+    {
+      "question": "Hvem er kendt for sin oversættelse af Bibelen til engelsk i det 14. århundrede?",
+      "correct_answer": "John Wycliffe",
+      "wrong_answers": [
+        "William Tyndale",
+        "Martin Luther",
+        "Erasmus",
+        "Desiderius Erasmus",
+        "Thomas More",
+        "Jan Hus"
+      ],
+      "silly_answers": [
+        "William Shakespeare",
+        "J.K. Rowling",
+        "George R.R. Martin"
+      ],
+      "explanation": "John Wycliffe, en teolog og reformator i det 14. århundrede, er kendt for at have oversat Bibelen til engelsk, hvilket var en stor bidrag til udviklingen af den engelske prosa og promovering af bibelsk læsning på folkesproget."
+    },
+    {
+      "question": "Hvilken berømt biskop af Genève skrev 'Indføring til et helligt liv' i det 16. århundrede?",
+      "correct_answer": "Francis de Sales",
+      "wrong_answers": [
+        "John Fisher",
+        "Thomas Cranmer",
+        "Robert Bellarmine",
+        "Reginald Pole",
+        "John Carroll",
+        "Charles Borromeo"
+      ],
+      "silly_answers": ["Gandalf the Grey", "Albus Dumbledore", "Aslan"],
+      "explanation": "Francis de Sales, biskop af Genève, skrev 'Indføring til et helligt liv', en klassisk guide til kristen spiritualitet. Han blev senere kanoniseret og er kendt for hans dybe fromhed og pastorale tilgang."
+    },
+    {
+      "question": "Hvem blev valgt til pave i 1492, en periode ofte forbundet med korruption i pavelige embede?",
+      "correct_answer": "Alexander VI",
+      "wrong_answers": [
+        "Innocent VIII",
+        "Julius II",
+        "Leo X",
+        "Clement VII",
+        "Pius III",
+        "Julius III"
+      ],
+      "silly_answers": [
+        "Paveye the Sailor Man",
+        "Pope Francis Bacon",
+        "Pope John Paul George Ringo"
+      ],
+      "explanation": "Rodrigo Borgia blev valgt som Pave Alexander VI i 1492. Hans pontifikat er ofte forbundet med nepotisme, simoni, og andre former for korruption, der skabte grobund for Reformationen."
+    },
+    {
+      "question": "Hvem blev brændt på bålet for kætteri i Konstanz i 1415?",
+      "correct_answer": "Jan Hus",
+      "wrong_answers": [
+        "John Wycliffe",
+        "William Tyndale",
+        "Martin Luther",
+        "Thomas Müntzer",
+        "Huldrych Zwingli",
+        "Michael Servetus"
+      ],
+      "silly_answers": ["Frodo Baggins", "Jon Snow", "Tony Stark"],
+      "explanation": "Jan Hus, en teolog og reformator fra Böhmen, blev dømt for kætteri og brændt på bålet under Konstanz-koncilet i 1415. Hans død udløste de omfattende Hussitterkrige i det 15. århundrede."
+    },
+    {
+      "question": "Hvilken teolog og reformator grundlagde den schweiziske reformerte tradition i det 16. århundrede?",
+      "correct_answer": "John Calvin",
+      "wrong_answers": [
+        "Martin Luther",
+        "Ulrich Zwingli",
+        "John Knox",
+        "John Wycliffe",
+        "Jan Hus",
+        "Thomas Cranmer"
+      ],
+      "silly_answers": ["Calvin Klein", "Calvin and Hobbes", "Calvin Coolidge"],
+      "explanation": "John Calvin var en fremtrædende teolog og reformator i det 16. århundrede, der spillede en central rolle i udviklingen af den reformerte tradition, især i Genève, Schweiz. Hans lære og skrifter, herunder hans 'Institutio Christianae Religionis', har haft en varig indflydelse på Protestantismen."
+    },
+    {
+      "question": "Hvem er kendt for at have malet loftet i Det Sixtinske Kapel i det 16. århundrede?",
+      "correct_answer": "Michelangelo",
+      "wrong_answers": [
+        "Leonardo da Vinci",
+        "Raphael",
+        "Donatello",
+        "Titian",
+        "Caravaggio",
+        "Botticelli"
+      ],
+      "silly_answers": ["Bob Ross", "Pablo Picasso", "Vincent van Gogh"],
+      "explanation": "Michelangelo er kendt for at have malet loftet i Det Sixtinske Kapel i det 16. århundrede, et mesterværk af vestlig kunst. Hans værker i maleri, skulptur og arkitektur er blandt de mest berømte i verden."
+    },
+    {
+      "question": "Hvem forfattede '95 teser' og satte gang i den protestantiske reformation?",
+      "correct_answer": "Martin Luther",
+      "wrong_answers": [
+        "John Calvin",
+        "Ulrich Zwingli",
+        "John Knox",
+        "John Wycliffe",
+        "Jan Hus",
+        "Thomas Cranmer"
+      ],
+      "silly_answers": [
+        "Luther Vandross",
+        "Martin Scorsese",
+        "Martin Lawrence"
+      ],
+      "explanation": "Martin Luther, en tysk munk og teolog, skrev og offentliggjorde '95 teser' i 1517. Disse teser kritiserede kraftigt den katolske kirkes salg af aflad og andre praksis, og dette udløste den protestantiske reformation."
+    },
+    {
+      "question": "Hvad er navnet på den religiøse bevægelse, der opstod i det 12. århundrede og kritiserede den materielle rigdom og verdslige magt hos den katolske kirke?",
+      "correct_answer": "Fransiskanerne",
+      "wrong_answers": [
+        "Dominikanerne",
+        "Benediktinerne",
+        "Karmeliterne",
+        "Augustinerne",
+        "Cistercienserne",
+        "Karthusianerne"
+      ],
+      "silly_answers": ["Hobitterne", "Elverne", "Dværgene"],
+      "explanation": "Fransiskanerne er en religiøs orden inden for den katolske kirke, der blev grundlagt af Frans af Assisi i det 12. århundrede. De er kendt for deres løfte om fattigdom og enkelhed samt deres engagement i at tjene de fattige og nødlidende."
+    }
+  ]
+}

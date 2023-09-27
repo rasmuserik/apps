@@ -1,0 +1,223 @@
+{
+  "title": "Kristendomshistorie år 800-1200",
+  "questions": [
+    {
+      "question": "Hvem blev kendt som 'apostlen til Norden' for hans missionærarbejde i Skandinavien?",
+      "correct_answer": "Ansgar",
+      "wrong_answers": [
+        "Willibrord",
+        "Bonifatius",
+        "Adalbert",
+        "Cyril",
+        "Methodius",
+        "Rimbert"
+      ],
+      "silly_answers": ["Harry Potter", "Thor", "Gandalf"],
+      "explanation": "Ansgar, også kendt som Sankt Ansgar, blev betroet med missionen at indføre kristendommen til Danmark, Sverige og Norge, og er derfor kendt som 'apostlen til Norden'."
+    },
+    {
+      "question": "Hvilken berømt klosterskole blev grundlagt af Charlemagne i det 9. århundrede?",
+      "correct_answer": "Klosterskolen i Aachen",
+      "wrong_answers": [
+        "Klosterskolen i Cluny",
+        "Klosterskolen i Canterbury",
+        "Klosterskolen i Chartres",
+        "Klosterskolen i Citeaux",
+        "Klosterskolen i Tours",
+        "Klosterskolen i Auxerre"
+      ],
+      "silly_answers": [
+        "Hogwarts",
+        "Xavier's School for Gifted Youngsters",
+        "Starfleet Academy"
+      ],
+      "explanation": "Charlemagne grundlagde klosterskolen i Aachen, som blev et vigtigt center for lærdom og uddannelse i det karolingiske rige."
+    },
+    {
+      "question": "Hvem var den byzantinske kejser, der indledte den første periode med ikonoklasme?",
+      "correct_answer": "Leo III",
+      "wrong_answers": [
+        "Justinian I",
+        "Heraclius",
+        "Basil II",
+        "Alexius I",
+        "Konstantin V",
+        "Leo V"
+      ],
+      "silly_answers": ["Julius Caesar", "Genghis Khan", "Sherlock Holmes"],
+      "explanation": "Leo III, den byzantinske kejser, indledte den første periode med ikonoklasme (ødelæggelsen af religiøse ikoner), hvilket førte til betydelige religiøse og politiske konflikter."
+    },
+    {
+      "question": "Hvilket stort skisma skete i 1054, der splittede kristendommen i øst og vest?",
+      "correct_answer": "Det store skisma",
+      "wrong_answers": [
+        "Det arianske skisma",
+        "Det monofysitiske skisma",
+        "Det nestorianske skisma",
+        "Det donatistiske skisma",
+        "Det pelagianske skisma",
+        "Det gnostiske skisma"
+      ],
+      "silly_answers": [
+        "Skismaet over pizza toppings",
+        "Skismaet over den bedste farve til biskoppelige klæder",
+        "Skismaet over de bedste tv-serier"
+      ],
+      "explanation": "Det store skisma i 1054 splittede kristendommen i den romersk-katolske kirke (vest) og den ortodokse kirke (øst), hovedsageligt over spørgsmål om kirkens autoritet og teologiske forskelle."
+    },
+    {
+      "question": "Hvilket berømt kloster blev grundlagt i 910 af Vilhelm I, hertug af Aquitaine?",
+      "correct_answer": "Cluny",
+      "wrong_answers": [
+        "Citeaux",
+        "Chartreuse",
+        "Mont Saint-Michel",
+        "Monte Cassino",
+        "Saint Gall",
+        "Fontenay"
+      ],
+      "silly_answers": [
+        "Klosteret af Uendelige Pølsefest",
+        "Klosteret af Evig Ost",
+        "Klosteret af Den Hellige Pizza"
+      ],
+      "explanation": "Cluny Abbey blev grundlagt i 910 og blev et centrum for reform inden for den vestlige kirke. Det var kendt for sin rigdom og sit uafhængige status, der tillod det at undgå sekulær indblanding."
+    },
+    {
+      "question": "Hvilken begivenhed fandt sted i 1095, der markerede starten på et århundrede med krig mellem kristne og muslimer?",
+      "correct_answer": "Det Første Korstog",
+      "wrong_answers": [
+        "Det Andet Korstog",
+        "Det Tredje Korstog",
+        "Det Fjerde Korstog",
+        "Det Femte Korstog",
+        "Det Sjette Korstog",
+        "Det Syvende Korstog"
+      ],
+      "silly_answers": [
+        "Det Første Kagekrig",
+        "Det Store Slagsmål om Puder",
+        "Den Store Musikkonkurrence"
+      ],
+      "explanation": "Det Første Korstog blev indkaldt i 1095 af pave Urban II som en militær ekspedition af den vestlige kristne verden mod de muslimer, der kontrollerede Det Hellige Land. Dette begivenhed markerede begyndelsen på korstogene."
+    },
+    {
+      "question": "Hvem grundlagde Cistercienserordenen i 1098?",
+      "correct_answer": "Robert af Molesme",
+      "wrong_answers": [
+        "Bernard of Clairvaux",
+        "Bruno of Cologne",
+        "Dominic of Caleruega",
+        "Francis of Assisi",
+        "Norbert of Xanten",
+        "Benedict of Nursia"
+      ],
+      "silly_answers": ["Sherlock Holmes", "Luke Skywalker", "Harry Potter"],
+      "explanation": "Cistercienserordenen blev grundlagt i 1098 af Robert of Molesme, og den blev kendt for sin strenge observans af Benediktinske regler og sit fokus på manuel arbejde og selvtilstrækkelighed."
+    },
+    {
+      "question": "Hvilken berømt katedral blev indviet i 1063 i Pisa, Italien?",
+      "correct_answer": "Pisa Katedralen",
+      "wrong_answers": [
+        "Duomo di Milano",
+        "Basilica di San Marco",
+        "Santa Maria del Fiore",
+        "San Giovanni in Laterano",
+        "Santa Maria Maggiore",
+        "Basilica di San Pietro"
+      ],
+      "silly_answers": [
+        "Pisa Pizzaria",
+        "Pisa Spaghetti House",
+        "Pisa Gelateria"
+      ],
+      "explanation": "Pisa Katedralen, et mesterværk af romansk arkitektur, blev indviet i 1063 og er berømt for sin klokketårn, det skæve tårn i Pisa."
+    },
+    {
+      "question": "Hvilken by blev centrum for den vestlige kristendom efter Rom i det 8. århundrede?",
+      "correct_answer": "Aachen",
+      "wrong_answers": [
+        "Paris",
+        "London",
+        "Ravenna",
+        "Constantinople",
+        "Jerusalem",
+        "Antioch"
+      ],
+      "silly_answers": [
+        "Gotham City",
+        "Middle-Earth's Minas Tirith",
+        "Hogwarts"
+      ],
+      "explanation": "Aachen blev hovedstad og centrum for det karolingiske rige under Charlemagne. Det blev et centrum for kristen kultur og lærdom, og domkirken i Aachen blev stedet for kroningen af de tyske konger."
+    },
+    {
+      "question": "Hvem var den førende skikkelse i kampen mod den kætterske katharisme i det 12. århundrede?",
+      "correct_answer": "Dominic of Caleruega",
+      "wrong_answers": [
+        "Francis of Assisi",
+        "Thomas Aquinas",
+        "Bernard of Clairvaux",
+        "Ignatius of Loyola",
+        "Anselm of Canterbury",
+        "John of the Cross"
+      ],
+      "silly_answers": ["Captain America", "Superman", "Batman"],
+      "explanation": "Dominic of Caleruega, der grundlagde dominikanerordenen, var en ledende figur i kampen mod katharisme, en kættersk bevægelse i det 12. århundrede. Han fremmede en reformeret og lærdomsbaseret tilgang til prædiken for at bekæmpe kætteri."
+    },
+    {
+      "question": "Hvem var den første nonne, der blev kanoniseret af den katolske kirke?",
+      "correct_answer": "Hildegard af Bingen",
+      "wrong_answers": [
+        "Teresa of Avila",
+        "Catherine of Siena",
+        "Julian of Norwich",
+        "Clare of Assisi",
+        "Theresa of Lisieux",
+        "Bridget of Sweden"
+      ],
+      "silly_answers": [
+        "Sister Act's Deloris Van Cartier",
+        "The Sound of Music's Maria",
+        "Call the Midwife's Sister Julienne"
+      ],
+      "explanation": "Hildegard af Bingen, en tysk benediktinsk abbedisse, var en fremtrædende skikkelse i det 12. århundrede. Hun var kendt for sine bidrag til musik, teologi, og naturvidenskab, og hun blev den første nonne, der blev kanoniseret af den katolske kirke."
+    },
+    {
+      "question": "Hvilken institution blev grundlagt af kardinal Pietro di Murrone i 1294?",
+      "correct_answer": "Celestinerordenen",
+      "wrong_answers": [
+        "Franciscanerordenen",
+        "Dominikanerordenen",
+        "Benediktinerordenen",
+        "Cistercienserordenen",
+        "Carmeliterordenen",
+        "Jesuitterordenen"
+      ],
+      "silly_answers": [
+        "The Order of the Phoenix",
+        "The Knights of the Round Table",
+        "The Jedi Order"
+      ],
+      "explanation": "Celestinerordenen blev grundlagt af Pietro di Murrone, der senere blev pave Celestine V. Ordenen fulgte en strengere version af Benediktinske regler."
+    },
+    {
+      "question": "Hvilket værk, skrevet af Thomas Aquinas i det 13. århundrede, er en af ​​de mest indflydelsesrige bøger i den vestlige filosofi og teologi?",
+      "correct_answer": "Summa Theologica",
+      "wrong_answers": [
+        "Confessions",
+        "City of God",
+        "Imitation of Christ",
+        "Divine Comedy",
+        "Spiritual Exercises",
+        "Cloud of Unknowing"
+      ],
+      "silly_answers": [
+        "The Philosopher's Stone",
+        "The Hobbit",
+        "A Brief History of Time"
+      ],
+      "explanation": "Summa Theologica, skrevet af Thomas Aquinas, er en omfattende arbejde, der forsøger at forklare hele den kristne lære og etik. Det er stadig et af de mest indflydelsesrige værker inden for teologi og filosofi."
+    }
+  ]
+}

@@ -1,0 +1,955 @@
+{
+  "title": "Animal Quiz",
+  "feedback": {
+    "everything_correct": "Wow, you've clearly spent some quality time in the jungle! You got everything correct, just like a dolphin acing an echolocation test. Your knowledge of animal facts is so profound that even a parrot would find it hard to keep up with you. Keep up the excellent work, and remember to wear a helmet; a jealous woodpecker might be around the corner.",
+
+    "very_good": "Fantastic! Your performance is as flashy as a peacock's tail. It seems like you've got a memory as strong as an elephant's. Sure, you missed a few, but nobody's perfect. Well, except for maybe the platypus, nature's most unlikely creature.",
+
+    "good": "Not bad, not bad at all. You're as sharp as an eagle's eye. Sure, a few questions slipped past you like a ninja octopus, but overall, you have a fair amount of knowledge in that noggin of yours. Keep learning and maybe you'll be as wise as an owl one day.",
+
+    "bad": "Well, it looks like you tripped up a bit there, kind of like a penguin on a banana peel. But don't let it get you down. Remember, a kangaroo doesn't start hopping right away, either. Keep learning and soon you'll be swinging through these quizzes like a chimpanzee in the jungle.",
+
+    "very_bad": "Oh dear, your score is a bit like a fish out of water. But don't worry, even a tortoise finishes the race eventually. It seems the animal kingdom is a bit of a lion's den for you right now, but with a bit of practice, you'll be soaring like an eagle in no time.",
+
+    "everything_wrong": "Well, looks like you've stumbled more than a newborn giraffe. Don't worry though, even a blind squirrel finds a nut sometimes. Brush up on your animal facts, and remember, every dog has its day. Next time, you might just make a comeback like a phoenix rising from the ashes."
+  },
+  "questions": [
+    {
+      "question": "What is the only bird known to fly backward?",
+      "correct_answer": "Hummingbird",
+      "wrong_answers": [
+        "Eagle",
+        "Parrot",
+        "Penguin",
+        "Flamingo",
+        "Peacock",
+        "Swan"
+      ],
+      "silly_answers": [
+        "Backward Bird",
+        "Helicopter Penguin",
+        "Reverse Phoenix"
+      ],
+      "explanation": "Hummingbirds are the only birds that can fly backward. They have a unique ball and socket joint at the shoulder that allows them to rotate their wings 180 degrees in all directions."
+    },
+    {
+      "question": "What type of animal is a Komodo Dragon?",
+      "correct_answer": "Lizard",
+      "wrong_answers": [
+        "Bird",
+        "Fish",
+        "Amphibian",
+        "Mammal",
+        "Insect",
+        "Reptile"
+      ],
+      "silly_answers": [
+        "Actual Dragon",
+        "Komodo Unicorn",
+        "Tropical Polar Bear"
+      ],
+      "explanation": "Komodo Dragons are a type of monitor lizard, which are large lizards found throughout Africa, Asia and Australia."
+    },
+    {
+      "question": "Which mammal lays eggs?",
+      "correct_answer": "Platypus",
+      "wrong_answers": [
+        "Kangaroo",
+        "Bear",
+        "Elephant",
+        "Lion",
+        "Giraffe",
+        "Whale"
+      ],
+      "silly_answers": ["Egg-laying Bunny", "Mammalian Chicken", "Eggplant"],
+      "explanation": "Platypuses are one of the few mammals that lay eggs. They, along with echidnas, are monotremes – a type of mammal that lays eggs instead of giving birth to live young."
+    },
+    {
+      "question": "What is the world's largest land carnivore?",
+      "correct_answer": "Polar Bear",
+      "wrong_answers": [
+        "Lion",
+        "Elephant",
+        "Kangaroo",
+        "Giraffe",
+        "Tiger",
+        "Wolf"
+      ],
+      "silly_answers": ["Omnivorous Oak Tree", "Carnivorous Cactus", "Bigfoot"],
+      "explanation": "The Polar Bear is the world's largest land carnivore and also the largest bear. They can weigh over 1,500 pounds and measure over 9 feet tall when standing on their hind legs."
+    },
+    {
+      "question": "Which animal has the longest lifespan?",
+      "correct_answer": "Bowhead Whale",
+      "wrong_answers": [
+        "Elephant",
+        "Tortoise",
+        "Koi Fish",
+        "Parrot",
+        "Human",
+        "Cockatoo"
+      ],
+      "silly_answers": [
+        "Immortal Jellyfish",
+        "Time-traveling Sloth",
+        "Vampire Bat"
+      ],
+      "explanation": "The Bowhead Whale is known to live over 200 years. The oldest known Bowhead lived to be 211 years old."
+    },
+    {
+      "question": "Which animal is capable of true flight?",
+      "correct_answer": "Bat",
+      "wrong_answers": [
+        "Ostrich",
+        "Penguin",
+        "Kiwi",
+        "Emu",
+        "Dodo",
+        "Cassowary"
+      ],
+      "silly_answers": [
+        "Flying Elephant",
+        "Rocket-propelled Turtle",
+        "Aerodynamic Snail"
+      ],
+      "explanation": "Bats are the only mammals that are capable of sustained flight. Other mammals like flying squirrels and flying lemurs can only glide or parachute; the longest recorded flight of a flying squirrel is 90 meters."
+    },
+    {
+      "question": "Which animal has the most hearts?",
+      "correct_answer": "Octopus",
+      "wrong_answers": [
+        "Whale",
+        "Elephant",
+        "Giraffe",
+        "Hippopotamus",
+        "Kangaroo",
+        "Bear"
+      ],
+      "silly_answers": [
+        "Three-hearted Thesaurus",
+        "Lovey-dovey Lemur",
+        "Multi-hearted Mongoose"
+      ],
+      "explanation": "An Octopus has three hearts. Two of the hearts work exclusively to move blood beyond the animal’s gills, while the third keeps circulation flowing for the organs."
+    },
+    {
+      "question": "Which animal has the most legs?",
+      "correct_answer": "Millipede",
+      "wrong_answers": [
+        "Spider",
+        "Octopus",
+        "Starfish",
+        "Centipede",
+        "Crab",
+        "Ant"
+      ],
+      "silly_answers": ["Decapede", "Multilegged Moose", "Lots-of-legs Lemur"],
+      "explanation": "Some species of millipedes have more than 400 legs, far more than any other animal."
+    },
+    {
+      "question": "Which animal has the largest brain?",
+      "correct_answer": "Sperm Whale",
+      "wrong_answers": [
+        "Human",
+        "Elephant",
+        "Dolphin",
+        "Chimpanzee",
+        "Octopus",
+        "Crow"
+      ],
+      "silly_answers": [
+        "Brilliant Butterfly",
+        "Intellectual Inchworm",
+        "Thoughtful Thrips"
+      ],
+      "explanation": "The Sperm Whale has the largest brain of any animal, more than five times heavier than a human's."
+    },
+    {
+      "question": "Which bird creates the largest nest?",
+      "correct_answer": "Bald Eagle",
+      "wrong_answers": [
+        "Sparrow",
+        "Hummingbird",
+        "Ostrich",
+        "Penguin",
+        "Owl",
+        "Woodpecker"
+      ],
+      "silly_answers": [
+        "Nesting Newt",
+        "Home-building Hamster",
+        "Construction Crane"
+      ],
+      "explanation": "The largest bird nest was built by a pair of Bald Eagles, and was 20 feet deep, 9.5 feet wide, and weighed over two tons."
+    },
+    {
+      "question": "What is the world's smallest fish?",
+      "correct_answer": "Paedocypris",
+      "wrong_answers": [
+        "Goldfish",
+        "Guppy",
+        "Tetra",
+        "Siamese Fighting Fish",
+        "Clown Fish",
+        "Puffer Fish"
+      ],
+      "silly_answers": ["Microscopic Marlin", "Tiny Tuna", "Diminutive Dorado"],
+      "explanation": "The smallest fish in the world is the Paedocypris. Females measure just 7.9mm long, while males only grow to 10.3mm."
+    },
+    {
+      "question": "Which animal has the strongest bite in the animal kingdom?",
+      "correct_answer": "Saltwater Crocodile",
+      "wrong_answers": [
+        "Great White Shark",
+        "Lion",
+        "Hyena",
+        "Hippopotamus",
+        "Grizzly Bear",
+        "Gorilla"
+      ],
+      "silly_answers": [
+        "Nipping Newt",
+        "Biting Butterfly",
+        "Munching Meadowlark"
+      ],
+      "explanation": "The Saltwater Crocodile has the strongest bite force ever recorded for an animal. The largest recorded bite force is over 3,700 pounds per square inch."
+    },
+    {
+      "question": "What is the world's largest rodent?",
+      "correct_answer": "Capybara",
+      "wrong_answers": [
+        "Beaver",
+        "Rat",
+        "Squirrel",
+        "Porcupine",
+        "Guinea Pig",
+        "Hamster"
+      ],
+      "silly_answers": [
+        "Gigantic Gerbil",
+        "Monster Mouse",
+        "Colossal Chipmunk"
+      ],
+      "explanation": "The Capybara is the largest rodent in the world, they can weigh up to 145 pounds."
+    },
+    {
+      "question": "Which animal can sleep while flying?",
+      "correct_answer": "Frigatebird",
+      "wrong_answers": [
+        "Bat",
+        "Swallow",
+        "Eagle",
+        "Albatross",
+        "Pigeon",
+        "Owl"
+      ],
+      "silly_answers": ["Snoozing Sparrow", "Napping Newt", "Dozing Dragonfly"],
+      "explanation": "Frigatebirds can sleep while flying in 7-12 second bursts, a phenomenon known as 'microsleep'."
+    },
+    {
+      "question": "Which animal is the tallest in the world?",
+      "correct_answer": "Giraffe",
+      "wrong_answers": [
+        "Elephant",
+        "Ostrich",
+        "Kangaroo",
+        "Whale",
+        "Grizzly Bear",
+        "Horse"
+      ],
+      "silly_answers": [
+        "Lofty Lemur",
+        "High-rising Hamster",
+        "Towering Tarantula"
+      ],
+      "explanation": "Giraffes are the tallest animals in the world. Males can grow up to 18 feet tall and females can reach 14 feet tall."
+    },
+    {
+      "question": "What is the largest species of shark?",
+      "correct_answer": "Whale Shark",
+      "wrong_answers": [
+        "Great White Shark",
+        "Tiger Shark",
+        "Basking Shark",
+        "Hammerhead Shark",
+        "Bull Shark",
+        "Mako Shark"
+      ],
+      "silly_answers": ["Loan Shark", "Card Shark", "Street Shark"],
+      "explanation": "Whale Sharks are the largest species of shark, and the largest fish in the ocean. They can grow up to 40 feet long, but despite their size, they are gentle giants that feed mostly on plankton."
+    },
+    {
+      "question": "What is the fastest land animal?",
+      "correct_answer": "Cheetah",
+      "wrong_answers": [
+        "Lion",
+        "Horse",
+        "Ostrich",
+        "Greyhound",
+        "Antelope",
+        "Kangaroo"
+      ],
+      "silly_answers": [
+        "A snail riding a rocket",
+        "A squirrel on caffeine",
+        "Usain Bolt"
+      ],
+      "explanation": "Cheetahs are the fastest land animals, capable of reaching speeds up to 60-70 miles per hour. They can accelerate from 0 to 60 miles an hour in just a few seconds."
+    },
+    {
+      "question": "Which bird is known as the 'Bird of Paradise'?",
+      "correct_answer": "Raggiana Bird-of-paradise",
+      "wrong_answers": [
+        "Peacock",
+        "Quetzal",
+        "Phoenix",
+        "Toucan",
+        "Parrot",
+        "Hummingbird"
+      ],
+      "silly_answers": [
+        "A penguin with a party hat",
+        "An ostrich in a tuxedo",
+        "A chicken in a tutu"
+      ],
+      "explanation": "The Raggiana Bird-of-paradise is a bird in the Paradisaeidae family. Male Raggiana Birds-of-paradise are known for their extravagant courtship displays and brightly colored plumage."
+    },
+    {
+      "question": "What is the largest land animal?",
+      "correct_answer": "African Elephant",
+      "wrong_answers": [
+        "White Rhinoceros",
+        "Hippopotamus",
+        "Kodiak Bear",
+        "Giraffe",
+        "American Bison",
+        "Moose"
+      ],
+      "silly_answers": [
+        "A T-Rex with high heels",
+        "An oversized Chihuahua",
+        "A bulldozer"
+      ],
+      "explanation": "The African Elephant is the largest land animal. They can weigh up to 14,000 pounds and stand up to 13 feet tall at the shoulder."
+    },
+    {
+      "question": "Which animal is known for its unique black and white coat?",
+      "correct_answer": "Panda",
+      "wrong_answers": [
+        "Zebra",
+        "Dalmatian",
+        "Orcinus Orca",
+        "Pied Bushchat",
+        "Skunk",
+        "Holstein Friesian Cow"
+      ],
+      "silly_answers": [
+        "A newspaper-colored parrot",
+        "A mime artist",
+        "A dalmatian dipped in ink"
+      ],
+      "explanation": "Pandas are known for their black and white coats. Their distinctive coloration is thought to provide effective camouflage in their snowy and rocky habitat."
+    },
+    {
+      "question": "What is the tallest bird in the world?",
+      "correct_answer": "Ostrich",
+      "wrong_answers": [
+        "Emu",
+        "Cassowary",
+        "Secretary Bird",
+        "Greater Rhea",
+        "Sarus Crane",
+        "Northern Gannet"
+      ],
+      "silly_answers": [
+        "A chicken on stilts",
+        "Big Bird from Sesame Street",
+        "A peacock on a ladder"
+      ],
+      "explanation": "The Ostrich is the tallest bird in the world, with an average height of 6 to 9 feet. Despite its height, it is also the fastest bird on land."
+    },
+    {
+      "question": "What is the heaviest bird capable of flight?",
+      "correct_answer": "Kori Bustard",
+      "wrong_answers": [
+        "Andean Condor",
+        "Southern Cassowary",
+        "Mute Swan",
+        "American White Pelican",
+        "Marabou Stork",
+        "Emperor Penguin"
+      ],
+      "silly_answers": [
+        "A penguin with a jetpack",
+        "A turkey after Thanksgiving dinner",
+        "An overweight canary"
+      ],
+      "explanation": "The Kori Bustard is the heaviest bird that can fly. It can weigh up to 44 pounds. Despite its weight, it prefers to walk or run on the ground."
+    },
+    {
+      "question": "What is the largest reptile in the world?",
+      "correct_answer": "Saltwater Crocodile",
+      "wrong_answers": [
+        "Komodo Dragon",
+        "Leatherback Sea Turtle",
+        "Green Anaconda",
+        "Nile Crocodile",
+        "Galapagos Tortoise",
+        "Aldabra Giant Tortoise"
+      ],
+      "silly_answers": [
+        "A chameleon on steroids",
+        "A dinosaur, alive and well",
+        "Godzilla"
+      ],
+      "explanation": "The Saltwater Crocodile is the largest living reptile in the world, with males reaching lengths of up to 6 to 7 meters."
+    },
+    {
+      "question": "Which bird can recognize itself in a mirror?",
+      "correct_answer": "European Magpie",
+      "wrong_answers": [
+        "Pigeon",
+        "Raven",
+        "Parrot",
+        "Crow",
+        "Canary",
+        "Sparrow"
+      ],
+      "silly_answers": [
+        "A vain peacock",
+        "A narcissistic penguin",
+        "An overly confident duck"
+      ],
+      "explanation": "The European Magpie is one of the few non-mammal species able to recognize itself in a mirror test. This indicates a certain level of self-awareness."
+    },
+    {
+      "question": "What is the national bird of New Zealand?",
+      "correct_answer": "Kiwi",
+      "wrong_answers": [
+        "Kea",
+        "Kakapo",
+        "Tui",
+        "Morepork",
+        "Fantail",
+        "Pukeko"
+      ],
+      "silly_answers": ["Kiwifruit", "Flightless Moa", "Peter Jackson"],
+      "explanation": "The Kiwi is the national bird of New Zealand. It's a flightless bird, and is also the smallest Ratite."
+    },
+    {
+      "question": "What animal has the highest blood pressure?",
+      "correct_answer": "Giraffe",
+      "wrong_answers": [
+        "Elephant",
+        "Whale",
+        "Hippopotamus",
+        "Horse",
+        "Camel",
+        "Kangaroo"
+      ],
+      "silly_answers": [
+        "A cheetah running a marathon",
+        "A very stressed out rabbit",
+        "A bloodhound on high alert"
+      ],
+      "explanation": "A giraffe's blood pressure is the highest of any animal, needed to pump blood up to its long neck. It's twice as high as a human's."
+    },
+    {
+      "question": "What is the smallest breed of dog?",
+      "correct_answer": "Chihuahua",
+      "wrong_answers": [
+        "Pomeranian",
+        "Yorkshire Terrier",
+        "Dachshund",
+        "Shih Tzu",
+        "Papillon",
+        "Toy Poodle"
+      ],
+      "silly_answers": [
+        "A hot dog",
+        "A gigantic Great Dane",
+        "A dog that got shrunk in the wash"
+      ],
+      "explanation": "The Chihuahua is the smallest breed of dog. They weigh as little as 2 pounds and stand about 5 inches high."
+    },
+    {
+      "question": "What animal never sleeps?",
+      "correct_answer": "Bullfrogs",
+      "wrong_answers": [
+        "Owls",
+        "Elephants",
+        "Sharks",
+        "Horses",
+        "Giraffes",
+        "Cows"
+      ],
+      "silly_answers": [
+        "A caffeinated squirrel",
+        "A vampire bat",
+        "An insomniac tortoise"
+      ],
+      "explanation": "Bullfrogs do not sleep. While they do have rest periods where they remain absolutely still with their eyes closed, they do not enter a true sleep state."
+    },
+    {
+      "question": "What is the largest species of penguin?",
+      "correct_answer": "Emperor Penguin",
+      "wrong_answers": [
+        "King Penguin",
+        "Adélie Penguin",
+        "Chinstrap Penguin",
+        "Gentoo Penguin",
+        "Macaroni Penguin",
+        "Rockhopper Penguin"
+      ],
+      "silly_answers": [
+        "A king penguin with a superiority complex",
+        "A regular penguin in a tuxedo",
+        "Danny Devito"
+      ],
+      "explanation": "The Emperor Penguin is the tallest and heaviest of all living penguin species and is endemic to Antarctica."
+    },
+    {
+      "question": "What is the most poisonous fish in the world?",
+      "correct_answer": "Stonefish",
+      "wrong_answers": [
+        "Lionfish",
+        "Pufferfish",
+        "Box Jellyfish",
+        "Blue Ringed Octopus",
+        "Cone Snail",
+        "Stingray"
+      ],
+      "silly_answers": [
+        "A goldfish with a bad attitude",
+        "A bass with a bellyache",
+        "A trout with a vendetta"
+      ],
+      "explanation": "The Stonefish is the most venomous fish in the world. Its dorsal area is lined with 13 spines, each of which has two venom sacs."
+    },
+    {
+      "question": "Which bird has the largest brain relative to its size?",
+      "correct_answer": "Ravens",
+      "wrong_answers": [
+        "Parrots",
+        "Owls",
+        "Hawks",
+        "Pigeons",
+        "Swans",
+        "Peacocks"
+      ],
+      "silly_answers": [
+        "A really overthinking sparrow",
+        "An owl wearing a graduation cap",
+        "A genius chicken"
+      ],
+      "explanation": "Ravens are extremely intelligent and have one of the largest brains of any bird species. They are capable of complex problem-solving and can even mimic human speech."
+    },
+    {
+      "question": "What is the slowest fish in the world?",
+      "correct_answer": "Seahorse",
+      "wrong_answers": [
+        "Blobfish",
+        "Flounder",
+        "Jellyfish",
+        "Clownfish",
+        "Starfish",
+        "Turtle"
+      ],
+      "silly_answers": [
+        "A fish on a leisurely stroll",
+        "A fish with no sense of direction",
+        "A fish late for an appointment"
+      ],
+      "explanation": "The Seahorse is the slowest fish, swimming at about 0.01 mph."
+    },
+    {
+      "question": "Which animal has the most legs?",
+      "correct_answer": "Millipede",
+      "wrong_answers": [
+        "Centipede",
+        "Spider",
+        "Scorpion",
+        "Lobster",
+        "Crab",
+        "Octopus"
+      ],
+      "silly_answers": [
+        "A caterpillar with extra sneakers",
+        "A spider doing the can-can",
+        "An octopus with a leg extension"
+      ],
+      "explanation": "Millipedes hold the record for most legs among the animal kingdom. Some species can have up to 750 legs."
+    },
+    {
+      "question": "What is the only bird known to fly backwards?",
+      "correct_answer": "Hummingbird",
+      "wrong_answers": [
+        "Sparrow",
+        "Eagle",
+        "Hawk",
+        "Penguin",
+        "Ostrich",
+        "Parrot"
+      ],
+      "silly_answers": [
+        "A chicken in reverse",
+        "An eagle with a backwind",
+        "A dyslexic duck"
+      ],
+      "explanation": "Hummingbirds are the only birds that can fly backwards and even upside down, thanks to their unique wing structure."
+    },
+    {
+      "question": "What bird is known as a symbol of peace?",
+      "correct_answer": "Dove",
+      "wrong_answers": [
+        "Eagle",
+        "Swan",
+        "Sparrow",
+        "Pigeon",
+        "Peacock",
+        "Raven"
+      ],
+      "silly_answers": [
+        "A hawk with a olive branch",
+        "A parrot preaching peace",
+        "An ostrich with a white flag"
+      ],
+      "explanation": "The Dove, often in white, has been a symbol of peace and innocence for thousands of years across many different cultures."
+    },
+    {
+      "question": "Which animal is known to have 32 brains?",
+      "correct_answer": "Leech",
+      "wrong_answers": [
+        "Spider",
+        "Octopus",
+        "Elephant",
+        "Dolphin",
+        "Ant",
+        "Worm"
+      ],
+      "silly_answers": [
+        "A chameleon with an identity crisis",
+        "A goldfish with PhDs",
+        "A very confused cockroach"
+      ],
+      "explanation": "Each segment of a leech's body has its own brain, hence a leech technically has 32 brains."
+    },
+    {
+      "question": "Which insect is known for its light-producing organ?",
+      "correct_answer": "Firefly",
+      "wrong_answers": ["Bee", "Wasp", "Dragonfly", "Moth", "Ant", "Butterfly"],
+      "silly_answers": [
+        "A disco-loving beetle",
+        "A glow worm with a torch",
+        "A lightning bug with LED lights"
+      ],
+      "explanation": "Fireflies, or lightning bugs, produce light in their light organs located in their abdomen. This bioluminescence is used to attract mates or prey."
+    },
+    {
+      "question": "Which animal has the longest gestation period?",
+      "correct_answer": "Elephant",
+      "wrong_answers": [
+        "Whale",
+        "Giraffe",
+        "Rhinoceros",
+        "Hippopotamus",
+        "Camel",
+        "Horse"
+      ],
+      "silly_answers": [
+        "A very patient kangaroo",
+        "A snail that's very slow in everything",
+        "A procrastinating platypus"
+      ],
+      "explanation": "Elephants have the longest gestation period of all animals. They are pregnant for up to 22 months."
+    },
+    {
+      "question": "Which bird has the widest wingspan?",
+      "correct_answer": "Wandering Albatross",
+      "wrong_answers": [
+        "Eagle",
+        "Condor",
+        "Pelican",
+        "Swan",
+        "Vulture",
+        "Marabou Stork"
+      ],
+      "silly_answers": [
+        "A penguin with delusions of grandeur",
+        "A peacock on a hang glider",
+        "A sparrow with extendable wings"
+      ],
+      "explanation": "The Wandering Albatross holds the record for largest wingspan of any bird, it can reach up to 11 feet."
+    },
+    {
+      "question": "What animal is known for changing its color to blend with its surroundings?",
+      "correct_answer": "Chameleon",
+      "wrong_answers": [
+        "Leopard",
+        "Octopus",
+        "Arctic Fox",
+        "Flamingo",
+        "Cuttlefish",
+        "Puffer Fish"
+      ],
+      "silly_answers": [
+        "A flamingo in a paint shop",
+        "A giraffe in a striped pyjama",
+        "A zebra at a chessboard"
+      ],
+      "explanation": "Chameleons are known for their ability to change their skin color. This can happen in response to changes in light, temperature, and mood."
+    },
+    {
+      "question": "What is the largest land animal?",
+      "correct_answer": "African Elephant",
+      "wrong_answers": [
+        "Blue Whale",
+        "Hippopotamus",
+        "Giraffe",
+        "White Rhinoceros",
+        "Kodiak Bear",
+        "Walrus"
+      ],
+      "silly_answers": [
+        "A really overfed hamster",
+        "A kangaroo on stilts",
+        "A tortoise with a superiority complex"
+      ],
+      "explanation": "The African Elephant is the largest land animal. They can weigh up to 14,000 pounds."
+    },
+    {
+      "question": "What animal has the highest blood pressure?",
+      "correct_answer": "Giraffe",
+      "wrong_answers": [
+        "Elephant",
+        "Blue Whale",
+        "Anaconda",
+        "Hippopotamus",
+        "Horse",
+        "Camel"
+      ],
+      "silly_answers": [
+        "A highly stressed bunny",
+        "A squirrel with a coffee addiction",
+        "A snake afraid of heights"
+      ],
+      "explanation": "Giraffes have the highest blood pressure among animals due to the long distance between their heart and brain."
+    },
+    {
+      "question": "What is the smallest mammal in the world?",
+      "correct_answer": "Bumblebee Bat",
+      "wrong_answers": [
+        "Mouse",
+        "Shrew",
+        "Dormouse",
+        "Pygmy Marmoset",
+        "Etruscan Shrew",
+        "Jerboa"
+      ],
+      "silly_answers": [
+        "A mouse on a diet",
+        "A hamster with Napoleon complex",
+        "A really modest kangaroo"
+      ],
+      "explanation": "The smallest mammal in the world by length is the bumblebee bat, also known as Kitti's hog-nosed bat. It measures just 1.1-1.3 inches long."
+    },
+    {
+      "question": "What bird is known for its elaborate courtship dance?",
+      "correct_answer": "Peacock",
+      "wrong_answers": [
+        "Flamingo",
+        "Eagle",
+        "Parrot",
+        "Penguin",
+        "Dove",
+        "Swan"
+      ],
+      "silly_answers": [
+        "A flamingo in flamenco class",
+        "A disco-loving parrot",
+        "A seagull at a salsa party"
+      ],
+      "explanation": "Male peacocks perform an elaborate courtship dance where they fan out their large, colorful tail feathers and shake them."
+    },
+    {
+      "question": "What animal is the symbol of the World Wildlife Fund (WWF)?",
+      "correct_answer": "Panda",
+      "wrong_answers": [
+        "Lion",
+        "Elephant",
+        "Tiger",
+        "Kangaroo",
+        "Dolphin",
+        "Eagle"
+      ],
+      "silly_answers": [
+        "A very photogenic squirrel",
+        "A penguin with good PR",
+        "An armadillo wearing a world champion belt"
+      ],
+      "explanation": "The Giant Panda has been the symbol of the World Wildlife Fund since its inception in 1961."
+    },
+    {
+      "question": "What mammal is capable of true flight?",
+      "correct_answer": "Bat",
+      "wrong_answers": [
+        "Flying Squirrel",
+        "Sugar Glider",
+        "Flying Lemur",
+        "Bird",
+        "Insect",
+        "Pterosaur"
+      ],
+      "silly_answers": [
+        "A kangaroo with a jetpack",
+        "A levitating rabbit",
+        "A really ambitious hamster"
+      ],
+      "explanation": "Bats are the only mammals that are capable of sustained flight. Other mammals like the flying squirrel can only glide or parachute."
+    },
+    {
+      "question": "What bird is known for its laughing call?",
+      "correct_answer": "Kookaburra",
+      "wrong_answers": [
+        "Parrot",
+        "Crow",
+        "Owl",
+        "Sparrow",
+        "Canary",
+        "Peacock"
+      ],
+      "silly_answers": [
+        "A jester jay",
+        "A comedian canary",
+        "A stand-up seagull"
+      ],
+      "explanation": "The Kookaburra, native to Australia, is known for its distinctive 'laughing' call, which is often used in films to suggest a jungle environment."
+    },
+    {
+      "question": "Which animal is the smallest breed of dog?",
+      "correct_answer": "Chihuahua",
+      "wrong_answers": [
+        "Pomeranian",
+        "Shih Tzu",
+        "Yorkshire Terrier",
+        "Dachshund",
+        "French Bulldog",
+        "Pekingese"
+      ],
+      "silly_answers": [
+        "A Great Dane with low self-esteem",
+        "A Labrador in a funhouse mirror",
+        "A mastiff who identifies as tiny"
+      ],
+      "explanation": "The Chihuahua is the smallest breed of dog and is named after the Mexican state of Chihuahua."
+    },
+    {
+      "question": "What is the world's largest reptile?",
+      "correct_answer": "Saltwater Crocodile",
+      "wrong_answers": [
+        "Komodo Dragon",
+        "Leatherback Turtle",
+        "Anaconda",
+        "Nile Crocodile",
+        "Gharial",
+        "Green Anaconda"
+      ],
+      "silly_answers": [
+        "A chameleon with a growth spurt",
+        "A python after swallowing a beach ball",
+        "An iguana with a tall tale"
+      ],
+      "explanation": "The Saltwater Crocodile is the largest living reptile in the world, with males reaching lengths of up to 6-7 meters."
+    },
+    {
+      "question": "What animal has the largest eyes in the world?",
+      "correct_answer": "Giant Squid",
+      "wrong_answers": [
+        "Blue Whale",
+        "Ostrich",
+        "Camel",
+        "Horse",
+        "Cow",
+        "Elephant"
+      ],
+      "silly_answers": [
+        "A hawk with binoculars",
+        "A mole with glasses",
+        "An owl at an optometrist"
+      ],
+      "explanation": "The Giant Squid has the largest eyes in the animal kingdom. Each eye can be up to 10 inches in diameter."
+    },
+    {
+      "question": "What is the tallest breed of dog in the world?",
+      "correct_answer": "Great Dane",
+      "wrong_answers": [
+        "St. Bernard",
+        "Mastiff",
+        "Irish Wolfhound",
+        "Newfoundland",
+        "Leonberger",
+        "Bernese Mountain Dog"
+      ],
+      "silly_answers": [
+        "A Chihuahua on stilts",
+        "A Dachshund with delusions of grandeur",
+        "A Pomeranian in high heels"
+      ],
+      "explanation": "The Great Dane is known for its giant size. The record holder for tallest dog was a Great Dane named Zeus who stood at 44 inches tall."
+    },
+    {
+      "question": "What is the largest species of shark?",
+      "correct_answer": "Whale Shark",
+      "wrong_answers": [
+        "Great White Shark",
+        "Tiger Shark",
+        "Hammerhead Shark",
+        "Basking Shark",
+        "Mako Shark",
+        "Bull Shark"
+      ],
+      "silly_answers": [
+        "A goldfish with a superiority complex",
+        "A salmon on a mission",
+        "A piranha with an attitude"
+      ],
+      "explanation": "The Whale Shark is the largest species of shark and the largest fish alive today. They can grow up to 40 feet in length."
+    },
+    {
+      "question": "What animal has the longest tail?",
+      "correct_answer": "Giraffe",
+      "wrong_answers": [
+        "Peacock",
+        "Kangaroo",
+        "Tiger",
+        "Cheetah",
+        "Ostrich",
+        "Lion"
+      ],
+      "silly_answers": [
+        "A squirrel with a scarf",
+        "A rat with a long story",
+        "A fox with a feather duster"
+      ],
+      "explanation": "The Giraffe has the longest tail of any land mammal. Their tail can be up to 8 feet long, including the tuft at the end."
+    },
+    {
+      "question": "What is the world's heaviest flying bird?",
+      "correct_answer": "Great Bustard",
+      "wrong_answers": [
+        "Swan",
+        "Albatross",
+        "Eagle",
+        "Pelican",
+        "Condor",
+        "Stork"
+      ],
+      "silly_answers": [
+        "A duck on a diet",
+        "A penguin with a jetpack",
+        "A flamingo filled with helium"
+      ],
+      "explanation": "The Great Bustard, found in Europe and Asia, is the heaviest living bird capable of flight. Males can weigh between 10-16 kg (22-40 lbs)."
+    }
+  ]
+}

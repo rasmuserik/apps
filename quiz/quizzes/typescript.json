@@ -1,0 +1,712 @@
+{
+  "title": "TypeScript-quiz",
+  "questions": [
+    {
+      "question": "What does TypeScript primarily aim to provide?",
+      "correct_answer": "Static typing for JavaScript",
+      "wrong_answers": [
+        "Memory management",
+        "An alternative to JavaScript",
+        "A front-end framework",
+        "Performance optimization",
+        "Code compression",
+        "A new programming paradigm"
+      ],
+      "silly_answers": [
+        "Anti-Gravity feature",
+        "Coffee making instructions",
+        "Mood swing predictions"
+      ],
+      "explanation": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It aims to provide static typing, which helps with early error detection, better autocompletion, and increased readability among other benefits."
+    },
+    {
+      "question": "How can you define a custom type in TypeScript?",
+      "correct_answer": "Using the 'type' keyword",
+      "wrong_answers": [
+        "Using the 'define' keyword",
+        "By calling a 'customType()' function",
+        "With the 'class' keyword",
+        "By declaring a new constant",
+        "In the TypeScript config file",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "Shouting at the computer",
+        "Writing on a piece of paper and giving it to the PC",
+        "Using the 'yoga' keyword"
+      ],
+      "explanation": "TypeScript allows you to define custom types using the 'type' keyword. These can be primitive types, union types, intersection types, etc."
+    },
+    {
+      "question": "What is a 'tuple' in TypeScript?",
+      "correct_answer": "An array with a fixed number of elements of specified types",
+      "wrong_answers": [
+        "A 3D vector",
+        "A complex number",
+        "A pair of keys and values",
+        "A JavaScript function",
+        "A TypeScript class",
+        "A built-in TypeScript method"
+      ],
+      "silly_answers": [
+        "A couple of programmers working on Typescript",
+        "An exotic fruit",
+        "TypeScript's secret dance move"
+      ],
+      "explanation": "In TypeScript, a tuple is a type that allows you to express an array with a fixed number of elements whose types are known, but need not be the same."
+    },
+    {
+      "question": "How do you declare a variable with a union type in TypeScript?",
+      "correct_answer": "let var: (type1 | type2);",
+      "wrong_answers": [
+        "let var: (type1 & type2);",
+        "let var: type1, type2;",
+        "let var = type1 || type2;",
+        "let var = type1 | type2;",
+        "var = (type1 | type2);",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "let var = type1 || dancingBanana;",
+        "let var = type1 | ghostTyping;",
+        "let var = type1 & karatePanda;"
+      ],
+      "explanation": "Union types in TypeScript allow you to handle different types of values. For example, 'let var: (type1 | type2);' means that the variable 'var' can either hold a value of 'type1' or 'type2'."
+    },
+    {
+      "question": "How do you declare a readonly property in TypeScript?",
+      "correct_answer": "readonly propertyName: type;",
+      "wrong_answers": [
+        "const propertyName: type;",
+        "final propertyName: type;",
+        "immutable propertyName: type;",
+        "PropertyName: type, readonly;",
+        "unmodifiable propertyName: type;",
+        "PropertyName: type, const;"
+      ],
+      "silly_answers": [
+        "unwriteableBecauseISaidSo propertyName: type;",
+        "thisShallNotChange propertyName: type;",
+        "propertyName: type, guardedByDragons;"
+      ],
+      "explanation": "In TypeScript, 'readonly' is a keyword used before property declarations to make them unmodifiable after they're initially set. 'readonly' is different from 'const' because 'const' is for variables/properties that cannot be reassigned, while 'readonly' properties can be set during declaration or inside the constructor."
+    },
+    {
+      "question": "What is the purpose of the 'never' type in TypeScript?",
+      "correct_answer": "To represent types of values that never occur",
+      "wrong_answers": [
+        "To prevent a function from running",
+        "To stop a while loop",
+        "To define infinite data types",
+        "To stop TypeScript compilation",
+        "As an alias for 'void'",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "To never say never",
+        "To cancel holidays",
+        "To make coffee taste terrible"
+      ],
+      "explanation": "The 'never' type in TypeScript is used for values that never occur. For example, a function that always throws an exception and never returns a value, has the return type 'never'."
+    },
+    {
+      "question": "What does the keyword 'extends' denote in TypeScript interfaces?",
+      "correct_answer": "Inheritance",
+      "wrong_answers": [
+        "Scope extension",
+        "Array extension",
+        "Extension methods",
+        "Extended properties",
+        "Interface overloading",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "A stretching routine for the code",
+        "A longer weekend for programmers",
+        "Extension of vacation time"
+      ],
+      "explanation": "The 'extends' keyword is used in TypeScript to create a new interface that inherits properties from an old interface, similar to how classes work. This is a form of inheritance, where one interface can extend one or more other interfaces."
+    },
+    {
+      "question": "What is a type guard in TypeScript?",
+      "correct_answer": "A way to narrow down the type of an object within a certain scope",
+      "wrong_answers": [
+        "A security feature",
+        "A kind of error",
+        "A TypeScript optimization tool",
+        "A way to protect types from changes",
+        "A way to encrypt TypeScript code",
+        "A way to lock type definitions"
+      ],
+      "silly_answers": [
+        "A tiny shield for your code",
+        "A nocturnal creature lurking in codebases",
+        "A guard that keeps variables from partying all night"
+      ],
+      "explanation": "A type guard is a way to narrow down the type of an object within a certain scope. This is done by using some kind of type checking operation, such as 'typeof', 'instanceof', or custom type guards."
+    },
+    {
+      "question": "What does the 'unknown' type represent in TypeScript?",
+      "correct_answer": "A type-safe counterpart of the 'any' type",
+      "wrong_answers": [
+        "An undefined value",
+        "A not yet defined type",
+        "A missing type",
+        "An error in TypeScript",
+        "A future type",
+        "A deprecated type"
+      ],
+      "silly_answers": [
+        "A type that got lost in the woods",
+        "The type that shall not be named",
+        "A type in witness protection program"
+      ],
+      "explanation": "The 'unknown' type in TypeScript is the type-safe counterpart of 'any'. Anything is assignable to 'unknown', but 'unknown' isn’t assignable to anything but itself and 'any' without a type assertion or a control flow based narrowing."
+    },
+    {
+      "question": "What are decorators in TypeScript?",
+      "correct_answer": "Special kind of declarations that can be attached to classes, methods, properties, or parameters",
+      "wrong_answers": [
+        "Functions that return new types",
+        "A way to create custom annotations",
+        "Syntax sugar for loops",
+        "Error handling mechanisms",
+        "Visual indicators in TypeScript editor",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "Interior designers for TypeScript",
+        "Part of TypeScript's party planning committee",
+        "The fancy hat your code wears on special occasions"
+      ],
+      "explanation": "Decorators are a special kind of declaration in TypeScript. They can be attached to classes, methods, properties, or parameters. Decorators use the form '@expression', where 'expression' must evaluate to a function that will be called at runtime with information about the decorated declaration."
+    },
+    {
+      "question": "How do you specify that a function should return no value in TypeScript?",
+      "correct_answer": "By declaring the return type as 'void'",
+      "wrong_answers": [
+        "By declaring the return type as 'null'",
+        "By not returning anything in the function body",
+        "By declaring the return type as 'none'",
+        "By declaring the return type as 'empty'",
+        "By declaring the return type as 'undefined'",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "By declaring the return type as 'blackHole'",
+        "By declaring the return type as 'voidOfCourse'",
+        "By declaring the return type as 'nadaZilchNothing'"
+      ],
+      "explanation": "In TypeScript, 'void' is a subtype of 'undefined' that is used to represent the absence of a value, particularly in function return types. If a function is not supposed to return any value, we can specify the return type as 'void'."
+    },
+    {
+      "question": "What is the purpose of an index signature in a TypeScript interface?",
+      "correct_answer": "To describe types that allow arbitrary properties of a certain type",
+      "wrong_answers": [
+        "To create dynamic arrays",
+        "To access the first element of a data structure",
+        "To make a type iterable",
+        "To allow type inheritance",
+        "To specify a default type",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "To make the code look more like math homework",
+        "To create a roadmap for lost variables",
+        "To give each element a unique autograph"
+      ],
+      "explanation": "An index signature in a TypeScript interface is used to describe types of objects that allow arbitrary properties, providing they are of a certain type. For example, in 'interface MyObj { [key: string]: number }', MyObj can have any number of properties, as long as their keys are strings and values are numbers."
+    },
+    {
+      "question": "What does 'Partial<T>' represent in TypeScript?",
+      "correct_answer": "A type representing a set of properties of 'T' where all properties are optional",
+      "wrong_answers": [
+        "A subset of type 'T'",
+        "A partially defined type 'T'",
+        "An incomplete type 'T'",
+        "A type 'T' with partial values",
+        "A type 'T' with some properties removed",
+        "A type derived from 'T'"
+      ],
+      "silly_answers": [
+        "A type that's still getting ready",
+        "Type 'T' on a diet",
+        "A type that only shows up to work part-time"
+      ],
+      "explanation": "'Partial<T>' is a utility type provided by TypeScript. It takes a type 'T' and makes each of its properties optional, creating a new type. This is useful when you want to have a type that represents a subset of the properties of another type."
+    },
+    {
+      "question": "How do you create a private property in a TypeScript class?",
+      "correct_answer": "By using the 'private' keyword before the property declaration",
+      "wrong_answers": [
+        "By using the 'protected' keyword",
+        "By using the '_' prefix",
+        "By using the 'private' keyword after the property declaration",
+        "By using the 'priv' keyword",
+        "By using the 'hidden' keyword",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "By whispering to the property to keep things on the down low",
+        "By using the 'topSecret' keyword",
+        "By using the 'thisIsBetweenYouAndMe' keyword"
+      ],
+      "explanation": "In TypeScript, the 'private' keyword before a property declaration ensures that the property is only visible within the class where it's defined. It cannot be accessed from outside the class or from subclasses."
+    },
+    {
+      "question": "What is the purpose of the 'Pick' utility type in TypeScript?",
+      "correct_answer": "To create a new type by picking specific properties from an existing type",
+      "wrong_answers": [
+        "To choose a random type",
+        "To get the first property of a type",
+        "To remove specific properties from a type",
+        "To clone a type",
+        "To rename properties of a type",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "To play a game of 'Pick and Mix' with types",
+        "To go fruit picking in a type orchard",
+        "To practice lock-picking skills on types"
+      ],
+      "explanation": "In TypeScript, 'Pick<T, K extends keyof T>' is a utility type that constructs a type by picking the set of properties 'K' from 'T'. This allows you to create a new type with a subset of the properties of an existing type."
+    },
+    {
+      "question": "In TypeScript, what is the difference between the '==' and '===' operators?",
+      "correct_answer": "'==' compares values after type coercion and '===' compares values without type coercion",
+      "wrong_answers": [
+        "There's no difference",
+        "'==' is a syntax error",
+        "'===' compares string length",
+        "'==' checks for deep equality",
+        "'===' is used only for numeric comparison",
+        "'==' is used only for string comparison"
+      ],
+      "silly_answers": [
+        "'==' is '===' but less enthusiastic",
+        "'===' is a '==' that went to college",
+        "'==' and '===' are actually long-lost twins"
+      ],
+      "explanation": "In TypeScript (and JavaScript), '==' checks for equality with type coercion, meaning it converts the operands to the same type before making the comparison. On the other hand, '===' checks for equality without type coercion, so it will not convert the operands to the same type before the comparison."
+    },
+    {
+      "question": "What is the output of 'console.log(typeof null)' in TypeScript?",
+      "correct_answer": "'object'",
+      "wrong_answers": [
+        "'null'",
+        "'undefined'",
+        "'void'",
+        "'any'",
+        "'unknown'",
+        "An error is thrown"
+      ],
+      "silly_answers": ["'nonexistent'", "'nada'", "'voidOfTheVoid'"],
+      "explanation": "The 'typeof' operator in TypeScript (and JavaScript) returns a string indicating the type of the unevaluated operand. However, 'typeof null' returns 'object', which is a bug that has been kept in the language for backward compatibility reasons."
+    },
+    {
+      "question": "How would you declare a variable of type number or string in TypeScript?",
+      "correct_answer": "let variable: number | string;",
+      "wrong_answers": [
+        "let variable = number | string;",
+        "let variable: number & string;",
+        "let variable: number || string;",
+        "let variable: number, string;",
+        "let variable: number; or string;",
+        "let variable: number; string;"
+      ],
+      "silly_answers": [
+        "let variable: number || recipeForPancakes;",
+        "let variable: dinosaur | string;",
+        "let variable: number | lasagnaRecipe;"
+      ],
+      "explanation": "In TypeScript, you can define a variable that can be of multiple types using the '|' operator. This operator is used to combine multiple types into one, allowing a variable to have one of those types."
+    },
+    {
+      "question": "What will the following TypeScript code output? `console.log(+'3');`",
+      "correct_answer": "3",
+      "wrong_answers": ["'3'", "Error", "NaN", "undefined", "'+'", "null"],
+      "silly_answers": [
+        "A photo of a cat",
+        "The meaning of life",
+        "Instructions to build a spaceship"
+      ],
+      "explanation": "The unary '+' operator in TypeScript (and JavaScript) attempts to convert a string to a number. If the string represents a numerical value, it will be converted to that number. Thus, '+\"3\"' becomes '3'."
+    },
+    {
+      "question": "What is the purpose of TypeScript compilation?",
+      "correct_answer": "To convert TypeScript code into JavaScript code",
+      "wrong_answers": [
+        "To optimize TypeScript code",
+        "To check for syntax errors",
+        "To bundle TypeScript code",
+        "To execute TypeScript code",
+        "To minify TypeScript code",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "To train the code for the Olympics",
+        "To make the code more fashionable",
+        "To prepare the code for space travel"
+      ],
+      "explanation": "The TypeScript compiler (tsc) is used to convert TypeScript code, which is not natively supported in browsers, into JavaScript code that can be executed in any JavaScript environment."
+    },
+    {
+      "question": "What will the following TypeScript code output? `console.log(!+'3');`",
+      "correct_answer": "false",
+      "wrong_answers": ["true", "Error", "NaN", "undefined", "null", "'3'"],
+      "silly_answers": [
+        "An encrypted message",
+        "An invisible ink note",
+        "A password to the secret base"
+      ],
+      "explanation": "In TypeScript (and JavaScript), the unary '+' operator converts the string '3' to a number. Then the '!' operator returns the opposite boolean value of that number. Since all non-zero numbers are truthy, '!3' returns 'false'."
+    },
+    {
+      "question": "Which feature allows TypeScript to infer the type of a value?",
+      "correct_answer": "Type Inference",
+      "wrong_answers": [
+        "Type Assertion",
+        "Type Guard",
+        "Type Hint",
+        "Type Interpretation",
+        "Type Deduction",
+        "Type Induction"
+      ],
+      "silly_answers": [
+        "Type Intuition",
+        "Type Telepathy",
+        "Type Clairvoyance"
+      ],
+      "explanation": "TypeScript uses type inference to automatically assign types when types are not explicitly provided. This usually happens when variables are declared and initialized simultaneously, when default parameter values are set, or when function return types are determined based on their return statements."
+    },
+    {
+      "question": "Which feature of TypeScript allows you to conditionally check the type of a value at runtime?",
+      "correct_answer": "Type Guard",
+      "wrong_answers": [
+        "Type Check",
+        "Type Assertion",
+        "Type Hint",
+        "Type Inference",
+        "Type Deduction",
+        "Type Coercion"
+      ],
+      "silly_answers": ["Type Spy", "Type Sherlock", "Type Detective"],
+      "explanation": "TypeScript uses Type Guards to check the type of a variable at runtime. This allows TypeScript to narrow down the type of a variable within a conditional block. The 'typeof', 'instanceof', and user-defined type guard functions are common ways to perform type guarding."
+    },
+    {
+      "question": "What TypeScript concept allows you to define a constraint on a type parameter in a generic function or class?",
+      "correct_answer": "Type Constraint",
+      "wrong_answers": [
+        "Type Inference",
+        "Type Guard",
+        "Type Assertion",
+        "Type Alias",
+        "Type Intersection",
+        "Type Union"
+      ],
+      "silly_answers": ["Type Straitjacket", "Type Leash", "Type Handcuffs"],
+      "explanation": "Type constraints in TypeScript allow you to specify that a type parameter in a generic function or class must have a certain shape. For example, with 'function logLength<T extends { length: number }>(arg: T): T', the type parameter 'T' is constrained to types that have a 'length' property of type 'number'."
+    },
+    {
+      "question": "How do you define a mapped type in TypeScript that makes all properties of a type optional?",
+      "correct_answer": "type Optional<T> = { [P in keyof T]?: T[P] };",
+      "wrong_answers": [
+        "type Optional<T> = { [P in T]?: P };",
+        "type Optional<T> = { [T in keyof P]?: P };",
+        "type Optional<T> = { [T in P]?: keyof P };",
+        "type Optional<T> = { [P in keyof T]?: keyof T };",
+        "type Optional<T> = { [P in T]?: keyof T };",
+        "type Optional<T> = { [P in keyof T]?: P };"
+      ],
+      "silly_answers": [
+        "type Optional<T> = { [P in keyof T]?: T['Potato'] };",
+        "type Optional<T> = { [P in keyof T]?: T['Unicorn'] };",
+        "type Optional<T> = { [P in keyof T]?: T['Rainbow'] };"
+      ],
+      "explanation": "Mapped types in TypeScript allow you to create new types based on existing ones by transforming properties. The 'Optional<T>' mapped type uses the '?' operator to make all properties of 'T' optional."
+    },
+    {
+      "question": "How would you define a function in TypeScript that accepts a parameter of any type and returns an array of that type?",
+      "correct_answer": "function toArray<T>(arg: T): T[] { return [arg]; }",
+      "wrong_answers": [
+        "function toArray(arg: any): any[] { return [arg]; }",
+        "function toArray<T>(arg: any): T[] { return [arg]; }",
+        "function toArray(arg: T): T[] { return [arg]; }",
+        "function toArray<T>(arg: T[]): T[] { return arg; }",
+        "function toArray(arg: T): any[] { return [arg]; }",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "function toZoo<T>(arg: T): T[] { return ['elephant', 'lion', 'giraffe']; }",
+        "function toPlanet<T>(arg: T): T[] { return ['Mars', 'Venus', 'Jupiter']; }",
+        "function toFruitBasket<T>(arg: T): T[] { return ['apple', 'banana', 'cherry']; }"
+      ],
+      "explanation": "This is an example of a generic function in TypeScript. 'T' is a type variable that stands for any type. This function will take one argument of any type and return it inside an array of that same type."
+    },
+    {
+      "question": "What is the correct syntax for defining a tuple type in TypeScript?",
+      "correct_answer": "type MyTuple = [number, string, boolean];",
+      "wrong_answers": [
+        "type MyTuple = number, string, boolean;",
+        "type MyTuple = (number, string, boolean);",
+        "type MyTuple = number | string | boolean;",
+        "type MyTuple = (number | string | boolean);",
+        "type MyTuple = {0: number, 1: string, 2: boolean};",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "type MyTuple = [unicorn, rainbow, potOfGold];",
+        "type MyTuple = [pasta, tomatoSauce, cheese];",
+        "type MyTuple = [spaceship, alien, blackHole];"
+      ],
+      "explanation": "In TypeScript, tuples are a way of declaring an array with fixed types for a known number of elements. Tuples are declared with square brackets."
+    },
+    {
+      "question": "How would you define an intersection type in TypeScript?",
+      "correct_answer": "type CombinedType = TypeA & TypeB;",
+      "wrong_answers": [
+        "type CombinedType = TypeA | TypeB;",
+        "type CombinedType = TypeA + TypeB;",
+        "type CombinedType = TypeA, TypeB;",
+        "type CombinedType = TypeA; TypeB;",
+        "type CombinedType = [TypeA, TypeB];",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "type CombinedType = TypeA & PeanutButter;",
+        "type CombinedType = TypeA & Unicorn;",
+        "type CombinedType = TypeA & Spaghetti;"
+      ],
+      "explanation": "Intersection types are a way of combining existing types into a new one. In TypeScript, you use the '&' operator to create an intersection type."
+    },
+    {
+      "question": "How would you declare a function in TypeScript that has a rest parameter?",
+      "correct_answer": "function foo(...args: number[]) {}",
+      "wrong_answers": [
+        "function foo(args...: number[]) {}",
+        "function foo(args: ...number[]) {}",
+        "function foo(...args: number) {}",
+        "function foo(args: number...) {}",
+        "function foo(args... number[]) {}",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "function foo(...args: pancake[]) {}",
+        "function foo(...args: rainbow[]) {}",
+        "function foo(...args: dinosaur[]) {}"
+      ],
+      "explanation": "In TypeScript, rest parameters are used to indicate that any number of arguments can be passed into a function. The syntax for a rest parameter is three dots ('...') followed by the array parameter name."
+    },
+    {
+      "question": "What is the correct syntax for defining an optional property in a TypeScript interface?",
+      "correct_answer": "interface MyInterface { optionalProp?: number; }",
+      "wrong_answers": [
+        "interface MyInterface { optionalProp: number?; }",
+        "interface MyInterface { optionalProp: number || undefined; }",
+        "interface MyInterface { optionalProp: optional number; }",
+        "interface MyInterface { optionalProp = number; }",
+        "interface MyInterface { optionalProp: number = undefined; }",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "interface MyInterface { optionalProp?: spaghetti; }",
+        "interface MyInterface { optionalProp?: unicorn; }",
+        "interface MyInterface { optionalProp?: rainbow; }"
+      ],
+      "explanation": "In TypeScript, optional properties in interfaces are declared by appending a question mark ('?') to the property name. This signals that the property is not required and can either have a value of its declared type or 'undefined'."
+    },
+    {
+      "question": "How do you specify that a function in TypeScript never returns a value?",
+      "correct_answer": "function throwError(errorMsg: string): never { throw new Error(errorMsg); }",
+      "wrong_answers": [
+        "function throwError(errorMsg: string): void { throw new Error(errorMsg); }",
+        "function throwError(errorMsg: string): null { throw new Error(errorMsg); }",
+        "function throwError(errorMsg: string): {} { throw new Error(errorMsg); }",
+        "function throwError(errorMsg: string): undefined { throw new Error(errorMsg); }",
+        "function throwError(errorMsg: string) { throw new Error(errorMsg); }",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "function throwError(errorMsg: string): spaghetti { throw new Error(errorMsg); }",
+        "function throwError(errorMsg: string): unicorn { throw new Error(errorMsg); }",
+        "function throwError(errorMsg: string): rainbow { throw new Error(errorMsg); }"
+      ],
+      "explanation": "The 'never' type in TypeScript represents a type of value that never occurs. It's used for functions that always throw an error and do not return a value."
+    },
+    {
+      "question": "What is the correct syntax for defining a read-only property in a TypeScript class?",
+      "correct_answer": "class MyClass { readonly myProp: number; }",
+      "wrong_answers": [
+        "class MyClass { const myProp: number; }",
+        "class MyClass { myProp: number; readonly; }",
+        "class MyClass { final myProp: number; }",
+        "class MyClass { immutable myProp: number; }",
+        "class MyClass { myProp: readonly number; }",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "class MyClass { readonly myProp: spaghetti; }",
+        "class MyClass { readonly myProp: unicorn; }",
+        "class MyClass { readonly myProp: rainbow; }"
+      ],
+      "explanation": "In TypeScript, the 'readonly' keyword is used to make properties read-only. Read-only properties must be initialized at their declaration or in the constructor."
+    },
+    {
+      "question": "What is the correct syntax for defining a function type that takes a number and returns a string in TypeScript?",
+      "correct_answer": "type MyFunc = (arg: number) => string;",
+      "wrong_answers": [
+        "type MyFunc = function(arg: number): string;",
+        "type MyFunc = (arg: number) -> string;",
+        "type MyFunc = (arg: number) { return: string; };",
+        "type MyFunc = number => string;",
+        "type MyFunc = (number) => string;",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "type MyFunc = (arg: spaghetti) => unicorn;",
+        "type MyFunc = (arg: rainbow) => potOfGold;",
+        "type MyFunc = (arg: batman) => robin;"
+      ],
+      "explanation": "In TypeScript, you can define a function type using the arrow function syntax. This type annotation indicates that the function takes one argument of type 'number' and returns a value of type 'string'."
+    },
+    {
+      "question": "How would you define a variable in TypeScript that can be either a string or null?",
+      "correct_answer": "let myVar: string | null;",
+      "wrong_answers": [
+        "let myVar: string || null;",
+        "let myVar: string & null;",
+        "let myVar: string ?? null;",
+        "let myVar: string and null;",
+        "let myVar: string or null;",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "let myVar: string | spaghetti;",
+        "let myVar: string | unicorn;",
+        "let myVar: string | rainbow;"
+      ],
+      "explanation": "The '|' operator is used to define a union type in TypeScript. 'let myVar: string | null;' means that 'myVar' can be either a string or null."
+    },
+    {
+      "question": "How would you define a mapped type in TypeScript that transforms all properties of a type to be readonly?",
+      "correct_answer": "type Readonly<T> = { readonly [P in keyof T]: T[P] };",
+      "wrong_answers": [
+        "type Readonly<T> = { [P in keyof T]: readonly T[P] };",
+        "type Readonly<T> = { readonly [P in T]: T[P] };",
+        "type Readonly<T> = { readonly [P in keyof T]: T; };",
+        "type Readonly<T> = { [P in keyof T]: T[P]; readonly; };",
+        "type Readonly<T> = { [P in keyof T]: T[P]; readonly: true; };",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "type Readonly<T> = { readonly [P in keyof T]: spaghetti; };",
+        "type Readonly<T> = { readonly [P in keyof T]: unicorn; };",
+        "type Readonly<T> = { readonly [P in keyof T]: rainbow; };"
+      ],
+      "explanation": "Mapped types in TypeScript allow you to create new types based on old ones by transforming properties. This 'Readonly<T>' mapped type uses the 'readonly' modifier to make all properties of 'T' read-only."
+    },
+    {
+      "question": "How do you implement an interface in a class in TypeScript?",
+      "correct_answer": "class MyClass implements MyInterface { }",
+      "wrong_answers": [
+        "class MyClass extends MyInterface { }",
+        "class MyClass: MyInterface { }",
+        "class MyClass uses MyInterface { }",
+        "class MyClass with MyInterface { }",
+        "class MyClass follows MyInterface { }",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "class MyClass implements MySandwich { }",
+        "class MyClass implements MyUnicorn { }",
+        "class MyClass implements MyPasta { }"
+      ],
+      "explanation": "In TypeScript, the 'implements' keyword is used to implement an interface in a class. The class must then adhere to the structure provided by the interface."
+    },
+    {
+      "question": "How would you create a namespace in TypeScript?",
+      "correct_answer": "namespace MyNamespace { }",
+      "wrong_answers": [
+        "module MyNamespace { }",
+        "scope MyNamespace { }",
+        "enclosure MyNamespace { }",
+        "area MyNamespace { }",
+        "block MyNamespace { }",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "namespace MyCupcake { }",
+        "namespace MySpaceship { }",
+        "namespace MyFairy { }"
+      ],
+      "explanation": "Namespaces in TypeScript are used to group related code. This is a way to encapsulate code and features, and prevent naming collisions."
+    },
+    {
+      "question": "How would you assign a default value to a function parameter in TypeScript?",
+      "correct_answer": "function greet(name = 'World') { return `Hello, ${name}!`; }",
+      "wrong_answers": [
+        "function greet(name ?: 'World') { return `Hello, ${name}!`; }",
+        "function greet(name || 'World') { return `Hello, ${name}!`; }",
+        "function greet(name ?= 'World') { return `Hello, ${name}!`; }",
+        "function greet(name := 'World') { return `Hello, ${name}!`; }",
+        "function greet(name ||= 'World') { return `Hello, ${name}!`; }",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "function greet(name = 'Pasta') { return `Hello, ${name}!`; }",
+        "function greet(name = 'Unicorn') { return `Hello, ${name}!`; }",
+        "function greet(name = 'Rainbow') { return `Hello, ${name}!`; }"
+      ],
+      "explanation": "Default function parameters in TypeScript allow you to set default values for parameters that are undefined. In this case, if no value for 'name' is passed into the function, 'World' will be used."
+    },
+    {
+      "question": "How would you use the keyof operator in TypeScript?",
+      "correct_answer": "type Key = keyof MyType;",
+      "wrong_answers": [
+        "type Key = MyType.keyof;",
+        "type Key = keyof(MyType);",
+        "type Key = MyType[keyof];",
+        "type Key = keyof typeof MyType;",
+        "type Key = MyType -> keyof;",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "type Key = keyof MyPasta;",
+        "type Key = keyof MyUnicorn;",
+        "type Key = keyof MyRainbow;"
+      ],
+      "explanation": "The 'keyof' type operator in TypeScript produces a string or numeric literal union of the keys of an object type. 'type Key = keyof MyType;' will create a type that represents all possible keys of 'MyType'."
+    },
+    {
+      "question": "How would you define a method in a TypeScript class?",
+      "correct_answer": "class MyClass { myMethod() { } }",
+      "wrong_answers": [
+        "class MyClass { function myMethod() { } }",
+        "class MyClass { method myMethod() { } }",
+        "class MyClass { let myMethod = function() { } }",
+        "class MyClass { const myMethod = function() { } }",
+        "class MyClass { var myMethod = function() { } }",
+        "None of the above"
+      ],
+      "silly_answers": [
+        "class MyClass { mySandwich() { } }",
+        "class MyClass { mySpaceship() { } }",
+        "class MyClass { myFairy() { } }"
+      ],
+      "explanation": "In TypeScript, methods are defined in the same way as they are in JavaScript. The method is defined directly inside the class body, without using the 'function' keyword."
+    }
+  ],
+  "feedback": {
+    "everything_correct": "Wow, you got every single question right! You are the TypeScript Titan! You've probably been coding in TypeScript since you were a fetus, typing away on a tiny laptop in your mother's womb. I bet you have a pet duck named 'DuckyType' and your breakfast consists of `null` and `undefined` sprinkled on your cereal.",
+
+    "very_good": "Impressive work! You've got most of the answers correct. You are the TypeScript Connoisseur! It's clear that TypeScript flows through your veins. You probably see the world in interfaces and types. I bet you dream in lines of TypeScript code and use decorators to spice up your life. Don't forget to come out of your type-safe shell occasionally!",
+
+    "good": "Good job, you did quite well! You are the TypeScript Hobbyist! It's evident that you've dabbled in TypeScript, but you might have missed a few nuances. Maybe you prefer to pet your cat named 'Any' rather than defining strict types. Remember, TypeScript won't bite, it's here to help you avoid runtime bugs!",
+
+    "bad": "Oof! You had a tough time with this one. You are the TypeScript Novice! I bet you think that 'Union Type' is a type of woodwork joint and 'Tuple' is a type of exotic fruit. That's okay, every coding journey starts somewhere. Keep practicing, and soon enough, you'll be defining types with the best of them!",
+
+    "very_bad": "Yikes! Not a lot of correct answers there. You are the TypeScript Tourist! You're probably still wondering if TypeScript is a brand of typewriter or a screenplay-writing course. Don't worry, coding is like cooking, sometimes you just need a better recipe. Remember, every 'undefined' is an opportunity for improvement!",
+
+    "everything_wrong": "Oh dear, no correct answers at all! You are the TypeScript Alien! You're probably looking at this screen thinking we're communicating in an ancient hieroglyphic language. You might think 'Null' is a fancy French dessert and 'Void' is a recent Hollywood movie. But fear not, even the greatest coders had to start somewhere. Time to fire up that spaceship and start your TypeScript journey!"
+  }
+}

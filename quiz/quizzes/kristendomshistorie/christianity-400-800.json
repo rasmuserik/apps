@@ -1,0 +1,219 @@
+{
+  "title": "Kristendomshistorie år 400-800",
+  "questions": [
+    {
+      "question": "Hvem er kendt for at have oversat Bibelen til latin?",
+      "correct_answer": "Hieronymus",
+      "wrong_answers": [
+        "Ambrosius",
+        "Augustinus",
+        "Gregor den Store",
+        "Johannes Chrysostomos",
+        "Benedict af Nursia",
+        "Pave Leo I"
+      ],
+      "silly_answers": ["J.K. Rowling", "Albert Einstein", "Leonardo Da Vinci"],
+      "explanation": "Hieronymus, også kendt som Sankt Hieronymus, er berømt for at have oversat Bibelen til latin. Denne oversættelse er kendt som Vulgata, og blev den autoritative tekst for den romersk-katolske kirke."
+    },
+    {
+      "question": "Hvilken begivenhed i 410 e.Kr. rystede den romerske verden?",
+      "correct_answer": "Saksernes plyndring af Rom",
+      "wrong_answers": [
+        "Romerrigets fald",
+        "Muhammeds fødsel",
+        "Romerigets deling",
+        "Konstantin den Stores død",
+        "Nicaea-rådets afslutning",
+        "Kristendommens legalisering"
+      ],
+      "silly_answers": [
+        "Romerske gladiatorspil blev erstattet af skak",
+        "Rom blev angrebet af rumvæsener",
+        "Colosseum blev ombygget til et stort svømmebassin"
+      ],
+      "explanation": "Saksernes plyndring af Rom i 410 e.Kr. var en katastrofal begivenhed, der rystede det romerske imperium. Det markerede begyndelsen på Romerrigets endelige nedgang."
+    },
+    {
+      "question": "Hvilken by blev det nye centrum for Romerriget efter Rom?",
+      "correct_answer": "Konstantinopel",
+      "wrong_answers": [
+        "Milano",
+        "Ravenna",
+        "Alexandria",
+        "Antiochia",
+        "Jerusalem",
+        "Damaskus"
+      ],
+      "silly_answers": [
+        "Atlantis",
+        "El Dorado",
+        "Springfield fra 'The Simpsons'"
+      ],
+      "explanation": "Efter Rom blev Konstantinopel det nye centrum for Romerriget. Byen blev et vigtigt kulturelt, økonomisk og politisk centrum, og en bastion for kristendommen."
+    },
+    {
+      "question": "Hvilken religiøs praksis blev formaliseret af Benedict af Nursia i det 6. århundrede?",
+      "correct_answer": "Klosterlivet",
+      "wrong_answers": [
+        "Præstecølibatet",
+        "Konfirmationen",
+        "Eukaristien",
+        "Bønneretningen mod Mekka",
+        "Brugen af ikoner",
+        "Treenigheden"
+      ],
+      "silly_answers": [
+        "Brugen af tryllestave",
+        "Afholdelse af årlige Quidditch-turneringer",
+        "Indtagelse af troldmandshat og tryllestav i kirken"
+      ],
+      "explanation": "Benedict af Nursia formaliserede klosterlivet gennem hans 'Regel for Sankt Benedict'. Denne regel skitserer principperne for monastisk disciplin og fællesskab."
+    },
+    {
+      "question": "Hvem er kendt som 'apostlen til germanerne'?",
+      "correct_answer": "Bonifatius",
+      "wrong_answers": [
+        "Martin af Tours",
+        "Patrick af Irland",
+        "Columbanus",
+        "Willibrord",
+        "Gregor af Tours",
+        "Benedict af Aniane"
+      ],
+      "silly_answers": ["Hulk", "Luke Skywalker", "Thor fra Avengers"],
+      "explanation": "Bonifatius, også kendt som 'apostlen til germanerne', spillede en central rolle i at konvertere germanske stammer til kristendommen i det 8. århundrede."
+    },
+    {
+      "question": "Hvem var den første frankiske konge, der blev katolsk?",
+      "correct_answer": "Clovis I",
+      "wrong_answers": [
+        "Karl den Store",
+        "Charibert I",
+        "Chilperic I",
+        "Chlothar II",
+        "Pippin den Yngre",
+        "Dagobert I"
+      ],
+      "silly_answers": ["Shrek", "Peter Plys", "Wolverine fra X-Men"],
+      "explanation": "Clovis I, den frankiske konge, konverterede til katolicismen omkring år 496. Han var den første germanske hersker, der gjorde det, hvilket cementerede båndene mellem frankerne og den romersk-katolske kirke."
+    },
+    {
+      "question": "Hvilken berømt bygning blev bygget i Konstantinopel i det 6. århundrede?",
+      "correct_answer": "Hagia Sophia",
+      "wrong_answers": [
+        "Pantheon",
+        "Colosseum",
+        "Sankt Peters Basilika",
+        "Blå Moské",
+        "Akropolis",
+        "Parthenon"
+      ],
+      "silly_answers": ["Taj Mahal", "Eiffeltårnet", "Frihedsgudinden"],
+      "explanation": "Hagia Sophia, en stor og prægtig kirke, blev bygget i Konstantinopel (nu Istanbul) i det 6. århundrede under kejser Justinian I. Det var det vigtigste center for ortodoks kristendom i mange år."
+    },
+    {
+      "question": "Hvem var paven, der sendte missionærer til England for at konvertere anglo-sakserne?",
+      "correct_answer": "Gregor den Store",
+      "wrong_answers": [
+        "Pave Leo I",
+        "Pave Gelasius I",
+        "Pave Leo III",
+        "Pave Innocent III",
+        "Pave Urban II",
+        "Pave Pius IX"
+      ],
+      "silly_answers": [
+        "Dumbledore fra Harry Potter",
+        "Frodo Baggins",
+        "Doctor Who"
+      ],
+      "explanation": "Pave Gregor den Store sendte missionærer, ledet af Sankt Augustin af Canterbury, til England for at konvertere anglo-sakserne. Dette markerede begyndelsen på engelsk kristendom."
+    },
+    {
+      "question": "Hvem var den frankiske konge, der blev kronet som 'kejser af romerne' af paven i 800 e.Kr.?",
+      "correct_answer": "Karl den Store",
+      "wrong_answers": [
+        "Clovis I",
+        "Pippin den Yngre",
+        "Karl Martel",
+        "Ludvig den Fromme",
+        "Charlemagne",
+        "Karloman"
+      ],
+      "silly_answers": ["Spiderman", "Indiana Jones", "James Bond"],
+      "explanation": "Karl den Store, konge af frankerne og lombarderne, blev kronet som 'kejser af romerne' af Pave Leo III den 25. december 800 e.Kr. Dette markerede starten på det, der skulle blive til Det Hellige Romerske Rige."
+    },
+    {
+      "question": "Hvilken kirkelige begivenhed fandt sted i 787 e.Kr.?",
+      "correct_answer": "Andet Koncil i Nicaea",
+      "wrong_answers": [
+        "Første Koncil i Nicaea",
+        "Koncil i Chalcedon",
+        "Koncil i Ephesus",
+        "Koncil i Konstantinopel",
+        "Koncil i Carthage",
+        "Koncil i Lyon"
+      ],
+      "silly_answers": [
+        "Årets største præsteloppemarked",
+        "Det første kirkekagebagning mesterskab",
+        "Konkurrencen om den bedste kirkehat"
+      ],
+      "explanation": "Andet Koncil i Nicaea i 787 e.Kr. blev afholdt for at løse spørgsmålet om ikonoklasme (ødelæggelsen af religiøse ikoner og billeder). Koncilet bekræftede brugen af ikoner og billeder i kirker."
+    },
+    {
+      "question": "Hvilken religiøs bevægelse opstod i det 7. århundrede, som en udfordring for kristendommen?",
+      "correct_answer": "Islam",
+      "wrong_answers": [
+        "Manikeisme",
+        "Buddhisme",
+        "Hinduisme",
+        "Sikhisme",
+        "Jødedom",
+        "Zoroastrisme"
+      ],
+      "silly_answers": [
+        "Jediisme fra Star Wars",
+        "Troen på Hogwarts",
+        "Cult of Batman"
+      ],
+      "explanation": "Islam opstod i det 7. århundrede og spredte sig hurtigt gennem Mellemøsten og Nordafrika, hvilket udfordrede det kristne byzantinske imperium."
+    },
+    {
+      "question": "Hvilket monastisk samfund blev grundlagt på Skellig Michael i Irland?",
+      "correct_answer": "Skellig-munkene",
+      "wrong_answers": [
+        "Franciskanerne",
+        "Benediktinerne",
+        "Karmeliterne",
+        "Dominikanerne",
+        "Trappisterne",
+        "Jesuitterne"
+      ],
+      "silly_answers": [
+        "Jedi-ridderne fra Star Wars",
+        "Hogwarts-skolens troldmænd",
+        "Smølferne"
+      ],
+      "explanation": "Et lille monastisk samfund, kendt som Skellig-munkene, blev etableret på Skellig Michael, en fjern ø ud for Irlands vestkyst, omkring det 6. århundrede. De levede her i isolation i flere hundrede år."
+    },
+    {
+      "question": "Hvilket kendt religiøst dokument blev oprettet af monker i Northumbria omkring 700 e.Kr.?",
+      "correct_answer": "Lindisfarne-evangelierne",
+      "wrong_answers": [
+        "Book of Kells",
+        "Codex Sinaiticus",
+        "Codex Alexandrinus",
+        "Dødehavsrullerne",
+        "Echternach-evangelierne",
+        "Godescalc-evangeliet"
+      ],
+      "silly_answers": [
+        "Harry Potters tryllebog",
+        "Drømmebogen fra Inception",
+        "Encyclopedia of Middle-Earth"
+      ],
+      "explanation": "Lindisfarne-evangelierne, et illumineret manuskript fra evangelierne i Det Nye Testamente, blev oprettet af monker i Northumbria omkring 700 e.Kr. Det er kendt for dets fantastiske dekoration og kunstneriske mesterskab."
+    }
+  ]
+}

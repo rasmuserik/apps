@@ -1,0 +1,223 @@
+{
+  "title": "Helleristninger i bronzealderen",
+  "questions": [
+    {
+      "question": "Hvor er Danmarks mest kendte bronzealder helleristninger placeret?",
+      "correct_answer": "Madsebakke på Bornholm",
+      "wrong_answers": [
+        "Møns Klint",
+        "Skagens Odde",
+        "Fanø",
+        "Rømø",
+        "Frederiksberg"
+      ],
+      "explanation": "Madsebakke på Bornholm er hjemsted for nogle af Danmarks mest kendte og velbevarede helleristninger fra bronzealderen."
+    },
+    {
+      "question": "Hvilket fænomen blev ofte afbildet i bronzealderens helleristninger?",
+      "correct_answer": "Solvogne",
+      "wrong_answers": [
+        "Snefald",
+        "Regnbuer",
+        "Tordenstorme",
+        "Tornadoer",
+        "Nordlys"
+      ],
+      "explanation": "Solvogne blev ofte afbildet i helleristninger fra bronzealderen, hvilket afspejler solens vigtige rolle i bronzealderens kosmologi."
+    },
+    {
+      "question": "Hvilken teknik blev mest anvendt for at skabe helleristninger i bronzealderen?",
+      "correct_answer": "Pikning",
+      "wrong_answers": [
+        "Maling",
+        "Skæring",
+        "Brænding",
+        "Ridning",
+        "Gravering"
+      ],
+      "explanation": "Pikning er en teknik, hvor billeder og motiver skabes ved at hakke små huller i overfladen på klippen."
+    },
+    {
+      "question": "Hvilket dyr er det mest afbildede i bronzealderens helleristninger?",
+      "correct_answer": "Hest",
+      "wrong_answers": ["Bjørn", "Ulv", "Ræv", "Hjort", "Ørn"],
+      "explanation": "Hesten er det mest afbildede dyr i bronzealderens helleristninger, hvilket afspejler dens vigtige rolle i bronzealderens samfund."
+    },
+    {
+      "question": "I hvilken periode af bronzealderen opstod de fleste helleristninger?",
+      "correct_answer": "Sen bronzealder",
+      "wrong_answers": [
+        "Tidlig bronzealder",
+        "Middel bronzealder",
+        "Neolitisk tid",
+        "Jernalderen",
+        "Stenalderen"
+      ],
+      "explanation": "De fleste af de kendte helleristninger fra bronzealderen blev skabt i den sene bronzealder."
+    },
+    {
+      "question": "Hvilken type landskab er de fleste danske helleristninger fra bronzealderen fundet i?",
+      "correct_answer": "Åbne landskaber",
+      "wrong_answers": [
+        "Skovområder",
+        "Kystlinjer",
+        "Flodlejer",
+        "Moser",
+        "Højlandet"
+      ],
+      "explanation": "De fleste danske helleristninger fra bronzealderen er fundet i åbne landskaber, ofte på store, flade klippeflader."
+    },
+    {
+      "question": "Hvilket materiale blev ofte anvendt til at fremhæve helleristninger i bronzealderen?",
+      "correct_answer": "Rød okker",
+      "wrong_answers": ["Kridt", "Kul", "Blæk", "Maling", "Leire"],
+      "explanation": "Rød okker, et naturligt pigment, blev ofte anvendt til at fremhæve helleristninger i bronzealderen."
+    },
+    {
+      "question": "Hvad repræsenterer skibsmotiver oftest i bronzealderens helleristninger?",
+      "correct_answer": "Rejser til efterlivet",
+      "wrong_answers": [
+        "Handelsruter",
+        "Fisketure",
+        "Krigsflåder",
+        "Vandveje",
+        "Familiebånd"
+      ],
+      "explanation": "I bronzealderens helleristninger symboliserer skibsmotiver oftest rejser til efterlivet."
+    },
+    {
+      "question": "Hvad er en solvogn?",
+      "correct_answer": "Et rituelt objekt der viser solens rejse over himlen",
+      "wrong_answers": [
+        "En type hestevogn",
+        "Et astronomisk instrument",
+        "En tidlig form for kompas",
+        "En kalender",
+        "En kongelig transportform"
+      ],
+      "explanation": "En solvogn er et rituelt objekt, ofte afbildet i bronzealderens helleristninger, der symboliserer solens daglige rejse over himlen."
+    },
+    {
+      "question": "Hvilket andet navn bruges ofte om bronzealderens helleristninger?",
+      "correct_answer": "Petroglyffer",
+      "wrong_answers": [
+        "Klippekunst",
+        "Ristninger",
+        "Kalkmalerier",
+        "Graffiti",
+        "Stencils"
+      ],
+      "explanation": "Bronzealderens helleristninger er også kendt som petroglyffer, et udtryk der generelt henviser til stenristninger."
+    },
+    {
+      "question": "Hvilken figur er centralt placeret på helleristningen 'Litsleby-ristningen' i Sverige?",
+      "correct_answer": "En mand med en stor phallus",
+      "wrong_answers": [
+        "En kvinde med et barn",
+        "En stor sol",
+        "En kriger med et sværd",
+        "Et skib",
+        "En hjort"
+      ],
+      "explanation": "Litsleby-ristningen i Tanum, Sverige, er kendt for sin centrale figur, en mand med en stor phallus, ofte tolket som en frugtbarhedsgud."
+    },
+    {
+      "question": "Hvad betyder ordet 'helleristning'?",
+      "correct_answer": "En ristning i sten",
+      "wrong_answers": [
+        "En stenmaling",
+        "En skulptur",
+        "Et hulemaleri",
+        "En indgraveret sten",
+        "En stenskæring"
+      ],
+      "explanation": "Ordet 'helleristning' kommer fra det tyske 'Helleritzung', som betyder 'ristning i sten'."
+    },
+    {
+      "question": "Hvorfor lavede bronzealderens mennesker helleristninger?",
+      "correct_answer": "Som en del af religiøse og kulturelle ritualer",
+      "wrong_answers": [
+        "Som grafitti",
+        "Som vejvisere",
+        "Som underholdning",
+        "Som krigserklæringer",
+        "Som skønlitteratur"
+      ],
+      "explanation": "Helleristninger i bronzealderen blev primært lavet som en del af religiøse og kulturelle ritualer, og afspejler bronzealderens samfund og kosmologi."
+    },
+    {
+      "question": "Hvordan kan helleristninger dateres til bronzealderen?",
+      "correct_answer": "Gennem stilistiske træk og sammenligning med fund af fysiske genstande",
+      "wrong_answers": [
+        "Gennem radioaktivt kulstof",
+        "Gennem DNA analyse",
+        "Gennem historiske tekster",
+        "Gennem satellitbilleder",
+        "Gennem termoluminescens datering"
+      ],
+      "explanation": "Helleristninger fra bronzealderen kan dateres gennem deres stilistiske træk og sammenligning med fund af fysiske genstande fra samme periode."
+    },
+    {
+      "question": "Hvad er hovedtemaet for helleristningerne i Tanum, Sverige?",
+      "correct_answer": "Menneskelige figurer og skibe",
+      "wrong_answers": [
+        "Dyr og jagt",
+        "Guder og gudinder",
+        "Krig og konflikt",
+        "Landbrug og høst",
+        "Huse og landsbyer"
+      ],
+      "explanation": "Helleristningerne i Tanum, Sverige, er kendte for deres mange menneskefigurer og skibsmotiver, der giver indsigt i bronzealderens ritualer og tro."
+    },
+    {
+      "question": "Hvilken dansk lokalitet er kendt for dens helleristninger af fodaftryk?",
+      "correct_answer": "Lille Strandbygård på Bornholm",
+      "wrong_answers": [
+        "Hammershus på Bornholm",
+        "Jelling i Jylland",
+        "Kongernes Jelling",
+        "Odense på Fyn",
+        "Roskilde på Sjælland"
+      ],
+      "explanation": "Lille Strandbygård på Bornholm er kendt for dens unikke helleristninger af fodaftryk, som er sjældne i bronzealderens helleristninger."
+    },
+    {
+      "question": "Hvilken type sten blev oftest anvendt til helleristninger i bronzealderen?",
+      "correct_answer": "Granit",
+      "wrong_answers": ["Kalksten", "Sandsten", "Marmor", "Basalt", "Skifer"],
+      "explanation": "Granit, en hård og vejrbestandig stentype, blev oftest anvendt til helleristninger i bronzealderen."
+    },
+    {
+      "question": "Hvilken mytologisk skikkelse blev ofte afbildet i skandinaviske helleristninger i bronzealderen?",
+      "correct_answer": "Øksenæbbede mand",
+      "wrong_answers": ["Thor", "Odin", "Freja", "Loki", "Fenrisulven"],
+      "explanation": "Øksenæbbede mand er en hyppig figur i bronzealderens helleristninger. Denne figur har et næb eller en snabel, der ofte tolkes som en økse, hvilket kan være et symbol på magt eller status."
+    },
+    {
+      "question": "Hvilket symbol blev ofte anvendt i helleristninger for at symbolisere solen?",
+      "correct_answer": "En cirkel med en kryds i midten",
+      "wrong_answers": [
+        "En stjerne",
+        "En halvmåne",
+        "En fugl",
+        "En pil",
+        "Et hjerte"
+      ],
+      "explanation": "I bronzealderens helleristninger blev solen ofte symboliseret som en cirkel med et kryds i midten."
+    },
+    {
+      "question": "Hvad er hovedtemaet for helleristningerne på Bornholm?",
+      "correct_answer": "Skibe",
+      "wrong_answers": ["Dyr", "Mennesker", "Sol", "Huse", "Træer"],
+      "explanation": "Helleristningerne på Bornholm er kendte for deres mange skibsmotiver, der giver indsigt i bronzealderens samfund og tro."
+    }
+  ],
+  "feedback": {
+    "everything_correct": "Wow! Du er en ægte broncealder-ekspert! Du ved mere om helleristninger end selve neolitikumets stenmejslere. Rygtet siger, at du engang fandt en helleristning, der afbildede en broncealderkunstner, der tegnede en helleristning af en broncealderkunstner, der tegnede en helleristning... Ja, du forstår billedet! Fortsæt med at rocke broncealderens verden!",
+    "very_good": "Fantastisk! Du har helt sikkert gjort din forskning. Du kan skelne mellem helleristninger fra bronzealderen og køkkenopskrifter fra istiden. Gerücht sagt, du har en særlig forbindelse til broncealderånden og kan kommunikere med helleristningerne i dine drømme. Måske skulle du overveje at starte en helleristningsklub?",
+    "good": "Godt klaret! Du har bestået broncealder-quizzen med stil. Du er mere indforstået med helleristninger end en neolitisk ko, der prøver at lære at male. Dine venner ville ringe til dig, hvis de stod over for et gådefuldt symbol og havde brug for en ekspert til at afgøre, om det er en helleristning eller en uforståelig graffititag. Tillykke!",
+    "bad": "Nå, der er stadig plads til forbedring, men du er på rette spor. Du kan skelne mellem en helleristning og en hævet cirkeltegn på en labyrint. Du er lidt som en broncealdermaler, der bruger en tåget briller, men med lidt mere træning vil du være en helleristningsekspert!",
+    "very_bad": "Ups! Det ser ud til, at du har brugt mere tid på at grave i sandet end på at studere helleristninger. Det er okay! Bronzealderens hemmeligheder kan være tricky. Prøv at kigge dybere ind i hulerne, hvor helleristningerne findes, og hvem ved? Måske finder du en skat!",
+    "everything_wrong": "Åh nej! Du er mere forvirret end en neolitisk person, der er fanget i en tidsmaskine og blev transporteret til bronzealderen. Helleristninger er ikke lige din stærke side, men hey, der er stadig masser af andre emner, der kan fascinere dig. Måske er du den ultimative ekspert i moderne højteknologi-katteudstyr?"
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "title": "Monastisk kristendom",
+  "questions": [
+    {
+      "question": "Hvad betyder ordet 'monastisk'?",
+      "correct_answer": "Relateret til munkeliv eller klosterliv",
+      "wrong_answers": [
+        "Relateret til præsteliv",
+        "Relateret til hermitsk liv",
+        "Relateret til livet som ridder",
+        "Relateret til livet som konge",
+        "Relateret til livet som bonde",
+        "Relateret til livet som handelsmand"
+      ],
+      "silly_answers": [
+        "Relateret til livet som superhelt",
+        "Relateret til livet som rumvæsen",
+        "Relateret til livet som vampyr"
+      ],
+      "explanation": "Monastisk liv refererer til livsstilen hos individer, der lever i isolation fra resten af verden for at hengive sig til religiøs efterlevelse. Ordet stammer fra det græske 'monos', der betyder 'alene'."
+    },
+    {
+      "question": "Hvad er en 'Abbed' indenfor monastisk kristendom?",
+      "correct_answer": "Lederen af et kloster",
+      "wrong_answers": [
+        "En titel for en biskop",
+        "En titel for en præst",
+        "En titel for en diakon",
+        "En type klokkeringer",
+        "En bygning i et kloster",
+        "En bibelsk profet"
+      ],
+      "silly_answers": [
+        "En berømt monastisk bager",
+        "En dygtig klosterbrygger",
+        "En mester i klosterkungfu"
+      ],
+      "explanation": "I monastisk kristendom er en abbed eller abbedisse lederen af et kloster. Titlen kommer fra det aramæiske 'Abba', der betyder 'far'."
+    },
+    {
+      "question": "Hvem var Benedikt af Nursia?",
+      "correct_answer": "Grundlæggeren af den vestlige monastiske tradition",
+      "wrong_answers": [
+        "En romersk kejser",
+        "En græsk filosof",
+        "En egyptisk farao",
+        "En persisk konge",
+        "En byzantinsk general",
+        "En jødisk rabbiner"
+      ],
+      "silly_answers": [
+        "En berømt jazzmusiker",
+        "En talentfuld tryllekunstner",
+        "En mesterlig skakspiller"
+      ],
+      "explanation": "Benedikt af Nursia var en kristen hellig mand, der levede i det 6. århundrede. Han er mest kendt for at skrive Benedikts regel, der dannede grundlaget for den vestlige monastiske tradition."
+    },
+    {
+      "question": "Hvad var 'Cenobitisk' monastisk liv?",
+      "correct_answer": "Munkeliv i fællesskab",
+      "wrong_answers": [
+        "Munkeliv i isolation",
+        "Munkeliv i byområder",
+        "Munkeliv på bjerge",
+        "Munkeliv i skoven",
+        "Munkeliv på ørkener",
+        "Munkeliv på øer"
+      ],
+      "silly_answers": [
+        "Munkeliv under vandet",
+        "Munkeliv i rummet",
+        "Munkeliv i et computerspil"
+      ],
+      "explanation": "Cenobitisk monasticisme refererer til en form for monasticisme, hvor munkene lever i fællesskab i et kloster, i modsætning til eremitisk monasticisme, hvor munkene lever i isolation."
+    },
+    {
+      "question": "Hvem var Pachomius?",
+      "correct_answer": "Grundlæggeren af cenobitisk monasticisme",
+      "wrong_answers": [
+        "En romersk senator",
+        "En byzantinsk kejser",
+        "En jødisk historiker",
+        "En græsk matematiker",
+        "En egyptisk gud",
+        "En middelalderlig ridder"
+      ],
+      "silly_answers": [
+        "En mesterlig pizzabager",
+        "En dygtig rumkaptein",
+        "En berømt tyrefægter"
+      ],
+      "explanation": "Pachomius var en kristen munk, der levede i det 4. århundrede i Egypten. Han er kendt for at være grundlæggeren af cenobitisk monasticisme, hvor munkene lever i fællesskab i stedet for at leve som eremitter."
+    },
+    {
+      "question": "Hvad var 'Reglen om Sankt Benedikt'?",
+      "correct_answer": "En vejledning til monastisk liv",
+      "wrong_answers": [
+        "En militær strategi",
+        "En medicinsk tekst",
+        "En filosofisk afhandling",
+        "En lovkode",
+        "En musikalsk komposition",
+        "En madopskrift"
+      ],
+      "silly_answers": [
+        "En brugsanvisning til tidsrejser",
+        "En guide til at bygge et slot af chokolade",
+        "En manual til at blive en superhelt"
+      ],
+      "explanation": "Reglen om Sankt Benedikt er en bog skrevet af Benedikt af Nursia i det 6. århundrede. Den er en vejledning til monastisk liv og er grundlaget for de fleste former for vestlig monasticisme."
+    },
+    {
+      "question": "Hvad er 'Klausur' i monastisk terminologi?",
+      "correct_answer": "Det afsidesliggende område i et kloster, hvor munkene eller nonnerne lever",
+      "wrong_answers": [
+        "En type monastisk klædedragt",
+        "En form for bøn",
+        "En type klostertårn",
+        "En monastisk festdag",
+        "En form for monastisk musik",
+        "En type klostermad"
+      ],
+      "silly_answers": [
+        "En kloster-zoo",
+        "En monastisk rumraket",
+        "Et hemmeligt superheltekvarter"
+      ],
+      "explanation": "Klausur er det afsidesliggende og hellige område i et kloster, hvor munkene eller nonnerne lever. Det er normalt afgrænset fra resten af verden og adgangen er ofte begrænset."
+    },
+    {
+      "question": "Hvad betyder 'Ordo' i monastisk terminologi?",
+      "correct_answer": "En ordning eller regel",
+      "wrong_answers": [
+        "En bygning",
+        "En bøn",
+        "En titel",
+        "En festdag",
+        "En bog",
+        "En klædedragt"
+      ],
+      "silly_answers": [
+        "En hemmelig monastisk dans",
+        "En magisk trylleformular",
+        "En ingrediens i monastisk madlavning"
+      ],
+      "explanation": "'Ordo' er latin og betyder 'orden' eller 'regel'. I monastisk terminologi kan det referere til en særlig tradition eller regel inden for en monastisk orden, eller det kan referere til selve ordenen."
+    },
+    {
+      "question": "Hvad betyder 'Novice' i monastisk terminologi?",
+      "correct_answer": "En person, der tester klosterlivet, men endnu ikke har aflagt løfter",
+      "wrong_answers": [
+        "En erfaren munk",
+        "En klostertjener",
+        "En titel for abbeden",
+        "En gæst i klosteret",
+        "En afdød munk",
+        "En klosterbygning"
+      ],
+      "silly_answers": [
+        "En munk, der har glemt alt om klosterlivet",
+        "En munk med overnaturlige evner",
+        "En munk, der kan tale med spøgelser"
+      ],
+      "explanation": "En novice er en person, der har trådt ind i et kloster for at teste det monastiske liv, men endnu ikke har aflagt de fulde løfter. Det er en periode med træning og evaluering for både den enkelte og klostersamfundet."
+    },
+    {
+      "question": "Hvad var Clunyordenen?",
+      "correct_answer": "En betydningsfuld orden i det middelalderlige Europa",
+      "wrong_answers": [
+        "En kongelig dynasti",
+        "En by i Frankrig",
+        "En ridderorden",
+        "En bog fra middelalderen",
+        "En gruppe af kættere",
+        "En militær strategi"
+      ],
+      "silly_answers": [
+        "En berømt rockgruppe",
+        "En hemmelig agentorganisation",
+        "En skole for magikere"
+      ],
+      "explanation": "Clunyordenen var en betydningsfuld monastisk orden i det middelalderlige Europa. Den blev grundlagt i Cluny i Frankrig i det 10. århundrede og blev kendt for sin strenge overholdelse af Benedikts regel."
+    },
+    {
+      "question": "Hvem var Bernard af Clairvaux?",
+      "correct_answer": "En betydningsfuld munk i Cistercienserordenen",
+      "wrong_answers": [
+        "En romersk general",
+        "En middelalderlig konge",
+        "En byzantinsk kejser",
+        "En græsk filosof",
+        "En jødisk skriftlærd",
+        "En arabisk videnskabsmand"
+      ],
+      "silly_answers": [
+        "En berømt stand-up komiker",
+        "En professionel fodboldspiller",
+        "En dygtig rumraketdesigner"
+      ],
+      "explanation": "Bernard af Clairvaux var en betydningsfuld munk i Cistercienserordenen i det 12. århundrede. Han er kendt for sin fromhed, sin indflydelse på kirken og sine mange skrifter."
+    },
+    {
+      "question": "Hvad betyder 'Cistercienser'?",
+      "correct_answer": "En medlem af en specifik kristen monastisk orden",
+      "wrong_answers": [
+        "En type klosterbygning",
+        "En monastisk festdag",
+        "En titel for en munk",
+        "En form for bøn",
+        "En type klædedragt",
+        "En middelalderlig by"
+      ],
+      "silly_answers": [
+        "En munk, der kun spiser ost",
+        "En munk, der kan flyve",
+        "En munk, der lever omvendt"
+      ],
+      "explanation": "Cistercienserne er en kristen monastisk orden, der blev grundlagt i det 11. århundrede. Ordenen er kendt for sin strenge livsstil og sin betoning af manuelt arbejde og selvforsyning."
+    }
+  ]
+}

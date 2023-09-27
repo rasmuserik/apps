@@ -1,0 +1,211 @@
+{
+  "title": "Kristendomshistorie år 0-400",
+  "questions": [
+    {
+      "question": "Hvem regnes som grundlæggeren af kristendommen?",
+      "correct_answer": "Jesus Kristus",
+      "wrong_answers": [
+        "Paulus",
+        "Peter",
+        "Judas",
+        "Johannes Døberen",
+        "Konstantin den Store",
+        "Augustinus"
+      ],
+      "silly_answers": [
+        "Julius Caesar",
+        "Kaptajn Haddock fra Tintin",
+        "Harry Potter"
+      ],
+      "explanation": "Jesus Kristus betragtes som grundlæggeren af kristendommen. Men mange af hans læresætninger og principper blev udbredt og fortolket af hans disciple, især Paulus."
+    },
+    {
+      "question": "Hvem var den første romerske kejser til at konvertere til kristendommen?",
+      "correct_answer": "Konstantin den Store",
+      "wrong_answers": [
+        "Nero",
+        "Augustus",
+        "Julius Caesar",
+        "Trajan",
+        "Tiberius",
+        "Caligula"
+      ],
+      "silly_answers": ["Darth Vader", "Sherlock Holmes", "Batman"],
+      "explanation": "Konstantin den Store var den første romerske kejser, der konverterede til kristendommen. Han gjorde det muligt for kristne at praktisere deres religion frit i Romerriget med hans Edikt i Milano i 313 e.Kr."
+    },
+    {
+      "question": "Hvilken begivenhed markerer traditionelt starten på kristendommen?",
+      "correct_answer": "Jesu opstandelse",
+      "wrong_answers": [
+        "Paulus' omvendelse",
+        "Kristi fødsel",
+        "Den sidste nadver",
+        "Johannes' åbenbaring",
+        "Peters korsfæstelse",
+        "Jerusalems ødelæggelse"
+      ],
+      "silly_answers": [
+        "Jesu deltagelse i et reality-show",
+        "Jesus vinder OL i svømning",
+        "Jesus starter en YouTube-kanal"
+      ],
+      "explanation": "Jesu opstandelse betragtes traditionelt som begyndelsen på kristendommen, da hans disciple begyndte at sprede hans lære efter denne begivenhed."
+    },
+    {
+      "question": "Hvad var Konstantinopel før det blev et kristent center?",
+      "correct_answer": "Byzantium",
+      "wrong_answers": [
+        "Roma",
+        "Athen",
+        "Jerusalem",
+        "Antiochia",
+        "Alexandria",
+        "Damaskus"
+      ],
+      "silly_answers": ["Hogwarts", "Westeros", "Narnia"],
+      "explanation": "Før Konstantin den Store omdøbte det til Konstantinopel og gjorde det til et centrum for kristendommen, var byen kendt som Byzantium."
+    },
+    {
+      "question": "Hvilken berømt romersk filosof konverterede til kristendommen i det 4. århundrede?",
+      "correct_answer": "Augustinus",
+      "wrong_answers": [
+        "Platon",
+        "Aristoteles",
+        "Seneca",
+        "Cicero",
+        "Sokrates",
+        "Epikur"
+      ],
+      "silly_answers": ["Yoda", "Gandalf", "Spock fra Star Trek"],
+      "explanation": "Augustinus, også kendt som Sankt Augustinus, var en romersk filosof, der konverterede til kristendommen i det 4. århundrede. Hans værker har haft en enorm indflydelse på kristen teologi."
+    },
+    {
+      "question": "Hvilket råd blev samlet i 325 e.Kr. for at afgøre kristendommens doktrin?",
+      "correct_answer": "Nicaea-rådet",
+      "wrong_answers": [
+        "Chalcedon-rådet",
+        "Efesos-rådet",
+        "Konstantinopel-rådet",
+        "Trent-rådet",
+        "Vatikanets Andet Råd",
+        "Jerusalem-rådet"
+      ],
+      "silly_answers": [
+        "Rådet af Elrond",
+        "Rådet af Jedi",
+        "De seks venner fra TV-showet 'Friends'"
+      ],
+      "explanation": "Nicaea-rådet blev indkaldt af Konstantin den Store i 325 e.Kr. for at afgøre doktrinen om Treenigheden og fastslå, at Jesus Kristus var 'af samme væsen' som Gud Fader."
+    },
+    {
+      "question": "Hvilken bog er grundlaget for kristendommen?",
+      "correct_answer": "Bibelen",
+      "wrong_answers": [
+        "Koranen",
+        "Vedas",
+        "Talmud",
+        "Book of Mormon",
+        "Dodekaphonon",
+        "Septuaginta"
+      ],
+      "silly_answers": [
+        "Harry Potter-serien",
+        "'Fifty Shades of Grey'",
+        "'Hvordan man træner din drage'"
+      ],
+      "explanation": "Bibelen, herunder både Det Gamle Testamente og Det Nye Testamente, er grundlaget for kristendommen."
+    },
+    {
+      "question": "Hvem er kendt for at have spredt kristendommen i det første århundrede?",
+      "correct_answer": "Paulus",
+      "wrong_answers": [
+        "Lukas",
+        "Markus",
+        "Johannes",
+        "Jakob",
+        "Thomas",
+        "Andreas"
+      ],
+      "silly_answers": ["Indiana Jones", "Sherlock Holmes", "Superman"],
+      "explanation": "Paulus, oprindeligt kendt som Saulus, er kendt for at have spredt kristendommen i det første århundrede efter hans omvendelse på vejen til Damaskus."
+    },
+    {
+      "question": "Hvad var den officielle religion i Romerriget før kristendommen?",
+      "correct_answer": "Romersk polyteisme",
+      "wrong_answers": [
+        "Jødedom",
+        "Zoroastrisme",
+        "Hinduisme",
+        "Buddhisme",
+        "Manikeisme",
+        "Mithraisme"
+      ],
+      "silly_answers": [
+        "Pastafarianisme",
+        "Fodboldfanatisme",
+        "Sokkepuppet-gudedyrkelse"
+      ],
+      "explanation": "Før kristendommen blev den officielle religion i Romerriget, praktiserede romerne en form for polyteisme med mange guder og gudinder."
+    },
+    {
+      "question": "Hvem var kejser, da kristendommen blev gjort til den officielle religion i Romerriget?",
+      "correct_answer": "Theodosius I",
+      "wrong_answers": [
+        "Marcus Aurelius",
+        "Nero",
+        "Hadrian",
+        "Claudius",
+        "Vespasian",
+        "Domitian"
+      ],
+      "silly_answers": ["Kermit Frøen", "Mickey Mouse", "Spongebob Firkant"],
+      "explanation": "Kejser Theodosius I erklærede kristendommen for Romerrigets officielle religion med Ediktet fra Thessaloniki i 380 e.Kr."
+    },
+    {
+      "question": "Hvilken kirketype blev indført i det 4. århundrede?",
+      "correct_answer": "Basilika",
+      "wrong_answers": [
+        "Katedral",
+        "Klosterkirke",
+        "Abbedi",
+        "Stavkirke",
+        "Rotundekirke",
+        "Koralkirke"
+      ],
+      "silly_answers": ["Undervandskirke", "Sky-Kirke", "Rumstation-Kirke"],
+      "explanation": "Basilika-typen, en bygningsform med en central nave og to eller flere sideskibe adskilt af kolonner, blev populær i det 4. århundrede som steder for kristen tilbedelse."
+    },
+    {
+      "question": "Hvilken religion udfordrede kristendommen i det 4. århundrede?",
+      "correct_answer": "Arianisme",
+      "wrong_answers": [
+        "Buddhisme",
+        "Manikeisme",
+        "Zoroastrisme",
+        "Jødedom",
+        "Mithraisme",
+        "Islam"
+      ],
+      "silly_answers": ["Robot-religion", "Pizzakultus", "Chokolade-fanatisme"],
+      "explanation": "Arianisme, en kristen doktrin, udfordrede kristendommen i det 4. århundrede. Arianerne afviste dogmet om Treenigheden og lærte, at Jesus var underordnet Gud Fader."
+    },
+    {
+      "question": "Hvem skrev den første kendte kristne katekismus i det 4. århundrede?",
+      "correct_answer": "Cyril af Jerusalem",
+      "wrong_answers": [
+        "Athanasius",
+        "Jerome",
+        "Gregor af Nazianz",
+        "Basil af Caesarea",
+        "Ambrosius",
+        "Hieronymus"
+      ],
+      "silly_answers": [
+        "Hagrid fra Harry Potter",
+        "Bilbo Baggins",
+        "Frodo Sækker"
+      ],
+      "explanation": "Cyril af Jerusalem, en biskop og lærd fra det 4. århundrede, skrev den første kendte kristne katekismus, en serie af undervisninger for nydøbte kristne."
+    }
+  ]
+}

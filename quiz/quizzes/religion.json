@@ -1,0 +1,543 @@
+{
+  "title": "Quiz om religion og mytologi",
+  "questions": [
+    {
+      "question": "Hvilken hinduistisk gud er kendt som 'Ødelæggeren'?",
+      "correct_answer": "Shiva",
+      "wrong_answers": [
+        "Vishnu",
+        "Brahma",
+        "Indra",
+        "Ganesha",
+        "Krishna",
+        "Kali"
+      ],
+      "silly_answers": ["Superman", "Sherlock Holmes"],
+      "explanation": "Shiva er en af de vigtigste guder i hinduismen og er kendt som 'Ødelæggeren' eller 'Transformeren'. Han er en del af den hellige treenighed, der også inkluderer Brahma og Vishnu."
+    },
+    {
+      "question": "Hvad var Odins hest Sleipnir kendt for?",
+      "correct_answer": "At have otte ben",
+      "wrong_answers": [
+        "At kunne tale",
+        "At være uovervindelig",
+        "At være usynlig",
+        "At være udødelig",
+        "At kunne flyve",
+        "At kunne svømme over havet"
+      ],
+      "silly_answers": [
+        "At være verdens bedste danser",
+        "At have en kandidatgrad i filosofi"
+      ],
+      "explanation": "Ifølge nordisk mytologi havde Sleipnir, Odins hest, otte ben. Den var kendt for sin utrolige hurtighed og evne til at rejse gennem luften og over havet."
+    },
+    {
+      "question": "Hvilken buddhistisk bodhisattva er knyttet til medfølelse?",
+      "correct_answer": "Avalokiteshvara",
+      "wrong_answers": [
+        "Maitreya",
+        "Manjushri",
+        "Samantabhadra",
+        "Ksitigarbha",
+        "Akasagarbha",
+        "Vajrapani"
+      ],
+      "silly_answers": ["Mickey Mouse", "Super Mario"],
+      "explanation": "Avalokiteshvara, også kendt som Guanyin, er bodhisattvaen for medfølelse i mahayana buddhismen. Denne bodhisattva er kendt for sin medfølelse og nåde."
+    },
+    {
+      "question": "Hvem er regnbuens gudinde i Shinto religionen?",
+      "correct_answer": "Niji",
+      "wrong_answers": [
+        "Amaterasu",
+        "Tsukuyomi",
+        "Susanoo",
+        "Inari",
+        "Hachiman",
+        "Raijin"
+      ],
+      "silly_answers": [
+        "Rainbow Dash fra My Little Pony",
+        "Skittles, slikmærket"
+      ],
+      "explanation": "Niji er regnbuens gudinde i Shinto religionen i Japan. Hun er ofte associeret med broer, da en regnbue danner en 'bro' over himlen."
+    },
+    {
+      "question": "Hvem var Apollos tvillingesøster i græsk mytologi?",
+      "correct_answer": "Artemis",
+      "wrong_answers": [
+        "Athena",
+        "Aphrodite",
+        "Hera",
+        "Demeter",
+        "Persephone",
+        "Hestia"
+      ],
+      "silly_answers": ["Kim Kardashian", "Taylor Swift"],
+      "explanation": "Artemis er tvillingesøster til Apollo i græsk mytologi. Hun er gudinde for jagt, vilde dyr, vildmarken, og er kendt som beskytter af unge piger."
+    },
+    {
+      "question": "Hvilket dyr optræder i skabelsesmyten i australsk aboriginal mytologi?",
+      "correct_answer": "Regnbue slange",
+      "wrong_answers": [
+        "Koala",
+        "Kangaroo",
+        "Emu",
+        "Dingo",
+        "Platypus",
+        "Wombat"
+      ],
+      "silly_answers": ["Pink flamingo", "Unicorn"],
+      "explanation": "I mange aboriginale kulturer er Regnbue slangen en vigtig del af skabelsesmyterne. Den symboliserer ofte vand, regnskab og frugtbarhed."
+    },
+    {
+      "question": "Hvem er krigsguden i aztekisk mytologi?",
+      "correct_answer": "Huitzilopochtli",
+      "wrong_answers": [
+        "Quetzalcoatl",
+        "Tlaloc",
+        "Tezcatlipoca",
+        "Xipe Totec",
+        "Tlaltecuhtli",
+        "Mictlantecuhtli"
+      ],
+      "silly_answers": ["SpongeBob SquarePants", "Sherlock Holmes"],
+      "explanation": "Huitzilopochtli er krigsguden og solguden i aztekisk mytologi. Han er en af de vigtigste guder, og mange menneskeofringer blev foretaget i hans navn."
+    },
+    {
+      "question": "Hvem var troldmanden i kong Arthurs legende?",
+      "correct_answer": "Merlin",
+      "wrong_answers": [
+        "Gandalf",
+        "Dumbledore",
+        "Radagast",
+        "Saruman",
+        "Draco",
+        "Severus Snape"
+      ],
+      "silly_answers": ["Doctor Strange", "Harry Houdini"],
+      "explanation": "Merlin er den berømte troldmand i kong Arthurs legende. Han spiller en vigtig rolle i mange af historierne, inklusiv Arthurs opstigen til tronen."
+    },
+    {
+      "question": "Hvad hedder gudinden for morgenrøden i græsk mytologi?",
+      "correct_answer": "Eos",
+      "wrong_answers": [
+        "Selene",
+        "Hera",
+        "Aphrodite",
+        "Demeter",
+        "Persephone",
+        "Artemis"
+      ],
+      "silly_answers": ["Morning SunShine"],
+      "explanation": "Eos er gudinden for morgenrøden i græsk mytologi. Hendes ækvivalent i romersk mytologi er Aurora."
+    },
+    {
+      "question": "I hinduismen, hvem er gud for ild?",
+      "correct_answer": "Agni",
+      "wrong_answers": ["Indra", "Vayu", "Varuna", "Yama", "Kubera", "Ishana"],
+      "silly_answers": ["Fire McSparkle"],
+      "explanation": "Agni er ildens gud i hinduismen. Han er også budbringer mellem mennesker og guder, og han er repræsentationen af det hellige ildoffer."
+    },
+    {
+      "question": "Hvem er kærlighedens gud i romersk mytologi?",
+      "correct_answer": "Cupid",
+      "wrong_answers": [
+        "Venus",
+        "Bacchus",
+        "Saturn",
+        "Mercury",
+        "Mars",
+        "Jupiter"
+      ],
+      "silly_answers": ["Crazy Cat Lady"],
+      "explanation": "Cupid er kærlighedens gud i romersk mytologi. Han er søn af Venus og er ofte afbildet som en dreng med bue og pil."
+    },
+    {
+      "question": "I nordisk mytologi, hvem er gud for lys og skønhed?",
+      "correct_answer": "Balder",
+      "wrong_answers": ["Odin", "Thor", "Loki", "Freyr", "Tyr", "Heimdall"],
+      "silly_answers": ["Shiny McPrettyface"],
+      "explanation": "Balder er gud for lys, skønhed, kærlighed og lykke i nordisk mytologi. Han er kendt for sin usædvanlige skønhed og godhed."
+    },
+    {
+      "question": "I egyptisk mytologi, hvem er gudinden for magi?",
+      "correct_answer": "Isis",
+      "wrong_answers": ["Bastet", "Sekhmet", "Nut", "Maat", "Hathor", "Anubis"],
+      "silly_answers": ["Hocus Pocus"],
+      "explanation": "Isis er gudinden for magi, ægteskab, heling og beskyttelse i egyptisk mytologi. Hun var en af de mest populære og dyrkede gudinder i det gamle Egypten."
+    },
+    {
+      "question": "Hvem er gudinden for høst i græsk mytologi?",
+      "correct_answer": "Demeter",
+      "wrong_answers": [
+        "Persephone",
+        "Hera",
+        "Athena",
+        "Artemis",
+        "Hestia",
+        "Aphrodite"
+      ],
+      "silly_answers": ["Farmer McFarmface"],
+      "explanation": "Demeter er høstens og landbrugets gudinde i græsk mytologi. Hun er kendt for at have lært mennesker at dyrke jorden."
+    },
+    {
+      "question": "I zoroastrismen, hvem er guden for retfærdighed?",
+      "correct_answer": "Mithra",
+      "wrong_answers": [
+        "Ahura Mazda",
+        "Anahita",
+        "Vayu",
+        "Verethragna",
+        "Haurvatat",
+        "Tishtrya"
+      ],
+      "silly_answers": ["Justice McCourtroom"],
+      "explanation": "Mithra er guden for retfærdighed, kontrakter og venskab i zoroastrismen. Han blev også tilbedt i det gamle Rom som en del af mysteriekulten Mithras."
+    },
+    {
+      "question": "I japansk mytologi, hvem er guden for storme?",
+      "correct_answer": "Susanoo",
+      "wrong_answers": [
+        "Amaterasu",
+        "Tsukuyomi",
+        "Izanagi",
+        "Izanami",
+        "Raijin",
+        "Fujin"
+      ],
+      "silly_answers": ["Stormy McStormface"],
+      "explanation": "Susanoo er stormenes og havets gud i japansk mytologi. Han er bror til solgudinden Amaterasu og måneguden Tsukuyomi."
+    },
+    {
+      "question": "I sumerisk mytologi, hvem er guden for solen?",
+      "correct_answer": "Utu",
+      "wrong_answers": [
+        "Enlil",
+        "Anu",
+        "Inanna",
+        "Enki",
+        "Nanna",
+        "Ereshkigal"
+      ],
+      "silly_answers": ["Sunny McSunface"],
+      "explanation": "Utu, også kendt som Shamash i akkadisk mytologi, er solguden i sumerisk mytologi. Han er også guden for retfærdighed og moral."
+    },
+    {
+      "question": "I keltisk mytologi, hvem er guden for kærlighed og skønhed?",
+      "correct_answer": "Aine",
+      "wrong_answers": [
+        "Brigid",
+        "Morrigan",
+        "Lugh",
+        "Dagda",
+        "Cernunnos",
+        "Manannan"
+      ],
+      "silly_answers": ["Lovey McBeautyface"],
+      "explanation": "Aine er gudinden for kærlighed, skønhed, sommer og suverænitet i keltisk mytologi. Hun er ofte associeret med solen og midtsommer."
+    },
+    {
+      "question": "Hvad hedder den hinduistiske elefantgud?",
+      "correct_answer": "Ganesha",
+      "wrong_answers": [
+        "Vishnu",
+        "Shiva",
+        "Krishna",
+        "Brahma",
+        "Durga",
+        "Lakshmi"
+      ],
+      "silly_answers": ["Dumbo", "Hr. Snabel", "Babar"],
+      "explanation": "Ganesha er den hinduistiske elefantgud, kendt for sin evne til at fjerne forhindringer og bringe succes."
+    },
+    {
+      "question": "Hvem er tordenguden i den norrøne mytologi?",
+      "correct_answer": "Thor",
+      "wrong_answers": ["Odin", "Freyr", "Tyr", "Balder", "Loki", "Heimdall"],
+      "silly_answers": ["Hulk", "Supermand", "Iron Man"],
+      "explanation": "I den norrøne mytologi er Thor tordenguden, kendt for sin mægtige hammer Mjølner."
+    },
+    {
+      "question": "Hvad er Buddhas rigtige navn?",
+      "correct_answer": "Siddhartha Gautama",
+      "wrong_answers": [
+        "Mahavira",
+        "Ashoka",
+        "Rama",
+        "Vishnu",
+        "Krishna",
+        "Arjuna"
+      ],
+      "silly_answers": [
+        "Buddha Mcbuddhaface",
+        "Buddhington Budderson",
+        "Buddha-Rama-Ding-Dong"
+      ],
+      "explanation": "Buddha, stifteren af buddhismen, var egentlig prins Siddhartha Gautama."
+    },
+    {
+      "question": "Hvem er kærlighedsgudinden i den græske mytologi?",
+      "correct_answer": "Aphrodite",
+      "wrong_answers": [
+        "Athena",
+        "Artemis",
+        "Hera",
+        "Hestia",
+        "Demeter",
+        "Persephone"
+      ],
+      "silly_answers": ["Lady Gaga", "Cher", "Madonna"],
+      "explanation": "Aphrodite er kærlighedsgudinden i den græske mytologi."
+    },
+    {
+      "question": "Hvilken gudinde blev Athens by i Grækenland opkaldt efter?",
+      "correct_answer": "Athena",
+      "wrong_answers": [
+        "Aphrodite",
+        "Hera",
+        "Artemis",
+        "Hestia",
+        "Demeter",
+        "Persephone"
+      ],
+      "silly_answers": ["Beyoncé", "Prinsesse Diana", "Paris Hilton"],
+      "explanation": "Athena, visdommens gudinde, er den gudinde som Athens by er opkaldt efter."
+    },
+    {
+      "question": "Hvem stjal ild fra guderne og gav den til menneskeheden i den græske mytologi?",
+      "correct_answer": "Prometheus",
+      "wrong_answers": [
+        "Herakles",
+        "Perseus",
+        "Theseus",
+        "Jason",
+        "Odysseus",
+        "Achilles"
+      ],
+      "silly_answers": ["MacGyver", "Indiana Jones", "Sherlock Holmes"],
+      "explanation": "I den græske mytologi stjal titanen Prometheus ild fra guderne og gav den til menneskeheden."
+    },
+    {
+      "question": "Hvem er vinguden i den romerske mytologi?",
+      "correct_answer": "Bacchus",
+      "wrong_answers": [
+        "Jupiter",
+        "Neptune",
+        "Mars",
+        "Vulcan",
+        "Mercury",
+        "Apollo"
+      ],
+      "silly_answers": ["Vin Diesel", "Merlot Man", "Pinot Noirboy"],
+      "explanation": "I den romerske mytologi er Bacchus vinguden."
+    },
+    {
+      "question": "Hvad var Einherjer i den norrøne mytologi?",
+      "correct_answer": "Faldne krigere der ender i Valhalla",
+      "wrong_answers": [
+        "Dværge",
+        "Elverfolk",
+        "Drager",
+        "Troldfolk",
+        "Hekse",
+        "Jætter"
+      ],
+      "silly_answers": [
+        "En heavy metal band",
+        "Vikinge-cheerleaders",
+        "Tidlige influencers"
+      ],
+      "explanation": "Einherjer var i den norrøne mytologi de faldne krigere, der ender i Valhalla."
+    },
+    {
+      "question": "Hvilken egyptisk gud har hoved af en jakkal?",
+      "correct_answer": "Anubis",
+      "wrong_answers": ["Ra", "Osiris", "Horus", "Seth", "Thoth", "Isis"],
+      "silly_answers": ["Scooby Doo", "Pluto", "Goofy"],
+      "explanation": "Anubis, den egyptiske gud for døden og balsamering, har hoved af en jakkal."
+    },
+    {
+      "question": "Hvem er regnbuebroen Bifrost hjem for i den norrøne mytologi?",
+      "correct_answer": "Heimdall",
+      "wrong_answers": ["Thor", "Odin", "Loki", "Tyr", "Freyr", "Balder"],
+      "silly_answers": ["Regnbue-Pony", "Unicorn-McSparkle", "Glittertind"],
+      "explanation": "I den norrøne mytologi bor guden Heimdall ved regnbuebroen Bifrost, hvor han holder vagt."
+    },
+    {
+      "question": "Hvilken japansk gudinde er solgudinde?",
+      "correct_answer": "Amaterasu",
+      "wrong_answers": [
+        "Izanami",
+        "Izanagi",
+        "Tsukuyomi",
+        "Susanoo",
+        "Inari",
+        "Hachiman"
+      ],
+      "silly_answers": ["Solshine-Sushi", "Maki-Morgenlys", "Tempura-Twilight"],
+      "explanation": "I den japanske mytologi er Amaterasu solgudinden."
+    },
+    {
+      "question": "Hvad hedder verdenstræet i den norrøne mytologi?",
+      "correct_answer": "Yggdrasil",
+      "wrong_answers": [
+        "Mjølner",
+        "Gungnir",
+        "Sleipner",
+        "Ratatosk",
+        "Gleipner",
+        "Fenrisulven"
+      ],
+      "silly_answers": [
+        "Æble-McÆbletræ",
+        "Granny Smith's Magiske Træ",
+        "Johnny Appleseed's Hemmelige Have"
+      ],
+      "explanation": "I den norrøne mytologi hedder verdenstræet Yggdrasil."
+    },
+    {
+      "question": "Hvad hedder torden- og lyn-guden i Mayas mytologi?",
+      "correct_answer": "Chaak",
+      "wrong_answers": [
+        "Hunab Ku",
+        "Itzamna",
+        "Kukulkan",
+        "Ix Chel",
+        "Yum Kaax",
+        "Ah Puch"
+      ],
+      "silly_answers": [
+        "Boom Boom Zap Zap",
+        "Maya-McThunderbolt",
+        "Flashy McFlash"
+      ],
+      "explanation": "I Mayas mytologi er Chaak torden- og lyn-guden."
+    },
+    {
+      "question": "Hvem er krigsguden i den romerske mytologi?",
+      "correct_answer": "Mars",
+      "wrong_answers": [
+        "Jupiter",
+        "Neptune",
+        "Vulcan",
+        "Mercury",
+        "Apollo",
+        "Bacchus"
+      ],
+      "silly_answers": ["Spartacus", "Gladiator-McFighty", "Russel Crowe"],
+      "explanation": "Mars er krigsguden i den romerske mytologi."
+    },
+    {
+      "question": "Hvem er den græske gud for fest og glæde?",
+      "correct_answer": "Dionysos",
+      "wrong_answers": [
+        "Zeus",
+        "Poseidon",
+        "Ares",
+        "Hermes",
+        "Apollo",
+        "Hades"
+      ],
+      "silly_answers": ["Party-Parthenon", "Groovy Greek", "Toga-Tequila"],
+      "explanation": "I den græske mytologi er Dionysos guden for vin, fest og glæde."
+    },
+    {
+      "question": "Hvilken gudinde i den egyptiske mytologi er kendt for sin løvehoved?",
+      "correct_answer": "Sekhmet",
+      "wrong_answers": ["Isis", "Hathor", "Maat", "Bastet", "Nut", "Nephthys"],
+      "silly_answers": ["Cleo-Catra", "Sphinx-Sassy", "Lioness-Leia"],
+      "explanation": "I den egyptiske mytologi har gudinden Sekhmet et hoved af en løve."
+    },
+    {
+      "question": "Hvem styrer underverdenen i den romerske mytologi?",
+      "correct_answer": "Pluto",
+      "wrong_answers": [
+        "Jupiter",
+        "Neptune",
+        "Mars",
+        "Vulcan",
+        "Mercury",
+        "Apollo"
+      ],
+      "silly_answers": ["Darth Vader", "Lord Voldemort", "Thanos"],
+      "explanation": "Pluto er guden for underverdenen i den romerske mytologi."
+    },
+    {
+      "question": "Hvem er gud for handel og tyveri i den græske mytologi?",
+      "correct_answer": "Hermes",
+      "wrong_answers": [
+        "Zeus",
+        "Poseidon",
+        "Ares",
+        "Apollo",
+        "Hades",
+        "Dionysos"
+      ],
+      "silly_answers": ["Walmartus", "Amazonus-Primeus", "Shopliftus-Maximus"],
+      "explanation": "Hermes er guden for handel og tyveri i den græske mytologi."
+    },
+    {
+      "question": "Hvem er den græske gud for krig?",
+      "correct_answer": "Ares",
+      "wrong_answers": [
+        "Zeus",
+        "Poseidon",
+        "Hermes",
+        "Apollo",
+        "Hades",
+        "Dionysos"
+      ],
+      "silly_answers": [
+        "Warrior-McWarface",
+        "Spartan-Spike",
+        "Fighty-McFighterson"
+      ],
+      "explanation": "Ares er guden for krig i den græske mytologi."
+    },
+    {
+      "question": "Hvilken afrikansk gud er kendt for sit trickster-væsen?",
+      "correct_answer": "Anansi",
+      "wrong_answers": [
+        "Olorun",
+        "Yemaja",
+        "Shango",
+        "Obatala",
+        "Ogun",
+        "Eshu"
+      ],
+      "silly_answers": ["Trickster-Tiki", "Jungle-Joker", "Safari-Sneaky"],
+      "explanation": "I afrikansk mytologi er Anansi, edderkoppeguden, kendt for at være en trickster."
+    },
+    {
+      "question": "Hvem er havets gud i den romerske mytologi?",
+      "correct_answer": "Neptune",
+      "wrong_answers": [
+        "Jupiter",
+        "Mars",
+        "Vulcan",
+        "Mercury",
+        "Apollo",
+        "Bacchus"
+      ],
+      "silly_answers": ["Aqua-Man", "Captain Nemo", "Spongebob Squarepants"],
+      "explanation": "Neptune er guden for havet i den romerske mytologi."
+    },
+    {
+      "question": "Hvem er lysets gudinde i den romerske mytologi?",
+      "correct_answer": "Lucina",
+      "wrong_answers": ["Venus", "Diana", "Minerva", "Juno", "Ceres", "Vesta"],
+      "silly_answers": ["Lady Lightbulb", "Lumina-Lux", "Glowy-McGlowface"],
+      "explanation": "I den romerske mytologi er Lucina gudinde for lyset."
+    }
+  ],
+  "feedback": {
+    "everything_correct": "Wow, du er den sande guru af religion og mytologi! Ikke alene har du besvaret alle spørgsmålene korrekt, men du har også en dybtgående viden om, hvad guderne spiser til morgenmad. Rygtet siger, at du engang legede skjul og søg med Odin og var den eneste, der nogensinde fandt ham! Der er ikke meget mere at lære for dig i denne verden. Måske skal du overveje at skrive din egen religiøse tekst og få en hær af tilbedere i gang.",
+    "very_good": "Fantastisk! Du klarede næsten perfekt i quizzen om religion og mytologi. Du ved nok til at få Zeus til at ryste i sine sandaler! Folk kalder dig 'Den guddommelige Gætter' på grund af din evne til at afgøre, om en mytologisk historie er sand eller falsk ved bare at lugte til en oliven. Du har uden tvivl et indre øje, der kan se de kosmiske mysterier!",
+    "good": "Godt gået! Du har en solid viden om religion og mytologi. Du kunne let give Ra en løbetur i den varme egyptiske sol! Der siges, at du har en fjer fra Fenrisulvens hale som lykkebringende amulet. Selvom du måske ikke ved alt, hvad der er at vide, har du bestemt potentialet til at blive en guddommelig historiefortæller.",
+    "bad": "Åh-åh! Du fik nogle af spørgsmålene i quizzen om religion og mytologi forkert. Men fortvivl ikke, du har stadig en chance for at genoplive gudommelig viden! Rygtet siger, at du har en vane med at bede til en skålsætning, før du spiser din aftensmad. Måske kan du tage et skridt tilbage og læse lidt mere om de gamle guder og gudinder, så du kan blæse liv i din viden!",
+    "very_bad": "Åh nej! Det ser ud til, at du har haft en hård tid med quizzen om religion og mytologi. Det er okay, selvom du måske tror, at Noah havde en ark fyldt med dinosaurer! Folk taler om dine bemærkelsesværdige evner til at snakke med træer og overbevise dem om at danse. Det er på tide at tænke på at kaste dig ud i nogle grundlæggende mytologibøger og gå fra at tale med træer til at tale med guderne!",
+    "everything_wrong": "Oh, kære! Det ser ud til, at du har været på en anden planet under quizzen om religion og mytologi. Men frygt ikke, selvom du måske tror, at Odin er navnet på en kendt isbutik! Rygtet siger, at du er den eneste person, der nogensinde har forsøgt at starte en religion dedikeret til æggebakker. Du er virkelig en unik person! Måske skal du starte med at læse nogle bøger om religion og mytologi for at finde ud af, hvem der gemmer sig bag alle de gamle fortællinger."
+  }
+}

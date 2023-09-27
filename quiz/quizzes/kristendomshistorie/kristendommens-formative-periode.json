@@ -1,0 +1,203 @@
+{
+  "title": "Kristendommens formative periode",
+  "questions": [
+    {
+      "question": "Hvad betyder 'Kristologi' i kristendommen?",
+      "correct_answer": "Studiet af Kristus' natur og person",
+      "wrong_answers": [
+        "Studiet af kirkens historie",
+        "Studiet af kirkearkitektur",
+        "Studiet af Bibelens tekster",
+        "Studiet af kirkens liturgi",
+        "Studiet af helgener",
+        "Studiet af engle"
+      ],
+      "silly_answers": [
+        "Studiet af juledekorationer",
+        "Studiet af kiks",
+        "Studiet af smørrebrød"
+      ],
+      "explanation": "Kristologi er studiet af Kristus' natur, person og værker. Det er et centralt område inden for teologi, der undersøger spørgsmål som Kristi guddommelighed, hans menneskelighed og hans relation til Faderen."
+    },
+    {
+      "question": "Hvad betyder 'homoousis' i kristendommen?",
+      "correct_answer": "Begrebet om, at Faderen og Sønnen er af samme væsen",
+      "wrong_answers": [
+        "Forestillingen om treenigheden",
+        "Begrebet om forudbestemmelse",
+        "Begrebet om arvesynd",
+        "Forestillingen om Kristi to naturer",
+        "Forestillingen om Kristi genkomst",
+        "Begrebet om retfærdiggørelse ved tro"
+      ],
+      "silly_answers": [
+        "Konceptet om 'homo sapiens'",
+        "Fænomenet med skiftevis tøjstil",
+        "Princippet om 'homo ludens' i spiludvikling"
+      ],
+      "explanation": "'Homoousis' er et græsk begreb, der betyder 'af samme væsen'. Det blev brugt i den nikænske trosbekendelse til at beskrive forholdet mellem Faderen og Sønnen i den kristne treenighed. Det understreger, at Faderen og Sønnen ikke bare er tæt forbundne, men de er et i væsen."
+    },
+    {
+      "question": "Hvad betyder 'Messias' i kristendommen?",
+      "correct_answer": "Den lovede befrier og konge, der ifølge Det Gamle Testamente skulle komme til jøderne",
+      "wrong_answers": [
+        "En engel",
+        "En profet",
+        "En helgen",
+        "En martyr",
+        "En apostel",
+        "En biskop"
+      ],
+      "silly_answers": [
+        "En kendt fodboldspiller",
+        "En populær cocktail",
+        "En berømt operakarakter"
+      ],
+      "explanation": "I kristendommen er 'Messias' en titel, der bruges om Jesus Kristus. Titlen stammer fra det hebraiske ord 'Māšîaḥ', som betyder 'den salvede'. Ifølge Det Gamle Testamente skulle Messias være en befrier og konge, der ville komme til jøderne. Kristne tror, at Jesus er denne lovede Messias."
+    },
+    {
+      "question": "Hvad er 'Augustinsk arvesynd'?",
+      "correct_answer": "Forestillingen om, at alle mennesker er født med synd på grund af Adams og Evas oprindelige synd",
+      "wrong_answers": [
+        "Forestillingen om, at alle mennesker er forudbestemt til enten frelse eller fordømmelse",
+        "Forestillingen om, at alle mennesker kan opnå frelse gennem tro alene",
+        "Forestillingen om, at mennesker kan opnå frelse gennem gode gerninger",
+        "Forestillingen om, at Gud er tre personer i en",
+        "Forestillingen om, at Jesus både er fuldt menneske og fuldt Gud",
+        "Forestillingen om, at Jesus vil vende tilbage i endetiden"
+      ],
+      "silly_answers": [
+        "Forestillingen om, at alle mennesker er født med en forkærlighed for is",
+        "Forestillingen om, at alle mennesker er forudbestemt til at tabe deres nøgler",
+        "Forestillingen om, at alle mennesker er genetisk programmeret til at nyse, når de ser sollys"
+      ],
+      "explanation": "'Augustinsk arvesynd' er en lære formuleret af den kristne teolog Augustine af Hippo, som hævdede, at alle mennesker er født med synd på grund af Adams og Evas oprindelige synd i Edens have. Dette står i modsætning til nogle tidligere kristne læresætninger, som hævdede, at synd kun blev overført gennem dårlige handlinger, ikke ved fødslen."
+    },
+    {
+      "question": "Hvad betyder 'eskatalogi' i kristendommen?",
+      "correct_answer": "Studiet af 'sidste ting', herunder død, dommedag, og livet efter døden",
+      "wrong_answers": [
+        "Studiet af engle",
+        "Studiet af mirakler",
+        "Studiet af kirkens struktur",
+        "Studiet af sakramenter",
+        "Studiet af præsteskabet",
+        "Studiet af Bibelen"
+      ],
+      "silly_answers": [
+        "Studiet af skønlitterære slutninger",
+        "Studiet af hvordan man finder den bedste plads i biografen",
+        "Studiet af hvordan man bedst lukker en fest"
+      ],
+      "explanation": "Eskatologi er det teologiske studie af 'sidste ting' eller endetiden. Det inkluderer emner som død, opstandelse, dommedag, himmelen, helvede, og det evige liv."
+    },
+    {
+      "question": "Hvem er 'theotokos' i kristendommen?",
+      "correct_answer": "Maria, Jesu mor",
+      "wrong_answers": [
+        "Gud Faderen",
+        "Jesus Kristus",
+        "Helligånden",
+        "Johannes Døberen",
+        "Apostlen Paulus",
+        "Apostlen Peter"
+      ],
+      "silly_answers": [
+        "Fru Claus, julemandens kone",
+        "Moira Rose, fra tv-serien 'Schitt's Creek'",
+        "Beyoncé, den amerikanske sanger og skuespiller"
+      ],
+      "explanation": "Theotokos er et græsk ord, der bogstaveligt talt betyder 'Gudsfødende'. I kristendommen bruges det som en titel for Maria, Jesu mor, for at understrege hendes rolle som moder til Guds søn."
+    },
+    {
+      "question": "Hvad betyder 'prædestination' i kristendommen?",
+      "correct_answer": "Forestillingen om, at Gud har forudbestemt alle begivenheder, herunder individets frelse eller fordømmelse",
+      "wrong_answers": [
+        "Forestillingen om treenigheden",
+        "Forestillingen om Kristi genkomst",
+        "Forestillingen om Kristi to naturer",
+        "Forestillingen om arvesynd",
+        "Forestillingen om Kristi opstandelse",
+        "Forestillingen om engles og djævles eksistens"
+      ],
+      "silly_answers": [
+        "Forestillingen om, at alle katte er forudbestemt til at falde på deres fødder",
+        "Forestillingen om, at alle mennesker er forudbestemt til at glemme, hvad de gik ind i rummet efter",
+        "Forestillingen om, at alle teenagere er forudbestemt til at rulle med øjnene"
+      ],
+      "explanation": "Prædestination er en lære, der siger, at Gud har forudbestemt alle begivenheder, herunder individets frelse eller fordømmelse. Det er især fremtrædende inden for kalvinistisk teologi."
+    },
+    {
+      "question": "Hvad er en 'apokalypse' i kristendommen?",
+      "correct_answer": "En åbenbaring eller profeti om endetiden",
+      "wrong_answers": [
+        "En form for bøn",
+        "En type sakrament",
+        "En rituel dans",
+        "En hellig skrift",
+        "En form for prædiken",
+        "En religiøs festdag"
+      ],
+      "silly_answers": [
+        "En særlig form for diæt",
+        "En metode til at klippe græsset",
+        "En måde at folde servietter på"
+      ],
+      "explanation": "Apokalypse er et græsk ord, der betyder 'afsløring' eller 'åbenbaring'. I en kristen sammenhæng refererer det ofte til profetiske visioner om endetiden, som de er beskrevet i Johannesevangeliet i Det Nye Testamente."
+    },
+    {
+      "question": "Hvad refererer 'øst-vest-kirken' til?",
+      "correct_answer": "Splittelsen af kristendommen i den østlige ortodokse kirke og den vestlige katolske kirke",
+      "wrong_answers": [
+        "Udbredelsen af kristendommen til Amerika",
+        "Udbredelsen af kristendommen til Asien",
+        "Splittelsen mellem protestanter og katolikker",
+        "Splittelsen mellem kristendom og jødedom",
+        "Splittelsen mellem kristendom og islam",
+        "Splittelsen mellem romersk-katolske og anglikanske kirker"
+      ],
+      "silly_answers": [
+        "Det teologiske debatforum om den bedste kompasretning",
+        "En særlig række kirker bygget i nord-syd retning",
+        "En kirke dedikeret til fans af rapperen Kanye West"
+      ],
+      "explanation": "Termen 'øst-vest-kirken' refererer til det store skisma i 1054 e.v., hvor kristendommen blev delt i den østlige ortodokse kirke (med hovedsæde i Byzans/Constantinopel) og den vestlige romersk-katolske kirke (med hovedsæde i Rom). Splittelsen skyldtes både politiske og teologiske uenigheder."
+    },
+    {
+      "question": "Hvad er 'to-natur-læren' i kristendommen?",
+      "correct_answer": "Forestillingen om, at Kristus har to naturer - en guddommelig og en menneskelig",
+      "wrong_answers": [
+        "Forestillingen om, at Gud er både god og ond",
+        "Forestillingen om, at mennesket har en udødelig sjæl og en dødelig krop",
+        "Forestillingen om, at verden består af både åndelige og fysiske virkeligheder",
+        "Forestillingen om, at engle har både en guddommelig og en menneskelig natur",
+        "Forestillingen om, at kirken har en åndelig og en institutionel dimension",
+        "Forestillingen om, at frelsen opnås både gennem tro og gerninger"
+      ],
+      "silly_answers": [
+        "Forestillingen om, at katte både er flydende og faste",
+        "Forestillingen om, at kaffe skal drikkes både om morgenen og om aftenen",
+        "Forestillingen om, at hver person har en ond tvilling"
+      ],
+      "explanation": "To-natur-læren er den kristne forestilling om, at Kristus har to naturer - en guddommelig og en menneskelig. Dette er en central del af kristologien og blev formuleret på kirkemødet i Chalcedon i 451 e.v. for at afvise monofysitisk kristologi, der hævdede, at Kristus kun har en natur."
+    },
+    {
+      "question": "Hvad refererer 'martyrium' til i kristendommen?",
+      "correct_answer": "At dø eller lide for sin tro",
+      "wrong_answers": [
+        "At forkynde evangeliet",
+        "At hjælpe de fattige",
+        "At gå i kirken regelmæssigt",
+        "At bede",
+        "At aflægge cølibatløfte",
+        "At blive ordineret som præst"
+      ],
+      "silly_answers": [
+        "At klippe plænen hver søndag",
+        "At løbe en marathon iført sandaler",
+        "At forsøge at læse alle Wikipedia-artikler"
+      ],
+      "explanation": "Martyrium er konceptet om at dø eller lide for sin tro. I en kristen sammenhæng henviser det ofte til de tidlige kristne, der blev forfulgt og dræbt for deres tro under det romerske imperium."
+    }
+  ]
+}

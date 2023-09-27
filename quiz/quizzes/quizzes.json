@@ -1,0 +1,12 @@
+{
+  "title": "Quizzes",
+  "quizzes": [
+    "./animals.json",
+    "./broncealder.json",
+    "./konditorkager.json",
+    "./neurotransmitters.json",
+    "./sneakers_og_mode.json",
+    "./religion.json",
+    "./typescript.json"
+  ]
+}

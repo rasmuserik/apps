@@ -1,0 +1,25 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Minimal quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  Sample App. <small>(scroll down for description/details)</small>
+  <hr />
+  <!--data-quiz="./quizzes/quizzes.json"-->
+  <script
+    src="./script.js"
+    data-quiz="./quizzes/quizzes.json"
+  ></script>
+  <hr />
+  <div id="READMEmd"></div>
+  <script type="module">
+    import marked from "../lib/marked.esm.js";
+    READMEmd.innerHTML = marked.parse(
+      await (await fetch("./README.md")).text(),
+    );
+  </script>
+</body>

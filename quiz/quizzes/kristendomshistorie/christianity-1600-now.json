@@ -1,0 +1,143 @@
+{
+  "title": "Kristendomshistorie år 1600-nu",
+  "questions": [
+    {
+      "question": "Hvem var en ledende figur i det engelske puritanske samfund, der ankom til Nordamerika på Mayflower i 1620?",
+      "correct_answer": "William Bradford",
+      "wrong_answers": [
+        "John Winthrop",
+        "Thomas Hooker",
+        "Roger Williams",
+        "Anne Hutchinson",
+        "William Penn",
+        "John Smith"
+      ],
+      "silly_answers": [
+        "Captain Jack Sparrow",
+        "Gandalf the Grey",
+        "Sherlock Holmes"
+      ],
+      "explanation": "William Bradford var en ledende figur i det separatistiske puritanske samfund, der ankom til det, der nu er Massachusetts, på Mayflower i 1620. Han tjente som guvernør i Plymouth Colony i mange år."
+    },
+    {
+      "question": "Hvilken religiøs bevægelse opstod i det 17. århundrede i England og blev ledet af George Fox?",
+      "correct_answer": "Kvækerne",
+      "wrong_answers": [
+        "Mennonitterne",
+        "Shakere",
+        "Hutterites",
+        "Amish",
+        "Anabaptisterne",
+        "Pietisterne"
+      ],
+      "silly_answers": ["Chewbacca", "Master Yoda", "Darth Vader"],
+      "explanation": "Kvækerne, formelt kendt som Religious Society of Friends, blev grundlagt i det 17. århundrede i England af George Fox. Bevægelsen er kendt for sin tro på den indre lys og dens vægt på direkte oplevelse af Gud."
+    },
+    {
+      "question": "Hvilken tysk teolog og filosof er kendt for at have udviklet dialektisk teologi i det 20. århundrede?",
+      "correct_answer": "Karl Barth",
+      "wrong_answers": [
+        "Friedrich Schleiermacher",
+        "Rudolf Bultmann",
+        "Paul Tillich",
+        "Emil Brunner",
+        "Jürgen Moltmann",
+        "Dietrich Bonhoeffer"
+      ],
+      "silly_answers": ["Karl Marx", "Karl Lagerfeld", "Karl Pilkington"],
+      "explanation": "Karl Barth var en schweizisk reformeret teolog, der er mest kendt for sin indflydelse på dialektisk teologi og for sin bog 'Kirchliche Dogmatik'."
+    },
+    {
+      "question": "Hvem var en vigtig figur i den amerikanske borgerrettighedsbevægelse og er kendt for sin 'I Have a Dream'-tale?",
+      "correct_answer": "Martin Luther King Jr.",
+      "wrong_answers": [
+        "Malcolm X",
+        "Rosa Parks",
+        "James Baldwin",
+        "Marcus Garvey",
+        "W.E.B. Du Bois",
+        "Booker T. Washington"
+      ],
+      "silly_answers": ["Martin Luther King Kong", "Mickey Mouse", "Superman"],
+      "explanation": "Martin Luther King Jr. var en amerikansk baptistpræst og borgerrettighedsaktivist, der er bedst kendt for sin rolle i fremskridtene i borgerrettighederne ved hjælp af ikke-voldelige civile ulydighed baseret på sin kristne tro."
+    },
+    {
+      "question": "Hvem var den første paven, der kom fra Latinamerika?",
+      "correct_answer": "Pave Francis",
+      "wrong_answers": [
+        "Pave Johannes Paul II",
+        "Pave Benedikt XVI",
+        "Pave Johannes Paul I",
+        "Pave Paul VI",
+        "Pave Johannes XXIII",
+        "Pave Pius XII"
+      ],
+      "silly_answers": [
+        "Paveye the Sailor Man",
+        "Pope John Paul George Ringo",
+        "Pope Francis Bacon"
+      ],
+      "explanation": "Pave Francis, der blev valgt i 2013, er den første paven fra Latinamerika. Han er også den første jesuit til at blive pave."
+    },
+    {
+      "question": "Hvilken engelsk evangelist spillede en central rolle i den metodistiske bevægelse og prædikede ofte udendørs i det 18. århundrede?",
+      "correct_answer": "John Wesley",
+      "wrong_answers": [
+        "George Whitefield",
+        "Charles Wesley",
+        "Jonathan Edwards",
+        "John Smyth",
+        "Roger Williams",
+        "William Carey"
+      ],
+      "silly_answers": ["John Lennon", "John Cena", "John Wick"],
+      "explanation": "John Wesley var en engelsk præst og teolog, der sammen med sin bror Charles Wesley spillede en central rolle i udviklingen af den metodistiske bevægelse i det 18. århundrede."
+    },
+    {
+      "question": "Hvem grundlagde Hæren Frels i England i det 19. århundrede?",
+      "correct_answer": "William og Catherine Booth",
+      "wrong_answers": [
+        "George Williams",
+        "Thomas Hughes",
+        "Charles Spurgeon",
+        "John Henry Newman",
+        "John Keble",
+        "Edward Bouverie Pusey"
+      ],
+      "silly_answers": [
+        "Batman and Robin",
+        "Sherlock Holmes and Watson",
+        "Bonnie and Clyde"
+      ],
+      "explanation": "William og Catherine Booth grundlagde Hæren Frels i England i det 19. århundrede som en bevægelse, der sigtede mod at bringe frelse til de fattigste og mest marginaliserede i samfundet."
+    },
+    {
+      "question": "Hvilken moderne religiøs bevægelse blev grundlagt af Joseph Smith i det 19. århundrede i USA?",
+      "correct_answer": "Mormonisme",
+      "wrong_answers": [
+        "Jehovas Vidner",
+        "Adventisme",
+        "Christian Science",
+        "Unitarisme",
+        "Plymouth Brethren",
+        "New Thought"
+      ],
+      "silly_answers": ["Jediisme", "Pastafarianisme", "Kryptonianisme"],
+      "explanation": "Mormonismen, officielt kendt som Jesu Kristi Kirke af Sidste Dages Hellige, blev grundlagt af Joseph Smith i det 19. århundrede. Smith hævdede at have haft flere åbenbaringer, der førte til oprettelsen af denne nye religiøse tradition."
+    },
+    {
+      "question": "Hvilken amerikansk evangelist ledede masser af vækkelsesmøder (crusades) i det 20. århundrede og prædikede for millioner af mennesker rundt om i verden?",
+      "correct_answer": "Billy Graham",
+      "wrong_answers": [
+        "Billy Sunday",
+        "Oral Roberts",
+        "Pat Robertson",
+        "Jerry Falwell",
+        "Jimmy Swaggart",
+        "Jim Bakker"
+      ],
+      "silly_answers": ["Billy the Kid", "Billy Goat", "Billy Idol"],
+      "explanation": "Billy Graham var en amerikansk evangelist, der gennem sin karriere prædikede for millioner af mennesker rundt om i verden gennem 'crusades' eller vækkelsesmøder. Han har rådgivet flere amerikanske præsidenter og har haft en betydelig indflydelse på kristendommen i det 20. århundrede."
+    }
+  ]
+}

@@ -1,0 +1,1084 @@
+{
+  "title": "Reformationen",
+  "questions": [
+    {
+      "question": "Hvornår startede Reformationen?",
+      "correct_answer": "1517",
+      "wrong_answers": ["1400", "1600", "1700", "1200", "1800", "1900"],
+      "silly_answers": [
+        "I går",
+        "Da dragerne landede",
+        "Da Elvis forlod bygningen"
+      ],
+      "explanation": "Reformationen startede i 1517, da Martin Luther offentliggjorde sine 95 teser."
+    },
+    {
+      "question": "Hvem er kendt for at have startet Reformationen?",
+      "correct_answer": "Martin Luther",
+      "wrong_answers": [
+        "Johannes Gutenberg",
+        "Henry VIII",
+        "Johannes Kepler",
+        "Galileo Galilei",
+        "Napoleon Bonaparte",
+        "Christopher Columbus"
+      ],
+      "silly_answers": ["Harry Potter", "Darth Vader", "Gandalf"],
+      "explanation": "Reformationen blev startet af Martin Luther, en tysk munk og professor i teologi, i 1517."
+    },
+    {
+      "question": "Hvilket land var Luther fra?",
+      "correct_answer": "Tyskland",
+      "wrong_answers": [
+        "England",
+        "Frankrig",
+        "Italien",
+        "Spanien",
+        "Portugal",
+        "Rusland"
+      ],
+      "silly_answers": ["Mars", "Atlantis", "Narnia"],
+      "explanation": "Martin Luther var fra Tyskland. Han blev født i Eisleben i 1483."
+    },
+    {
+      "question": "Hvad er Luthers 95 teser kendt for?",
+      "correct_answer": "Kritik af afladsbrevet",
+      "wrong_answers": [
+        "Støtte til pavelig autoritet",
+        "Promovering af det latinske sprog",
+        "Bekræftelse af katolske dogmer",
+        "Afvisning af Guds eksistens",
+        "Fremme af korsridt",
+        "Oprettelse af nye munkeordener"
+      ],
+      "silly_answers": [
+        "Opskrifter på tysk øl",
+        "En guide til dragedræbning",
+        "Anmeldelser af middelalderlige rockbands"
+      ],
+      "explanation": "Luthers 95 teser var en kritik af afladsbrevet og mange andre aspekter af den romersk-katolske kirke."
+    },
+    {
+      "question": "Hvilken religiøs bevægelse opstod som et resultat af Reformationen?",
+      "correct_answer": "Protestantisme",
+      "wrong_answers": [
+        "Hinduisme",
+        "Islam",
+        "Buddhisme",
+        "Sikhisme",
+        "Jødedom",
+        "Shintoisme"
+      ],
+      "silly_answers": ["Pastafarianisme", "Jediisme", "Dødningehovedkulten"],
+      "explanation": "Protestantisme opstod som et resultat af Reformationen. Det er en af de største gren af kristendommen."
+    },
+    {
+      "question": "Hvem var den første danske konge efter Reformationen?",
+      "correct_answer": "Christian III",
+      "wrong_answers": [
+        "Christian IV",
+        "Frederik I",
+        "Christian II",
+        "Frederik II",
+        "Valdemar Atterdag",
+        "Svend Tveskæg"
+      ],
+      "silly_answers": ["Simba", "King Kong", "Optimus Prime"],
+      "explanation": "Christian III blev den første danske konge efter Reformationen. Han styrkede den lutherske kirke i Danmark."
+    },
+    {
+      "question": "Hvad blev brugt til at sprede Luthers ideer bredt?",
+      "correct_answer": "Trykkepressen",
+      "wrong_answers": [
+        "Telegraf",
+        "Radio",
+        "Fjernsyn",
+        "Internet",
+        "Mobiltelefon",
+        "Satellitkommunikation"
+      ],
+      "silly_answers": ["Magiske duer", "Teleportation", "Tidsrejser"],
+      "explanation": "Trykkepressen spillede en afgørende rolle i udbredelsen af Luthers ideer."
+    },
+    {
+      "question": "Hvilket år blev Reformationen indført i Danmark?",
+      "correct_answer": "1536",
+      "wrong_answers": ["1550", "1560", "1570", "1580", "1590", "1600"],
+      "silly_answers": [
+        "I det 25. århundrede",
+        "Da enhjørningerne tog magten",
+        "Da pizzaen blev opfundet"
+      ],
+      "explanation": "Reformationen blev indført i Danmark i 1536 under Christian III."
+    },
+    {
+      "question": "Hvad hed det møde, hvor Luther skulle stå til ansvar for sine skrifter?",
+      "correct_answer": "Rigsdagen i Worms",
+      "wrong_answers": [
+        "Koncilet i Nicaea",
+        "Koncilet i Trent",
+        "Rigsdagen i Speyer",
+        "Koncilet i Konstantinopel",
+        "Koncilet i Chalcedon",
+        "Rigsdagen i Mainz"
+      ],
+      "silly_answers": [
+        "Hogwarts' skolestyrelsesmøde",
+        "Star Wars' rådsmøde",
+        "Elverfolkenes hemmelige råd"
+      ],
+      "explanation": "Martin Luther blev indkaldt til Rigsdagen i Worms i 1521 for at stå til ansvar for sine skrifter."
+    },
+    {
+      "question": "Hvilken begivenhed markerer typisk slutningen på Reformationen?",
+      "correct_answer": "Freden i Westphalen",
+      "wrong_answers": [
+        "Første Vatikanråd",
+        "Konstantin den Stores omvendelse",
+        "Faldet af det Romerske Rige",
+        "Første Korstog",
+        "Opdagelsen af Amerika",
+        "Konstantinopels fald"
+      ],
+      "silly_answers": [
+        "Festen i Mordor",
+        "Hobbitternes festmåltid",
+        "Kampen i Hogwarts"
+      ],
+      "explanation": "Freden i Westphalen i 1648 markerer typisk slutningen på Reformationen."
+    },
+    {
+      "question": "Hvilken bog oversatte Luther til tysk som en del af reformationen?",
+      "correct_answer": "Bibelen",
+      "wrong_answers": [
+        "Koranen",
+        "Torahen",
+        "Iliaden",
+        "Odysseen",
+        "Aeneiden",
+        "Bhagavadgita"
+      ],
+      "silly_answers": ["Harry Potter", "Game of Thrones", "Lord of the Rings"],
+      "explanation": "Luther oversatte Bibelen til tysk, hvilket gjorde det muligt for almindelige mennesker at læse og forstå det."
+    },
+    {
+      "question": "Hvem var Jean Calvin?",
+      "correct_answer": "En leder af Reformationen i Schweiz",
+      "wrong_answers": [
+        "En spansk conquistador",
+        "En romersk kejser",
+        "En russisk tsar",
+        "En engelsk konge",
+        "En fransk revolutionær",
+        "En italiensk kunstner"
+      ],
+      "silly_answers": ["En elverprins", "En hobbit", "En jediridder"],
+      "explanation": "Jean Calvin var en af de vigtigste ledere af Reformationen. Han var aktiv i Schweiz."
+    },
+    {
+      "question": "Hvilken dansk biskop støttede Reformationen og blev fængslet for det?",
+      "correct_answer": "Hans Tausen",
+      "wrong_answers": [
+        "Absalon",
+        "Grundtvig",
+        "Peder Palladius",
+        "Erik Pontoppidan",
+        "Poul Madsen",
+        "Johannes Ewald"
+      ],
+      "silly_answers": ["Frodo Baggins", "Sherlock Holmes", "Hulk Hogan"],
+      "explanation": "Hans Tausen, også kendt som 'den danske Luther', støttede Reformationen og blev fængslet for sine synspunkter."
+    },
+    {
+      "question": "Hvilken institution led mest under Reformationen i Danmark?",
+      "correct_answer": "Kirken",
+      "wrong_answers": [
+        "Kongehuset",
+        "Handelsflåden",
+        "Landbruget",
+        "Skoler",
+        "Universiteter",
+        "Hospitaler"
+      ],
+      "silly_answers": [
+        "Drageopdrættere",
+        "Elvernes skjulesteder",
+        "Quidditch-ligaen"
+      ],
+      "explanation": "Kirken mistede meget magt og rigdom under Reformationen i Danmark."
+    },
+    {
+      "question": "Hvad blev klostrene brugt til efter Reformationen i Danmark?",
+      "correct_answer": "Skoler og hospitaler",
+      "wrong_answers": [
+        "Festhaller",
+        "Hoteller",
+        "Restauranter",
+        "Kasinoer",
+        "Shoppingcentre",
+        "Boliger"
+      ],
+      "silly_answers": [
+        "Enhjørningestalde",
+        "Troll-træningscentre",
+        "Heksens bryggerier"
+      ],
+      "explanation": "Efter Reformationen i Danmark blev mange klostre omdannet til skoler og hospitaler."
+    },
+    {
+      "question": "Hvilket sprog blev det primære i kirken efter Reformationen i Danmark?",
+      "correct_answer": "Dansk",
+      "wrong_answers": [
+        "Latin",
+        "Engelsk",
+        "Tysk",
+        "Fransk",
+        "Spansk",
+        "Italiensk"
+      ],
+      "silly_answers": ["Elversprog", "Dothraki", "Klingon"],
+      "explanation": "Efter Reformationen blev dansk det primære sprog i kirken i stedet for latin."
+    },
+    {
+      "question": "Hvem blev den øverste leder af kirken i Danmark efter Reformationen?",
+      "correct_answer": "Kongen",
+      "wrong_answers": [
+        "Paven",
+        "Biskopper",
+        "Præster",
+        "Munkene",
+        "Nonnerne",
+        "Folket"
+      ],
+      "silly_answers": ["Gandalf", "Dumbledore", "Yoda"],
+      "explanation": "Efter Reformationen blev kongen den øverste leder af kirken i Danmark."
+    },
+    {
+      "question": "Hvilken by blev centrum for Reformationen i Schweiz?",
+      "correct_answer": "Genève",
+      "wrong_answers": [
+        "Zürich",
+        "Basel",
+        "Bern",
+        "Lausanne",
+        "Lugano",
+        "Luzern"
+      ],
+      "silly_answers": ["Hogwarts", "Narnia", "Middeljord"],
+      "explanation": "Genève blev centrum for Reformationen i Schweiz, hovedsageligt på grund af Jean Calvins lederskab."
+    },
+    {
+      "question": "Hvad hed den religiøse bevægelse, der opstod i England som følge af Reformationen?",
+      "correct_answer": "Anglikanisme",
+      "wrong_answers": [
+        "Calvinisme",
+        "Lutheranisme",
+        "Baptisme",
+        "Methodisme",
+        "Pentekostalisme",
+        "Presbyterianisme"
+      ],
+      "silly_answers": ["Hufflepuff", "Gryffindor", "Slytherin"],
+      "explanation": "Anglikanismen opstod i England som følge af Reformationen, især efter bruddet med paven under Henry VIII."
+    },
+    {
+      "question": "Hvem startede den engelske Reformation?",
+      "correct_answer": "Henry VIII",
+      "wrong_answers": [
+        "Elizabeth I",
+        "Henry VII",
+        "Edward VI",
+        "Mary I",
+        "Charles I",
+        "James I"
+      ],
+      "silly_answers": ["Sherlock Holmes", "James Bond", "Harry Potter"],
+      "explanation": "Henry VIII startede den engelske Reformation, da han brød med paven og oprettede den Anglikanske Kirke."
+    },
+    {
+      "question": "Hvad var den primære årsag til Henry VIIIs brud med den katolske kirke?",
+      "correct_answer": "Han ønskede en skilsmisse",
+      "wrong_answers": [
+        "Han ønskede mere magt",
+        "Han blev lutheraner",
+        "Han konverterede til islam",
+        "Han blev ekskommunikeret",
+        "Han blev ateist",
+        "Han konverterede til jødedom"
+      ],
+      "silly_answers": [
+        "Han ønskede at blive en jediridder",
+        "Han blev forelsket i en elverprinsesse",
+        "Han ville være det nye medlem af Gryffindor"
+      ],
+      "explanation": "Henry VIII brød med den katolske kirke, fordi paven nægtede at annullere hans ægteskab med Catherine af Aragon, så han kunne gifte sig med Anne Boleyn."
+    },
+    {
+      "question": "Hvad blev den nye kirke kaldt, som Henry VIII grundlagde?",
+      "correct_answer": "Den Anglikanske Kirke",
+      "wrong_answers": [
+        "Den Lutheranske Kirke",
+        "Den Calvinistiske Kirke",
+        "Den Baptiske Kirke",
+        "Den Methodiske Kirke",
+        "Den Presbyterianiske Kirke",
+        "Den Romersk-Katolske Kirke"
+      ],
+      "silly_answers": [
+        "Hogwarts Skole for Heksekunst og Troldmandsskab",
+        "Stark Industries",
+        "Starfleet Academy"
+      ],
+      "explanation": "Henry VIII grundlagde Den Anglikanske Kirke efter sit brud med den katolske kirke."
+    },
+    {
+      "question": "Hvad er en anden betegnelse for Den Anglikanske Kirke?",
+      "correct_answer": "Church of England",
+      "wrong_answers": [
+        "Church of Scotland",
+        "Church of Ireland",
+        "Church of Wales",
+        "Church of Australia",
+        "Church of Canada",
+        "Church of New Zealand"
+      ],
+      "silly_answers": [
+        "Church of Hogwarts",
+        "Church of Middeljord",
+        "Church of Narnia"
+      ],
+      "explanation": "Den Anglikanske Kirke er også kendt som 'Church of England'."
+    },
+    {
+      "question": "Hvad er 'Trediveårskrigen'?",
+      "correct_answer": "En stor konflikt udløst af religiøse spændinger mellem protestanter og katolikker",
+      "wrong_answers": [
+        "En borgerkrig i England",
+        "En krig mellem Danmark og Sverige",
+        "En krig mellem Frankrig og England",
+        "En krig mellem Spanien og Holland",
+        "En krig i Nordamerika",
+        "En krig i Asien"
+      ],
+      "silly_answers": [
+        "En krig mellem Jedi og Sith",
+        "En krig mellem Hogwarts og Durmstrang",
+        "En krig mellem Hobbitter og Orker"
+      ],
+      "explanation": "Trediveårskrigen var en stor konflikt i Europa, der hovedsageligt blev udløst af religiøse spændinger mellem protestanter og katolikker efter Reformationen."
+    },
+    {
+      "question": "Hvad hed det møde, hvor den katolske kirke besluttede at gøre modstand mod Reformationen?",
+      "correct_answer": "Konciliet i Trento",
+      "wrong_answers": [
+        "Konciliet i Nicea",
+        "Konciliet i Chalcedon",
+        "Konciliet i Ephesus",
+        "Konciliet i Konstantinopel",
+        "Konciliet i Vatikanet",
+        "Konciliet i Firenze"
+      ],
+      "silly_answers": [
+        "Rådet i Elrond",
+        "Rådet i Jedi",
+        "Hogwarts' Skolestyrelse"
+      ],
+      "explanation": "Konciliet i Trento var et vigtigt møde i den katolske kirke, hvor det blev besluttet at gøre modstand mod Reformationen. Dette blev starten på Modreformationen."
+    },
+    {
+      "question": "Hvad hed den religiøse bevægelse, der opstod som modstand mod Reformationen?",
+      "correct_answer": "Modreformationen",
+      "wrong_answers": [
+        "Pietismen",
+        "Unitarismen",
+        "Puritanismen",
+        "Shakerismen",
+        "Transcendentalismen",
+        "Kvækerrørelsen"
+      ],
+      "silly_answers": [
+        "Wakanda Forever-bevægelsen",
+        "Dumbledore's Army",
+        "Rebels Alliance"
+      ],
+      "explanation": "Modreformationen var en religiøs bevægelse i den katolske kirke som modreaktion på Reformationen."
+    },
+    {
+      "question": "Hvad var 'Ediktet i Nantes'?",
+      "correct_answer": "En lov, der gav religionsfrihed til protestanter i Frankrig",
+      "wrong_answers": [
+        "En lov, der forbød protestantisme",
+        "En lov, der gjorde katolicismen til statsreligion",
+        "En lov, der forbød katolicismen",
+        "En lov, der gav religionsfrihed til jøder",
+        "En lov, der forbød jødedom",
+        "En lov, der gjorde jødedom til statsreligion"
+      ],
+      "silly_answers": [
+        "En lov, der anerkendte rettighederne for husalfer",
+        "En lov, der forbød brug af magi i mugglerverdenen",
+        "En lov, der gav borgerrettigheder til droider"
+      ],
+      "explanation": "Ediktet i Nantes, udstedt af Henrik IV af Frankrig i 1598, gav religionsfrihed til protestanter (huguenotter) i Frankrig."
+    },
+    {
+      "question": "Hvem var de vigtigste ledere af Modreformationen?",
+      "correct_answer": "Jesuitterordenen",
+      "wrong_answers": [
+        "Fransiskanerne",
+        "Dominikanerne",
+        "Benediktinerne",
+        "Karmeliterne",
+        "Cistercienserne",
+        "Augustinerne"
+      ],
+      "silly_answers": ["Hus Hufflepuff", "Hus Slytherin", "Hus Ravenclaw"],
+      "explanation": "Jesuitterordenen, også kendt som Jesu Selskab, spillede en afgørende rolle i Modreformationen."
+    },
+    {
+      "question": "Hvad var 'Freden i Westfalen'?",
+      "correct_answer": "Aftalerne, der sluttede Trediveårskrigen",
+      "wrong_answers": [
+        "Aftalerne, der sluttede den engelske borgerkrig",
+        "Aftalerne, der sluttede Napoleonskrigene",
+        "Aftalerne, der sluttede den første verdenskrig",
+        "Aftalerne, der sluttede den anden verdenskrig",
+        "Aftalerne, der sluttede den amerikanske borgerkrig",
+        "Aftalerne, der sluttede den spanske borgerkrig"
+      ],
+      "silly_answers": [
+        "Aftalerne, der sluttede 'Star Wars'",
+        "Aftalerne, der sluttede 'Game of Thrones'",
+        "Aftalerne, der sluttede 'Harry Potter'"
+      ],
+      "explanation": "Freden i Westfalen refererer til en række fredsaftaler, der blev underskrevet i 1648 og effektivt sluttede Trediveårskrigen."
+    },
+    {
+      "question": "Hvad var resultaterne af Reformationen?",
+      "correct_answer": "Splittelse af kristendommen i forskellige retninger og afslutning af kirkens monopol på religiøs tolkning",
+      "wrong_answers": [
+        "Enden på kristendommen",
+        "Starten på kristendommen",
+        "Udbredelsen af islam i Europa",
+        "Starten på middelalderen",
+        "Enden på middelalderen",
+        "Starten på renæssancen"
+      ],
+      "silly_answers": [
+        "Opfindelsen af kvidditch",
+        "Udbredelsen af jediismen",
+        "Oprettelsen af Hogwarts"
+      ],
+      "explanation": "Reformationen resulterede i splittelsen af kristendommen i flere retninger, herunder protestantisme, og satte en stopper for den katolske kirkes monopol på religiøs tolkning."
+    },
+    {
+      "question": "Hvilket år blev Martin Luther ekskommunikeret fra den katolske kirke?",
+      "correct_answer": "1521",
+      "wrong_answers": ["1517", "1520", "1525", "1530", "1534", "1546"],
+      "silly_answers": ["1492", "1066", "2001"],
+      "explanation": "Martin Luther blev ekskommunikeret fra den katolske kirke i 1521 efter at have afvist at tage afstand fra sine teser."
+    },
+    {
+      "question": "Hvilken tysk prins beskyttede Martin Luther efter hans ekskommunikation?",
+      "correct_answer": "Frederik den Vise",
+      "wrong_answers": [
+        "Karl V",
+        "Johan af Sachsen",
+        "Albrecht af Brandenburg",
+        "Georg af Sachsen",
+        "Ludvig II af Bayern",
+        "Wilhelm af Hessen"
+      ],
+      "silly_answers": ["Aragorn", "Prins Charming", "Luke Skywalker"],
+      "explanation": "Efter Martin Luthers ekskommunikation beskyttede Frederik den Vise ham mod det katolske hierarki."
+    },
+    {
+      "question": "Hvad er doktrinen 'Sola fide'?",
+      "correct_answer": "Troen alene er nok for frelse",
+      "wrong_answers": [
+        "Skriften alene er autoritativ",
+        "Frelse kommer gennem nådegaverne alene",
+        "Frelse er for alle mennesker",
+        "Tro er ikke nødvendig for frelse",
+        "Frelse opnås gennem gode gerninger",
+        "Ingen kan vide, om de er frelst"
+      ],
+      "silly_answers": [
+        "Frelse opnås gennem en 'Sole D'Oro' pizza",
+        "Tro på Narnia fører til frelse",
+        "Frelse opnås ved at klare sig gennem 'The Matrix'"
+      ],
+      "explanation": "'Sola fide' er en af de centrale doktriner i protestantismen, der hævder, at troen alene er nok for frelse."
+    },
+    {
+      "question": "Hvem oversatte Bibelen til engelsk for første gang?",
+      "correct_answer": "William Tyndale",
+      "wrong_answers": [
+        "John Wycliffe",
+        "Thomas More",
+        "Erasmus af Rotterdam",
+        "John Calvin",
+        "Thomas Cromwell",
+        "Roger Ascham"
+      ],
+      "silly_answers": [
+        "William Shakespeare",
+        "Charles Dickens",
+        "J.K. Rowling"
+      ],
+      "explanation": "William Tyndale var den første, der oversatte Bibelen til engelsk fra de oprindelige sprog, hebraisk og græsk."
+    },
+    {
+      "question": "Hvilken af de følgende er IKKE en af de fem 'sola'-doktriner?",
+      "correct_answer": "Sola ecclesia",
+      "wrong_answers": [
+        "Sola scriptura",
+        "Sola fide",
+        "Sola gratia",
+        "Solus Christus",
+        "Soli Deo gloria",
+        "Sola scriptura"
+      ],
+      "silly_answers": ["Sola pizza", "Sola Hogwarts", "Sola Star Wars"],
+      "explanation": "'Sola ecclesia' er ikke en af de fem 'sola'-doktriner. De fem er 'Sola scriptura', 'Sola fide', 'Sola gratia', 'Solus Christus' og 'Soli Deo gloria'."
+    },
+    {
+      "question": "Hvem udstedte Ediktet i Worms?",
+      "correct_answer": "Kejser Karl V",
+      "wrong_answers": [
+        "Pave Leo X",
+        "Frederik den Vise",
+        "Kejser Maximilian I",
+        "Kong Henrik VIII",
+        "Kardinal Thomas Wolsey",
+        "Kejser Ferdinand I"
+      ],
+      "silly_answers": ["Kejser Palpatine", "Dronning Amidala", "Thanos"],
+      "explanation": "Ediktet i Worms, der erklærede Martin Luther for fredløs og hans skrifter for forbudte, blev udstedt af kejser Karl V."
+    },
+    {
+      "question": "Hvilket land blev det første protestantiske land?",
+      "correct_answer": "Tyskland",
+      "wrong_answers": [
+        "England",
+        "Danmark",
+        "Schweiz",
+        "Holland",
+        "Sverige",
+        "Frankrig"
+      ],
+      "silly_answers": ["Hogwarts", "Gondor", "Narnia"],
+      "explanation": "Tyskland, især de nordlige tyske stater, blev de første områder, der omfavnede protestantismen efter Martin Luthers reformation."
+    },
+    {
+      "question": "Hvad var 'Marburg-kollokviet'?",
+      "correct_answer": "Et møde mellem Martin Luther og Ulrich Zwingli",
+      "wrong_answers": [
+        "Et møde mellem Martin Luther og Pave Leo X",
+        "En serie af foredrag af John Calvin",
+        "Et råd afvisende protestantismen",
+        "En debat mellem Thomas More og William Tyndale",
+        "En konference afvisende Anabaptisterne",
+        "Et råd fordømmende ikonoklasme"
+      ],
+      "silly_answers": [
+        "Et møde mellem Harry Potter og Voldemort",
+        "En debat mellem Frodo og Gollum",
+        "En konference om 'The Force' mellem Yoda og Obi-Wan Kenobi"
+      ],
+      "explanation": "Marburg-kollokviet var et møde mellem Martin Luther og Ulrich Zwingli, to af reformationens hovedfigurer. De var dog uenige om nattverden, hvilket førte til en splittelse inden for protestantismen."
+    },
+    {
+      "question": "Hvad var formålet med 'Konfessionen i Augsburg'?",
+      "correct_answer": "At formulere lutherske læresætninger",
+      "wrong_answers": [
+        "At formulere calvinske læresætninger",
+        "At formulere anglikanske læresætninger",
+        "At fordømme Martin Luther",
+        "At forsvare den katolske kirke",
+        "At fordømme Henry VIII's brud med den katolske kirke",
+        "At forsvare 'Anabaptisterne'"
+      ],
+      "silly_answers": [
+        "At formulere læresætninger for 'Huset Gryffindor'",
+        "At fordømme 'The Dark Side of The Force'",
+        "At forsvare 'The Shire' mod 'Mordor'"
+      ],
+      "explanation": "'Konfessionen i Augsburg', skrevet af Philipp Melanchthon, var et forsøg på at formulere de grundlæggende læresætninger i den lutherske tro."
+    },
+    {
+      "question": "Hvem grundlagde den calvinske gren af protestantismen?",
+      "correct_answer": "John Calvin",
+      "wrong_answers": [
+        "Martin Luther",
+        "Ulrich Zwingli",
+        "John Knox",
+        "William Tyndale",
+        "Thomas Cranmer",
+        "Huldrych Zwingli"
+      ],
+      "silly_answers": ["Calvin Klein", "John Snow", "John Wick"],
+      "explanation": "John Calvin var en fransk teolog og reformator, der grundlagde den calvinske gren af protestantismen i Genève, Schweiz."
+    },
+    {
+      "question": "Hvad var resultatet af 'Schmalkaldiske Krig'?",
+      "correct_answer": "Protestantiske stater tabte men fik senere religionsfrihed",
+      "wrong_answers": [
+        "Protestantiske stater vandt",
+        "Katolske stater vandt",
+        "Protestantiske stater blev genforenet med den katolske kirke",
+        "Katolske stater blev protestantiske",
+        "Protestantismen blev forbudt",
+        "Katolicismen blev forbudt"
+      ],
+      "silly_answers": [
+        "Voldemort vandt",
+        "Frodo mistede ringen",
+        "Thanos udslettede halvdelen af befolkningen"
+      ],
+      "explanation": "'Schmalkaldiske Krig' var en krig mellem de protestantiske Schmalkaldic League og den katolske kejser Karl V. Selvom de protestantiske stater tabte, blev de senere tildelt religionsfrihed i Freden i Augsburg."
+    },
+    {
+      "question": "Hvilken tysk by er kendt som 'Reformationens by'?",
+      "correct_answer": "Wittenberg",
+      "wrong_answers": [
+        "Frankfurt",
+        "Berlin",
+        "München",
+        "Hamburg",
+        "Dresden",
+        "Köln"
+      ],
+      "silly_answers": ["Hobbiton", "Mordor", "Gotham City"],
+      "explanation": "Wittenberg er kendt som 'Reformationens by', fordi det var her, Martin Luther slog sine 95 teser op på All Saints' Church's dør, hvilket udløste Reformationen."
+    },
+    {
+      "question": "Hvad var 'Radikale Reformation'?",
+      "correct_answer": "En bevægelse der forkastede både katolicisme og mainstream protestantisme",
+      "wrong_answers": [
+        "En bevægelse, der støttede en tilbagevenden til den katolske kirke",
+        "En bevægelse, der støttede en tilbagevenden til ortodoks kristendom",
+        "En bevægelse, der støttede brug af vold for at sprede protestantismen",
+        "En bevægelse, der støttede større indflydelse for paven",
+        "En bevægelse, der støttede større indflydelse for kejseren",
+        "En bevægelse, der støttede katolsk og protestantisk enhed"
+      ],
+      "silly_answers": [
+        "En bevægelse, der støttede udbredelsen af 'The Force'",
+        "En bevægelse, der støttede Hogwarts' dominans i Quidditch",
+        "En bevægelse, der støttede en tilbagevenden til 'Middle Earth'"
+      ],
+      "explanation": "'Radikale Reformation' refererer til bevægelser, der forkastede både den katolske kirke og mainstream protestantisme, herunder anabaptister, spiritualister og evangeliske rationalister."
+    },
+    {
+      "question": "Hvad er en anden betegnelse for 'Schweizer Reformationen'?",
+      "correct_answer": "Zwinglisk reformation",
+      "wrong_answers": [
+        "Luthersk reformation",
+        "Calvinsk reformation",
+        "Anabaptistisk reformation",
+        "Anglikansk reformation",
+        "Radikal reformation",
+        "Engelsk reformation"
+      ],
+      "silly_answers": [
+        "Voldemort reformation",
+        "Frodo reformation",
+        "Yoda reformation"
+      ],
+      "explanation": "'Schweizer Reformationen' refererer også til den zwingliske reformation, ledet af Ulrich Zwingli i Zürich."
+    },
+    {
+      "question": "Hvem var Thomas Müntzer?",
+      "correct_answer": "En radikal reformator og leder af bondeopstanden",
+      "wrong_answers": [
+        "En luthersk teolog",
+        "En calvinsk teolog",
+        "En engelsk reformator",
+        "En katolsk kardinal",
+        "En schweizisk reformator",
+        "En dansk reformator"
+      ],
+      "silly_answers": [
+        "En Hogwart professor",
+        "En Jedi-ridder",
+        "En 'Avenger'"
+      ],
+      "explanation": "Thomas Müntzer var en radikal reformator, der blev en af lederne af den tyske bondeopstand. Han var kendt for sine apokalyptiske læresætninger og støtte til voldelig opstand."
+    },
+    {
+      "question": "Hvad var 'Nattverdsstriden'?",
+      "correct_answer": "En uenighed mellem Luther og Zwingli om nattverdens natur",
+      "wrong_answers": [
+        "En uenighed mellem Luther og Calvin om prædestination",
+        "En uenighed mellem Zwingli og Calvin om kirkestaten",
+        "En uenighed mellem Luther og Pave Leo X om afladsbreve",
+        "En uenighed mellem Luther og Henry VIII om kongens overhoved",
+        "En uenighed mellem Zwingli og Pave Leo X om ekskommunikation",
+        "En uenighed mellem Calvin og Pave Leo X om pavelig ufejlbarlighed"
+      ],
+      "silly_answers": [
+        "En uenighed mellem Harry og Voldemort om Horcruxes",
+        "En uenighed mellem Frodo og Sauron om 'One Ring'",
+        "En uenighed mellem Luke og Darth Vader om 'The Force'"
+      ],
+      "explanation": "'Nattverdsstriden' var en uenighed mellem Martin Luther og Ulrich Zwingli om nattverdens natur. Luther hævdede 'Real Presence', mens Zwingli opfattede det som symbolsk."
+    },
+    {
+      "question": "Hvad er et 'afladsbrev'?",
+      "correct_answer": "Et dokument udstedt af kirken der reducerede straffen for synder",
+      "wrong_answers": [
+        "En form for helligt skrift",
+        "En bekendelse af tro",
+        "En form for bøn",
+        "En protestantisk reformationstekst",
+        "En katolsk højtid",
+        "En form for skriftemål"
+      ],
+      "silly_answers": [
+        "En Hogwarts acceptbrev",
+        "En Jedi-ridder certifikat",
+        "Et Marvel superhelte medlemskab"
+      ],
+      "explanation": "Et afladsbrev var et dokument, som den katolske kirke solgte i Middelalderen. Det blev sagt, at det kunne reducere straffen for synder, og det var salget af disse, der delvist udløste Luthers kritik og Reformationen."
+    },
+    {
+      "question": "Hvem var 'Anabaptisterne'?",
+      "correct_answer": "En radikal reformationistisk sekt der støttede voksen dåb",
+      "wrong_answers": [
+        "En luthersk sekt",
+        "En calvinsk sekt",
+        "En katolsk sekt",
+        "En anglikansk sekt",
+        "En zwinglisk sekt",
+        "En sekt grundlagt af Thomas Müntzer"
+      ],
+      "silly_answers": [
+        "En sekt af 'Death Eaters'",
+        "En sekt af 'Jedi Knights'",
+        "En sekt af 'Hogwarts House Elves'"
+      ],
+      "explanation": "Anabaptisterne var en sekt af radikale reformatorer, der afviste barnedåben og støttede genoplivningen (voksen dåb). De var også kendt for deres pacifistiske overbevisninger og fællesskabslevemåde."
+    },
+    {
+      "question": "Hvem var Pave Leo X?",
+      "correct_answer": "Paven under Reformationen",
+      "wrong_answers": [
+        "Paven efter Reformationen",
+        "Den første protestantiske pave",
+        "Den pave der autoriserede afladsbreve",
+        "Den pape der ekskommunikerede Martin Luther",
+        "Den pave der indførte katolsk reformation",
+        "Den pape der sluttede 'Schmalkaldiske Krig'"
+      ],
+      "silly_answers": [
+        "En Hogwarts' rektor",
+        "En 'Jedi Council' medlem",
+        "En 'Avengers' leder"
+      ],
+      "explanation": "Pave Leo X var paven under Reformationen, mest kendt for hans forbindelse til Martin Luther og hans 95 teser. Han ekskommunikerede Luther i 1521."
+    },
+    {
+      "question": "Hvad er 'Ulvian Reformationen'?",
+      "correct_answer": "Ikke eksisterende - der er ingen 'Ulvian Reformation'",
+      "wrong_answers": [
+        "En gren af protestantisme grundlagt af Ulvian",
+        "En reformation i Ulvian regionen",
+        "En reformation der søgte at forene katolikker og protestanter",
+        "En reformation der startede i Frankrig",
+        "En reformation ledet af Ulvian, en elev af Martin Luther",
+        "En radikal reformation ledet af Ulvian"
+      ],
+      "silly_answers": [
+        "En reform bevægelse ledet af ulve",
+        "En reformation ledet af Ulv fra 'Game of Thrones'",
+        "En reformation ledet af Ulv, det kendte medlem af 'The Avengers'"
+      ],
+      "explanation": "'Ulvian Reformationen' eksisterer ikke. Dette er en fiktiv term."
+    },
+    {
+      "question": "Hvem er kendt for at have oversat Bibelen til engelsk for første gang?",
+      "correct_answer": "William Tyndale",
+      "wrong_answers": [
+        "Martin Luther",
+        "John Calvin",
+        "Ulrich Zwingli",
+        "Thomas Cranmer",
+        "John Knox",
+        "Henry VIII"
+      ],
+      "silly_answers": [
+        "William Shakespeare",
+        "J.K. Rowling",
+        "George R.R. Martin"
+      ],
+      "explanation": "William Tyndale er kendt for at have oversat Bibelen til engelsk for første gang, en handling der til sidst førte til hans henrettelse for kætteri, men banede vejen for bredere adgang til Skriften."
+    },
+    {
+      "question": "Hvad betyder 'sola scriptura'?",
+      "correct_answer": "Skriften alene",
+      "wrong_answers": [
+        "Troen alene",
+        "Nåden alene",
+        "Kristus alene",
+        "Til Guds ære alene",
+        "Bare tro",
+        "Bare nåde"
+      ],
+      "silly_answers": [
+        "Sola er skribent",
+        "Scriptura alene sol",
+        "Sola æbler"
+      ],
+      "explanation": "'Sola scriptura' er et af de fem 'sola' fra Reformationen og betyder 'Skriften alene'. Det hævder, at Bibelen er den højeste og sidste autoritet i tro og praksis."
+    },
+    {
+      "question": "Hvilken by var centrum for Calvin's reformation?",
+      "correct_answer": "Genève",
+      "wrong_answers": [
+        "Zürich",
+        "Basel",
+        "Paris",
+        "Frankfurt",
+        "London",
+        "Rome"
+      ],
+      "silly_answers": ["Hogwarts", "Wakanda", "Gotham"],
+      "explanation": "Genève i Schweiz blev centrum for Calvin's reformation, og byen blev kendt som 'Reformationens Rom'."
+    },
+    {
+      "question": "Hvad er 'freden i Augsburg'?",
+      "correct_answer": "En traktat der tillod tyske fyrster at vælge mellem katolicisme og lutheranisme",
+      "wrong_answers": [
+        "En traktat der afsluttede 'Schmalkaldiske Krig'",
+        "En traktat der oprettede det Heilige Romerske Rige",
+        "En traktat der formelt sluttede Reformationen",
+        "En traktat der oprettede den lutherske kirke",
+        "En traktat der anerkendte den anglikanske kirke",
+        "En traktat der afsluttede 30 års krigen"
+      ],
+      "silly_answers": [
+        "En traktat der forvandlede skolebørn til frøer",
+        "En traktat der tillod drager at bo i menneskebyer",
+        "En traktat der gav superhelte officiel anerkendelse"
+      ],
+      "explanation": "Freden i Augsburg var en traktat mellem Karl V og de schmalkaldiske prinsstater i 1555. Det tillod hver tysk fyrste at vælge, om hans rige skulle være katolsk eller luthersk."
+    },
+    {
+      "question": "Hvem var 'Thomas Cranmer'?",
+      "correct_answer": "Den første anglikanske ærkebiskop af Canterbury",
+      "wrong_answers": [
+        "Den første lutherske ærkebiskop",
+        "Den første calvinske ærkebiskop",
+        "Den første zwingliske ærkebiskop",
+        "Den første katolske ærkebiskop efter Reformationen",
+        "En vigtig skikkelse i den schweiziske reformation",
+        "En af Martin Luthers nærmeste allierede"
+      ],
+      "silly_answers": [
+        "En professor i 'Defence Against the Dark Arts'",
+        "En karakter fra 'The Avengers'",
+        "En Hobbit fra 'The Shire'"
+      ],
+      "explanation": "Thomas Cranmer var den første anglikanske ærkebiskop af Canterbury og en central skikkelse i den engelske reformation. Han skabte også 'Book of Common Prayer'."
+    },
+    {
+      "question": "Hvad er 'Münster-rebellionen'?",
+      "correct_answer": "En anabaptistisk opstand i Münster",
+      "wrong_answers": [
+        "En opstand mod Martin Luther",
+        "En opstand mod John Calvin",
+        "En katolsk opstand mod protestanterne",
+        "En luthersk opstand mod katolikkerne",
+        "En opstand mod Henry VIII",
+        "En bondeopstand ledet af Thomas Müntzer"
+      ],
+      "silly_answers": [
+        "En opstand af magiske væsner mod mugglere",
+        "En opstand af superhelte mod skurke",
+        "En opstand af 'Hobbits' mod 'The Ring'"
+      ],
+      "explanation": "Münster-rebellionen var en voldelig anabaptistisk opstand i byen Münster i Tyskland. Det resulterede i et kortvarigt forsøg på at etablere en radikal anabaptistisk samfundsorden i byen."
+    },
+    {
+      "question": "Hvem var 'John Knox'?",
+      "correct_answer": "En leder af den skotske reformation",
+      "wrong_answers": [
+        "En leder af den engelske reformation",
+        "En leder af den tyske reformation",
+        "En leder af den schweiziske reformation",
+        "En luthersk reformator",
+        "En zwinglisk reformator",
+        "En anabaptistisk reformator"
+      ],
+      "silly_answers": [
+        "En karakter fra 'Game of Thrones'",
+        "En karakter fra 'Harry Potter'",
+        "En karakter fra 'The Avengers'"
+      ],
+      "explanation": "John Knox var en skotsk minister, teolog og forfatter, der var en leder af landets reformation. Han er regnet for at være grundlæggeren af den presbyterianske kirke i Skotland."
+    },
+    {
+      "question": "Hvad er 'Schmalkaldiske Krig'?",
+      "correct_answer": "En krig mellem Karl V og de schmalkaldiske prinsstater",
+      "wrong_answers": [
+        "En krig mellem katolikker og lutheranere i Tyskland",
+        "En krig mellem protestanter og katolikker i England",
+        "En krig mellem katolikker og protestanter i Frankrig",
+        "En krig mellem forskellige protestantiske sekter",
+        "En krig mellem den katolske kirke og anabaptisterne",
+        "En krig mellem Karl V og Martin Luther"
+      ],
+      "silly_answers": [
+        "En krig mellem drager og mennesker",
+        "En krig mellem 'Jedi' og 'Sith'",
+        "En krig mellem 'Avengers' og 'Thanos'"
+      ],
+      "explanation": "Schmalkaldiske Krig var en krig mellem Karl V og de schmalkaldiske prinsstater. Det blev udkæmpet over spørgsmål om religion og politik under Reformationen."
+    },
+    {
+      "question": "Hvad er 'Confessio Augustana'?",
+      "correct_answer": "Den første officielle bekendelse af den lutherske kirke",
+      "wrong_answers": [
+        "En bekendelse skrevet af Martin Luther",
+        "En bekendelse skrevet af John Calvin",
+        "En bekendelse skrevet af Thomas Cranmer",
+        "Den første officielle bekendelse af den calvinske kirke",
+        "Den første officielle bekendelse af den anglikanske kirke",
+        "En bekendelse skrevet af Pave Leo X"
+      ],
+      "silly_answers": [
+        "En Hogwarts hemmelig trylleformular",
+        "En Jedi kodeks",
+        "Et Avengers ed"
+      ],
+      "explanation": "Confessio Augustana, eller Augsburg-bekendelsen, er den første officielle bekendelse af den lutherske kirke. Den blev præsenteret ved Rigsdagen i Augsburg i 1530."
+    },
+    {
+      "question": "Hvem var 'Menno Simons'?",
+      "correct_answer": "En anabaptistisk reformator",
+      "wrong_answers": [
+        "En luthersk reformator",
+        "En calvinsk reformator",
+        "En zwinglisk reformator",
+        "En anglikansk reformator",
+        "En katolsk reformator",
+        "En radikal reformator"
+      ],
+      "silly_answers": [
+        "En 'Game of Thrones' karakter",
+        "En 'Harry Potter' karakter",
+        "En 'Avengers' karakter"
+      ],
+      "explanation": "Menno Simons var en tidlig anabaptistisk leder fra hvem menonitterne, en gren af anabaptisterne, får deres navn. Han var en præst i Nordtyskland og Nederlandene."
+    },
+    {
+      "question": "Hvad er 'Konciliet i Trent'?",
+      "correct_answer": "Et råd indkaldt af den katolske kirke som svar på Reformationen",
+      "wrong_answers": [
+        "Et råd indkaldt af Martin Luther",
+        "Et råd indkaldt af John Calvin",
+        "Et råd indkaldt af Henry VIII",
+        "Et råd der førte til oprettelsen af den anglikanske kirke",
+        "Et råd der førte til oprettelsen af den lutherske kirke",
+        "Et råd der førte til oprettelsen af den calvinske kirke"
+      ],
+      "silly_answers": [
+        "Et råd af 'Jedi'",
+        "Et råd af 'Avengers'",
+        "Et råd af 'Hogwarts' professorer"
+      ],
+      "explanation": "Konciliet i Trent var et råd indkaldt af den katolske kirke fra 1545 til 1563 i Trent, Italien, for at reagere på de udfordringer, der blev rejst af Reformationen. Det markerede starten på modreformationen."
+    },
+    {
+      "question": "Hvem var 'Ignatius af Loyola'?",
+      "correct_answer": "Grundlæggeren af Jesuitterordenen",
+      "wrong_answers": [
+        "Grundlæggeren af Dominikanerordenen",
+        "Grundlæggeren af Franciskanerordenen",
+        "Grundlæggeren af Benediktinerordenen",
+        "Grundlæggeren af Augustinerordenen",
+        "Grundlæggeren af Cistercienserordenen",
+        "Grundlæggeren af Kartusianerordenen"
+      ],
+      "silly_answers": [
+        "Grundlæggeren af Hogwarts",
+        "Grundlæggeren af 'Jedi Order'",
+        "Grundlæggeren af 'Avengers'"
+      ],
+      "explanation": "Ignatius af Loyola var en spansk katolsk præst og teolog, der grundlagde Jesuitterordenen. Ordenen blev en vigtig kraft i modreformationen."
+    },
+    {
+      "question": "Hvad er '30 års krigen'?",
+      "correct_answer": "En konflikt udløst delvist af religiøse spændinger mellem katolikker og protestanter",
+      "wrong_answers": [
+        "En konflikt udløst af spændinger mellem Martin Luther og Pave Leo X",
+        "En konflikt udløst af spændinger mellem John Calvin og Pave Clement VII",
+        "En konflikt udløst af spændinger mellem Henry VIII og Pave Clement VII",
+        "En konflikt udløst af spændinger mellem forskellige protestantiske sekter",
+        "En konflikt udløst af spændinger mellem katolikker og anabaptister",
+        "En konflikt udløst af spændinger mellem jesuitterne og dominikanerne"
+      ],
+      "silly_answers": [
+        "En konflikt udløst af spændinger mellem 'Jedi' og 'Sith'",
+        "En konflikt udløst af spændinger mellem 'Avengers' og 'Thanos'",
+        "En konflikt udløst af spændinger mellem 'Harry Potter' og 'Voldemort'"
+      ],
+      "explanation": "30 års krigen var en serie af krige i Central-Europa mellem 1618 og 1648. Det var en af ​​de længste og mest destruktive konflikter i europæisk historie, og det blev i høj grad udløst af religiøse spændinger mellem katolikker og protestanter."
+    },
+    {
+      "question": "Hvem var 'Thomas Cranmer'?",
+      "correct_answer": "En ledende figur i den engelske reformation",
+      "wrong_answers": [
+        "En ledende figur i den schweiziske reformation",
+        "En ledende figur i den tyske reformation",
+        "En ledende figur i den skotske reformation",
+        "En luthersk reformator",
+        "En calvinsk reformator",
+        "En anabaptistisk reformator"
+      ],
+      "silly_answers": [
+        "En karakter fra 'Game of Thrones'",
+        "En karakter fra 'Harry Potter'",
+        "En karakter fra 'The Avengers'"
+      ],
+      "explanation": "Thomas Cranmer var en ledende figur i den engelske reformation og ærkebiskop af Canterbury under Henry VIII, Edward VI og for en kort tid under Mary I. Han hjalp med at bygge det teologiske fundament for den anglikanske kirke."
+    },
+    {
+      "question": "Hvad er 'Freden i Westfalen'?",
+      "correct_answer": "En række fredsaftaler, der afsluttede 30 års krigen",
+      "wrong_answers": [
+        "En række fredsaftaler, der afsluttede Schmalkaldiske Krig",
+        "En række fredsaftaler, der afsluttede Engelske borgerkrig",
+        "En række fredsaftaler, der afsluttede Hugenotterkrigene",
+        "En række fredsaftaler, der afsluttede Hollandske Revolte",
+        "En række fredsaftaler, der afsluttede Ottekantede Krig",
+        "En række fredsaftaler, der afsluttede Trediveårs'krigen"
+      ],
+      "silly_answers": [
+        "En række fredsaftaler, der afsluttede 'Star Wars'",
+        "En række fredsaftaler, der afsluttede 'Infinity War'",
+        "En række fredsaftaler, der afsluttede 'Wizarding War'"
+      ],
+      "explanation": "Freden i Westfalen henviser til en række fredsaftaler, der blev underskrevet mellem maj og oktober 1648 i Westfalen (nuværende Tyskland), der effektivt afsluttede den europæiske 30 års krig."
+    },
+    {
+      "question": "Hvem var 'William Tyndale'?",
+      "correct_answer": "En engelsk reformator kendt for sin oversættelse af Bibelen til engelsk",
+      "wrong_answers": [
+        "En engelsk reformator kendt for sin oversættelse af Bibelen til fransk",
+        "En engelsk reformator kendt for sin oversættelse af Bibelen til tysk",
+        "En engelsk reformator kendt for sin oversættelse af Bibelen til spansk",
+        "En engelsk reformator kendt for sin oversættelse af Bibelen til italiensk",
+        "En engelsk reformator kendt for sin oversættelse af Bibelen til latin",
+        "En engelsk reformator kendt for sin oversættelse af Bibelen til græsk"
+      ],
+      "silly_answers": [
+        "En karakter fra 'Game of Thrones'",
+        "En karakter fra 'Harry Potter'",
+        "En karakter fra 'The Avengers'"
+      ],
+      "explanation": "William Tyndale var en engelsk reformator og skolar, der er bedst kendt for hans oversættelse af Bibelen til engelsk. Han blev henrettet for kætteri, og hans oversættelser af Det Nye Testamente blev brugt i King James-versionen af ​​Bibelen."
+    }
+  ]
+}

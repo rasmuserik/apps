@@ -1,0 +1,107 @@
+{
+  "title": "Samtidig kristendom",
+  "questions": [
+    {
+      "question": "Hvilken kristen retning afviser brugen af ikoner og helgengraver?",
+      "correct_answer": "Reformert protestantisme",
+      "wrong_answers": [
+        "Anglikansk",
+        "Metodistisk",
+        "Luthersk",
+        "Romersk-katolsk",
+        "Ortodoks",
+        "Baptistisk"
+      ],
+      "silly_answers": ["Jediisme", "Westeros' De Syv", "Hogwarts' Hus"],
+      "explanation": "Reformert protestantisme, også kendt som calvinisme, afviser typisk brugen af ikoner og helgengraver, da de anser dette for at være en form for idolatri."
+    },
+    {
+      "question": "Hvilken kristen retning praktiserer 'Voksne dåb'?",
+      "correct_answer": "Baptistisk",
+      "wrong_answers": [
+        "Romersk-katolsk",
+        "Ortodoks",
+        "Anglikansk",
+        "Metodistisk",
+        "Presbyteriansk",
+        "Luthersk"
+      ],
+      "silly_answers": ["Vampyrisme", "Elvernes Klan", "Vikingerne"],
+      "explanation": "Baptistkirker praktiserer 'Voksne dåb' eller 'troendes dåb', hvor personer bliver døbt efter at de personligt har erklæret deres tro på Kristus."
+    },
+    {
+      "question": "Hvilken kristen retning har en kvindelig biskop ved navn Katharine Jefferts Schori?",
+      "correct_answer": "Episkopal kirke",
+      "wrong_answers": [
+        "Romersk-katolsk",
+        "Ortodoks",
+        "Metodistisk",
+        "Presbyteriansk",
+        "Luthersk",
+        "Baptistisk"
+      ],
+      "silly_answers": ["De Uendelige", "Ravnklo", "Marvels Avengers"],
+      "explanation": "Katharine Jefferts Schori tjente som den presiderende biskop af den Episkopale Kirke, den amerikanske gren af den Anglikanske Kommunion, fra 2006 til 2015. Hun var den første kvinde, der blev valgt som presiderende biskop i denne kirke."
+    },
+    {
+      "question": "Hvilken kristen retning er kendt for deres praksis med 'speaking in tongues' eller glossolalia?",
+      "correct_answer": "Pinsebevægelsen",
+      "wrong_answers": [
+        "Romersk-katolsk",
+        "Ortodoks",
+        "Anglikansk",
+        "Metodistisk",
+        "Presbyteriansk",
+        "Luthersk"
+      ],
+      "silly_answers": ["Dothraki", "High Valyrian", "Elvisk"],
+      "explanation": "Pinsebevægelsen er kendt for deres praksis med 'speaking in tongues' eller glossolalia, som de anser for at være en åndelig gave fra Helligånden."
+    },
+    {
+      "question": "Hvilken kristen retning blev grundlagt af Ellen G. White i det 19. århundrede?",
+      "correct_answer": "Syvende Dags Adventisterne",
+      "wrong_answers": [
+        "Jehovas Vidner",
+        "Mormoner",
+        "Christian Science",
+        "Unitarister",
+        "Quakers",
+        "Shakers"
+      ],
+      "silly_answers": ["Potterheads", "Trekkies", "Whovians"],
+      "explanation": "Ellen G. White var en af grundlæggerne af Syvende Dags Adventisterne, en kristen retning, der blev etableret i det 19. århundrede og er kendt for sin observans af sabbatten på den syvende dag, som er lørdag."
+    },
+    {
+      "question": "Hvilken kristen retning praktiserer 'Science and Health with Key to the Scriptures'?",
+      "correct_answer": "Christian Science",
+      "wrong_answers": [
+        "Mormoner",
+        "Jehovas Vidner",
+        "Syvende Dags Adventisterne",
+        "Unitarister",
+        "Quakers",
+        "Shakers"
+      ],
+      "silly_answers": [
+        "Starfleet Academy",
+        "Jedi-ordenen",
+        "The Hogwarts School"
+      ],
+      "explanation": "'Science and Health with Key to the Scriptures' er en central tekst i Christian Science, en retning, der blev grundlagt af Mary Baker Eddy i det 19. århundrede."
+    },
+    {
+      "question": "Hvilken kristen retning praktiserer det ekstraordinære synode, som kun forekommer hvert 50. år?",
+      "correct_answer": "Ortodoks",
+      "wrong_answers": [
+        "Romersk-katolsk",
+        "Anglikansk",
+        "Metodistisk",
+        "Presbyteriansk",
+        "Luthersk",
+        "Baptistisk"
+      ],
+      "silly_answers": ["Vulkanerne", "Klingonerne", "Ewoks"],
+      "explanation": "Ortodokse kirker praktiserer det ekstraordinære synode, også kendt som et jubelår, som er en speciel begivenhed, der finder sted hvert 50. år, og involverer bøn, bod og fornyelse af åndelige løfter."
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "title": "Sneakerquiz",
+  "questions": [
+    {
+      "question": "Hvilket år blev den første Air Jordan sko lanceret?",
+      "correct_answer": "1984",
+      "wrong_answers": ["1980", "1990", "2000", "1975", "1988", "1979"],
+      "silly_answers": [
+        "1492",
+        "i dinosaurernes tid",
+        "under det gamle Egypten"
+      ],
+      "explanation": "Den første Air Jordan sko blev lanceret i 1984. Den blev designet til basketballspilleren Michael Jordan, hvilket ændrede sneakerkulturen markant."
+    },
+    {
+      "question": "Hvad hedder grundlæggeren af Nike?",
+      "correct_answer": "Bill Bowerman og Phil Knight",
+      "wrong_answers": [
+        "Steve Jobs og Steve Wozniak",
+        "Ben Cohen og Jerry Greenfield",
+        "Bill Gates og Paul Allen",
+        "Henry Ford",
+        "Mark Zuckerberg",
+        "Larry Page og Sergey Brin"
+      ],
+      "silly_answers": [
+        "Darth Vader og Luke Skywalker",
+        "Batman og Robin",
+        "Hagrid og Dumbledore"
+      ],
+      "explanation": "Nike blev grundlagt af Bill Bowerman og Phil Knight i 1964, oprindeligt under navnet Blue Ribbon Sports."
+    },
+    {
+      "question": "Hvilket dyr er afbildet på logoet for Air Jordan sko?",
+      "correct_answer": "Ingen dyr",
+      "wrong_answers": [
+        "En ørn",
+        "En tiger",
+        "En løve",
+        "En elefant",
+        "En bjørn",
+        "En hest"
+      ],
+      "silly_answers": [
+        "En enhjørning",
+        "En regnbuefarvet panda",
+        "En snakkende papegøje"
+      ],
+      "explanation": "Air Jordan logoet fremviser ingen dyr. Det viser en silhuet af Michael Jordan, der dunker en basketball."
+    },
+    {
+      "question": "Hvilket materiale er den oprindelige Nike Air Force 1 lavet af?",
+      "correct_answer": "Læder",
+      "wrong_answers": ["Stof", "Gummi", "Plastik", "Silke", "Denim", "Canvas"],
+      "silly_answers": ["Spaghetti", "Papir maché", "Slik"],
+      "explanation": "Den oprindelige Nike Air Force 1 er lavet af læder, hvilket giver skoen dens karakteristiske stil og holdbarhed."
+    },
+    {
+      "question": "Hvad står 'AF1' for i Nike's skosortiment?",
+      "correct_answer": "Air Force 1",
+      "wrong_answers": [
+        "After Foot 1",
+        "Athletic Footwear 1",
+        "Active Fit 1",
+        "Air Flow 1",
+        "Artistic Foot 1",
+        "All in Foot 1"
+      ],
+      "silly_answers": ["Alien Fod 1", "Avocado Frites 1", "Astronaut Fjer 1"],
+      "explanation": "'AF1' står for Air Force 1, en populær sneakers model fra Nike, der blev lanceret i 1982."
+    },
+    {
+      "question": "Hvilken farve er den klassiske Nike 'Swoosh' logo normalt?",
+      "correct_answer": "Hvid",
+      "wrong_answers": ["Rød", "Sort", "Grøn", "Blå", "Gul", "Lilla"],
+      "silly_answers": ["Invisible", "Regnbue", "Polka dot"],
+      "explanation": "Den klassiske Nike 'Swoosh' logo er normalt hvid, men kan variere afhængig af skoenes farve og design."
+    },
+    {
+      "question": "Hvad er navnet på Nikes selvsnørende sneakers, der blev præsenteret i 2016?",
+      "correct_answer": "HyperAdapt 1.0",
+      "wrong_answers": [
+        "ZoomFly",
+        "HyperMax",
+        "FlyKnit",
+        "AirMax 360",
+        "LunarEpic",
+        "FreeRun"
+      ],
+      "silly_answers": ["SnoozeBoot", "LazyLaces 2000", "RoboShoe"],
+      "explanation": "HyperAdapt 1.0 er Nikes selvsnørende sneakers, en teknologi inspireret af filmen 'Tilbage til fremtiden II'."
+    },
+    {
+      "question": "Hvad var Nikes oprindelige navn, før det blev ændret i 1971?",
+      "correct_answer": "Blue Ribbon Sports",
+      "wrong_answers": [
+        "Green Ribbon Sports",
+        "Red Ribbon Footwear",
+        "Black Ribbon Athletics",
+        "Golden Ribbon Sneakers",
+        "Silver Ribbon Running",
+        "Bronze Ribbon Basketball"
+      ],
+      "silly_answers": [
+        "Polka Dot Penguin",
+        "Rainbow Llama Sports",
+        "Unicorn Ribbon Racing"
+      ],
+      "explanation": "Nike var oprindeligt kendt som Blue Ribbon Sports, da det blev grundlagt i 1964. Navnet blev ændret til Nike i 1971."
+    },
+    {
+      "question": "Hvem er 'Air Max 95' designet til at efterligne?",
+      "correct_answer": "Menneskets anatomi",
+      "wrong_answers": [
+        "En bil",
+        "En skyskraber",
+        "En bølge",
+        "En fugl",
+        "Et træ",
+        "En flod"
+      ],
+      "silly_answers": [
+        "En rumvæsen",
+        "En enhjørning",
+        "En magisk bønne stilk"
+      ],
+      "explanation": "Nike 'Air Max 95' er designet til at efterligne menneskets anatomi, med designelementer inspireret af menneskekroppen: rygsøjlen, ribbenene og musklerne."
+    },
+    {
+      "question": "Hvilket år blev Nike 'Cortez' først lanceret?",
+      "correct_answer": "1972",
+      "wrong_answers": ["1962", "1975", "1980", "1985", "1990", "1995"],
+      "silly_answers": [
+        "Year of the Monkey",
+        "År af det brølende Tyrannosaurus Rex",
+        "Under den første fuldmåne efter en solformørkelse"
+      ],
+      "explanation": "Nike 'Cortez' blev først lanceret i 1972 og var designet til at være en løbesko. Den blev kendt for dens komfort og holdbarhed."
+    },
+    {
+      "question": "Hvad er navnet på Nikes løbesko-serie, der er designet til at være letvægt?",
+      "correct_answer": "Flyknit",
+      "wrong_answers": [
+        "AirMax",
+        "HyperAdapt",
+        "ZoomFly",
+        "LunarEpic",
+        "FreeRun",
+        "AirForce"
+      ],
+      "silly_answers": ["Featherlite", "SkyFloat", "CloudRun"],
+      "explanation": "Nike's Flyknit-serie er kendt for at være letvægt og giver en nærmest soklignende pasform. Teknologien blev introduceret i 2012."
+    },
+    {
+      "question": "Hvad er navnet på den berømte basketballspiller, der har et livslangt samarbejde med Nike?",
+      "correct_answer": "LeBron James",
+      "wrong_answers": [
+        "Kobe Bryant",
+        "Tim Duncan",
+        "Shaquille O'Neal",
+        "Magic Johnson",
+        "Larry Bird",
+        "Michael Jordan"
+      ],
+      "silly_answers": [
+        "Michael Scott fra 'The Office'",
+        "Sherlock Holmes",
+        "Santa Claus"
+      ],
+      "explanation": "LeBron James har et livslangt samarbejde med Nike. Det er det første i sit slags for Nike, og det betyder, at han vil være med mærket i hele sin karriere og også efter han stopper med at spille professionel basketball."
+    },
+    {
+      "question": "Hvilken kendt rapper har et samarbejde med Adidas, kaldet 'Yeezy'?",
+      "correct_answer": "Kanye West",
+      "wrong_answers": [
+        "Jay-Z",
+        "Drake",
+        "Eminem",
+        "Lil Wayne",
+        "50 Cent",
+        "Travis Scott"
+      ],
+      "silly_answers": ["Mickey Mouse", "Spiderman", "Shrek"],
+      "explanation": "Rapperen Kanye West har et meget kendt samarbejde med Adidas, kendt som 'Yeezy'. Dette partnerskab har resulteret i nogle af de mest eftertragtede sneakers i verden."
+    },
+    {
+      "question": "Hvem designet den berømte 'Air Jordan' logo?",
+      "correct_answer": "Tinker Hatfield",
+      "wrong_answers": [
+        "Michael Jordan",
+        "Phil Knight",
+        "Steve Prefontaine",
+        "Bill Bowerman",
+        "Peter Moore",
+        "George Raveling"
+      ],
+      "silly_answers": ["Harry Potter", "Mona Lisa", "Superman"],
+      "explanation": "Tinker Hatfield, en berømt designer for Nike, designet det ikoniske 'Air Jordan' logo. Han er kendt for sit arbejde på mange af Nikes mest populære modeller."
+    },
+    {
+      "question": "Hvad er navnet på Nikes serie af skateboardsko?",
+      "correct_answer": "Nike SB",
+      "wrong_answers": [
+        "Nike Sk8",
+        "Nike Board",
+        "Nike Grind",
+        "Nike Flip",
+        "Nike Ride",
+        "Nike Ollie"
+      ],
+      "silly_answers": ["Nike Do a Kickflip", "Nike Wheely", "Nike BoardSlide"],
+      "explanation": "Nike SB er Nikes linje af skateboardsko. 'SB' står for SkateBoarding. Denne serie blev lanceret i 2002."
+    },
+    {
+      "question": "Hvilken Air Jordan model er kendt som 'Bred'?",
+      "correct_answer": "Air Jordan 11",
+      "wrong_answers": [
+        "Air Jordan 1",
+        "Air Jordan 3",
+        "Air Jordan 5",
+        "Air Jordan 6",
+        "Air Jordan 9",
+        "Air Jordan 13"
+      ],
+      "silly_answers": [
+        "Air Jordan Bread",
+        "Air Jordan Butter",
+        "Air Jordan Toast"
+      ],
+      "explanation": "Air Jordan 11 'Bred' er en af de mest ikoniske sneakers i historien. 'Bred' står for sort og rød, som er de primære farver i designet."
+    },
+    {
+      "question": "Hvilken sneakers model blev berømt gennem filmen 'Back to the Future II'?",
+      "correct_answer": "Nike Mag",
+      "wrong_answers": [
+        "Nike AirMax",
+        "Nike Flyknit",
+        "Nike Air Jordan",
+        "Nike SB",
+        "Nike Dunk",
+        "Nike Huarache"
+      ],
+      "silly_answers": ["Nike Flux Capacitor", "Nike DeLorean", "Nike McFly"],
+      "explanation": "I 'Back to the Future II' blev Marty McFly, spillet af Michael J. Fox, set iført et par selvbindende Nike Mag sneakers."
+    },
+    {
+      "question": "Hvad er navnet på den teknologi, der er anvendt i mellemsålen af mange Nike-sko for at øge komforten?",
+      "correct_answer": "Air",
+      "wrong_answers": ["Foam", "Spring", "Cushion", "Soft", "Comfort", "Ease"],
+      "silly_answers": ["Marshmallow", "Bubblegum", "Cotton Candy"],
+      "explanation": "Nike Air teknologi bruger trykluft til at give mere polstring i mellemsålen på deres sko. Dette giver en forbedret følelse af komfort og støtte."
+    },
+    {
+      "question": "Hvad står 'OG' for i sneakerkulturen?",
+      "correct_answer": "Original",
+      "wrong_answers": [
+        "Old Generation",
+        "Outstanding Grade",
+        "Over Gold",
+        "Official Game",
+        "Optimal Grip",
+        "Outdoor Gear"
+      ],
+      "silly_answers": [
+        "Octopus Gymnastics",
+        "Orange Gorilla",
+        "Omelette Guide"
+      ],
+      "explanation": "I sneakerkulturen står 'OG' for 'Original'. Det henviser til den oprindelige udgivelse af en sneaker model."
+    },
+    {
+      "question": "Hvad er navnet på den sko, der blev kendt som 'den forbudte sko' i NBA?",
+      "correct_answer": "Air Jordan 1",
+      "wrong_answers": [
+        "Air Jordan 3",
+        "Air Jordan 5",
+        "Air Jordan 11",
+        "Air Force 1",
+        "Nike Dunk",
+        "Nike SB"
+      ],
+      "silly_answers": ["Air Jordan NoNo", "Nike Oops", "Air Oops"],
+      "explanation": "Air Jordan 1 blev kendt som 'den forbudte sko', fordi NBA oprindeligt forbød den på grund af dens farveskema, som brød ligaens strenge uniform regler."
+    }
+  ],
+  "feedback": {
+    "everything_correct": "Wow, du er den absolutte sneaker-guru! Du ved mere om sneakers end skomageren selv. Måske har du en hemmelig sneaker-samling gemt under din seng eller måske er du bare utrolig god til at gætte. Det siges, at hver gang du binder dine sko, får en ny sneakers model sit navn!",
+
+    "very_good": "Impressive! Du ved helt sikkert din besked om sneakers. Det er næsten som om du tilbringer dine weekender i hemmelige sneaker-udstillinger eller holder møder med den legendariske Tinker Hatfield. Fortsæt sådan, snart vil dine sneakers begynde at binde sig selv!",
+
+    "good": "Godt gået! Du har en solid viden om sneakers, men der er stadig plads til forbedring. Måske du engang var venner med en sneaker, eller du har haft en drøm, hvor du blev jagtet af en gigantisk Air Jordan. Husk, øvelse gør mester!",
+
+    "bad": "Åh åh, det ser ud til, at du har lidt at lære om sneakers. Måske har du brugt for meget tid på at binde snørebånd i stedet for at lære om skoene selv. Men fortvivl ikke, de siger, at når man falder over sine egne sko, er det et tegn på, at man snart vil blive en sneaker-ekspert.",
+
+    "very_bad": "Ups, du kender ikke meget til sneakers. Men det er okay, ikke alle kan være sneaker-eksperter. Måske bor du i en verden, hvor folk kun går i træsko, eller måske har du bare en ting for sandaler. Men husk, det er aldrig for sent at lære!",
+
+    "everything_wrong": "Åh nej! Det ser ud til, at du har brug for en kæmpe genopfriskning i sneaker-verdenen. Det kan være, at du kommer fra en planet, hvor alle bærer anti-gravitationsstøvler, eller måske har du bare en utrolig dårlig hukommelse. Men giv ikke op, selv den største sneaker-samler startede et sted!"
+  }
+}

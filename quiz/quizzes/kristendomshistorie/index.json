@@ -1,0 +1,38 @@
+{
+  "title": "Quizzes om Kristendomshistorie",
+  "quizzes": [
+    "./kristendommens-formative-periode.json",
+    "./christianity-0-400.json",
+    "./christianity-400-800.json",
+    "./christianity-800-1200.json",
+    "./monastisk-kristendom.json",
+    "./christianity-1200-1600.json",
+    "./reformationen.json",
+    "./christianity-1600-now.json",
+    "./christianity-contemporary.json"
+  ],
+  "messages": {
+    "back": "Tilbage til oversigten",
+    "correct_answer": "(Dit svar var rigtigt).",
+    "correct": "rigtige svar!",
+    "wrong_answer": "(Dit svar var forkert).",
+    "next_question": "👍 \u00a0 Næste spørgsmål",
+    "report_wrong_question": "👎 \u00a0 Rapportér fejl i spørgsmål",
+    "what_is_wrong": "Hvad var der galt med spørsmålet?",
+    "done_retry": "Gentag samme quiz",
+    "done_randomize": "Bland spørgsmålene og prøv igen"
+  },
+  "feedback": {
+    "everything_correct": "Hold da op! Du har svaret korrekt på alle spørgsmål. Du er enten den genopstandne Martin Luther eller har et direkte telefonlinje til den Hellige Ånd! Du kan sandsynligvis rekonstruere Nicaea-konciliet fra hukommelsen, og hvis nogen har brug for at oversætte Det Gamle Testamente fra originalt hebraisk, er du deres person! Dine venner ringer til dig, når de har brug for en opdatering på kirkehistorien. Fortsæt det gode arbejde!",
+
+    "very_good": "Impresserende! Du har et meget solidt kendskab til kristendomshistorien. Er du sikker på, at du ikke hemmeligt er en tidsrejsende fra det 16. århundrede? Du kan måske ikke opretholde en samtale med pave Urban II på latin, men du er ikke langt fra! Din viden om kristendommens historie er så stor, at selv englene synger din pris. Godt gået!",
+
+    "good": "Godt arbejde! Du har et ganske godt greb om kristendomshistorien. Du er ikke helt klar til at blive den næste pave, men du kunne i det mindste forvirre en munk eller to med din viden. Du kender nok til kristendom til at undgå at blive brændt på bålet i middelalderen. Fortsæt med at læse og lære!",
+
+    "bad": "Åh åh, det ser ud til, at du har brug for en lille opfrisker på din kristendomshistorie. Har du måske forvekslet Martin Luther med Martin Luther King? Du er ikke helt klar til at prædike fra prædikestolen, men fortvivl ikke! Et par læsninger af Bibelen og nogle timer med historiebøgerne vil sætte dig på rette vej.",
+
+    "very_bad": "Hmmm, det ser ud til, at din viden om kristendomshistorien er lidt rusten. Måske tror du, at Paven er en slags fancy fugl, og at Den Hellige Gral er en trendy cocktail. Men fortvivl ikke, det er aldrig for sent at lære! Gå ud og dyk ned i kirkehistoriens fantastiske verden!",
+
+    "everything_wrong": "Oh dear, det ser ud til, at du har svaret forkert på alle spørgsmål. Du har sandsynligvis en forestilling om, at Noahs Ark er et nyt krydstogtskib, og at Adam og Eva er en romantisk komedie. Men det er okay! Alle starter et sted. Tag din bibel og dyk ned i kristendommens rige historie. Du vil være overrasket over, hvad du vil lære!"
+  }
+}
