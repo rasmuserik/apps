@@ -11,7 +11,7 @@
   v._loading = {};
   v.load = async function (url) {
     console.log("start-load", url);
-    v.emit({ dst: 0, type:"load", path: url });
+    v.emit({ dst: 0, type: "load", path: url });
     if (v._loading[url]) return v._loading[url];
     if (!url.startsWith("http")) {
       let baseUrl =
@@ -31,14 +31,15 @@
     while (Object.values(v._loading).some((p) => !p.isResolved)) {
       await Promise.all(Object.values(v._loading));
     }
+    await v.sleep(0);
     console.log("end-load", url);
   };
   v.btou = (o) =>
     btoa(o).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
   v.utob = (o) => atob(o.replace(/-/g, "+").replace(/_/g, "/"));
   v.log = function log(type, obj = {}) {
-    console.log('log', type, obj);
-    v.emit({ ...obj, type: "log", dst: 0, log_type: type, time : Date.now() });
+    console.log("log", type, obj);
+    v.emit({ ...obj, type: "log", dst: 0, log_type: type, time: Date.now() });
   };
 
   ////////////////////
@@ -203,12 +204,12 @@
   ////////////////////
   v._unsent = {};
   v._send = async function _send(msg) {
-    if(v._socket?.readyState === WebSocket.OPEN) {
+    if (v._socket?.readyState === WebSocket.OPEN) {
       v._socket.send(v.cborx.encode(msg));
     } else {
       v._unsent[v.uniqueTime()] = msg;
     }
-  }
+  };
   v._connect = async function connect() {
     if (!v.cborx) await v.load("deps/cborx.js");
     if (!v._socket || v._socket.readyState !== WebSocket.OPEN) {
@@ -230,8 +231,8 @@
         let unsent = v._unsent;
         v._unsent = {};
         let t = String(Date.now() - 10000);
-        for(const ts in unsent) {
-          if(ts > t) v._send(unsent[ts]);
+        for (const ts in unsent) {
+          if (ts > t) v._send(unsent[ts]);
         }
       }
     }
@@ -326,6 +327,7 @@
   //////////////////////
   // Login functionality (old code)
   //////////////////////
+  /*
   if (!v.login) {
     let app_id = "48a7de57-c558-4092-ba78-57e9d5f5a4dc";
     let session = JSON.parse(sessionStorage.getItem(app_id) || "{}");
@@ -379,7 +381,9 @@
       if (query.user_login) {
         session.auth = { ...session.query, ...query };
         saveSession();
-        location.href = location.href.replace(/[?].*/, "");
+        */
+  //location.href = location.href.replace(/[?].*/, "");
+  /*
       }
     }
     async function api(path, opt) {
@@ -429,6 +433,7 @@
     }
   }
   //  main();
+  */
 
   ////////////////////
   // main
@@ -446,12 +451,47 @@
       }
       let elem = document.getElementById(elemId);
       if (!elem) {
-        elem = document.createElement("div");
-        elem.className = "veduz-app veduz-app-" + appName;
-        elem.id = elemId;
-        script.parentNode.insertBefore(elem, script);
+        if (
+          !script.getAttribute("landscape-mockup") &&
+          !script.dataset["landscape-mockup"]
+        ) {
+          elem = document.createElement("div");
+          elem.className = "veduz-app veduz-app-" + appName;
+          elem.id = elemId;
+          script.parentNode.insertBefore(elem, script);
+        } else {
+          let center = document.createElement("center");
+          script.parentNode.insertBefore(center, script);
+          //393 × 852
+          center.innerHTML = `
+  <div style="position: relative; display: inline-block; height: 908px; width: 409px">
+    <div id=${elemId} 
+      className="veduz-app veduz-app-${appName}"
+      style="
+        position: absolute; 
+        top: 0px; left: 0px; 
+        border: 8px solid black; 
+        border-radius: 48px; 
+        box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 32px; 
+        width: 393px;
+        height: 852px;
+        overflow:hidden;"
+      ></div>
+    <div style="
+        position: absolute;
+        left: 138px;
+        top: 20px;;
+        height: 35px;
+        width: 133px;
+        background: black;
+        border-radius: 20px;"></div>
+  </div> `;
+        }
       }
       if (!v[appName]) await v.load(`${appName}/${appName}.js`);
+      for (let i = 0; !v[appName] && i < 100; ++i) {
+        await v.sleep(i);
+      }
       if (v[appName]?.init) {
         v.update_state(`/${appName}/elem_${elemId}`, v[appName].init, {});
       }
@@ -459,5 +499,5 @@
     }
   }
   setTimeout(() => (v.state = { ...v.state }), 100);
-  v.log('veduz-client-loaded')
+  v.log("veduz-client-loaded");
 })();
