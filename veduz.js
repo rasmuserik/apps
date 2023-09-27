@@ -28,27 +28,17 @@
     v._loading[url] = promise;
     await promise;
     promise.isResolved = true;
-
     while (Object.values(v._loading).some((p) => !p.isResolved)) {
       await Promise.all(Object.values(v._loading));
     }
-
-    /*
-    while(v._loading.length > 0) {
-      console.log(v._)
-      while(v._loading[0].isResolved) {
-        v._loading.shift();
-      }
-      await Promise.all(v._loading);
-    }
-    */
     console.log("end-load", url);
   };
   v.btou = (o) =>
     btoa(o).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
   v.utob = (o) => atob(o.replace(/-/g, "+").replace(/_/g, "/"));
   v.log = function log(type, obj = {}) {
-    v.emit({ ...obj, type: "log", dst: 0, log_type_: type });
+    console.log('log', type, obj);
+    v.emit({ ...obj, type: "log", dst: 0, log_type: type, time : Date.now() });
   };
 
   ////////////////////
@@ -239,11 +229,8 @@
 
         let unsent = v._unsent;
         v._unsent = {};
-        console.log('connect');
         let t = String(Date.now() - 10000);
-        console.log(unsent);
         for(const ts in unsent) {
-          console.log('sending', ts > t);
           if(ts > t) v._send(unsent[ts]);
         }
       }
@@ -472,4 +459,5 @@
     }
   }
   setTimeout(() => (v.state = { ...v.state }), 100);
+  v.log('veduz-client-loaded')
 })();

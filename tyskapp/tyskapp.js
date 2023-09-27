@@ -149,6 +149,7 @@
   let topic_id;
   let person_id;
   let answers = {};
+  let start_langauge = "other";
 
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -156,11 +157,11 @@
   async function start_screen() {
     rootElem.innerHTML = template("start_screen", messages);
     document.getElementById("danish").addEventListener("click", () => {
-      language = "da";
+      start_language = language = "da";
       choose_topic();
     });
     document.getElementById("german").addEventListener("click", () => {
-      language = "de";
+      start_language = language = "de";
       choose_topic();
     });
   }
@@ -237,10 +238,14 @@
       audio.play();
     });
     rootElem.querySelector("#answer_da").addEventListener("click", () => {
+      let isInitial = answers[topic_id + "." + person_id] === undefined;
+      v.log(`tyskapp-answer:${isInitial}:${start_language}:${topic_id}:${person_id}:da`);
       answers[topic_id + "." + person_id] = "da";
       feedback();
     });
     rootElem.querySelector("#answer_de").addEventListener("click", () => {
+      let isInitial = answers[topic_id + "." + person_id] === undefined;
+      v.log(`tyskapp-answer:${isInitial}:${start_language}:${topic_id}:${person_id}:de`);
       answers[topic_id + "." + person_id] = "de";
       feedback();
     });
@@ -278,7 +283,6 @@
 
   v.tyskapp = v.tyskapp || {};
   v.tyskapp.init = async ({cur}) => {
-    console.log('here', cur);
     await load_templates("templates.html");
     cur = cur.set('../topics',
     [
