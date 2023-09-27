@@ -45,7 +45,7 @@
     btoa(o).replace(/=/g, "").replace(/\+/g, "-").replace(/\//g, "_");
   v.utob = (o) => atob(o.replace(/-/g, "+").replace(/_/g, "/"));
   v.log = function log(type, obj = {}) {
-    v.emit({ ...obj, type: "log", dst: 0, log_type: type });
+    v.emit({ ...obj, type: "log", dst: 0, log_type_: type });
   };
 
   ////////////////////
@@ -53,9 +53,9 @@
   //////////////////
   v.Any = Any;
   function Any(type, data = "", children = {}) {
-    if(type) this._type = type;
-    if(data !== undefined) this._data = data;
-    this._children = children || {};
+    if(type) this._type_ = type;
+    if(data !== undefined) this._data_ = data;
+    this._children_ = children || {};
   }
 
   ////////////////////
@@ -84,7 +84,7 @@
     let t = this._root;
     for (const k of this._path.split("/")) {
       if (t instanceof Any) {
-        t = t._children[k];
+        t = t._children_[k];
       } else {
         t = t[k];
       }
@@ -101,14 +101,14 @@
     let prev_val;
     let val;
     if (o instanceof Any) {
-      let new_children = { ...o._children };
+      let new_children = { ...o._children_ };
       val = updateIn(o.children[k], path.slice(1), fn);
       if (val !== undefined) {
         new_children[k] = val;
       } else {
         delete new_children[k];
       }
-      result = new Any(o._type, o._data, new_children);
+      result = new Any(o._type_, o._data_, new_children);
     } else if (o instanceof Array) {
       result = [...o];
       val = updateIn(o[k], path.slice(1), fn);
