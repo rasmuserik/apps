@@ -1,0 +1,558 @@
+{
+  "title": "Quiz om Open Data Science kurset",
+  "questions": [
+    {
+      "question": "Hvilket sprog introduceres i kurset for dataanalyse?",
+      "correct_answer": "Python",
+      "wrong_answers": ["Java", "C#", "Ruby", "JavaScript", "R"],
+      "silly_answers": ["Klingon", "Sindarin", "Parseltongue"],
+      "explanation": "Python er det primære programmeringssprog i kurset og bruges til dataanalyse."
+    },
+    {
+      "question": "Hvad er FAIR?",
+      "correct_answer": "Principper for god dataforvaltning",
+      "wrong_answers": [
+        "En regeringsorganisation",
+        "En type database",
+        "En kodeeditor",
+        "En analysemetode",
+        "Et cloud-service",
+        "En krypteringsmetode"
+      ],
+      "silly_answers": [
+        "Fantastisk Attraktiv Internet Revolution",
+        "Frække Aber i Rummet",
+        "Fiskerimuseum, Akvarium og Informationcenter i Ribe"
+      ],
+      "explanation": "FAIR står for Findable, Accessible, Interoperable og Reusable, og er principper for god dataforvaltning."
+    },
+    {
+      "question": "Hvilke typer data behandles i kurset?",
+      "correct_answer": "Strukturerede data, tekst data, temporale data",
+      "wrong_answers": [
+        "Lyddata",
+        "Billeddata",
+        "Rumlige data",
+        "Klimadata",
+        "Genetiske data",
+        "Netværksdata"
+      ],
+      "silly_answers": ["Følelsesmæssige data", "Spøgelsesdata", "Drømmedata"],
+      "explanation": "Kurset fokuserer på strukturerede data, tekst data og temporale data."
+    },
+    {
+      "question": "Er kurset relevant for dem der arbejder med store datasæt?",
+      "correct_answer": "Ja",
+      "wrong_answers": [
+        "Nej",
+        "Måske",
+        "Kun for små datasæt",
+        "Kun for tekstdata",
+        "Kun i den akademiske verden",
+        "Kun i erhvervslivet"
+      ],
+      "silly_answers": [
+        "Kun for troldmænd",
+        "Kun for tidrejsende",
+        "Kun hvis man kan jonglere"
+      ],
+      "explanation": "Kurset inkluderer arbejde med relevante datasæt og er derfor relevant for dem, der arbejder med store datasæt."
+    },
+    {
+      "question": "Er etiske problemstillinger del af kurset?",
+      "correct_answer": "Ja",
+      "wrong_answers": [
+        "Nej",
+        "Måske",
+        "Kun i en gæsteforelæsning",
+        "Kun som valgfrit modul",
+        "Kun i begyndelsen af kurset",
+        "Kun i slutningen af kurset"
+      ],
+      "silly_answers": [
+        "Kun på fuldmånenætter",
+        "Kun hvis man har et godt horoskop",
+        "Kun hvis studerende har rene sokker"
+      ],
+      "explanation": "Etiske problemstillinger i arbejdet med open data er en vigtig del af kurset og indgår i FAIR-principperne."
+    },
+    {
+      "question": "Er der en teoretisk komponent i kurset?",
+      "correct_answer": "Ja",
+      "wrong_answers": [
+        "Nej",
+        "Måske",
+        "Kun i en gæsteforelæsning",
+        "Kun som valgfrit modul",
+        "Kun i begyndelsen af kurset",
+        "Kun i slutningen af kurset"
+      ],
+      "silly_answers": [
+        "Kun hvis Pluto er en planet igen",
+        "Kun hvis det er skudår",
+        "Kun på fredag den 13."
+      ],
+      "explanation": "Selvom kurset er praktisk orienteret, inkluderer det teoretisk materiale som FAIR-principperne og etiske problemstillinger."
+    },
+    {
+      "question": "Hvilken type analyse bruges til at forstå følelser i tekst?",
+      "correct_answer": "Sentiment analysis",
+      "wrong_answers": [
+        "Time-series analyse",
+        "Clusteranalyse",
+        "Dimensionalitetsreduktion",
+        "Regressionanalyse",
+        "Klassifikationsanalyse",
+        "Mønsteranalyse"
+      ],
+      "silly_answers": [
+        "Kærlighedsanalyse",
+        "Fortolkningsdans",
+        "Smiley-faces analyse"
+      ],
+      "explanation": "Sentiment analysis bruges til at analysere og forstå følelser eller holdninger i tekst."
+    },
+    {
+      "question": "Hvilket formål tjener 'hands-on cases' i kurset?",
+      "correct_answer": "Praktisk erfaring med datasæt",
+      "wrong_answers": [
+        "Team-building",
+        "Tid til at hvile",
+        "Styrkelse af teoretiske koncepter",
+        "Netværksopbygning",
+        "Forberedelse til eksamen",
+        "Tid til selvstudium"
+      ],
+      "silly_answers": [
+        "Opbygning af muskler",
+        "Eksperimentel kagebagning",
+        "Træning i gedekommunikation"
+      ],
+      "explanation": "Hands-on cases giver studerende praktisk erfaring med relevante datasæt."
+    },
+    {
+      "question": "Hvilket aspekt af data dækker FAIR-principperne?",
+      "correct_answer": "Dataforvaltning",
+      "wrong_answers": [
+        "Dataskyld",
+        "Dataindsamling",
+        "Datarensning",
+        "Dataopbevaring",
+        "Dataudtræk",
+        "Databeskyttelse"
+      ],
+      "silly_answers": ["Data-dating", "Data-feng shui", "Data-astrologi"],
+      "explanation": "FAIR-principperne omhandler Findable, Accessible, Interoperable og Reusable data, som alle er aspekter af god dataforvaltning."
+    },
+    {
+      "question": "Hvad er 'strukturerede data'?",
+      "correct_answer": "Data organiseret i felter og tabeller",
+      "wrong_answers": [
+        "Uorganiserede data",
+        "Billeder og video",
+        "Tekstdata",
+        "Data med komplekse relationer",
+        "Big Data",
+        "Ustrukturerede data"
+      ],
+      "silly_answers": [
+        "Data skrevet i sten",
+        "Data sendt via røgsignaler",
+        "Data i en pædagogisk linedans"
+      ],
+      "explanation": "Strukturerede data er data, der er organiseret i en bestemt måde, ofte i tabeller, hvilket gør det lettere at arbejde med."
+    },
+    {
+      "question": "Hvad indebærer 'text mining'?",
+      "correct_answer": "Udvinding af information fra tekst",
+      "wrong_answers": [
+        "Udvinding af metal",
+        "Datakryptering",
+        "Genkendelse af ansigter i tekst",
+        "Oversættelse af sprog",
+        "Komprimering af tekst",
+        "Analyse af tekststruktur"
+      ],
+      "silly_answers": [
+        "Minering af bøger med dynamit",
+        "Digge efter viden med spader",
+        "Fiskeri efter sætninger"
+      ],
+      "explanation": "Text mining er en metode til at udvinde nyttig information fra store mængder tekst."
+    },
+    {
+      "question": "Hvad er 'temporale data'?",
+      "correct_answer": "Data med en tidskomponent",
+      "wrong_answers": [
+        "Data fra temperaturmålinger",
+        "Data i 3D-format",
+        "Tekstdata",
+        "Geografiske data",
+        "Strukturerede data",
+        "Lyddata"
+      ],
+      "silly_answers": [
+        "Data fra en tidsmaskine",
+        "Data med evigt liv",
+        "Data fra din sidste drøm"
+      ],
+      "explanation": "Temporale data refererer til data, der har en tidskomponent, som for eksempel tidsseriedata."
+    },
+    {
+      "question": "Hvilke etiske problemstillinger kan opstå ved arbejde med open data?",
+      "correct_answer": "Databeskyttelse og privatliv",
+      "wrong_answers": [
+        "Brug af ulovlig software",
+        "Urimelige arbejdstimer",
+        "Manglende kreditering",
+        "Overforbrug af serverressourcer",
+        "Patentproblemer",
+        "Diskrimination i data"
+      ],
+      "silly_answers": [
+        "Risiko for at blive en superhelt",
+        "Datalov for brudt hjerter",
+        "Overforbrug af magi"
+      ],
+      "explanation": "Etiske problemstillinger som databeskyttelse og privatlivets fred er vigtige, når man arbejder med open data."
+    },
+    {
+      "question": "Hvad står FAIR for?",
+      "correct_answer": "Findable, Accessible, Interoperable, Reusable",
+      "wrong_answers": [
+        "Fart, Agilitet, Intelligens, Robusthed",
+        "Fleksibel, Aktiv, Initiativrig, Responsiv",
+        "Fokuseret, Automatiseret, Isoleret, Rutine",
+        "Fast, Akkurat, Informeret, Regelbundet",
+        "Fri, Accepteret, Inkluderende, Rationel",
+        "Fuld, Alkoholiseret, Irriterende, Råbende"
+      ],
+      "silly_answers": [
+        "Fisk, And, Is, Rabarber",
+        "Fodbold, Atletik, Ishockey, Ridning",
+        "Fremtid, Astrologi, Illusion, Rekreation"
+      ],
+      "explanation": "FAIR-principperne angiver, at data skal være Findable, Accessible, Interoperable og Reusable."
+    },
+    {
+      "question": "Hvad gør data 'Findable' i FAIR-princippet?",
+      "correct_answer": "Data har unikke identifikatorer",
+      "wrong_answers": [
+        "Data er offentlige",
+        "Data er i skyen",
+        "Data er i et kendt format",
+        "Data er på sociale medier",
+        "Data er i mange kopier",
+        "Data er lette at forstå"
+      ],
+      "silly_answers": [
+        "Data kan findes med en skattekort",
+        "Data er gemt under din seng",
+        "Data kan lugtes af sporhunde"
+      ],
+      "explanation": "'Findable' refererer til data, der har unikke identifikatorer, så de nemt kan findes."
+    },
+    {
+      "question": "Hvilken Creative Commons-licens er den mest restriktive?",
+      "correct_answer": "CC BY-NC-ND",
+      "wrong_answers": [
+        "CC BY",
+        "CC BY-SA",
+        "CC BY-NC",
+        "CC BY-ND",
+        "CC0",
+        "Public Domain"
+      ],
+      "silly_answers": ["CC BY-NASA", "CC BY-BYE", "CC OMG-WTF"],
+      "explanation": "CC BY-NC-ND tillader kun andre at downloade værker og dele dem med andre, så længe de krediterer ophavsmanden, men de kan ikke ændre dem på nogen måde eller anvende dem kommercielt."
+    },
+    {
+      "question": "Hvad er 'Linked Data'?",
+      "correct_answer": "Data der er forbundet med andre data",
+      "wrong_answers": [
+        "Data i en liste",
+        "Data i et netværk",
+        "Data i en sky",
+        "Data i en kæde",
+        "Data i en tabel",
+        "Data i en database"
+      ],
+      "silly_answers": [
+        "Data i en kærlighedsrelation",
+        "Data på en linedans",
+        "Data i et kæledyrsregister"
+      ],
+      "explanation": "'Linked Data' refererer til data, der er struktureret på en måde, så de kan forbindes med relaterede data."
+    },
+    {
+      "question": "Hvad gør data 'Accessible' i FAIR-princippet?",
+      "correct_answer": "Data kan tilgås og hentes",
+      "wrong_answers": [
+        "Data er gratis",
+        "Data er populære",
+        "Data er i PDF-format",
+        "Data er på engelsk",
+        "Data er offline",
+        "Data er på en hjemmeside"
+      ],
+      "silly_answers": [
+        "Data er i din lomme",
+        "Data er skrevet i himlen",
+        "Data er tatoveret på din arm"
+      ],
+      "explanation": "'Accessible' betyder, at data skal være tilgængelige og kan hentes, typisk via internettet."
+    },
+    {
+      "question": "Hvad gør data 'Interoperable' i FAIR-princippet?",
+      "correct_answer": "Data kan integreres med andre data",
+      "wrong_answers": [
+        "Data kan tilgås offline",
+        "Data er i et udbredt format",
+        "Data er på forskellige sprog",
+        "Data er krypteret",
+        "Data har høj opløsning",
+        "Data er i farver"
+      ],
+      "silly_answers": [
+        "Data kan bruges som frisbee",
+        "Data kan spille skak",
+        "Data kan synge opera"
+      ],
+      "explanation": "'Interoperable' betyder, at data kan integreres med andre data og dermed anvendes i forskellige sammenhænge."
+    },
+    {
+      "question": "Hvad gør data 'Reusable' i FAIR-princippet?",
+      "correct_answer": "Data har tilstrækkelig metadata",
+      "wrong_answers": [
+        "Data er i offentlig domæne",
+        "Data er komprimerede",
+        "Data har ingen licens",
+        "Data er i PDF-format",
+        "Data er backupped",
+        "Data er verificerede"
+      ],
+      "silly_answers": [
+        "Data er vaskbare",
+        "Data kan genbruges som drikkebrikker",
+        "Data kan foldes som et telt"
+      ],
+      "explanation": "'Reusable' indebærer, at data har tilstrækkelig metadata og dermed kan genbruges i forskellige sammenhænge."
+    },
+    {
+      "question": "Hvad er et RDF?",
+      "correct_answer": "Resource Description Framework",
+      "wrong_answers": [
+        "Remote Data Facility",
+        "Rapid Development Framework",
+        "Runtime Data Formatting",
+        "Real-time Data Feed",
+        "Reliable Data Format",
+        "Resource-Defined Firewall"
+      ],
+      "silly_answers": [
+        "Really Delicious Fries",
+        "Ridiculously Dressed Frogs",
+        "Random Dance Floor"
+      ],
+      "explanation": "RDF (Resource Description Framework) er en standard for at beskrive ressourcer på internettet, ofte brugt i semantisk web."
+    },
+    {
+      "question": "Hvilket format bruges ofte til Linked Data?",
+      "correct_answer": "JSON-LD",
+      "wrong_answers": ["XML", "CSV", "HTML", "YAML", "SQL", "PDF"],
+      "silly_answers": ["MORSE", "CAVE PAINTING", "SMOKE SIGNALS"],
+      "explanation": "JSON-LD (JSON for Linked Data) er et almindeligt anvendt format for at strukturere Linked Data."
+    },
+    {
+      "question": "Hvilken del af FAIR handler om etiske overvejelser?",
+      "correct_answer": "Ingen",
+      "wrong_answers": [
+        "Findable",
+        "Accessible",
+        "Interoperable",
+        "Reusable",
+        "Alle dele",
+        "Kun i kombination"
+      ],
+      "silly_answers": ["Fearable", "Astrological", "Illusionable", "Romantic"],
+      "explanation": "FAIR-principperne fokuserer ikke direkte på etiske overvejelser, men etik kan indgå i den overordnede dataforvaltning."
+    },
+    {
+      "question": "Hvad betyder 'Open Data'?",
+      "correct_answer": "Data, der er frit tilgængelige for alle",
+      "wrong_answers": [
+        "Data i en åben mappe",
+        "Data uden password",
+        "Data i klartekst",
+        "Data i skyen",
+        "Offentlige data",
+        "Ukrypterede data"
+      ],
+      "silly_answers": [
+        "Data, der er åbne for nye oplevelser",
+        "Data, der åbner døre",
+        "Data, der nyder frisk luft"
+      ],
+      "explanation": "'Open Data' refererer til data, der er frit tilgængelige for alle at bruge, modificere og distribuere."
+    },
+    {
+      "question": "Hvad er 'Semantic Web'?",
+      "correct_answer": "Et web, der gør data forståelige for maskiner",
+      "wrong_answers": [
+        "Et web med mening",
+        "Et web med mange links",
+        "Et web af semantiske enheder",
+        "Et socialt web",
+        "Et web for semantiske forskere",
+        "Et web med dybde"
+      ],
+      "silly_answers": [
+        "Et web, der skriver poesi",
+        "Et web, der tager eksistentielle valg",
+        "Et web, der har læst Sartre"
+      ],
+      "explanation": "'Semantic Web' er en udvidelse af det almindelige web, hvor data er struktureret på en måde, så det er forståeligt for maskiner."
+    },
+    {
+      "question": "Hvad er 'Text Mining'?",
+      "correct_answer": "Tekstanalyse for at udtrække information",
+      "wrong_answers": [
+        "Udgravning af tekster",
+        "Søgning i tekster",
+        "Tekstforståelse",
+        "Tekstkomprimering",
+        "Tekstredigering",
+        "Tekstgenerering"
+      ],
+      "silly_answers": [
+        "Tekster, der arbejder i miner",
+        "Udgravning af bøger fra undergrunden",
+        "Skrivning med en hakke og skovl"
+      ],
+      "explanation": "'Text Mining' er processen med at analysere tekster for at udtrække nyttige informationer."
+    },
+    {
+      "question": "Hvad er et URI?",
+      "correct_answer": "Uniform Resource Identifier",
+      "wrong_answers": [
+        "Unified Rendering Interface",
+        "User Reliability Index",
+        "Unique Registration Identification",
+        "Universal Resource Index",
+        "Ultra Responsive Image",
+        "Unified Runtime Infrastructure"
+      ],
+      "silly_answers": [
+        "Unbelievable Rainbow Illusions",
+        "Utterly Ridiculous Inventions",
+        "Universal Ravioli Index"
+      ],
+      "explanation": "URI (Uniform Resource Identifier) er en streng af tegn, der identificerer en navn eller en ressource på internettet."
+    },
+    {
+      "question": "Hvad er 'Sentiment Analysis'?",
+      "correct_answer": "Analyse af følelser i tekster",
+      "wrong_answers": [
+        "Analyse af meninger",
+        "Analyse af teksters længde",
+        "Analyse af grammatik",
+        "Analyse af popularitet",
+        "Analyse af læsbarhed",
+        "Analyse af originalitet"
+      ],
+      "silly_answers": [
+        "Analyse af teksters yndlingsfarver",
+        "Analyse af teksters musiksmag",
+        "Analyse af teksters stjernetegn"
+      ],
+      "explanation": "'Sentiment Analysis' handler om at bruge computeralgoritmer til at afgøre, hvad der er den overordnede følelse i en given tekst."
+    },
+    {
+      "question": "Hvad er 'Creative Commons'?",
+      "correct_answer": "En non-profit organisation, der tilbyder frie licenser",
+      "wrong_answers": [
+        "En kunstskole",
+        "En kode-editor",
+        "En musikgenre",
+        "En streamingplatform",
+        "Et reklamebureau",
+        "Et softwarefirma"
+      ],
+      "silly_answers": [
+        "Et bofællesskab for kreative væsner",
+        "En åndelig sekt for kunstnere",
+        "Et fælles bad for kreative mennesker"
+      ],
+      "explanation": "Creative Commons er en organisation, der tilbyder en række licenser, som giver ophavsmænd mulighed for at dele deres arbejde under forskellige betingelser."
+    },
+    {
+      "question": "Hvilken FAIR-principperne komponent fokuserer på metadata?",
+      "correct_answer": "Reusable",
+      "wrong_answers": [
+        "Findable",
+        "Accessible",
+        "Interoperable",
+        "Ingen af dem",
+        "Alle af dem",
+        "Kun i kombination"
+      ],
+      "silly_answers": [
+        "Regrettable",
+        "Inconceivable",
+        "Unbelievable",
+        "Astonishable"
+      ],
+      "explanation": "'Reusable' indebærer, at data har tilstrækkelig metadata og dermed kan genbruges i forskellige sammenhænge."
+    },
+    {
+      "question": "Hvad er 'SPARQL'?",
+      "correct_answer": "Et forespørgselssprog for databaser, der kan lagre, hente og manipulere semantiske data",
+      "wrong_answers": [
+        "En type fugl",
+        "En programmeringsmodel",
+        "En sikkerhedsprotokol",
+        "Et layoutsystem",
+        "En teksteditor",
+        "Et operativsystem"
+      ],
+      "silly_answers": [
+        "En brand af gnistfrie tændstikker",
+        "En klub for ældre rovfugle",
+        "Et alternativt navn for Scrabble"
+      ],
+      "explanation": "SPARQL er et RDF forespørgselssprog; det bruges til at hente data fra RDF-databaser."
+    },
+    {
+      "question": "Hvilken licens tillader genbrug og redigering, men kræver samme licens for afledte værker?",
+      "correct_answer": "CC BY-SA",
+      "wrong_answers": [
+        "CC BY",
+        "CC BY-ND",
+        "CC BY-NC",
+        "CC BY-NC-SA",
+        "CC0",
+        "CC BY-NC-ND"
+      ],
+      "silly_answers": ["CC DIY", "CC TMI", "CC OMG"],
+      "explanation": "CC BY-SA (Attribution-ShareAlike) licensen tillader brugere at genbruge og redigere værket, men kræver, at afledte værker distribueres under samme licens."
+    },
+    {
+      "question": "Hvad står 'API' for?",
+      "correct_answer": "Application Programming Interface",
+      "wrong_answers": [
+        "Advanced Process Integration",
+        "Automated Program Installer",
+        "Adaptive Performance Index",
+        "Abstract Page Identifier",
+        "Automated Package Inspection",
+        "Agile Programming Iteration"
+      ],
+      "silly_answers": [
+        "Apple Pie Ingredients",
+        "Ant-eating Penguin Investigators",
+        "Annoying Pop-up Intruders"
+      ],
+      "explanation": "API (Application Programming Interface) er et sæt protokoller og værktøjer til bygning af softwareapplikationer."
+    }
+  ]
+}
