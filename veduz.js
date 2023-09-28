@@ -462,6 +462,18 @@
           elem = document.createElement("div");
           elem.className = "veduz-app veduz-app-" + appName;
           elem.id = elemId;
+          if(script.getAttribute("fullscreen" || script.dataset["fullscreen"])) {
+            Object.assign(elem.style,
+              {
+                position: "fixed",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                width: "100%"
+              });
+              alert('here');
+          }
           script.parentNode.insertBefore(elem, script);
         } else {
           let center = document.createElement("center");
@@ -483,10 +495,10 @@
       ></div>
     <div style="
         position: absolute;
-        left: 138px;
-        top: 20px;;
-        height: 35px;
-        width: 133px;
+        left: 135px;
+        top: 10px;;
+        height: 30px;
+        width: 123px;
         background: black;
         border-radius: 20px;"></div>
   </div> `;

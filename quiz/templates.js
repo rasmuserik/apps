@@ -1,4 +1,4 @@
-import mustache from "../lib/mustache.js";
+import mustache from "./mustache.js";
 let templates = {};
 export async function load_templates(url) {
   let html = await (await fetch(url)).text();

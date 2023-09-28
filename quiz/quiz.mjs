@@ -1,4 +1,4 @@
-import { setStyle, log, sleep, shuffled } from "../util/util.js";
+import { setStyle, log, sleep, shuffled } from "./util.js";
 import { template, load_templates } from "./templates.js";
 
 let http_cache = {};

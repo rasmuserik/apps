@@ -16,10 +16,4 @@
   ></script>
   <hr />
   <div id="READMEmd"></div>
-  <script type="module">
-    import marked from "../lib/marked.esm.js";
-    READMEmd.innerHTML = marked.parse(
-      await (await fetch("./README.md")).text(),
-    );
-  </script>
 </body>
