@@ -78,7 +78,7 @@
                   {
                     class: "item-up list-item-button",
                     onclick: () =>
-                      v.update_state(cur.path(), ({cur}) =>
+                      v.update(cur.path(), ({cur}) =>
                       cur.update(o => {
                         if (i == 0) return o;
                         o = [...o];
@@ -97,7 +97,7 @@
                   {
                     class: "item-down list-item-button",
                     onclick: () =>
-                      v.update_state(cur.path(), ({cur}) =>
+                      v.update(cur.path(), ({cur}) =>
                       cur.update(o => {
                         if (i == o.length - 1) return o;
                         o = [...o];
@@ -115,7 +115,7 @@
                 class: "item-delete list-item-button",
                 onclick: () => 
                   window.confirm("Er du sikker på at du vil slette dette?") &&
-                  v.update_state(cur.path(), ({cur}) =>
+                  v.update(cur.path(), ({cur}) =>
                     cur.update(o => o.filter((_, j) => j != i)))
                 ,
               },
@@ -131,7 +131,7 @@
             {
               class: "list-item-button list-append-button",
               onclick: () =>
-                v.update_state(cur.path(), ({cur}) => 
+                v.update(cur.path(), ({cur}) => 
                   cur.update(o => [...o || [], {}]))
             },
             "+"
@@ -150,7 +150,7 @@
             },
 
             value: data || "",
-            oninput: (e) => v.update_state(cur.path(), ({cur}) => cur.set("", e.target.value) ),
+            oninput: (e) => v.update(cur.path(), ({cur}) => cur.set("", e.target.value) ),
           }),
         ];
         break;
@@ -160,7 +160,7 @@
             "select",
             {
               value: data,
-              onchange: (e) => v.update_state(cur.path(), ({cur}) => cur.set(e.target.value))
+              onchange: (e) => v.update(cur.path(), ({cur}) => cur.set(e.target.value))
             },
             ...form.slice(2).map((f) =>
               h(
@@ -194,7 +194,7 @@
               const reader = new FileReader();
               reader.onload = function (e) {
                 const dataUrl = e.target.result;
-                v.update_state(cur.path(), ({cur}) => cur.set(dataUrl));
+                v.update(cur.path(), ({cur}) => cur.set(dataUrl));
               };
               reader.readAsDataURL(file);
             },

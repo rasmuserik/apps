@@ -164,7 +164,11 @@
         if (view?.html) {
           elem.innerHTML = view.html;
         } else if (view?.preact) {
+          console.log('render-preact', view.preact);
           v.preact.render(view.preact, elem);
+        } else if (view?.react) {
+          console.log('render-react', view.react);
+          v.react.dom.render(view.react, elem);
         }
       }
     }
@@ -247,7 +251,7 @@
     permission = ("system " + (permission || "local")).split(" ");
     v._exposed[name] = { fn, permission };
   };
-  v.update_state = async function update_state(path, fn, msg = {}) {
+  v.update = async function update_state(path, fn, msg = {}) {
     let o = (await fn({ ...msg, cur: new v.Cursor(v.state, path) })) || {};
     if (o instanceof v.Cursor && o._root !== v.state) {
       v.state = o._root;
@@ -269,7 +273,7 @@
     let { fn, permission } = v._exposed[msg.type] || {};
     if (!fn) return;
     if (!permission.some((p) => msg.roles.includes(p))) return;
-    let { result, error } = v.update_state("/", fn, msg);
+    let { result, error } = v.update("/", fn, msg);
     if (msg.rid) {
       v.emit({
         dst: msg.src,
@@ -493,11 +497,11 @@
         await v.sleep(i);
       }
       if (v[appName]?.init) {
-        v.update_state(`/${appName}/elem_${elemId}`, v[appName].init, {});
+        v.update(`/${appName}/elem_${elemId}`, v[appName].init, {});
       }
       v._render(elemId, appName);
     }
   }
   setTimeout(() => (v.state = { ...v.state }), 100);
-  v.log("veduz-client-loaded");
+  v.log("veduz-client-loaded:" + location.hostname);
 })();
