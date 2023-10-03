@@ -35,8 +35,8 @@
         { title: "Aussage auf Deutsch", path: "statement/de", lines: 3 },
       ],
       ["select", { title: "Land", path: "country" }, "da", "de"],
-      ["upload", { title: "Optagelse på Dansk", path: "audio/da" }],
-      ["upload", { title: "Aufname auf Deutsch", path: "audio/de" }],
+      ["upload", { title: "Optagelse på Dansk", path: "audio_da" }],
+      ["upload", { title: "Aufname auf Deutsch", path: "audio_de" }],
       ["upload", { title: "Billede/Bild", path: "img" }],
     ],
     [
