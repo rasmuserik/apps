@@ -12,10 +12,8 @@
         "de": "Ich habe letzte Woche den neuen Film von Almodovar im Original mit Untertiteln gesehen und war hin und weg. Ich habe mal einen Spanischkurs gemacht und konnte daher ganz gut folgen. Ans Untertitellesen kann ich mich nicht gewöhnen. Ich finde auch, dass ich dann was von der Handlung verpasse."
       },
       "id": "person1",
-      "audio": {
-        "da": "https://veduz.com/tyskultur/release/data/files/person1-da.mp3",
-        "de": "https://veduz.com/tyskultur/release/data/files/person1-de.mp3"
-      },
+      "audio_da": "https://veduz.com/tyskultur/release/data/files/person1-da.mp3",
+      "audio_de": "https://veduz.com/tyskultur/release/data/files/person1-de.mp3",
       "img": "https://veduz.com/tyskultur/release/data/files/person1.jpg",
       "country": "de"
     },
@@ -29,10 +27,8 @@
         "da": "TV er heller ikke, hvad det har været. Altid disse gentagelser! Men jeg nyder stadig at se krimier. Især de gamle Columbo-film med Peter Falk. Hans stemme var altid noget helt særligt. Især den i de gamle afsnit."
       },
       "id": "person2",
-      "audio": {
-        "da": "https://veduz.com/tyskultur/release/data/files/person2-da.mp3",
-        "de": "https://veduz.com/tyskultur/release/data/files/person2-de.mp3"
-      },
+      "audio_da": "https://veduz.com/tyskultur/release/data/files/person2-da.mp3",
+      "audio_de": "https://veduz.com/tyskultur/release/data/files/person2-de.mp3",
       "img": "https://veduz.com/tyskultur/release/data/files/person2.jpg",
       "country": "de"
     },
@@ -46,10 +42,8 @@
         "da": "Jeg må ikke se så meget fjernsyn endnu, men vi ser et afsnit af Gurli Gris sammen med far hver søndag. Det er sååå sjovt!"
       },
       "id": "person3",
-      "audio": {
-        "da": "https://veduz.com/tyskultur/release/data/files/person3-da.mp3",
-        "de": "https://veduz.com/tyskultur/release/data/files/person3-de.mp3"
-      },
+      "audio_da": "https://veduz.com/tyskultur/release/data/files/person3-da.mp3",
+      "audio_de": "https://veduz.com/tyskultur/release/data/files/person3-de.mp3",
       "img": "https://veduz.com/tyskultur/release/data/files/person3.jpg",
       "country": "da"
     },
@@ -63,10 +57,8 @@
         "da": "Man kan finde underteksterne på tekst-tv. Det gør jeg altid, når jeg ser fjernsyn. Tit har jeg svært ved at forstå, hvad folk siger, derfor er det lettere, når jeg kan læse med."
       },
       "id": "person4",
-      "audio": {
-        "da": "https://veduz.com/tyskultur/release/data/files/person4-da.mp3",
-        "de": "https://veduz.com/tyskultur/release/data/files/person4-de.mp3"
-      },
+      "audio_da": "https://veduz.com/tyskultur/release/data/files/person4-da.mp3",
+      "audio_de": "https://veduz.com/tyskultur/release/data/files/person4-de.mp3",
       "img": "https://veduz.com/tyskultur/release/data/files/person4.jpg",
       "country": "de"
     }

@@ -291,7 +291,7 @@
   v.call = function call(...args) {
     let dst = args.length > 2 ? args[args.length - 3] : undefined;
     let type = args.length > 1 ? args[args.length - 2] : undefined;
-    let req = args[args.length - 1];
+    let req = args[args.length - 1] || {};
     let rid = v._next_rid++;
 
     req = { ...req, dst, type, rid };

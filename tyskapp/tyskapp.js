@@ -134,8 +134,8 @@
         de: "Die Person kommt aus Deutschland.",
       },
       stats: {
-        da: "Andre har gættet:",
-        de: "Andere haben geraten:",
+        da: "Folk har svaret:",
+        de: "Leute haben geantwortet:",
       },
       back: {
         da: "Tilbage til emnet",
@@ -223,29 +223,34 @@
       person: persondata,
       messages: local(messages, language),
     });
+    console.log('here', persondata);
     rootElem.querySelector("#listen_da").addEventListener("click", () => {
       language = "da";
       person();
       let audio = document.getElementById("audio");
-      audio.src = "./data/files/" + person_id + "-da.mp3";
+      audio.src = persondata.audio_da;
       audio.play();
     });
     rootElem.querySelector("#listen_de").addEventListener("click", () => {
       language = "de";
       person();
       let audio = document.getElementById("audio");
-      audio.src = "./data/files/" + person_id + "-de.mp3";
+      audio.src = persondata.audio_de;
       audio.play();
     });
     rootElem.querySelector("#answer_da").addEventListener("click", () => {
       let isInitial = answers[topic_id + "." + person_id] === undefined;
-      v.log(`tyskapp-answer:${isInitial}:${start_language}:${topic_id}:${person_id}:da`);
+      v.log(
+        `tyskapp-answer:${isInitial}:${start_language}:${topic_id}:${person_id}:da`
+      );
       answers[topic_id + "." + person_id] = "da";
       feedback();
     });
     rootElem.querySelector("#answer_de").addEventListener("click", () => {
       let isInitial = answers[topic_id + "." + person_id] === undefined;
-      v.log(`tyskapp-answer:${isInitial}:${start_language}:${topic_id}:${person_id}:de`);
+      v.log(
+        `tyskapp-answer:${isInitial}:${start_language}:${topic_id}:${person_id}:de`
+      );
       answers[topic_id + "." + person_id] = "de";
       feedback();
     });
@@ -257,7 +262,22 @@
     ).people.find((o) => o.id === person_id);
     let msg = local(messages, language);
     let response = answers[topic_id + "." + person_id];
-    let correct = Math.round(Math.random() * 100);
+
+    let responses = {da: 0, de: 0};
+    for (const [orig, answer] of [
+      ["da", "da"],
+      ["da", "de"],
+      ["de", "da"],
+      ["de", "de"],
+    ]) {
+      responses[answer] += await v.call(0, "log_count", {
+        log_type: `CLIENT:tyskapp-answer:true:${orig}:${topic_id}:${person_id}:${answer}`,
+      });
+    }
+    let count = responses.da + responses.de;
+    // avoid division by zero
+    if(count === 0) count = 1;
+
     rootElem.innerHTML = template("feedback", {
       person,
       messages: msg,
@@ -267,8 +287,8 @@
         person.country === "de"
           ? msg.feedback.from_germany
           : msg.feedback.from_denmark,
-      stat_de: correct,
-      stat_dk: 100 - correct,
+      stat_de: Math.round(responses.de * 100 / count),
+      stat_dk: Math.round(responses.da * 100 / count),
     });
     rootElem.querySelector("#back").addEventListener("click", () => {
       topic();
@@ -282,10 +302,9 @@
   }
 
   v.tyskapp = v.tyskapp || {};
-  v.tyskapp.init = async ({cur}) => {
+  v.tyskapp.init = async ({ cur }) => {
     await load_templates("templates.html");
-    cur = cur.set('../topics',
-    [
+    cur = cur.set("../topics", [
       await (await fetch("./topic1.json")).json(),
       { title: "Tema 2", id: "theme1" },
       { title: "Tema 3", id: "theme2" },
@@ -293,21 +312,28 @@
       { title: "Tema 5", id: "theme3" },
       { title: "Tema 6", id: "theme3" },
       { title: "...", id: "theme5" },
-    ]
-    );
-    cur = cur.set('../messages', messages);
-    topics = cur.get('../topics')
+    ]);
+    cur = cur.set("../messages", messages);
+    topics = cur.get("../topics");
     language = "da";
     topic_id = "dubbing";
     person_id = "person1";
     return cur;
-  }
+  };
   let started = false;
-  v.tyskapp.render = (({elem, cur}) => {
-    if(!cur.get("../messages")
-       ||!cur.get('../topics')) return {html:"<h1>Loading...</h1>"}
-    if(started) return;
+  v.tyskapp.render = ({ elem, cur }) => {
+    if (!cur.get("../messages") || !cur.get("../topics"))
+      return { html: "<h1>Loading...</h1>" };
+    if (started) return;
     started = true;
-    main({elem});
-  });
+    main({ elem });
+  };
+  console.log(await v.call(0, "log_types", {}));
+  console.log(
+    await v.call(0, "log_stat", {
+      log_type: "CLIENT:tyskapp-answer:true:da:dubbing:person3:da",
+    })
+  );
+
+  console.log("blah");
 })();
