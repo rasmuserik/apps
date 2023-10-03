@@ -519,4 +519,5 @@
     setTimeout(() => (v.state = { ...v.state }), 100);
     v.log("veduz-client-loaded:" + location.hostname);
   }
+  main();
 })();
