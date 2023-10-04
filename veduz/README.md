@@ -1,66 +1,80 @@
 # Veduz standard library
 
-- core:
-    - `v.load`
-    - `
+Next: change veduz.js to load other parts.
+
+## API
 
 
-- veduz - core
-    - `v.load(...)`
-    - dummy-message-queue
-- util
-- cborx
-- Cursor + Any
-- State
-    - `v.update(path, fn({...msg, cur}) => Cursor || {state, ...}, msg)`
-- Message passing + RPC
-    - `v.emit(msg)`
-    - `v.expose(permission, name, fn)`
-    - `v.call(host, method, {...params})`
-- server connection
-- rendering
+Functions:
 
----
+- `v.sleep`
+- `v.uniqueTime()`
+- `v.load`
+- `v.btou`
+- `v.utob`
+- `v.log(type, {...})`
+- `v.exposes(permission, name, fn)`
+- `v.emit(msg)`
+- `v.call([[host,] type,] msg)`
+- `v.update(path, fn({...msg, cur}) -> Cursor, msg)`
+- `v.style(id, css-as-text)`
+- **TODO** `v.mount(...)` synchronise state data to/from server etc.
 
-App functions
+Properties:
 
-- `v.$APPNAME`.init({cur})`
-- `v.$APPNAME`.render({cur})`
-- `v.$APPNAME`.start({cur})`
-- `v.$APPNAME`.stop({cur})`
+- `v.state`
 
----
+Classes:
 
-- abstract over datatypes
-- later: traceable
-
-## Any
-
-- `{type: "SomeType", data: somedata, children: {...}}`
-
-utility functions:
-- type(obj)
-- data(obj)
-- children(obj)
-
-
-## Cursor:
-- root 
-- path
-
-
-Methods:
-
-- core methods
-    - `constructor(obj, path?)`
+- `v.Any(type, data, children)`
+- `v.new_any(type, data, children)`
+- `v.Cursor(root, path?)`
     - `cd(path)`
-    - `ls(relativePath?)` returns children list.
+    - `get(path)`
+    - `update(path, fn)`
+    - `set(path, val)`
     - `path()`
-    - `root()`
-    - `update(relativePath?, fn)`
-    - `get(relativePath?, defaultValue?)`
-- made with other methods
-    - `set(relativePath?, val)`
-    - `diff(to)` returns changelist: `[{path, type, data, children},...]`
-    - `applyChanges(changelist)`
+    - `type()`
+    - `data()`
+    - `children()`
+    - `keys()`
+    - `diff(next)`
+    - `apply_changes(changes)`
+    - TODO later: traceable
+
+App data / functions:
+
+- `v.$APP_NAME.render({cur})` returns `{html:"..."}` or `{preact:...}` or `{react: ...}`
+- `v.$APP_NAME.init({cur})` returns `{cur}`
+- TODO `v.$APP_NAME.start(...)`
+- TODO `v.$APP_NAME.stop(...)`
+
+Veduz reads `<script>`-tag it is loaded with, and handles the following properties (with or without `data-`):
+
+- `app`, – load `veduz.com/app/app.js` and start it, with a target div/id
+- `elem` - elem to render app into (create new at `<script>`-tag if not supplied
+- `fullscreen` - whether the apps should use the entire screen
+- `landscape-mockup` - app should open in an app mockup view
+
+
+
+State content:
+
+- `/$APP_NAME/elem_$ELEMID` state for current app-element
+
+Deps loaded with `v.load('deps/$DEPNAME')`:
+- `v.cborx`
+- `v.preact`
+- `v.marked`
+- `v.mustache`
+
+Messages:
+
+- `src`
+- `dst`
+- `type`
+- `rid`
+- `result`
+- `error`
+- `state` property not allowed
 
