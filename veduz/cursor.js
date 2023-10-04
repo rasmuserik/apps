@@ -119,8 +119,8 @@
       .slice(1, -1);
   }
   function addPath(a, b) {
-    if (Array.isArray(a)) a = a.join("/");
-    if (Array.isArray(b)) b = b.join("/");
+    a = Array.isArray(a) ? a.join("/") : String(a);
+    b = Array.isArray(b) ? b.join("/") : String(b);
     if (b.startsWith("/")) return b;
     return normalisePath(a + "/" + b);
   }
@@ -150,6 +150,7 @@
     return this.cd(path).get();
   };
   v.Cursor.prototype.update = function update(path, fn) {
+    console.log('update', path);
     if (arguments.length === 1) {
       fn = path;
       path = undefined;
@@ -159,7 +160,8 @@
     } else {
       path = addPath(this._path, path);
     }
-    return new v.Cursor(updateIn(this._root, path, fn));
+    console.log('path', this._path, path);
+    return new v.Cursor(updateIn(this._root, path, fn), this._path);
   };
   v.Cursor.prototype.set = function set(path, val) {
     if (arguments.length === 1) {

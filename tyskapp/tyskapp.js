@@ -303,6 +303,7 @@
 
   v.tyskapp = v.tyskapp || {};
   v.tyskapp.init = async ({ cur }) => {
+    console.log('init');
     await load_templates("templates.html");
     cur = cur.set("../topics", [
       await (await fetch("./topic1.json")).json(),
@@ -322,12 +323,14 @@
   };
   let started = false;
   v.tyskapp.render = ({ elem, cur }) => {
+    console.log('render', cur);
     if (!cur.get("../messages") || !cur.get("../topics"))
       return { html: "<h1>Loading...</h1>" };
     if (started) return;
     started = true;
     main({ elem });
   };
+  console.log("here");
   console.log(await v.call(0, "log_types", {}));
   console.log(
     await v.call(0, "log_stat", {

@@ -257,10 +257,14 @@
     `
   );
 
-  v.updata.init = async ({cur})  => cur.set("../form", form)
+  v.updata.init = async ({cur})  => {
+    let result = cur.set("../form", form)
       .set("../data", {
       topics: [await (await fetch("./topic1.json")).json()],
     });
+    console.log('updata init');
+    return result;
+  }
   v.updata.render = function ({ cur }) {
     console.log("updata.render", cur);
     return { preact: h("div", { class: "appeditor" }, render_form(cur.get("../form"), cur.cd("../data"))) };
