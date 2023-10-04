@@ -1,18 +1,35 @@
-# Cursor
+# Veduz standard library
+
+- core:
+    - `v.load`
+    - `
 
 
-```
-c = cur([path,] obj)
-c.cd(path)
-c.update([path, ], fn)
-c.get([path[, defaultValue]])
-c.keys() => Array
+- veduz - core
+    - `v.load(...)`
+    - dummy-message-queue
+- util
+- cborx
+- Cursor + Any
+- State
+    - `v.update(path, fn({...msg, cur}) => Cursor || {state, ...}, msg)`
+- Message passing + RPC
+    - `v.emit(msg)`
+    - `v.expose(permission, name, fn)`
+    - `v.call(host, method, {...params})`
+- server connection
+- rendering
 
-c.diff
+---
 
+App functions
 
+- `v.$APPNAME`.init({cur})`
+- `v.$APPNAME`.render({cur})`
+- `v.$APPNAME`.start({cur})`
+- `v.$APPNAME`.stop({cur})`
 
-```
+---
 
 - abstract over datatypes
 - later: traceable
