@@ -1,30 +1,19 @@
 # Veduz standard library
 
-Next: change veduz.js to load other parts.
 
-## API
-
-
-Functions:
+`/veduz.js` has code for loading + boots veduz.
 
 - `v.sleep`
+- `v.load(...)`
+
+`veduz/util.js` contains various utilities:
+
 - `v.uniqueTime()`
-- `v.load`
 - `v.btou`
 - `v.utob`
 - `v.log(type, {...})`
-- `v.exposes(permission, name, fn)`
-- `v.emit(msg)`
-- `v.call([[host,] type,] msg)`
-- `v.update(path, fn({...msg, cur}) -> Cursor, msg)`
-- `v.style(id, css-as-text)`
-- **TODO** `v.mount(...)` synchronise state data to/from server etc.
 
-Properties:
-
-- `v.state`
-
-Classes:
+`veduz/cursor.js` creates cursor class:
 
 - `v.Any(type, data, children)`
 - `v.new_any(type, data, children)`
@@ -41,6 +30,33 @@ Classes:
     - `diff(next)`
     - `apply_changes(changes)`
     - TODO later: traceable
+
+`veduz/state.js` handles state management/access.
+
+- `v.update(path, fn({...msg, cur}) -> Cursor, msg)`
+
+`veduz/messaging.js` handles messaging, networking, and rpc
+
+- `v.exposes(permission, name, fn)`
+- `v.emit(msg)`
+- `v.call([[host,] type,] msg)`
+
+Rendering:
+
+- `v.style(id, css-as-text)`
+
+Main
+
+
+Functions:
+
+- **TODO** `v.mount(...)` synchronise state data to/from server etc.
+
+Properties:
+
+- `v.state`
+
+Classes:
 
 App data / functions:
 
