@@ -14,10 +14,8 @@
         if (view?.html) {
           elem.innerHTML = view.html;
         } else if (view?.preact) {
-          console.log("render-preact", view.preact);
           v.preact.render(view.preact, elem);
         } else if (view?.react) {
-          console.log("render-react", view.react);
           v.react.dom.render(view.react, elem);
         }
       }

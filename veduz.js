@@ -5,7 +5,6 @@
   v.sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   v._loading = v.loading || {};
   v.load = async function (url) {
-    console.log('loading', url);
     v.emit && v.emit({ dst: 0, type: "load", path: url });
     if (v._loading[url]) return v._loading[url];
     if (!url.startsWith("http")) {

@@ -64,13 +64,10 @@
   </div> `;
           }
         }
-        console.log('loading', appName);
         if (!v[appName]) await v.load(`${appName}/${appName}.js`);
-        console.log('loaded', appName);
         for (let i = 0; !v[appName] && i < 100; ++i) {
           await v.sleep(i);
         }
-        console.log('xys', v[appName]);
         if (v[appName]?.init) {
           v.update(`/${appName}/elem_${elemId}`, v[appName].init, {});
         }

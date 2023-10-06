@@ -57,6 +57,7 @@
     ],
   ];
   function render_form(form, cur) {
+
     if(!form) return h("h1", {}, "Loading..."  )
     if (form[1].path) {
       let t = cur.cd(form[1].path);
@@ -71,6 +72,7 @@
           h(
             "div",
             { class: "list-item" },
+            /*
             i === 0
               ? null
               : h(
@@ -109,6 +111,7 @@
                   },
                   "↓"
                 ),
+                */
             h(
               "div",
               {
@@ -254,19 +257,84 @@
         line-height: ${lineheight}px;
         width: 98%;
         font-family: sans-serif;
-    `
+    }
+    .appeditor .login {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }`
   );
 
+  async function doLogin({cur}) {
+    // TODO login
+
+    let email = cur.get("email");
+    let userExists = await v.call(0, 'user_exists', {email: cur.get("email")});
+    console.log(email, userExists)
+
+    return cur.set("route", ["formedit"]);
+  }
+
+  function login({cur}) {
+    let style = {
+          width: 240,
+          boxSizing: "border-box",
+          margin: 10,
+          padding: 10,
+          borderRadius: 5,
+      border: "1px solid #999"
+        }
+    return h("div", {class: "login"},
+      h("span", {
+
+        style: {...style, padding: 0, border: "none"},
+
+      }, "Sign in using your university email (enrolled in the course) to get access to edit the content:"),
+      h("input", {
+        style,
+        type:"email",
+        name: "username",
+        autocomplete: "email" /*"username"*/,
+          type: "text", 
+          placeholder: "abc123@alumni.ku.dk", 
+          value: cur.get("email"), 
+          oninput: e => v.update(cur.path(), ({cur}) => cur.set("email", e.target.value))}),
+      h("button", {
+        style,
+        onclick: async () => v.update(cur.path(), doLogin)},"Login"),
+        h("small", {style: {...style, border: "none", padding: 0, color: "#666"}}, "(If you haven't logged in here before, you will get an email with a new password. Contact kulturapp@solsort.dk, if you have questions, or problems logging in).")
+        );
+
+  }
+
   v.updata.init = async ({cur})  => {
-    let result = cur.set("../form", form)
-      .set("../data", {
+    cur = cur.set("form", form)
+      .set("data", {
       topics: [await (await fetch("./topic1.json")).json()],
     });
+    let roles = await v.call(0, 'roles', {});
+    cur = cur.set('roles', roles)
+    console.log('roles', roles);
     console.log('updata init');
-    return result;
+    return cur;
   }
   v.updata.render = function ({ cur }) {
+    let route = cur.get("route", []);
     console.log("updata.render", cur);
-    return { preact: h("div", { class: "appeditor" }, render_form(cur.get("../form"), cur.cd("../data"))) };
+    console.log(route);
+    let [page] = route;
+    let pages = {
+      login, 
+      formedit: ({cur}) => render_form(cur.get("form"), cur.cd("data")),
+    }
+
+    return { preact: h("div", { class: "appeditor" }, 
+    (pages[page] || pages.login)({cur}))};
   };
 })();

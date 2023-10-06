@@ -145,12 +145,11 @@
     let newPath = addPath(this._path, path);
     return new v.Cursor(this._root, newPath);
   };
-  v.Cursor.prototype.get = function get(path) {
-    if (!path) return this._current;
-    return this.cd(path).get();
+  v.Cursor.prototype.get = function get(path, defaultValue) {
+    if (!path) return this._current === undefined? defaultValue : this._current;
+    return this.cd(path).get(undefined, defaultValue);
   };
   v.Cursor.prototype.update = function update(path, fn) {
-    console.log('update', path);
     if (arguments.length === 1) {
       fn = path;
       path = undefined;
@@ -160,7 +159,6 @@
     } else {
       path = addPath(this._path, path);
     }
-    console.log('path', this._path, path);
     return new v.Cursor(updateIn(this._root, path, fn), this._path);
   };
   v.Cursor.prototype.set = function set(path, val) {
@@ -232,5 +230,5 @@
     next = next.apply_changes(changes);
     console.log(changes, next);
   }
-  main();
+  //main();
 })();
