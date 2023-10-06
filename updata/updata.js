@@ -57,8 +57,7 @@
     ],
   ];
   function render_form(form, cur) {
-
-    if(!form) return h("h1", {}, "Loading..."  )
+    if (!form) return h("h1", {}, "Loading...");
     if (form[1].path) {
       let t = cur.cd(form[1].path);
       cur = t;
@@ -116,11 +115,11 @@
               "div",
               {
                 class: "item-delete list-item-button",
-                onclick: () => 
+                onclick: () =>
                   window.confirm("Er du sikker på at du vil slette dette?") &&
-                  v.update(cur.path(), ({cur}) =>
-                    cur.update(o => o.filter((_, j) => j != i)))
-                ,
+                  v.update(cur.path(), ({ cur }) =>
+                    cur.update((o) => o.filter((_, j) => j != i))
+                  ),
               },
               "🗑"
             ),
@@ -134,8 +133,9 @@
             {
               class: "list-item-button list-append-button",
               onclick: () =>
-                v.update(cur.path(), ({cur}) => 
-                  cur.update(o => [...o || [], {}]))
+                v.update(cur.path(), ({ cur }) =>
+                  cur.update((o) => [...(o || []), {}])
+                ),
             },
             "+"
           ),
@@ -153,7 +153,8 @@
             },
 
             value: data || "",
-            oninput: (e) => v.update(cur.path(), ({cur}) => cur.set("", e.target.value) ),
+            oninput: (e) =>
+              v.update(cur.path(), ({ cur }) => cur.set("", e.target.value)),
           }),
         ];
         break;
@@ -163,7 +164,8 @@
             "select",
             {
               value: data,
-              onchange: (e) => v.update(cur.path(), ({cur}) => cur.set(e.target.value))
+              onchange: (e) =>
+                v.update(cur.path(), ({ cur }) => cur.set(e.target.value)),
             },
             ...form.slice(2).map((f) =>
               h(
@@ -197,7 +199,7 @@
               const reader = new FileReader();
               reader.onload = function (e) {
                 const dataUrl = e.target.result;
-                v.update(cur.path(), ({cur}) => cur.set(dataUrl));
+                v.update(cur.path(), ({ cur }) => cur.set(dataUrl));
               };
               reader.readAsDataURL(file);
             },
@@ -271,70 +273,163 @@
     }`
   );
 
-  async function doLogin({cur}) {
-    // TODO login
-
+  async function doLogin({ cur }) {
     let email = cur.get("email");
-    let userExists = await v.call(0, 'user_exists', {email: cur.get("email")});
-    console.log(email, userExists)
+    let userExists = await v.call(0, "user_exists", {
+      email: cur.get("email"),
+    });
+    if (!userExists) {
+      await v.call(0, "reset_password", { email });
+      cur = cur.set("login_message", "Email sent with new password");
+    } else {
+      cur = cur.set("login_message", "");
+    }
+    return cur.set("route", ["password"]);
+  }
 
+  async function handle_password({ cur }) {
+    let signin = await v.call(0, "login", {
+      email: cur.get("email"),
+      password: cur.get("password"),
+    });
+    if (signin.error) {
+      return cur
+        .set("login_message", "Login failed")
+        .set("password", "")
+        .set("route", ["login"]);
+    }
+    console.log("handle_signin", signin);
     return cur.set("route", ["formedit"]);
   }
 
-  function login({cur}) {
+  function password({ cur }) {
     let style = {
-          width: 240,
-          boxSizing: "border-box",
-          margin: 10,
-          padding: 10,
-          borderRadius: 5,
-      border: "1px solid #999"
-        }
-    return h("div", {class: "login"},
-      h("span", {
-
-        style: {...style, padding: 0, border: "none"},
-
-      }, "Sign in using your university email (enrolled in the course) to get access to edit the content:"),
+      width: 240,
+      boxSizing: "border-box",
+      margin: 10,
+      padding: 10,
+      borderRadius: 5,
+      border: "1px solid #999",
+    };
+    return h(
+      "div",
+      { class: "login" },
+      h(
+        "span",
+        {
+          style: { ...style, padding: 0, border: "none" },
+        },
+        "Enter password that you received per email:"
+      ),
       h("input", {
         style,
-        type:"email",
+        type: "password",
+        name: "password",
+        autocomplete: "current-password" /*"username"*/,
+        placeholder: "password sent to " + cur.get("email"),
+        value: cur.get("password", ""),
+        oninput: (e) =>
+          v.update(cur.path(), ({ cur }) =>
+            cur.set("password", e.target.value)
+          ),
+      }),
+      h(
+        "button",
+        {
+          style,
+          onclick: async () => v.update(cur.path(), handle_password),
+        },
+        "Login"
+      ),
+      h(
+        "small",
+        { style: { ...style, border: "none", padding: 0, color: "#666" } },
+        cur.get("login_message", "")
+      ),
+      "TODO: button to reset password",
+      "TODO: handle return key",
+
+
+    );
+  }
+
+  function login({ cur }) {
+    let style = {
+      width: 240,
+      boxSizing: "border-box",
+      margin: 10,
+      padding: 10,
+      borderRadius: 5,
+      border: "1px solid #999",
+    };
+    return h(
+      "div",
+      { class: "login" },
+      h(
+        "span",
+        {
+          style: { ...style, padding: 0, border: "none" },
+        },
+        "Sign in using your university email (enrolled in the course) to get access to edit the content:"
+      ),
+      h("input", {
+        style,
+        type: "email",
         name: "username",
         autocomplete: "email" /*"username"*/,
-          type: "text", 
-          placeholder: "abc123@alumni.ku.dk", 
-          value: cur.get("email"), 
-          oninput: e => v.update(cur.path(), ({cur}) => cur.set("email", e.target.value))}),
-      h("button", {
-        style,
-        onclick: async () => v.update(cur.path(), doLogin)},"Login"),
-        h("small", {style: {...style, border: "none", padding: 0, color: "#666"}}, "(If you haven't logged in here before, you will get an email with a new password. Contact kulturapp@solsort.dk, if you have questions, or problems logging in).")
-        );
-
+        placeholder: "abc123@alumni.ku.dk",
+        value: cur.get("email"),
+        oninput: (e) =>
+          v.update(cur.path(), ({ cur }) => cur.set("email", e.target.value)),
+      }),
+      h(
+        "button",
+        {
+          style,
+          onclick: async () => v.update(cur.path(), doLogin),
+        },
+        "Login"
+      ),
+      h(
+        "small",
+        { style: { ...style, border: "none", padding: 0, color: "#666" } },
+        "(If you haven't logged in here before, you will get an email with a new password. Contact kulturapp@solsort.dk, if you have questions, or problems logging in)."
+      ),
+      h(
+        "span",
+        { style: { ...style, border: "none", padding: 0}},
+        cur.get("login_message", ""),
+      )
+    );
   }
 
-  v.updata.init = async ({cur})  => {
-    cur = cur.set("form", form)
-      .set("data", {
+  v.updata.init = async ({ cur }) => {
+    cur = cur.set("form", form).set("data", {
       topics: [await (await fetch("./topic1.json")).json()],
     });
-    let roles = await v.call(0, 'roles', {});
-    cur = cur.set('roles', roles)
-    console.log('roles', roles);
-    console.log('updata init');
+    let roles = await v.call(0, "roles", {});
+    cur = cur.set("roles", roles);
+    console.log("roles", roles);
+    console.log("updata init");
     return cur;
-  }
+  };
   v.updata.render = function ({ cur }) {
     let route = cur.get("route", []);
     console.log("updata.render", cur);
     console.log(route);
     let [page] = route;
     let pages = {
-      login, 
-      formedit: ({cur}) => render_form(cur.get("form"), cur.cd("data")),
-    }
+      login,
+      password,
+      formedit: ({ cur }) => render_form(cur.get("form"), cur.cd("data")),
+    };
 
-    return { preact: h("div", { class: "appeditor" }, 
-    (pages[page] || pages.login)({cur}))};
+    return {
+      preact: h(
+        "div",
+        { class: "appeditor" },
+        (pages[page] || pages.login)({ cur })
+      ),
+    };
   };
 })();
