@@ -1,7 +1,7 @@
 (async () => {
   let v = self.veduz;
-  await v.load("deps/preact.js");
-  let { h } = v.preact;
+  await v.load("deps/react.js");
+  let h = v.react.createElement;
   v.updata = v.updata || {};
 
   let lineheight = 20;
@@ -78,7 +78,7 @@
                   "div",
                   {
                     class: "item-up list-item-button",
-                    onclick: () =>
+                    onClick: () =>
                       v.update(cur.path(), ({cur}) =>
                       cur.update(o => {
                         if (i == 0) return o;
@@ -97,7 +97,7 @@
                   "div",
                   {
                     class: "item-down list-item-button",
-                    onclick: () =>
+                    onClick: () =>
                       v.update(cur.path(), ({cur}) =>
                       cur.update(o => {
                         if (i == o.length - 1) return o;
@@ -115,7 +115,7 @@
               "div",
               {
                 class: "item-delete list-item-button",
-                onclick: () =>
+                onClick: () =>
                   window.confirm("Er du sikker på at du vil slette dette?") &&
                   v.update(cur.path(), ({ cur }) =>
                     cur.update((o) => o.filter((_, j) => j != i))
@@ -132,7 +132,7 @@
             "span",
             {
               class: "list-item-button list-append-button",
-              onclick: () =>
+              onClick: () =>
                 v.update(cur.path(), ({ cur }) =>
                   cur.update((o) => [...(o || []), {}])
                 ),
@@ -153,7 +153,7 @@
             },
 
             value: data || "",
-            oninput: (e) =>
+            onInput: (e) =>
               v.update(cur.path(), ({ cur }) => cur.set("", e.target.value)),
           }),
         ];
@@ -298,7 +298,6 @@
         .set("password", "")
         .set("route", ["login"]);
     }
-    console.log("handle_signin", signin);
     return cur.set("route", ["formedit"]);
   }
 
@@ -328,28 +327,43 @@
         autocomplete: "current-password" /*"username"*/,
         placeholder: "password sent to " + cur.get("email"),
         value: cur.get("password", ""),
-        oninput: (e) =>
+        onKeyDown: (e) =>
+          e.key === "Enter" && v.update(cur.path(), handle_password),
+        onInput: (e) => {
+          localStorage.setItem("updata-pw", e.target.value);
           v.update(cur.path(), ({ cur }) =>
             cur.set("password", e.target.value)
-          ),
+          );
+        },
       }),
       h(
         "button",
         {
           style,
-          onclick: async () => v.update(cur.path(), handle_password),
+          onClick: async () => v.update(cur.path(), handle_password),
         },
         "Login"
       ),
       h(
         "small",
         { style: { ...style, border: "none", padding: 0, color: "#666" } },
-        cur.get("login_message", "")
+        cur.get("login_message", ""),
       ),
-      "TODO: button to reset password",
-      "TODO: handle return key",
-
-
+      h("button", {
+        style: {
+          margin: 10,
+          padding: 10,
+        },
+        onClick: async () => {
+          let email = cur.get("email");
+          let result = await v.call(0, "reset_password", { email });
+          if(result?.error) {
+            v.update(cur.path(), ({cur}) => cur.set("login_message", result.error?.en));
+          } else {
+            v.update(cur.path(), ({cur}) => cur.set("password", "").set("login_message", "Email sent with new password"));
+          }
+        },
+      }, "Send new password to " + cur.get("email")),
     );
   }
 
@@ -379,28 +393,39 @@
         autocomplete: "email" /*"username"*/,
         placeholder: "abc123@alumni.ku.dk",
         value: cur.get("email"),
-        oninput: (e) =>
-          v.update(cur.path(), ({ cur }) => cur.set("email", e.target.value)),
+        onKeyDown: (e) => e.key === "Enter" && v.update(cur.path(), doLogin),
+        onInput: (e) => {
+          localStorage.setItem("updata-email", e.target.value);
+          return v.update(cur.path(), ({ cur }) =>
+            cur.set("email", e.target.value)
+          );
+        },
       }),
       h(
         "button",
         {
           style,
-          onclick: async () => v.update(cur.path(), doLogin),
+          onClick: async () => v.update(cur.path(), doLogin),
         },
         "Login"
       ),
       h(
         "small",
         { style: { ...style, border: "none", padding: 0, color: "#666" } },
-        "(If you haven't logged in here before, you will get an email with a new password. Contact kulturapp@solsort.dk, if you have questions, or problems logging in)."
+        "(If you haven't logged in here before, you will get an email with a new password. Contact tyskapp@solsort.dk, if you have questions, or problems logging in)."
       ),
       h(
         "span",
-        { style: { ...style, border: "none", padding: 0}},
-        cur.get("login_message", ""),
+        { style: { ...style, border: "none", padding: 0 } },
+        cur.get("login_message", "")
       )
     );
+  }
+  async function logout({cur}) {
+    localStorage.removeItem("updata-email");
+    localStorage.removeItem("updata-pw");
+    await v.call(0, "logout", {});
+    return cur.set("password", "").set("email", "").set("route", ["login"]);
   }
 
   v.updata.init = async ({ cur }) => {
@@ -408,24 +433,34 @@
       topics: [await (await fetch("./topic1.json")).json()],
     });
     let roles = await v.call(0, "roles", {});
+    let email = localStorage.getItem("updata-email") || "";
+    let password = localStorage.getItem("updata-pw") || "";
     cur = cur.set("roles", roles);
-    console.log("roles", roles);
+    cur = cur.set("email", email);
+    cur = cur.set("password", password);
+    if (email && password) {
+      setTimeout(() => v.update(cur.path(), handle_password), 0);
+    }
     console.log("updata init");
     return cur;
   };
   v.updata.render = function ({ cur }) {
     let route = cur.get("route", []);
-    console.log("updata.render", cur);
-    console.log(route);
+    console.log("updata.render", route, cur);
     let [page] = route;
     let pages = {
       login,
       password,
-      formedit: ({ cur }) => render_form(cur.get("form"), cur.cd("data")),
+      formedit: ({ cur }) => h("div", {}, 
+      h("div", {style: {textAlign: "right"}}, "Logged in as: " + cur.get("email"), " ",
+      h("button", {
+        onClick: () => v.update(cur.path(), logout)
+      }, "Log out")),
+      render_form(cur.get("form"), cur.cd("data"))),
     };
 
     return {
-      preact: h(
+      react: h(
         "div",
         { class: "appeditor" },
         (pages[page] || pages.login)({ cur })
