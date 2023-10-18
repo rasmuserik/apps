@@ -1,6 +1,7 @@
 (async () => {
   let v = self.veduz;
   await v.load("deps/react.js");
+  await v.load("veduz/mount.js");
   let h = v.react.createElement;
   v.updata = v.updata || {};
 
@@ -429,19 +430,23 @@
   }
 
   v.updata.init = async ({ cur }) => {
-    cur = cur.set("form", form).set("data", {
-      topics: [await (await fetch("./topic1.json")).json()],
-    });
+    cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
     let roles = await v.call(0, "roles", {});
     let email = localStorage.getItem("updata-email") || "";
     let password = localStorage.getItem("updata-pw") || "";
+    cur = cur.set("form", form);
     cur = cur.set("roles", roles);
     cur = cur.set("email", email);
     cur = cur.set("password", password);
     if (email && password) {
       setTimeout(() => v.update(cur.path(), handle_password), 0);
     }
-    console.log("updata init");
+    console.log(cur.cd("/mount/updata-data").path());
+    cur = cur.set(`/mount/updata-data`, {
+      path: "/" + cur.path() + "/data",
+      server: "veduz.com/apps/tyskapp/data"
+    })
+    console.log("updata init", cur.get("/"));
     return cur;
   };
   v.updata.render = function ({ cur }) {

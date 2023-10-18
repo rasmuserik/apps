@@ -121,7 +121,7 @@
   function addPath(a, b) {
     a = Array.isArray(a) ? a.join("/") : String(a);
     b = Array.isArray(b) ? b.join("/") : String(b);
-    if (b.startsWith("/")) return b;
+    if (b.startsWith("/")) return normalisePath(b);
     return normalisePath(a + "/" + b);
   }
 
@@ -169,7 +169,7 @@
     return this.update(path, () => val);
   };
   v.Cursor.prototype.path = function path() {
-    return this._path.join("/");
+    return '/' + this._path.join("/");
   };
   v.Cursor.prototype.children = function children() {
     return any_children(this._current);
@@ -205,15 +205,16 @@
     let prefix = "/" + this.path() + "/";
     let cur = this;
     for (const change of changes) {
+      console.log('blah');
       let path = prefix + change.path;
       cur = cur.cd(path);
       cur = cur.set(new_any(
-        change.hasOwnProperty("type") ? change.type : this.type(),
-        change.hasOwnProperty("data") ? change.data : this.data(),
-        this.children(),
+        change.hasOwnProperty("type") ? change.type : cur.type(),
+        change.hasOwnProperty("data") ? change.data : cur.data(),
+        cur.children(),
       ));
     }
-    cur.cd("/" + prefix);
+    cur.cd(prefix);
     return cur;
   };
   ///////////////
