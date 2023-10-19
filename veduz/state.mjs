@@ -1,10 +1,10 @@
-(async function () {
-  let v = self.veduz;
-
+  import {Cursor} from './cursor.mjs';
+  globalThis.veduz = globalThis.veduz || {};
+  let v = globalThis.veduz;
   v.state = v.state || {};
-  v.update = async function update_state(path, fn, msg = {}) {
-    let o = (await fn({ ...msg, cur: new v.Cursor(v.state, path) })) || {};
-    if (o instanceof v.Cursor && o._root !== v.state) {
+  export async function update(path, fn, msg = {}) {
+    let o = (await fn({ ...msg, cur: new Cursor(v.state, path) })) || {};
+    if (o instanceof Cursor && o._root !== v.state) {
       v.state = o._root;
       return {};
     }
@@ -15,4 +15,6 @@
     if (cur) delete o.cur;
     return o;
   };
-})();
+  export function getState() {
+    return v.state;
+  }

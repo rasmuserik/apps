@@ -1,42 +1,41 @@
-(async function () {
-  let v = self.veduz;
-  v._renderers = v.renderers || {};
-  v._rerender = function _rerender() {
-    if (v.state !== v._prevState) {
-      v._prevState = v.state;
-      for (const id in v._renderers) {
-        let appName = v._renderers[id];
+  import { getState } from "./state.mjs";
+  import {Cursor} from './cursor.mjs';
+  import reactdom from 'https://esm.sh/react-dom';
+  let v = globalThis.veduz = globalThis.veduz || {};
+  let _renderers = {};
+  let _prevState = {};
+  function _rerender() {
+    if (getState() !== _prevState) {
+      _prevState = getState();
+      for (const id in _renderers) {
+        let appName = _renderers[id];
         let elem = document.getElementById(id);
-        let view = veduz?.[appName]?.render({
-          cur: new v.Cursor(v.state, `/${appName}/elem_${id}`),
+        let view = v.apps?.[appName]?.render({
+          cur: new Cursor(getState(), `/${appName}/elem_${id}`),
           elem,
         });
         if (view?.html) {
           elem.innerHTML = view.html;
-        } else if (view?.preact) {
-          v.preact.render(view.preact, elem);
         } else if (view?.react) {
-          v.react.dom.render(view.react, elem);
+          reactdom.render(view.react, elem);
         }
       }
     }
   };
-  v._render = function _render(id, appName) {
-    v._renderers[id] = appName;
+  export function render(id, appName) {
+    _renderers[id] = appName;
   };
-  if (!v._renderLoopStarted) {
-    v._renderLoopStarted = true;
+
     async function renderLoop() {
       try {
-        await v._rerender();
+        await _rerender();
       } catch (e) {
         console.error(e);
       }
       requestAnimationFrame(renderLoop);
     }
     renderLoop();
-  }
-  v.style = function (id, style) {
+  export function style(id, style) {
     let elem = document.getElementById(id);
     if (!elem) {
       elem = document.createElement("style");
@@ -49,4 +48,3 @@
       throw new Error("TODO: style object");
     }
   };
-})();

@@ -1,9 +1,6 @@
-(async () => {
-  let v = self.veduz;
-  await v.load("deps/react.js");
-  await v.load("veduz/mount.js");
-  let h = v.react.createElement;
-  v.updata = v.updata || {};
+  import {createElement} from "https://esm.sh/react";
+  import {update, style, call} from "../veduz.mjs";
+  let h = createElement;
 
   let lineheight = 20;
   let form = [
@@ -80,7 +77,7 @@
                   {
                     class: "item-up list-item-button",
                     onClick: () =>
-                      v.update(cur.path(), ({cur}) =>
+                      update(cur.path(), ({cur}) =>
                       cur.update(o => {
                         if (i == 0) return o;
                         o = [...o];
@@ -99,7 +96,7 @@
                   {
                     class: "item-down list-item-button",
                     onClick: () =>
-                      v.update(cur.path(), ({cur}) =>
+                      update(cur.path(), ({cur}) =>
                       cur.update(o => {
                         if (i == o.length - 1) return o;
                         o = [...o];
@@ -118,7 +115,7 @@
                 class: "item-delete list-item-button",
                 onClick: () =>
                   window.confirm("Er du sikker på at du vil slette dette?") &&
-                  v.update(cur.path(), ({ cur }) =>
+                  update(cur.path(), ({ cur }) =>
                     cur.update((o) => o.filter((_, j) => j != i))
                   ),
               },
@@ -134,7 +131,7 @@
             {
               class: "list-item-button list-append-button",
               onClick: () =>
-                v.update(cur.path(), ({ cur }) =>
+                update(cur.path(), ({ cur }) =>
                   cur.update((o) => [...(o || []), {}])
                 ),
             },
@@ -155,7 +152,7 @@
 
             value: data || "",
             onInput: (e) =>
-              v.update(cur.path(), ({ cur }) => cur.set("", e.target.value)),
+              update(cur.path(), ({ cur }) => cur.set("", e.target.value)),
           }),
         ];
         break;
@@ -165,8 +162,8 @@
             "select",
             {
               value: data,
-              onchange: (e) =>
-                v.update(cur.path(), ({ cur }) => cur.set(e.target.value)),
+              onChange: (e) =>
+                update(cur.path(), ({ cur }) => cur.set(e.target.value)),
             },
             ...form.slice(2).map((f) =>
               h(
@@ -195,12 +192,13 @@
           h("br"),
           h("input", {
             type: "file",
-            onchange: async (e) => {
+            onChange: async (e) => {
+              console.log('filechange', e);
               const file = e.target.files[0];
               const reader = new FileReader();
               reader.onload = function (e) {
                 const dataUrl = e.target.result;
-                v.update(cur.path(), ({ cur }) => cur.set(dataUrl));
+                update(cur.path(), ({ cur }) => cur.set(dataUrl));
               };
               reader.readAsDataURL(file);
             },
@@ -218,8 +216,8 @@
       ...result
     );
   }
-  v.style(
-    "updata-stylel",
+  style(
+    "jsonform-stylel",
     `
     .appeditor {
         font-family: sans-serif;
@@ -276,11 +274,11 @@
 
   async function doLogin({ cur }) {
     let email = cur.get("email");
-    let userExists = await v.call(0, "user_exists", {
+    let userExists = await call(0, "user_exists", {
       email: cur.get("email"),
     });
     if (!userExists) {
-      await v.call(0, "reset_password", { email });
+      await call(0, "reset_password", { email });
       cur = cur.set("login_message", "Email sent with new password");
     } else {
       cur = cur.set("login_message", "");
@@ -289,7 +287,7 @@
   }
 
   async function handle_password({ cur }) {
-    let signin = await v.call(0, "login", {
+    let signin = await call(0, "login", {
       email: cur.get("email"),
       password: cur.get("password"),
     });
@@ -329,10 +327,10 @@
         placeholder: "password sent to " + cur.get("email"),
         value: cur.get("password", ""),
         onKeyDown: (e) =>
-          e.key === "Enter" && v.update(cur.path(), handle_password),
+          e.key === "Enter" && update(cur.path(), handle_password),
         onInput: (e) => {
-          localStorage.setItem("updata-pw", e.target.value);
-          v.update(cur.path(), ({ cur }) =>
+          localStorage.setItem("jsonform-pw", e.target.value);
+          update(cur.path(), ({ cur }) =>
             cur.set("password", e.target.value)
           );
         },
@@ -341,7 +339,7 @@
         "button",
         {
           style,
-          onClick: async () => v.update(cur.path(), handle_password),
+          onClick: async () => update(cur.path(), handle_password),
         },
         "Login"
       ),
@@ -357,11 +355,11 @@
         },
         onClick: async () => {
           let email = cur.get("email");
-          let result = await v.call(0, "reset_password", { email });
+          let result = await call(0, "reset_password", { email });
           if(result?.error) {
-            v.update(cur.path(), ({cur}) => cur.set("login_message", result.error?.en));
+            update(cur.path(), ({cur}) => cur.set("login_message", result.error?.en));
           } else {
-            v.update(cur.path(), ({cur}) => cur.set("password", "").set("login_message", "Email sent with new password"));
+            update(cur.path(), ({cur}) => cur.set("password", "").set("login_message", "Email sent with new password"));
           }
         },
       }, "Send new password to " + cur.get("email")),
@@ -394,10 +392,10 @@
         autocomplete: "email" /*"username"*/,
         placeholder: "abc123@alumni.ku.dk",
         value: cur.get("email"),
-        onKeyDown: (e) => e.key === "Enter" && v.update(cur.path(), doLogin),
+        onKeyDown: (e) => e.key === "Enter" && update(cur.path(), doLogin),
         onInput: (e) => {
-          localStorage.setItem("updata-email", e.target.value);
-          return v.update(cur.path(), ({ cur }) =>
+          localStorage.setItem("jsonform-email", e.target.value);
+          return update(cur.path(), ({ cur }) =>
             cur.set("email", e.target.value)
           );
         },
@@ -406,7 +404,7 @@
         "button",
         {
           style,
-          onClick: async () => v.update(cur.path(), doLogin),
+          onClick: async () => update(cur.path(), doLogin),
         },
         "Login"
       ),
@@ -423,35 +421,35 @@
     );
   }
   async function logout({cur}) {
-    localStorage.removeItem("updata-email");
-    localStorage.removeItem("updata-pw");
-    await v.call(0, "logout", {});
+    localStorage.removeItem("jsonform-email");
+    localStorage.removeItem("jsonform-pw");
+    await call(0, "logout", {});
     return cur.set("password", "").set("email", "").set("route", ["login"]);
   }
 
-  v.updata.init = async ({ cur }) => {
-    cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
-    let roles = await v.call(0, "roles", {});
-    let email = localStorage.getItem("updata-email") || "";
-    let password = localStorage.getItem("updata-pw") || "";
+  export async function init({ cur }) {
+    //cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
+    let roles = await call(0, "roles", {});
+    let email = localStorage.getItem("jsonform-email") || "";
+    let password = localStorage.getItem("jsonform-pw") || "";
     cur = cur.set("form", form);
     cur = cur.set("roles", roles);
     cur = cur.set("email", email);
     cur = cur.set("password", password);
     if (email && password) {
-      setTimeout(() => v.update(cur.path(), handle_password), 0);
+      setTimeout(() => update(cur.path(), handle_password), 0);
     }
-    console.log(cur.cd("/mount/updata-data").path());
-    cur = cur.set(`/mount/updata-data`, {
+    console.log(cur.cd("/mount/jsonform-data").path());
+    cur = cur.set(`/mount/jsonform-data`, {
       path: "/" + cur.path() + "/data",
       server: "veduz.com/apps/tyskapp/data"
     })
-    console.log("updata init", cur.get("/"));
+    console.log("jsonform init", cur.get("/"));
     return cur;
   };
-  v.updata.render = function ({ cur }) {
+  export function render({ cur }) {
     let route = cur.get("route", []);
-    console.log("updata.render", route, cur);
+    //console.log("jsonform.render", route, cur);
     let [page] = route;
     let pages = {
       login,
@@ -459,7 +457,7 @@
       formedit: ({ cur }) => h("div", {}, 
       h("div", {style: {textAlign: "right"}}, "Logged in as: " + cur.get("email"), " ",
       h("button", {
-        onClick: () => v.update(cur.path(), logout)
+        onClick: () => update(cur.path(), logout)
       }, "Log out")),
       render_form(cur.get("form"), cur.cd("data"))),
     };
@@ -472,4 +470,3 @@
       ),
     };
   };
-})();

@@ -1,7 +1,6 @@
-(async () => {
-  let v = self.veduz;
-  await v.load("deps/marked.js");
-  await v.load("deps/mustache.js");
+  import {marked} from 'https://esm.sh/marked';
+  import mustache from 'https://esm.sh/mustache';
+  import {log, call} from '../veduz.mjs';
 
   let templates = {};
   async function load_templates(url) {
@@ -17,7 +16,7 @@
     return templates;
   }
   function template(name, obj = {}) {
-    return v.mustache.render(templates[name] || "", obj);
+    return mustache.render(templates[name] || "", obj);
   }
 
   function setStyle(name, style) {
@@ -84,7 +83,7 @@
         },
         {
           listen: "Auf&nbsp;Deutsch hören / lesen",
-          country: "Germany",
+          country: "Tyskland",
           class: "german",
           lang: "de",
         },
@@ -145,11 +144,13 @@
   };
   let language = "da";
   let rootElem;
-  let topics = [];
+  function getTopics() {
+    return globalThis.veduz.state.tyskapp.topics || [];
+  }
   let topic_id;
   let person_id;
   let answers = {};
-  let start_langauge = "other";
+  let start_language = "other";
 
   function sleep(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -168,10 +169,10 @@
   async function choose_topic() {
     let text = {
       messages: local(messages.choose_topic, language),
-      topics: local(topics, language),
+      topics: local(getTopics(), language),
     };
     rootElem.innerHTML = template("choose_topic", text);
-    for (const { id } of topics) {
+    for (const { id } of getTopics()) {
       document.getElementById(id).addEventListener("click", () => {
         topic_id = id;
         topic();
@@ -180,7 +181,7 @@
   }
   async function topic() {
     let topic = local(
-      topics.find((o) => o.id === topic_id),
+      getTopics().find((o) => o.id === topic_id),
       language
     );
     let msgs = local(messages, language);
@@ -196,7 +197,7 @@
         }
       }
     }
-    topic.background = v.marked.marked(topic.background || "");
+    topic.background = marked(topic.background || "");
     rootElem.innerHTML = template("topic", {
       topic,
       messages: msgs,
@@ -216,7 +217,7 @@
   }
   function person() {
     let persondata = local(
-      topics.find((o) => o.id === topic_id),
+      getTopics().find((o) => o.id === topic_id),
       language
     ).people.find((o) => o.id === person_id);
     rootElem.innerHTML = template("person", {
@@ -240,7 +241,7 @@
     });
     rootElem.querySelector("#answer_da").addEventListener("click", () => {
       let isInitial = answers[topic_id + "." + person_id] === undefined;
-      v.log(
+      log(
         `tyskapp-answer:${isInitial}:${start_language}:${topic_id}:${person_id}:da`
       );
       answers[topic_id + "." + person_id] = "da";
@@ -248,7 +249,7 @@
     });
     rootElem.querySelector("#answer_de").addEventListener("click", () => {
       let isInitial = answers[topic_id + "." + person_id] === undefined;
-      v.log(
+      log(
         `tyskapp-answer:${isInitial}:${start_language}:${topic_id}:${person_id}:de`
       );
       answers[topic_id + "." + person_id] = "de";
@@ -257,7 +258,7 @@
   }
   async function feedback() {
     let person = local(
-      topics.find((o) => o.id === topic_id),
+      getTopics().find((o) => o.id === topic_id),
       language
     ).people.find((o) => o.id === person_id);
     let msg = local(messages, language);
@@ -270,7 +271,7 @@
       ["de", "da"],
       ["de", "de"],
     ]) {
-      responses[answer] += await v.call(0, "log_count", {
+      responses[answer] += await call(0, "log_count", {
         log_type: `CLIENT:tyskapp-answer:true:${orig}:${topic_id}:${person_id}:${answer}`,
       });
     }
@@ -301,28 +302,21 @@
     await start_screen();
   }
 
-  v.tyskapp = v.tyskapp || {};
-  v.tyskapp.init = async ({ cur }) => {
+  export async function init({cur}) {
     console.log('init');
     await load_templates("templates.html");
-    cur = cur.set("../topics", [
-      await (await fetch("./topic1.json")).json(),
-      { title: "Tema 2", id: "theme1" },
-      { title: "Tema 3", id: "theme2" },
-      { title: "Tema 4", id: "theme3" },
-      { title: "Tema 5", id: "theme3" },
-      { title: "Tema 6", id: "theme3" },
-      { title: "...", id: "theme5" },
-    ]);
     cur = cur.set("../messages", messages);
-    topics = cur.get("../topics");
+    cur = cur.set(`/mount/jsonform-data`, {
+      path: "/" + cur.path() + "/../topics",
+      server: "veduz.com/apps/tyskapp/data/topics"
+    })
     language = "da";
     topic_id = "dubbing";
     person_id = "person1";
     return cur;
   };
   let started = false;
-  v.tyskapp.render = ({ elem, cur }) => {
+  export function render({ elem, cur }) {
     console.log('render', cur);
     if (!cur.get("../messages") || !cur.get("../topics"))
       return { html: "<h1>Loading...</h1>" };
@@ -331,12 +325,11 @@
     main({ elem });
   };
   console.log("here");
-  console.log(await v.call(0, "log_types", {}));
+  console.log(await call(0, "log_types", {}));
   console.log(
-    await v.call(0, "log_stat", {
+    await call(0, "log_stat", {
       log_type: "CLIENT:tyskapp-answer:true:da:dubbing:person3:da",
     })
   );
 
   console.log("blah");
-})();

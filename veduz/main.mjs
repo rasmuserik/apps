@@ -1,5 +1,11 @@
-(async function () {
-  let v = self.veduz;
+  import {update}  from "./state.mjs";
+  import {render}   from "./rendering.mjs";
+  import {log}  from "./messaging.mjs";
+
+  globalThis.veduz = globalThis.veduz || {};
+  globalThis.veduz.apps = globalThis.veduz.apps || {};
+  let apps = veduz.apps;
+
   async function main() {
     let scriptTags = Array.from(document.querySelectorAll("script")).filter(
       (o) => o.src.endsWith("veduz.js")
@@ -64,18 +70,15 @@
   </div> `;
           }
         }
-        if (!v[appName]) await v.load(`${appName}/${appName}.js`);
-        for (let i = 0; !v[appName] && i < 100; ++i) {
-          await v.sleep(i);
+
+        if (!apps[appName]) apps[appName] = await import(`../${appName}/${appName}.mjs`);
+    console.log("here", appName, apps[appName]);
+        render(elemId, appName);
+        if (apps[appName]?.init) {
+          update(`/${appName}/elem_${elemId}`, apps[appName].init, {});
         }
-        if (v[appName]?.init) {
-          v.update(`/${appName}/elem_${elemId}`, v[appName].init, {});
-        }
-        v._render(elemId, appName);
       }
     }
-    setTimeout(() => (v.state = { ...v.state }), 100);
-    v.log("veduz-client-loaded:" + location.hostname);
+    log("veduz-client-loaded:" + location.hostname);
   }
   main();
-})();

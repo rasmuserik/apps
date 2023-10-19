@@ -14,16 +14,16 @@
   </style>
 </head>
 <body>
-  <script src="../veduz.js" app="veduz"></script>
+  <script src=../veduz.js app=veduz></script>
   <div id=READMEmd></div>
   <div id=apps>
   </div>
-  <script>
+  <!--script>
     (async () => {
     await veduz.load('deps/marked.js');
     READMEmd.innerHTML = veduz.marked.parse(await(await fetch('./README.md')).text());
     apps.innerHTML = apps.innerHTML.split(/\s+/g).filter(o => o.trim())
         .map(name => `<a class="button" href="./${name.toLowerCase()}/">${name}</a>`).join('');
         })();
-  </script>
+  </script-->
 </body>
