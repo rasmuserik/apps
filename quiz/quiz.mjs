@@ -1,5 +1,5 @@
-import { setStyle, log, sleep, shuffled } from "./util.js";
-import { template, load_templates } from "./templates.js";
+import { sleep, array_shuffle, log, style as CSS } from '../veduz.mjs';
+import { template, load_templates } from "./templates.mjs";
 
 let http_cache = {};
 async function load_quiz(quiz_url) {
@@ -15,7 +15,7 @@ async function load_quiz(quiz_url) {
 }
 
 function randomize_questions(quiz) {
-  let questions = shuffled(quiz.questions).slice(0, 6);
+  let questions = array_shuffle(quiz.questions).slice(0, 6);
   for (const q of questions) {
     let wrong_answers = [...q.wrong_answers];
     if (q.silly_answers && Math.random() < 0.7) {
@@ -23,8 +23,8 @@ function randomize_questions(quiz) {
         q.silly_answers[(Math.random() * q.silly_answers.length) | 0],
       );
     }
-    wrong_answers = shuffled(wrong_answers).slice(0, 5);
-    q.answers = shuffled([
+    wrong_answers = array_shuffle(wrong_answers).slice(0, 5);
+    q.answers = array_shuffle([
       { answer: q.correct_answer, correct: true },
       ...wrong_answers.map((a) => ({ answer: a, correct: false })),
     ]);
@@ -65,7 +65,8 @@ async function run_quiz({
   elem,
   back,
 }) {
-  setStyle("vdz-quiz-style", template("quiz_style"));
+
+  CSS("vdz-quiz-style", template("quiz_style"));
   let quiz = await load_quiz(quiz_url);
   feedback = { ...default_feedback, ...feedback, ...(quiz.feedback || {}) };
   messages = {
@@ -115,7 +116,7 @@ async function run_quiz({
   let i = 1;
   let score = 0;
   for (const q of questions) {
-    setStyle(
+    CSS(
       "vdz-quiz-dynamic",
       `.quiz .answers div { opacity: 0; }
        .quiz .info { opacity: 0; height: 0; }`,
@@ -137,7 +138,7 @@ async function run_quiz({
     let t0 = Date.now();
 
     await sleep(1000);
-    setStyle(
+    CSS(
       "vdz-quiz-dynamic",
       ` .quiz .answers div { opacity: 1; }
         .quiz .info { opacity: 0; height: 0}`,
@@ -167,7 +168,7 @@ async function run_quiz({
     document.querySelector(".quiz .response").innerHTML = ok
       ? messages.correct_answer
       : messages.wrong_answer;
-    setStyle(
+    CSS(
       "vdz-quiz-dynamic",
       `
     .quiz .answers div.correct { opacity: 0.5; }
@@ -249,8 +250,39 @@ async function run_quiz({
 }
 
 export default async function main(args) {
+  init(args);
+}
+
+
+export async function init(args) {
+  let {elem, quiz_url, cur} = args
+  console.log('init', args);
   await load_templates(
     import.meta.url.replace(/[^/]*$/, "") + "templates.html",
   );
-  run_quiz(args);
+  if(elem) {
+    run_quiz(args);
+  }
+  return cur.set('quiz_url', quiz_url);
+
+}
+
+let started = false;
+export function render({cur, elem}) {
+  let quiz_url = cur.get('quiz_url');
+  if(!started) {
+    run_quiz({ quiz_url, elem });
+    started = true;
+  }
+
+  /*
+
+  quiz_url,
+  feedback = {},
+  messages = {},
+  questions,
+  elem,
+  back,
+  */
+
 }

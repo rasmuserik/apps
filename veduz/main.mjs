@@ -11,7 +11,11 @@
       (o) => o.src.endsWith("veduz.js")
     );
     for (const script of scriptTags) {
-      let appName = script.getAttribute("app") || script.dataset["app"];
+      let params = {
+        ...Object.fromEntries(Array.from(script.attributes).filter(({name}) => name !== 'src' && name !== 'type' && !name.startsWith('data-')).map(({name, value}) => [name, value])),
+        ...script.dataset,
+      };
+      let appName = params.app;
       if (appName) {
         let elemId = script.getAttribute("elem") || script.dataset["elem"];
         if (!elemId) {
@@ -72,10 +76,9 @@
         }
 
         if (!apps[appName]) apps[appName] = await import(`../${appName}/${appName}.mjs`);
-    console.log("here", appName, apps[appName]);
         render(elemId, appName);
         if (apps[appName]?.init) {
-          update(`/${appName}/elem_${elemId}`, apps[appName].init, {});
+          update(`/${appName}/elem_${elemId}`, apps[appName].init, params);
         }
       }
     }
