@@ -430,7 +430,7 @@
   }
 
   v.updata.init = async ({ cur }) => {
-    cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
+    //cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
     let roles = await v.call(0, "roles", {});
     let email = localStorage.getItem("updata-email") || "";
     let password = localStorage.getItem("updata-pw") || "";
@@ -451,7 +451,7 @@
   };
   v.updata.render = function ({ cur }) {
     let route = cur.get("route", []);
-    console.log("updata.render", route, cur);
+    //console.log("updata.render", route, cur);
     let [page] = route;
     let pages = {
       login,

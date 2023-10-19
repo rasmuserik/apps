@@ -84,7 +84,7 @@
         },
         {
           listen: "Auf&nbsp;Deutsch hören / lesen",
-          country: "Germany",
+          country: "Tyskland",
           class: "german",
           lang: "de",
         },

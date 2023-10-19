@@ -105,7 +105,8 @@
       return fn(o);
     }
     let k = path[0];
-    if (any_nochildren(o)) o = {};
+    if (any_type(o) === "Nil") o = {};
+    //if (any_nochildren(o)) o = {}; TODO: remove
     let v = updateIn(any_get(o, k), path.slice(1), fn);
     return any_set(o, k, v);
   }
@@ -204,8 +205,8 @@
   v.Cursor.prototype.apply_changes = function apply_changes(changes) {
     let prefix = "/" + this.path() + "/";
     let cur = this;
+    console.log('applychanges1', cur, prefix);
     for (const change of changes) {
-      console.log('blah');
       let path = prefix + change.path;
       cur = cur.cd(path);
       cur = cur.set(new_any(
@@ -214,7 +215,8 @@
         cur.children(),
       ));
     }
-    cur.cd(prefix);
+    cur = cur.cd(prefix);
+    console.log('applychanges2', cur);
     return cur;
   };
   ///////////////

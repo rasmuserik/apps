@@ -19,10 +19,9 @@
       // get local changes and push to server
       let local_changes = remoteData.diff(localData)
       let server_update = local_changes.map((o) => ({ ...o, path: serverPath + "/" + o.path, }));
-      console.log('su', local_changes.map(o => o.path));
+      console.log('server_update', local_changes.map(o => o.path));
       // NB: TODO fix error – apparently sync'ing at wrong location/path
-      if (false && server_update.length) {
-        console.log("push changes to server", server_update);
+      if (1 && server_update.length) {
         let result = await v.call(0, "datastore_update", {
           changes: server_update,
         });
@@ -33,15 +32,19 @@
         path: serverPath,
         since: timestamp,
       });
+      if (serverChanges.length > 0) {
       serverChanges = serverChanges.map((o) => {
         o = {...o};
         if(o.path.startsWith(serverPath)) o.path = o.path.replace(serverPath, "");
         return o;
       });
-      if (serverChanges.length) console.log("serverchanges", serverChanges);
-      let t = new v.Cursor({});
+        console.log("serverchanges", serverChanges);
       await v.update(path, ({ cur }) => {
-        return cur.apply_changes(serverChanges).apply_changes(local_changes);
+        let local_changes = remoteData.diff(cur);
+        console.log('a', cur, serverChanges, local_changes);
+        cur = cur.apply_changes(serverChanges).apply_changes(local_changes);
+        console.log('b', cur);
+        return cur;
       });
       await v.update(remoteData.path(), ({ cur }) =>
         cur.apply_changes(serverChanges)
@@ -50,10 +53,8 @@
         timestamp = Math.max(timestamp, updated_at);
       }
       v.update(cur.cd("timestamp").path(), ({ cur }) => cur.set(timestamp));
-
-      let obj = cur.get(id);
-      let local = cur.cd();
+      }
     }
-    setTimeout(() => v.mount_loop(), 1000);
+    setTimeout(() => v.mount_loop(), 3000);
   };
 })();
