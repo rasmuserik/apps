@@ -44,9 +44,11 @@
 Rendering:
 
 - `v.style(id, css-as-text)`
+- `v.$APPNAME.render({cur})` returns `{html:"..."}` or `{preact:...}` or `{react: ...}`
 
 Main
 
+- `v.$APP_NAME.init({cur})` returns `{cur}`
 
 Functions:
 
@@ -60,8 +62,6 @@ Classes:
 
 App data / functions:
 
-- `v.$APP_NAME.render({cur})` returns `{html:"..."}` or `{preact:...}` or `{react: ...}`
-- `v.$APP_NAME.init({cur})` returns `{cur}`
 - TODO `v.$APP_NAME.start(...)`
 - TODO `v.$APP_NAME.stop(...)`
 
