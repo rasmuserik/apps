@@ -3,7 +3,7 @@
   await v.load("deps/react.js");
   await v.load("veduz/mount.js");
   let h = v.react.createElement;
-  v.updata = v.updata || {};
+  v.jsonform = v.jsonform || {};
 
   let lineheight = 20;
   let form = [
@@ -219,7 +219,7 @@
     );
   }
   v.style(
-    "updata-stylel",
+    "jsonform-stylel",
     `
     .appeditor {
         font-family: sans-serif;
@@ -331,7 +331,7 @@
         onKeyDown: (e) =>
           e.key === "Enter" && v.update(cur.path(), handle_password),
         onInput: (e) => {
-          localStorage.setItem("updata-pw", e.target.value);
+          localStorage.setItem("jsonform-pw", e.target.value);
           v.update(cur.path(), ({ cur }) =>
             cur.set("password", e.target.value)
           );
@@ -396,7 +396,7 @@
         value: cur.get("email"),
         onKeyDown: (e) => e.key === "Enter" && v.update(cur.path(), doLogin),
         onInput: (e) => {
-          localStorage.setItem("updata-email", e.target.value);
+          localStorage.setItem("jsonform-email", e.target.value);
           return v.update(cur.path(), ({ cur }) =>
             cur.set("email", e.target.value)
           );
@@ -423,17 +423,17 @@
     );
   }
   async function logout({cur}) {
-    localStorage.removeItem("updata-email");
-    localStorage.removeItem("updata-pw");
+    localStorage.removeItem("jsonform-email");
+    localStorage.removeItem("jsonform-pw");
     await v.call(0, "logout", {});
     return cur.set("password", "").set("email", "").set("route", ["login"]);
   }
 
-  v.updata.init = async ({ cur }) => {
+  v.jsonform.init = async ({ cur }) => {
     //cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
     let roles = await v.call(0, "roles", {});
-    let email = localStorage.getItem("updata-email") || "";
-    let password = localStorage.getItem("updata-pw") || "";
+    let email = localStorage.getItem("jsonform-email") || "";
+    let password = localStorage.getItem("jsonform-pw") || "";
     cur = cur.set("form", form);
     cur = cur.set("roles", roles);
     cur = cur.set("email", email);
@@ -441,17 +441,17 @@
     if (email && password) {
       setTimeout(() => v.update(cur.path(), handle_password), 0);
     }
-    console.log(cur.cd("/mount/updata-data").path());
-    cur = cur.set(`/mount/updata-data`, {
+    console.log(cur.cd("/mount/jsonform-data").path());
+    cur = cur.set(`/mount/jsonform-data`, {
       path: "/" + cur.path() + "/data",
       server: "veduz.com/apps/tyskapp/data"
     })
-    console.log("updata init", cur.get("/"));
+    console.log("jsonform init", cur.get("/"));
     return cur;
   };
-  v.updata.render = function ({ cur }) {
+  v.jsonform.render = function ({ cur }) {
     let route = cur.get("route", []);
-    //console.log("updata.render", route, cur);
+    //console.log("jsonform.render", route, cur);
     let [page] = route;
     let pages = {
       login,
