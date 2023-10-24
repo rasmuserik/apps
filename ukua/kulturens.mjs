@@ -34,9 +34,12 @@
             textAlign: "center",
           },
         },
-        "KULTURENS"
+        "KULTURENS",
       ),
-      h("ion-icon", { name: "menu", style: { fontSize: 36, paddingRight: 20 } })
+      h("ion-icon", {
+        name: "menu",
+        style: { fontSize: 36, paddingRight: 20 },
+      }),
     );
   }
   function bottmBar({ cur }) {
@@ -45,8 +48,8 @@
       people: "people",
       chatbubbles: "discuss",
       home: "locations",
-      library: "guides"
-    }
+      library: "guides",
+    };
     return h(
       "div",
       {
@@ -59,12 +62,11 @@
         },
       },
       ...Object.keys(buttons).map((icon) =>
-      h("div",
-      {
-        onClick: () => veduz.update(path, ({cur}) => cur.set("page", buttons[icon])),
-      },
-      h("ion-icon", { name: icon, style: { fontSize: 44 }, }),
-      ))
+        h("div", {
+          onClick: () =>
+            veduz.update(path, ({ cur }) => cur.set("page", buttons[icon])),
+        }, h("ion-icon", { name: icon, style: { fontSize: 44 } }))
+      ),
     );
   }
   function root_view({ cur, width, height }) {
@@ -72,7 +74,8 @@
     console.log(pages);
     let pageid = cur.get("page");
     console.log("pageid", pageid);
-    let appContent = pages.find(x => x.slug === pageid) || pages.find((x) => x.slug === "app");
+    let appContent = pages.find((x) => x.slug === pageid) ||
+      pages.find((x) => x.slug === "app");
     return () =>
       h(
         "div",
@@ -98,7 +101,7 @@
           h("div", {
             style: { padding: 30 },
             dangerouslySetInnerHTML: { __html: appContent.content.rendered },
-          })
+          }),
         ),
         h(
           "div",
@@ -115,7 +118,7 @@
               color: "rgb(25, 127, 255)",
             },
           },
-          topBar({ cur })
+          topBar({ cur }),
         ),
         h(
           "div",
@@ -134,8 +137,8 @@
               boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
             },
           },
-          bottmBar({ cur })
-        )
+          bottmBar({ cur }),
+        ),
       );
   }
   v.kulturens.render = function ({ cur, elem }) {

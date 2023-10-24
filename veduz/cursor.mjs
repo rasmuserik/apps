@@ -215,8 +215,8 @@ Cursor.prototype.apply_changes = function apply_changes(changes) {
       new_any(
         change.hasOwnProperty("type") ? change.type : cur.type(),
         change.hasOwnProperty("data") ? change.data : cur.data(),
-        cur.children()
-      )
+        cur.children(),
+      ),
     );
   }
   cur = cur.cd(prefix);
@@ -229,7 +229,7 @@ Cursor.prototype.apply_changes = function apply_changes(changes) {
 async function main() {
   let orig = new Cursor(
     await (await fetch("../tyskapp/topic1.json")).json(),
-    "/people/0"
+    "/people/0",
   );
   let cur = orig.set("country", "da");
   let changes = orig.cd("/people").diff(cur.cd("/people"));

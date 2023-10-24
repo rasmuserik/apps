@@ -1,75 +1,75 @@
-  import {createElement} from "https://esm.sh/react";
-  import {update, style, call} from "../veduz.mjs";
-  let h = createElement;
+import { createElement } from "https://esm.sh/react";
+import { call, style, update } from "../veduz.mjs";
+let h = createElement;
 
-  let lineheight = 20;
-  let form = [
+let lineheight = 20;
+let form = [
+  "list",
+  { title: "Emne/Thema", path: "topics" },
+  ["input", { title: "Titel auf Deutsch", path: "title/de" }],
+  ["input", { title: "Titel på Dansk", path: "title/da" }],
+  [
     "list",
-    { title: "Emne/Thema", path: "topics" },
-    ["input", { title: "Titel auf Deutsch", path: "title/de" }],
-    ["input", { title: "Titel på Dansk", path: "title/da" }],
-    [
-      "list",
-      { title: "Personer/Personen", path: "people" },
-      [
-        "input",
-        {
-          title: "Personsbeskrivelse på dansk",
-          path: "person/da",
-          lines: 1,
-        },
-      ],
-      [
-        "input",
-        {
-          title: "Personsbeschreibung auf Deutsch",
-          path: "person/de",
-          lines: 1,
-        },
-      ],
-      ["input", { title: "Udsagn på Dansk", path: "statement/da", lines: 3 }],
-      [
-        "input",
-        { title: "Aussage auf Deutsch", path: "statement/de", lines: 3 },
-      ],
-      ["select", { title: "Land", path: "country" }, "da", "de"],
-      ["upload", { title: "Optagelse på Dansk", path: "audio_da" }],
-      ["upload", { title: "Aufname auf Deutsch", path: "audio_de" }],
-      ["upload", { title: "Billede/Bild", path: "img" }],
-    ],
+    { title: "Personer/Personen", path: "people" },
     [
       "input",
       {
-        title: "Hintergrund auf Deutsch",
-        path: "background/de",
-        lines: 10,
+        title: "Personsbeskrivelse på dansk",
+        path: "person/da",
+        lines: 1,
       },
     ],
     [
       "input",
       {
-        title: "Baggrundstekst på dansk",
-        path: "background/da",
-        lines: 10,
+        title: "Personsbeschreibung auf Deutsch",
+        path: "person/de",
+        lines: 1,
       },
     ],
-  ];
-  function render_form(form, cur) {
-    if (!form) return h("h1", {}, "Loading...");
-    if (form[1].path) {
-      let t = cur.cd(form[1].path);
-      cur = t;
-    }
-    let data = cur.get();
-    let result = [];
-    switch (form[0]) {
-      case "list":
-        data = data || [];
-        let items = data.map((item, i) =>
-          h(
-            "div",
-            { class: "list-item" },
-            /*
+    ["input", { title: "Udsagn på Dansk", path: "statement/da", lines: 3 }],
+    [
+      "input",
+      { title: "Aussage auf Deutsch", path: "statement/de", lines: 3 },
+    ],
+    ["select", { title: "Land", path: "country" }, "da", "de"],
+    ["upload", { title: "Optagelse på Dansk", path: "audio_da" }],
+    ["upload", { title: "Aufname auf Deutsch", path: "audio_de" }],
+    ["upload", { title: "Billede/Bild", path: "img" }],
+  ],
+  [
+    "input",
+    {
+      title: "Hintergrund auf Deutsch",
+      path: "background/de",
+      lines: 10,
+    },
+  ],
+  [
+    "input",
+    {
+      title: "Baggrundstekst på dansk",
+      path: "background/da",
+      lines: 10,
+    },
+  ],
+];
+function render_form(form, cur) {
+  if (!form) return h("h1", {}, "Loading...");
+  if (form[1].path) {
+    let t = cur.cd(form[1].path);
+    cur = t;
+  }
+  let data = cur.get();
+  let result = [];
+  switch (form[0]) {
+    case "list":
+      data = data || [];
+      let items = data.map((item, i) =>
+        h(
+          "div",
+          { class: "list-item" },
+          /*
             i === 0
               ? null
               : h(
@@ -109,116 +109,117 @@
                   "↓"
                 ),
                 */
-            h(
-              "div",
-              {
-                class: "item-delete list-item-button",
-                onClick: () =>
-                  window.confirm("Er du sikker på at du vil slette dette?") &&
-                  update(cur.path(), ({ cur }) =>
-                    cur.update((o) => o.filter((_, j) => j != i))
-                  ),
-              },
-              "🗑"
-            ),
-            ...form.slice(2).map((f) => render_form(f, cur.cd(i)))
-          )
-        );
-        result = [
-          ...items,
           h(
-            "span",
+            "div",
             {
-              class: "list-item-button list-append-button",
+              class: "item-delete list-item-button",
               onClick: () =>
+                window.confirm("Er du sikker på at du vil slette dette?") &&
                 update(cur.path(), ({ cur }) =>
-                  cur.update((o) => [...(o || []), {}])
-                ),
+                  cur.update((o) => o.filter((_, j) => j != i))),
             },
-            "+"
+            "🗑",
           ),
-        ];
-        break;
-      case "input":
-        result = [
-          h("textarea", {
-            style: {
-              height:
-                Math.min(
-                  window.innerHeight * 0.95,
-                  (form[1].lines || 1) * lineheight + 8
-                ) + "px",
-            },
+          ...form.slice(2).map((f) =>
+            render_form(f, cur.cd(i))
+          ),
+        )
+      );
+      result = [
+        ...items,
+        h(
+          "span",
+          {
+            class: "list-item-button list-append-button",
+            onClick: () =>
+              update(
+                cur.path(),
+                ({ cur }) => cur.update((o) => [...(o || []), {}]),
+              ),
+          },
+          "+",
+        ),
+      ];
+      break;
+    case "input":
+      result = [
+        h("textarea", {
+          style: {
+            height: Math.min(
+              window.innerHeight * 0.95,
+              (form[1].lines || 1) * lineheight + 8,
+            ) + "px",
+          },
 
-            value: data || "",
-            onInput: (e) =>
-              update(cur.path(), ({ cur }) => cur.set("", e.target.value)),
-          }),
-        ];
-        break;
-      case "select":
-        result = [
-          h(
-            "select",
-            {
-              value: data,
-              onChange: (e) =>
-                update(cur.path(), ({ cur }) => cur.set(e.target.value)),
-            },
-            ...form.slice(2).map((f) =>
-              h(
-                "option",
-                {
-                  value: f,
-                  selected: data === f,
-                },
-                f
-              )
+          value: data || "",
+          onInput: (e) =>
+            update(cur.path(), ({ cur }) => cur.set("", e.target.value)),
+        }),
+      ];
+      break;
+    case "select":
+      result = [
+        h(
+          "select",
+          {
+            value: data,
+            onChange: (e) =>
+              update(cur.path(), ({ cur }) => cur.set(e.target.value)),
+          },
+          ...form.slice(2).map((f) =>
+            h(
+              "option",
+              {
+                value: f,
+                selected: data === f,
+              },
+              f,
             )
           ),
-        ];
-        break;
-      case "upload":
-        result = [
-          (data?.startsWith("data:audio") || data?.endsWith(".mp3")) &&
-            h("audio", { src: data, controls: true }),
-          (data?.startsWith("data:image") || data?.endsWith(".jpg")) &&
-            h("img", {
-              src: data,
-              style: {
-                maxHeight: 128,
-              },
-            }),
-          h("br"),
-          h("input", {
-            type: "file",
-            onChange: async (e) => {
-              console.log('filechange', e);
-              const file = e.target.files[0];
-              const reader = new FileReader();
-              reader.onload = function (e) {
-                const dataUrl = e.target.result;
-                update(cur.path(), ({ cur }) => cur.set(dataUrl));
-              };
-              reader.readAsDataURL(file);
-            },
-          }),
-        ];
-        break;
+        ),
+      ];
+      break;
+    case "upload":
+      result = [
+        (data?.startsWith("data:audio") || data?.endsWith(".mp3")) &&
+        h("audio", { src: data, controls: true }),
+        (data?.startsWith("data:image") || data?.endsWith(".jpg")) &&
+        h("img", {
+          src: data,
+          style: {
+            maxHeight: 128,
+          },
+        }),
+        h("br"),
+        h("input", {
+          type: "file",
+          onChange: async (e) => {
+            console.log("filechange", e);
+            const file = e.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const dataUrl = e.target.result;
+              update(cur.path(), ({ cur }) => cur.set(dataUrl));
+            };
+            reader.readAsDataURL(file);
+          },
+        }),
+      ];
+      break;
 
-      default:
-        result = ["TODO: " + form[0]];
-    }
-    return h(
-      "div",
-      { class: `form-${form[0]}` },
-      form[1].title && h("div", { class: "title" }, form[1].title, ":"),
-      ...result
-    );
+    default:
+      result = ["TODO: " + form[0]];
   }
-  style(
-    "jsonform-stylel",
-    `
+  return h(
+    "div",
+    { class: `form-${form[0]}` },
+    form[1].title && h("div", { class: "title" }, form[1].title, ":"),
+    ...result,
+  );
+}
+style(
+  "jsonform-stylel",
+  `
     .appeditor {
         font-family: sans-serif;
         font-size: 14px;
@@ -269,204 +270,222 @@
       width: 100%;
       top: 0;
       left: 0;
-    }`
+    }`,
+);
+
+async function doLogin({ cur }) {
+  let email = cur.get("email");
+  let userExists = await call(0, "user_exists", {
+    email: cur.get("email"),
+  });
+  if (!userExists) {
+    await call(0, "reset_password", { email });
+    cur = cur.set("login_message", "Email sent with new password");
+  } else {
+    cur = cur.set("login_message", "");
+  }
+  return cur.set("route", ["password"]);
+}
+
+async function handle_password({ cur }) {
+  let signin = await call(0, "login", {
+    email: cur.get("email"),
+    password: cur.get("password"),
+  });
+  if (signin.error) {
+    return cur
+      .set("login_message", "Login failed")
+      .set("password", "")
+      .set("route", ["login"]);
+  }
+  return cur.set("route", ["formedit"]);
+}
+
+function password({ cur }) {
+  let style = {
+    width: 240,
+    boxSizing: "border-box",
+    margin: 10,
+    padding: 10,
+    borderRadius: 5,
+    border: "1px solid #999",
+  };
+  return h(
+    "div",
+    { class: "login" },
+    h(
+      "span",
+      {
+        style: { ...style, padding: 0, border: "none" },
+      },
+      "Enter password that you received per email:",
+    ),
+    h("input", {
+      style,
+      type: "password",
+      name: "password",
+      autocomplete: "current-password", /*"username"*/
+      placeholder: "password sent to " + cur.get("email"),
+      value: cur.get("password", ""),
+      onKeyDown: (e) =>
+        e.key === "Enter" && update(cur.path(), handle_password),
+      onInput: (e) => {
+        localStorage.setItem("jsonform-pw", e.target.value);
+        update(cur.path(), ({ cur }) => cur.set("password", e.target.value));
+      },
+    }),
+    h(
+      "button",
+      {
+        style,
+        onClick: async () => update(cur.path(), handle_password),
+      },
+      "Login",
+    ),
+    h(
+      "small",
+      { style: { ...style, border: "none", padding: 0, color: "#666" } },
+      cur.get("login_message", ""),
+    ),
+    h("button", {
+      style: {
+        margin: 10,
+        padding: 10,
+      },
+      onClick: async () => {
+        let email = cur.get("email");
+        let result = await call(0, "reset_password", { email });
+        if (result?.error) {
+          update(
+            cur.path(),
+            ({ cur }) => cur.set("login_message", result.error?.en),
+          );
+        } else {
+          update(
+            cur.path(),
+            ({ cur }) =>
+              cur.set("password", "").set(
+                "login_message",
+                "Email sent with new password",
+              ),
+          );
+        }
+      },
+    }, "Send new password to " + cur.get("email")),
   );
+}
 
-  async function doLogin({ cur }) {
-    let email = cur.get("email");
-    let userExists = await call(0, "user_exists", {
-      email: cur.get("email"),
-    });
-    if (!userExists) {
-      await call(0, "reset_password", { email });
-      cur = cur.set("login_message", "Email sent with new password");
-    } else {
-      cur = cur.set("login_message", "");
-    }
-    return cur.set("route", ["password"]);
-  }
-
-  async function handle_password({ cur }) {
-    let signin = await call(0, "login", {
-      email: cur.get("email"),
-      password: cur.get("password"),
-    });
-    if (signin.error) {
-      return cur
-        .set("login_message", "Login failed")
-        .set("password", "")
-        .set("route", ["login"]);
-    }
-    return cur.set("route", ["formedit"]);
-  }
-
-  function password({ cur }) {
-    let style = {
-      width: 240,
-      boxSizing: "border-box",
-      margin: 10,
-      padding: 10,
-      borderRadius: 5,
-      border: "1px solid #999",
-    };
-    return h(
-      "div",
-      { class: "login" },
-      h(
-        "span",
-        {
-          style: { ...style, padding: 0, border: "none" },
-        },
-        "Enter password that you received per email:"
-      ),
-      h("input", {
-        style,
-        type: "password",
-        name: "password",
-        autocomplete: "current-password" /*"username"*/,
-        placeholder: "password sent to " + cur.get("email"),
-        value: cur.get("password", ""),
-        onKeyDown: (e) =>
-          e.key === "Enter" && update(cur.path(), handle_password),
-        onInput: (e) => {
-          localStorage.setItem("jsonform-pw", e.target.value);
-          update(cur.path(), ({ cur }) =>
-            cur.set("password", e.target.value)
-          );
-        },
-      }),
-      h(
-        "button",
-        {
-          style,
-          onClick: async () => update(cur.path(), handle_password),
-        },
-        "Login"
-      ),
-      h(
-        "small",
-        { style: { ...style, border: "none", padding: 0, color: "#666" } },
-        cur.get("login_message", ""),
-      ),
-      h("button", {
-        style: {
-          margin: 10,
-          padding: 10,
-        },
-        onClick: async () => {
-          let email = cur.get("email");
-          let result = await call(0, "reset_password", { email });
-          if(result?.error) {
-            update(cur.path(), ({cur}) => cur.set("login_message", result.error?.en));
-          } else {
-            update(cur.path(), ({cur}) => cur.set("password", "").set("login_message", "Email sent with new password"));
-          }
-        },
-      }, "Send new password to " + cur.get("email")),
-    );
-  }
-
-  function login({ cur }) {
-    let style = {
-      width: 240,
-      boxSizing: "border-box",
-      margin: 10,
-      padding: 10,
-      borderRadius: 5,
-      border: "1px solid #999",
-    };
-    return h(
-      "div",
-      { class: "login" },
-      h(
-        "span",
-        {
-          style: { ...style, padding: 0, border: "none" },
-        },
-        "Sign in using your university email (enrolled in the course) to get access to edit the content:"
-      ),
-      h("input", {
-        style,
-        type: "email",
-        name: "username",
-        autocomplete: "email" /*"username"*/,
-        placeholder: "abc123@alumni.ku.dk",
-        value: cur.get("email"),
-        onKeyDown: (e) => e.key === "Enter" && update(cur.path(), doLogin),
-        onInput: (e) => {
-          localStorage.setItem("jsonform-email", e.target.value);
-          return update(cur.path(), ({ cur }) =>
-            cur.set("email", e.target.value)
-          );
-        },
-      }),
-      h(
-        "button",
-        {
-          style,
-          onClick: async () => update(cur.path(), doLogin),
-        },
-        "Login"
-      ),
-      h(
-        "small",
-        { style: { ...style, border: "none", padding: 0, color: "#666" } },
-        "(If you haven't logged in here before, you will get an email with a new password. Contact tyskapp@solsort.dk, if you have questions, or problems logging in)."
-      ),
-      h(
-        "span",
-        { style: { ...style, border: "none", padding: 0 } },
-        cur.get("login_message", "")
-      )
-    );
-  }
-  async function logout({cur}) {
-    localStorage.removeItem("jsonform-email");
-    localStorage.removeItem("jsonform-pw");
-    await call(0, "logout", {});
-    return cur.set("password", "").set("email", "").set("route", ["login"]);
-  }
-
-  export async function init({ cur }) {
-    //cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
-    let roles = await call(0, "roles", {});
-    let email = localStorage.getItem("jsonform-email") || "";
-    let password = localStorage.getItem("jsonform-pw") || "";
-    cur = cur.set("form", form);
-    cur = cur.set("roles", roles);
-    cur = cur.set("email", email);
-    cur = cur.set("password", password);
-    if (email && password) {
-      setTimeout(() => update(cur.path(), handle_password), 0);
-    }
-    console.log(cur.cd("/mount/jsonform-data").path());
-    cur = cur.set(`/mount/jsonform-data`, {
-      path: "/" + cur.path() + "/data",
-      server: "veduz.com/apps/tyskapp/data"
-    })
-    console.log("jsonform init", cur.get("/"));
-    return cur;
+function login({ cur }) {
+  let style = {
+    width: 240,
+    boxSizing: "border-box",
+    margin: 10,
+    padding: 10,
+    borderRadius: 5,
+    border: "1px solid #999",
   };
-  export function render({ cur }) {
-    let route = cur.get("route", []);
-    //console.log("jsonform.render", route, cur);
-    let [page] = route;
-    let pages = {
-      login,
-      password,
-      formedit: ({ cur }) => h("div", {}, 
-      h("div", {style: {textAlign: "right"}}, "Logged in as: " + cur.get("email"), " ",
-      h("button", {
-        onClick: () => update(cur.path(), logout)
-      }, "Log out")),
-      render_form(cur.get("form"), cur.cd("data"))),
-    };
+  return h(
+    "div",
+    { class: "login" },
+    h(
+      "span",
+      {
+        style: { ...style, padding: 0, border: "none" },
+      },
+      "Sign in using your university email (enrolled in the course) to get access to edit the content:",
+    ),
+    h("input", {
+      style,
+      type: "email",
+      name: "username",
+      autocomplete: "email", /*"username"*/
+      placeholder: "abc123@alumni.ku.dk",
+      value: cur.get("email"),
+      onKeyDown: (e) => e.key === "Enter" && update(cur.path(), doLogin),
+      onInput: (e) => {
+        localStorage.setItem("jsonform-email", e.target.value);
+        return update(
+          cur.path(),
+          ({ cur }) => cur.set("email", e.target.value),
+        );
+      },
+    }),
+    h(
+      "button",
+      {
+        style,
+        onClick: async () => update(cur.path(), doLogin),
+      },
+      "Login",
+    ),
+    h(
+      "small",
+      { style: { ...style, border: "none", padding: 0, color: "#666" } },
+      "(If you haven't logged in here before, you will get an email with a new password. Contact tyskapp@solsort.dk, if you have questions, or problems logging in).",
+    ),
+    h(
+      "span",
+      { style: { ...style, border: "none", padding: 0 } },
+      cur.get("login_message", ""),
+    ),
+  );
+}
+async function logout({ cur }) {
+  localStorage.removeItem("jsonform-email");
+  localStorage.removeItem("jsonform-pw");
+  await call(0, "logout", {});
+  return cur.set("password", "").set("email", "").set("route", ["login"]);
+}
 
-    return {
-      react: h(
+export async function init({ cur }) {
+  //cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
+  let roles = await call(0, "roles", {});
+  let email = localStorage.getItem("jsonform-email") || "";
+  let password = localStorage.getItem("jsonform-pw") || "";
+  cur = cur.set("form", form);
+  cur = cur.set("roles", roles);
+  cur = cur.set("email", email);
+  cur = cur.set("password", password);
+  if (email && password) {
+    setTimeout(() => update(cur.path(), handle_password), 0);
+  }
+  console.log(cur.cd("/mount/jsonform-data").path());
+  cur = cur.set(`/mount/jsonform-data`, {
+    path: "/" + cur.path() + "/data",
+    server: "veduz.com/apps/tyskapp/data",
+  });
+  console.log("jsonform init", cur.get("/"));
+  return cur;
+}
+export function render({ cur }) {
+  let route = cur.get("route", []);
+  //console.log("jsonform.render", route, cur);
+  let [page] = route;
+  let pages = {
+    login,
+    password,
+    formedit: ({ cur }) =>
+      h(
         "div",
-        { class: "appeditor" },
-        (pages[page] || pages.login)({ cur })
+        {},
+        h(
+          "div",
+          { style: { textAlign: "right" } },
+          "Logged in as: " + cur.get("email"),
+          " ",
+          h("button", {
+            onClick: () => update(cur.path(), logout),
+          }, "Log out"),
+        ),
+        render_form(cur.get("form"), cur.cd("data")),
       ),
-    };
   };
+
+  return {
+    react: h(
+      "div",
+      { class: "appeditor" },
+      (pages[page] || pages.login)({ cur }),
+    ),
+  };
+}
