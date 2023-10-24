@@ -5,20 +5,15 @@ Veduz.com hosts various prototypes and apps by [Solsort](https://solsort.com), a
 Apps under development:
 
 - [TyskApp](./tyskapp/) for a german course at KU
-- [Quiz](./quiz/) with AI-generated quizzes
+- [Quiz](./quiz/) with (AI-generated) quizzes
 - [JsonForm](./jsonform) creates a form for editing JSON-data, without knowing json, – currently used to allow students to edit content for the TyskApp
-- `smk_stl` to be renamed, – hack4dk hack
+- New project, not ready yet: [lifeman](./lifeman) a life-manager, keeping track of tasks, time-tracking, habit tracking etc. 
+- 3d-experiments
 
-Apps to be migrated to the platform:
-
-- Combigame
-- Runicode
-
-
+<!--
 
 ## Platform
 # Veduz standard library
-
 
 
 `/veduz.js` has code for loading + boots veduz.
@@ -114,3 +109,4 @@ Messages:
 - `error`
 - `state` property not allowed
 
+-->

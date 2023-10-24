@@ -36,16 +36,10 @@
   </style>
 </head>
 <body>
-  <script src="./veduz.js"></script>
+  <!--script src="./veduz.js"></script-->
   <div id=READMEmd></div>
-  <div id=apps>
-  </div>
-  <script>
-    (async () => {
-    await veduz.load('deps/marked.js');
-    READMEmd.innerHTML = veduz.marked.parse(await(await fetch('./README.md')).text());
-    apps.innerHTML = apps.innerHTML.split(/\s+/g).filter(o => o.trim())
-        .map(name => `<a class="button" href="./${name.toLowerCase()}/">${name}</a>`).join('');
-        })();
+  <script type=module>
+    import {marked} from 'https://esm.sh/marked';
+    READMEmd.innerHTML = marked.parse(await(await fetch('./README.md')).text());
   </script>
 </body>
