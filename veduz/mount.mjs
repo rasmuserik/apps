@@ -1,6 +1,14 @@
 import { getState, update } from "./state.mjs";
-import { Cursor } from "./cursor.mjs";
+import { Cursor, path_as_array} from "./cursor.mjs";
 import { call } from "./messaging.mjs";
+export async function mount(host, path) {
+  console.log('mount', host, path)
+  let name = path_as_array(path).join("_")
+  update("/mount", ({ cur }) => 
+    cur.set(name, {
+      path: path,
+      server: host}));
+}
 async function mount_loop() {
   let mount = new Cursor(getState(), "/mount");
   for (const id of mount.keys()) {

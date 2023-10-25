@@ -1,4 +1,4 @@
-import "./veduz/mount.mjs";
+export * from "./veduz/mount.mjs";
 export * from "./veduz/cursor.mjs";
 export * from "./veduz/main.mjs";
 export * from "./veduz/messaging.mjs";

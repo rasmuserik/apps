@@ -1,6 +1,6 @@
 import { marked } from "https://esm.sh/marked";
 import mustache from "https://esm.sh/mustache";
-import { call, log } from "../veduz.mjs";
+import { call, log, mount } from "../veduz.mjs";
 
 let templates = {};
 async function load_templates(url) {
@@ -311,10 +311,7 @@ export async function init({ cur }) {
   console.log("init");
   await load_templates("templates.html");
   cur = cur.set("../messages", messages);
-  cur = cur.set(`/mount/jsonform-data`, {
-    path: "/" + cur.path() + "/../topics",
-    server: "veduz.com/apps/tyskapp/data/topics",
-  });
+  mount("veduz.com/apps/tyskapp/data/topics", cur.path() + "/../topics");
   language = "da";
   topic_id = "dubbing";
   person_id = "person1";

@@ -113,7 +113,7 @@ function updateIn(o, path, fn) {
   let v = updateIn(any_get(o, k), path.slice(1), fn);
   return any_set(o, k, v);
 }
-function normalisePath(path) {
+export function path_as_array(path) {
   if (Array.isArray(path)) return path;
   return ("/" + path + "/")
     .replace(/\/+/g, "/")
@@ -125,8 +125,8 @@ function normalisePath(path) {
 function addPath(a, b) {
   a = Array.isArray(a) ? a.join("/") : String(a);
   b = Array.isArray(b) ? b.join("/") : String(b);
-  if (b.startsWith("/")) return normalisePath(b);
-  return normalisePath(a + "/" + b);
+  if (b.startsWith("/")) return path_as_array(b);
+  return path_as_array(a + "/" + b);
 }
 
 ///////////////
@@ -135,7 +135,7 @@ function addPath(a, b) {
 
 export function Cursor(root, path = []) {
   this._root = root;
-  path = normalisePath(path);
+  path = path_as_array(path);
   this._path = path;
 
   let current = root;
