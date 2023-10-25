@@ -1,6 +1,6 @@
 import { marked } from "https://esm.sh/marked";
 import mustache from "https://esm.sh/mustache";
-import { call, log, mount } from "../veduz.mjs";
+import { call, log, mount, update, getCur } from "../veduz.mjs";
 
 let templates = {};
 async function load_templates(url) {
@@ -307,9 +307,13 @@ async function main({ elem }) {
   await start_screen();
 }
 
-export async function init({ cur }) {
+export function init({ cur }) {
   console.log("init");
-  await load_templates("templates.html");
+  (async () => {
+    await load_templates("templates.html");
+    console.log('here');
+    update(cur.path(), ({ cur }) => cur.set("templates_loaded", true));
+  })();
   cur = cur.set("../messages", messages);
   mount("veduz.com/apps/tyskapp/data/topics", cur.path() + "/../topics");
   language = "da";
@@ -319,8 +323,8 @@ export async function init({ cur }) {
 }
 let started = false;
 export function render({ elem, cur }) {
-  console.log("render", cur);
-  if (!cur.get("../messages") || !cur.get("../topics")) {
+  console.log("render", cur.cd('..'));
+  if (!cur.get("templates_loaded") || !cur.get("../messages") || !cur.get("../topics")) {
     return { html: "<h1>Loading...</h1>" };
   }
   if (started) return;

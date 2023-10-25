@@ -1,5 +1,6 @@
 import { array_shuffle, log, sleep, style as CSS } from "../veduz.mjs";
 import { load_templates, template } from "./templates.mjs";
+import {update} from "../veduz.mjs";
 
 let http_cache = {};
 async function load_quiz(quiz_url) {
@@ -254,33 +255,26 @@ export default async function main(args) {
   init(args);
 }
 
-export async function init(args) {
-  let { elem, quiz_url, cur } = args;
+export function init(args) {
+  let { quiz_url, cur } = args;
   console.log("init", args);
+  (async () => {
   await load_templates(
     import.meta.url.replace(/[^/]*$/, "") + "templates.html",
   );
-  if (elem) {
-    run_quiz(args);
-  }
+  update(cur.path(), ({ cur }) => cur.set("templates_loaded", true));
+  })();
   return cur.set("quiz_url", quiz_url);
 }
 
 let started = false;
 export function render({ cur, elem }) {
   let quiz_url = cur.get("quiz_url");
+  if(!cur.get("templates_loaded")) {
+    return {html: "loading..."}
+  }
   if (!started) {
     run_quiz({ quiz_url, elem });
     started = true;
   }
-
-  /*
-
-  quiz_url,
-  feedback = {},
-  messages = {},
-  questions,
-  elem,
-  back,
-  */
 }

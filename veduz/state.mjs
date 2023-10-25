@@ -1,53 +1,36 @@
 import { Cursor } from "./cursor.mjs";
+import {sleep} from './util.mjs';
 globalThis.veduz = globalThis.veduz || {};
 let v = globalThis.veduz;
 v.state = v.state || {};
 
-
-/**
- * Update the state of the application.
- * Ensures only one update happens at a time.
- * 
- * @param {string} path
- * @param {function} fn
- * @param {object} msg
- */
-let updating = false;
-export async function update(path, fn, msg = {}) {
-  while (updating) {
-    await updating;
-  }
-  let done;
-  updating = new Promise(
-    (resolve) =>
-      (done = () => {
-        updating = false;
-        resolve();
-      })
-  );
-
-  let o;
-  try {
-    o = (await fn({ ...msg, cur: new Cursor(v.state, path) })) || {};
-  } catch (e) {
-    //log('updata error', {error: String(e)});
-    console.error(e);
-  }
+let running = false;
+export function update(path, fn, msg = {}) {
+  if(running) return (async () => {
+    await sleep(0);
+    return update(path, fn, msg);
+  })();
+  running = true;
+  let o = fn({ ...msg, cur: new Cursor(v.state, path) }) || {};
   if (o instanceof Cursor && o._root !== v.state) {
     v.state = o._root;
-    done();
+    running = false;
     return {};
   }
+
   let cur = o?.cur;
   if (cur && cur._root !== v.state) {
     v.state = cur._root;
   }
   if (cur) delete o.cur;
-  done();
+ running = false;
   return o;
 }
 v.update = update;
 
 export function getState() {
   return v.state;
+}
+export function getCur(path) {
+  return new Cursor(v.state, path);
 }

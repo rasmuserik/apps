@@ -1,5 +1,5 @@
 import { createElement } from "https://esm.sh/react";
-import { call, style, update } from "../veduz.mjs";
+import { call, style, update, getCur } from "../veduz.mjs";
 let h = createElement;
 
 let lineheight = 20;
@@ -269,32 +269,43 @@ style(
     }`
 );
 
-async function doLogin({ cur }) {
+async function doLogin(path) {
+  let cur = getCur(path);
   let email = cur.get("email");
   let userExists = await call(0, "user_exists", {
     email: cur.get("email"),
   });
   if (!userExists) {
     await call(0, "reset_password", { email });
-    cur = cur.set("login_message", "Email sent with new password");
+    update(path, ({ cur }) =>
+      cur
+        .set("login_message", "Email sent with new password")
+        .set("route", ["password"])
+    );
   } else {
-    cur = cur.set("login_message", "");
+    update(path, ({ cur }) =>
+      cur.set("login_message", "").set("route", ["password"])
+    );
   }
-  return cur.set("route", ["password"]);
 }
 
-async function handle_password({ cur }) {
+async function handle_password(path) {
+  let cur = getCur(path);
   let signin = await call(0, "login", {
     email: cur.get("email"),
     password: cur.get("password"),
   });
+
   if (signin.error) {
-    return cur
-      .set("login_message", "Login failed")
-      .set("password", "")
-      .set("route", ["login"]);
+    update(path, ({ cur }) =>
+      cur
+        .set("login_message", "Login failed")
+        .set("password", "")
+        .set("route", ["login"])
+    );
+  } else {
+    update(path, ({ cur }) => cur.set("route", ["formedit"]));
   }
-  return cur.set("route", ["formedit"]);
 }
 
 function password({ cur }) {
@@ -323,8 +334,7 @@ function password({ cur }) {
       autocomplete: "current-password" /*"username"*/,
       placeholder: "password sent to " + cur.get("email"),
       value: cur.get("password", ""),
-      onKeyDown: (e) =>
-        e.key === "Enter" && update(cur.path(), handle_password),
+      onKeyDown: (e) => e.key === "Enter" && handle_password(cur.path()),
       onInput: (e) => {
         localStorage.setItem("jsonform-pw", e.target.value);
         update(cur.path(), ({ cur }) => cur.set("password", e.target.value));
@@ -334,7 +344,7 @@ function password({ cur }) {
       "button",
       {
         style,
-        onClick: async () => update(cur.path(), handle_password),
+        onClick: async () => handle_password(cur.path()),
       },
       "Login"
     ),
@@ -397,7 +407,7 @@ function login({ cur }) {
       autocomplete: "email" /*"username"*/,
       placeholder: "abc123@alumni.ku.dk",
       value: cur.get("email"),
-      onKeyDown: (e) => e.key === "Enter" && update(cur.path(), doLogin),
+      onKeyDown: (e) => e.key === "Enter" && doLogin(cur.path()),
       onInput: (e) => {
         localStorage.setItem("jsonform-email", e.target.value);
         return update(cur.path(), ({ cur }) =>
@@ -409,7 +419,7 @@ function login({ cur }) {
       "button",
       {
         style,
-        onClick: async () => update(cur.path(), doLogin),
+        onClick: async () => doLogin(cur.path()),
       },
       "Login"
     ),
@@ -425,27 +435,27 @@ function login({ cur }) {
     )
   );
 }
-async function logout({ cur }) {
+function logout({ cur }) {
   localStorage.removeItem("jsonform-email");
   localStorage.removeItem("jsonform-pw");
-  await call(0, "logout", {});
+  call(0, "logout", {});
   return cur.set("password", "").set("email", "").set("route", ["login"]);
 }
 
 export function init({ cur }) {
   //cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
-  console.log('init');
-  (async () => {
+  console.log("init");
+  async () => {
     let roles = await call(0, "roles", {});
     update(cur.path(), ({ cur }) => cur.set("roles", roles));
-  })
+  };
   let email = localStorage.getItem("jsonform-email") || "";
   let password = localStorage.getItem("jsonform-pw") || "";
   cur = cur.set("form", form);
   cur = cur.set("email", email);
   cur = cur.set("password", password);
   if (email && password) {
-    setTimeout(() => update(cur.path(), handle_password), 0);
+    setTimeout(() => handle_password(cur.path()), 0);
   }
   console.log(cur.cd("/mount/jsonform-data").path());
   cur = cur.set(`/mount/jsonform-data`, {
