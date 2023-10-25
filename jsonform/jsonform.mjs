@@ -28,10 +28,7 @@ let form = [
       },
     ],
     ["input", { title: "Udsagn på Dansk", path: "statement/da", lines: 3 }],
-    [
-      "input",
-      { title: "Aussage auf Deutsch", path: "statement/de", lines: 3 },
-    ],
+    ["input", { title: "Aussage auf Deutsch", path: "statement/de", lines: 3 }],
     ["select", { title: "Land", path: "country" }, "da", "de"],
     ["upload", { title: "Optagelse på Dansk", path: "audio_da" }],
     ["upload", { title: "Aufname auf Deutsch", path: "audio_de" }],
@@ -116,13 +113,12 @@ function render_form(form, cur) {
               onClick: () =>
                 window.confirm("Er du sikker på at du vil slette dette?") &&
                 update(cur.path(), ({ cur }) =>
-                  cur.update((o) => o.filter((_, j) => j != i))),
+                  cur.update((o) => o.filter((_, j) => j != i))
+                ),
             },
-            "🗑",
+            "🗑"
           ),
-          ...form.slice(2).map((f) =>
-            render_form(f, cur.cd(i))
-          ),
+          ...form.slice(2).map((f) => render_form(f, cur.cd(i)))
         )
       );
       result = [
@@ -132,12 +128,11 @@ function render_form(form, cur) {
           {
             class: "list-item-button list-append-button",
             onClick: () =>
-              update(
-                cur.path(),
-                ({ cur }) => cur.update((o) => [...(o || []), {}]),
+              update(cur.path(), ({ cur }) =>
+                cur.update((o) => [...(o || []), {}])
               ),
           },
-          "+",
+          "+"
         ),
       ];
       break;
@@ -145,10 +140,11 @@ function render_form(form, cur) {
       result = [
         h("textarea", {
           style: {
-            height: Math.min(
-              window.innerHeight * 0.95,
-              (form[1].lines || 1) * lineheight + 8,
-            ) + "px",
+            height:
+              Math.min(
+                window.innerHeight * 0.95,
+                (form[1].lines || 1) * lineheight + 8
+              ) + "px",
           },
 
           value: data || "",
@@ -173,23 +169,23 @@ function render_form(form, cur) {
                 value: f,
                 selected: data === f,
               },
-              f,
+              f
             )
-          ),
+          )
         ),
       ];
       break;
     case "upload":
       result = [
         (data?.startsWith("data:audio") || data?.endsWith(".mp3")) &&
-        h("audio", { src: data, controls: true }),
+          h("audio", { src: data, controls: true }),
         (data?.startsWith("data:image") || data?.endsWith(".jpg")) &&
-        h("img", {
-          src: data,
-          style: {
-            maxHeight: 128,
-          },
-        }),
+          h("img", {
+            src: data,
+            style: {
+              maxHeight: 128,
+            },
+          }),
         h("br"),
         h("input", {
           type: "file",
@@ -214,7 +210,7 @@ function render_form(form, cur) {
     "div",
     { class: `form-${form[0]}` },
     form[1].title && h("div", { class: "title" }, form[1].title, ":"),
-    ...result,
+    ...result
   );
 }
 style(
@@ -270,7 +266,7 @@ style(
       width: 100%;
       top: 0;
       left: 0;
-    }`,
+    }`
 );
 
 async function doLogin({ cur }) {
@@ -318,13 +314,13 @@ function password({ cur }) {
       {
         style: { ...style, padding: 0, border: "none" },
       },
-      "Enter password that you received per email:",
+      "Enter password that you received per email:"
     ),
     h("input", {
       style,
       type: "password",
       name: "password",
-      autocomplete: "current-password", /*"username"*/
+      autocomplete: "current-password" /*"username"*/,
       placeholder: "password sent to " + cur.get("email"),
       value: cur.get("password", ""),
       onKeyDown: (e) =>
@@ -340,38 +336,38 @@ function password({ cur }) {
         style,
         onClick: async () => update(cur.path(), handle_password),
       },
-      "Login",
+      "Login"
     ),
     h(
       "small",
       { style: { ...style, border: "none", padding: 0, color: "#666" } },
-      cur.get("login_message", ""),
+      cur.get("login_message", "")
     ),
-    h("button", {
-      style: {
-        margin: 10,
-        padding: 10,
+    h(
+      "button",
+      {
+        style: {
+          margin: 10,
+          padding: 10,
+        },
+        onClick: async () => {
+          let email = cur.get("email");
+          let result = await call(0, "reset_password", { email });
+          if (result?.error) {
+            update(cur.path(), ({ cur }) =>
+              cur.set("login_message", result.error?.en)
+            );
+          } else {
+            update(cur.path(), ({ cur }) =>
+              cur
+                .set("password", "")
+                .set("login_message", "Email sent with new password")
+            );
+          }
+        },
       },
-      onClick: async () => {
-        let email = cur.get("email");
-        let result = await call(0, "reset_password", { email });
-        if (result?.error) {
-          update(
-            cur.path(),
-            ({ cur }) => cur.set("login_message", result.error?.en),
-          );
-        } else {
-          update(
-            cur.path(),
-            ({ cur }) =>
-              cur.set("password", "").set(
-                "login_message",
-                "Email sent with new password",
-              ),
-          );
-        }
-      },
-    }, "Send new password to " + cur.get("email")),
+      "Send new password to " + cur.get("email")
+    )
   );
 }
 
@@ -392,21 +388,20 @@ function login({ cur }) {
       {
         style: { ...style, padding: 0, border: "none" },
       },
-      "Sign in using your university email (enrolled in the course) to get access to edit the content:",
+      "Sign in using your university email (enrolled in the course) to get access to edit the content:"
     ),
     h("input", {
       style,
       type: "email",
       name: "username",
-      autocomplete: "email", /*"username"*/
+      autocomplete: "email" /*"username"*/,
       placeholder: "abc123@alumni.ku.dk",
       value: cur.get("email"),
       onKeyDown: (e) => e.key === "Enter" && update(cur.path(), doLogin),
       onInput: (e) => {
         localStorage.setItem("jsonform-email", e.target.value);
-        return update(
-          cur.path(),
-          ({ cur }) => cur.set("email", e.target.value),
+        return update(cur.path(), ({ cur }) =>
+          cur.set("email", e.target.value)
         );
       },
     }),
@@ -416,18 +411,18 @@ function login({ cur }) {
         style,
         onClick: async () => update(cur.path(), doLogin),
       },
-      "Login",
+      "Login"
     ),
     h(
       "small",
       { style: { ...style, border: "none", padding: 0, color: "#666" } },
-      "(If you haven't logged in here before, you will get an email with a new password. Contact tyskapp@solsort.dk, if you have questions, or problems logging in).",
+      "(If you haven't logged in here before, you will get an email with a new password. Contact tyskapp@solsort.dk, if you have questions, or problems logging in)."
     ),
     h(
       "span",
       { style: { ...style, border: "none", padding: 0 } },
-      cur.get("login_message", ""),
-    ),
+      cur.get("login_message", "")
+    )
   );
 }
 async function logout({ cur }) {
@@ -437,13 +432,16 @@ async function logout({ cur }) {
   return cur.set("password", "").set("email", "").set("route", ["login"]);
 }
 
-export async function init({ cur }) {
+export function init({ cur }) {
   //cur = cur.set("data", { topics: [await (await fetch("./topic1.json")).json()], });
-  let roles = await call(0, "roles", {});
+  console.log('init');
+  (async () => {
+    let roles = await call(0, "roles", {});
+    update(cur.path(), ({ cur }) => cur.set("roles", roles));
+  })
   let email = localStorage.getItem("jsonform-email") || "";
   let password = localStorage.getItem("jsonform-pw") || "";
   cur = cur.set("form", form);
-  cur = cur.set("roles", roles);
   cur = cur.set("email", email);
   cur = cur.set("password", password);
   if (email && password) {
@@ -459,7 +457,7 @@ export async function init({ cur }) {
 }
 export function render({ cur }) {
   let route = cur.get("route", []);
-  //console.log("jsonform.render", route, cur);
+  console.log("jsonform.render", route, cur);
   let [page] = route;
   let pages = {
     login,
@@ -473,11 +471,15 @@ export function render({ cur }) {
           { style: { textAlign: "right" } },
           "Logged in as: " + cur.get("email"),
           " ",
-          h("button", {
-            onClick: () => update(cur.path(), logout),
-          }, "Log out"),
+          h(
+            "button",
+            {
+              onClick: () => update(cur.path(), logout),
+            },
+            "Log out"
+          )
         ),
-        render_form(cur.get("form"), cur.cd("data")),
+        render_form(cur.get("form"), cur.cd("data"))
       ),
   };
 
@@ -485,7 +487,7 @@ export function render({ cur }) {
     react: h(
       "div",
       { class: "appeditor" },
-      (pages[page] || pages.login)({ cur }),
+      (pages[page] || pages.login)({ cur })
     ),
   };
 }

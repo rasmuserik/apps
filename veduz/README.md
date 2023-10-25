@@ -1,4 +1,15 @@
-# Veduz API/platform
+# Veduz approach to making apps
+
+
+Library:
+
+- Single state
+- Functional cursor for updating state
+- Library for message passing and RPC (both to server and between peers/clients).
+- Backend with user authentification and JSON-storage (which can be mounted / auto-sync'ed into state).
+
+
+
 
 Various utility libraries + architecture for making apps.
 
