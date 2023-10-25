@@ -6,24 +6,40 @@
   <style>
       body {
         font-family: sans-serif;
+        display: flex;
+        flex-flow: column;
+        justify-content: center; 
+        align-items: center;
       }
       #READMEmd {
         max-width: 40em;
         line-height: 1.4;
       }
+      #apps {
+        max-width: 66em;
+        display: flex;
+        flex-flow: column;
+        gap: 8px;
+      }
+
+      #apps .button {
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        outline: 1px solid black;
+        border-radius: 8px;
+        min-height: 44px;
+        min-width: 200px;
+        text-decoration: none;
+        color: black;
+      }
   </style>
 </head>
 <body>
-  <script src=../veduz.js app=veduz></script>
+  <!--script src="./veduz.js"></script-->
   <div id=READMEmd></div>
-  <div id=apps>
-  </div>
-  <!--script>
-    (async () => {
-    await veduz.load('deps/marked.js');
-    READMEmd.innerHTML = veduz.marked.parse(await(await fetch('./README.md')).text());
-    apps.innerHTML = apps.innerHTML.split(/\s+/g).filter(o => o.trim())
-        .map(name => `<a class="button" href="./${name.toLowerCase()}/">${name}</a>`).join('');
-        })();
-  </script-->
+  <script type=module>
+    import {marked} from 'https://esm.sh/marked';
+    READMEmd.innerHTML = marked.parse(await(await fetch('./README.md')).text());
+  </script>
 </body>

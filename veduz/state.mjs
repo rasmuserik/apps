@@ -15,6 +15,7 @@ export async function update(path, fn, msg = {}) {
   if (cur) delete o.cur;
   return o;
 }
+v.update = update;
 export function getState() {
   return v.state;
 }

@@ -1,5 +1,4 @@
-import { update } from "./state.mjs";
-import { render } from "./rendering.mjs";
+import { appElem } from "./rendering.mjs";
 import { log } from "./messaging.mjs";
 
 globalThis.veduz = globalThis.veduz || {};
@@ -21,6 +20,8 @@ async function main() {
     };
     let appName = params.app;
     if (appName) {
+      if (!apps[appName]) 
+        app(appName, await import(`../${appName}/${appName}.mjs`));
       let elemId = script.getAttribute("elem") || script.dataset["elem"];
       if (!elemId) {
         elemId = Math.random().toString(36).slice(2);
@@ -79,15 +80,14 @@ async function main() {
         }
       }
 
-      if (!apps[appName]) {
-        apps[appName] = await import(`../${appName}/${appName}.mjs`);
-      }
-      render(elemId, appName);
-      if (apps[appName]?.init) {
-        update(`/${appName}/elem_${elemId}`, apps[appName].init, params);
-      }
+      appElem(appName, elemId, params);
+
     }
   }
   log("veduz-client-loaded:" + location.hostname);
 }
 main();
+
+export function app(name, app) {
+  apps[name] = app;
+}

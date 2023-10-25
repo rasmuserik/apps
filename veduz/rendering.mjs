@@ -1,6 +1,7 @@
-import { getState } from "./state.mjs";
+import { update, getState } from "./state.mjs";
 import { Cursor } from "./cursor.mjs";
 import reactdom from "https://esm.sh/react-dom";
+
 let v = globalThis.veduz = globalThis.veduz || {};
 let _renderers = {};
 let _prevState = {};
@@ -22,10 +23,12 @@ function _rerender() {
     }
   }
 }
-export function render(id, appName) {
-  _renderers[id] = appName;
+export function appElem(appName, elemId, params) {
+  _renderers[elemId] = appName;
+  if (v.apps[appName]?.init) {
+    update(`/${appName}/elem_${elemId}`, v.apps[appName].init, params);
+  }
 }
-
 async function renderLoop() {
   try {
     await _rerender();
