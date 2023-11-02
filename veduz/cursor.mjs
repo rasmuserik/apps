@@ -32,6 +32,12 @@ export function new_any(type, data, children) {
   }
   return new Any(type, data, children);
 }
+export function any_shallow_equals(a, b) {
+  if (a === b) return true;
+  return any_type(a) === any_type(b) &&
+       any_data(a) === any_data(b) && 
+       any_children(a) === any_children(b);
+}
 export function any_nochildren(any) {
   let cstr = any?.constructor;
   return cstr !== Object && cstr !== Array && cstr !== Any;
@@ -63,6 +69,7 @@ export function any_get(any, key) {
 }
 export function any_set(any, key, val) {
   let cstr = any?.constructor;
+  if(any_shallow_equals(any_get(any, key), val)) return any;
   if (cstr === Object) {
     let result = { ...any };
     if (val === undefined) delete result[key];
@@ -71,8 +78,8 @@ export function any_set(any, key, val) {
   }
   if (cstr === Array) {
     let result = [...any];
-    if (val === undefined) delete result[key];
-    else result[key] = val;
+    result[key] = val;
+    while(result.length > 0 && result[result.length-1] === undefined) result.pop();
     return result;
   }
   if (cstr === Any) {
@@ -108,9 +115,12 @@ function updateIn(o, path, fn) {
     return fn(o);
   }
   let k = path[0];
-  if (any_type(o) === "Nil") o = {};
+  let orig = o;
+  if (any_type(o) === "Nil") o = empty_obj;
   //if (any_nochildren(o)) o = {}; TODO: remove
-  let v = updateIn(any_get(o, k), path.slice(1), fn);
+  let prev = any_get(o, k);
+  let v = updateIn(prev, path.slice(1), fn);
+  if(any_shallow_equals(prev, v)) return orig;
   return any_set(o, k, v);
 }
 export function path_as_array(path) {
