@@ -226,7 +226,6 @@ function person() {
     person: persondata,
     messages: local(messages, language),
   });
-  console.log("here", persondata);
   rootElem.querySelector("#listen_da").addEventListener("click", () => {
     language = "da";
     person();
@@ -311,7 +310,6 @@ export function init({ cur }) {
   console.log("init");
   (async () => {
     await load_templates("templates.html");
-    console.log('here');
     update(cur.path(), ({ cur }) => cur.set("templates_loaded", true));
   })();
   cur = cur.set("../messages", messages);
@@ -331,12 +329,9 @@ export function render({ elem, cur }) {
   started = true;
   main({ elem });
 }
-console.log("here");
 console.log(await call(0, "log_types", {}));
 console.log(
   await call(0, "log_stat", {
     log_type: "CLIENT:tyskapp-answer:true:da:dubbing:person3:da",
   }),
 );
-
-console.log("blah");

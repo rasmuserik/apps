@@ -8,6 +8,7 @@ let form = [
   { title: "Emne/Thema", path: "topics" },
   ["input", { title: "Titel auf Deutsch", path: "title/de" }],
   ["input", { title: "Titel på Dansk", path: "title/da" }],
+  //["input", { title: "ID", path: "id" }],
   [
     "list",
     { title: "Personer/Personen", path: "people" },
@@ -27,6 +28,7 @@ let form = [
         lines: 1,
       },
     ],
+    //["input", { title: "ID", path: "id" }],
     ["input", { title: "Udsagn på Dansk", path: "statement/da", lines: 3 }],
     ["input", { title: "Aussage auf Deutsch", path: "statement/de", lines: 3 }],
     ["select", { title: "Land", path: "country" }, "da", "de"],
@@ -465,8 +467,37 @@ export function init({ cur }) {
   console.log("jsonform init", cur.get("/"));
   return cur;
 }
+
+function fix_data(cur) {
+  let topics = cur.get("topics", "");
+  console.log("fix_data", topics);
+  for (const i in topics) {
+    if (!topics[i].id)
+      update(cur.path(), ({ cur }) =>
+        cur.update(`topics/${i}/id`, (s) =>
+          s
+            ? s.replace(/[^a-z0-9_]/gi, "")
+            : Math.random().toString(36).substring(2, 9)
+        )
+      );
+    if (topics[i].people) {
+      for (const j in topics[i].people) {
+        if (topics[i].people[j].id) continue;
+          update(cur.path(), ({ cur }) =>
+            cur.update(`topics/${i}/people/${j}/id`, (s) =>
+              s
+                ? s.replace(/[^a-z0-9_]/gi, "")
+                : Math.random().toString(36).substring(2, 9)
+            )
+          );
+      }
+    }
+  }
+}
+
 export function render({ cur }) {
   let route = cur.get("route", []);
+  fix_data(cur.cd("data"));
   console.log("jsonform.render", route, cur);
   let [page] = route;
   let pages = {
