@@ -474,6 +474,7 @@ function fix_data(cur) {
   for (const i in topics) {
     if (!topics[i].id)
       update(cur.path(), ({ cur }) =>
+        cur.get(`topics/${i}`) &&
         cur.update(`topics/${i}/id`, (s) =>
           s
             ? s.replace(/[^a-z0-9_]/gi, "")
@@ -484,6 +485,7 @@ function fix_data(cur) {
       for (const j in topics[i].people) {
         if (topics[i].people[j].id) continue;
           update(cur.path(), ({ cur }) =>
+            cur.get(`topics/${i}/people/${j}`) &&
             cur.update(`topics/${i}/people/${j}/id`, (s) =>
               s
                 ? s.replace(/[^a-z0-9_]/gi, "")
@@ -498,7 +500,6 @@ function fix_data(cur) {
 export function render({ cur }) {
   let route = cur.get("route", []);
   fix_data(cur.cd("data"));
-  console.log("jsonform.render", route, cur);
   let [page] = route;
   let pages = {
     login,
