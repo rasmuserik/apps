@@ -1,0 +1,691 @@
+{
+  "title": "Diogenes og Sextus Empiricus",
+  "questions": [
+    {
+      "question": "Hvad handler skepticismens grundprincipper om?",
+      "correct_answer": "At man ikke kan vide noget med absolut sikkerhed",
+      "wrong_answers": [
+        "At al viden er absolut og uforanderlig",
+        "At verden er fuldstændig forudsigelig",
+        "At mennesket er centrum for al viden",
+        "At virkeligheden kun kan forstås gennem religion",
+        "At historiske begivenheder gentager sig nøjagtigt"
+      ],
+      "silly_answers": [
+        "At katter har ni liv",
+        "At jorden er flad",
+        "At pizza er sundere end salat"
+      ],
+      "explanation": "Skepticismen er en filosofisk tilgang, der sætter spørgsmålstegn ved muligheden for at opnå absolut viden og understreger usikkerheden i al viden."
+    },
+    {
+      "question": "Hvem samlede de grundlæggende elementer i den skeptiske tradition omkring 200 år efter Kristus?",
+      "correct_answer": "Sextus Empiricus",
+      "wrong_answers": [
+        "Platon",
+        "Sokrates",
+        "Aristoteles",
+        "Epikur",
+        "Marcus Aurelius"
+      ],
+      "silly_answers": ["Julius Cæsar", "Leonardo da Vinci", "Albert Einstein"],
+      "explanation": "Sextus Empiricus var en græsk filosof, der samlede og systematiserede den skeptiske filosofi omkring 200 år efter Kristus."
+    },
+    {
+      "question": "Hvad kritiserer skepticismen i forhold til dogmatismen?",
+      "correct_answer": "Søgen efter en absolut sandhed",
+      "wrong_answers": [
+        "Brugen af logik og rationel tænkning",
+        "Værdien af personlig erfaring",
+        "Behovet for samfundsmæssige normer",
+        "Brugen af matematik i filosofi",
+        "Anerkendelsen af kunstens rolle"
+      ],
+      "silly_answers": [
+        "Foretrukken kaffetype",
+        "Modevalg i antikken",
+        "Præferencer for feriedestinationer"
+      ],
+      "explanation": "Skepticismen udfordrer dogmatismens forsøg på at finde og fastholde absolutte sandheder, og argumenterer for at sådan en søgen er forgæves."
+    },
+    {
+      "question": "Hvad indebærer Sextus Empiricus' forslag om 'epoché'?",
+      "correct_answer": "Suspendering af dogmatiske udsagn",
+      "wrong_answers": [
+        "Fastholdelse af religiøse overbevisninger",
+        "Afvikling af politiske systemer",
+        "Afvisning af videnskabelige metoder",
+        "Genoplivning af gamle traditioner",
+        "Styrkelse af etiske principper"
+      ],
+      "silly_answers": [
+        "Indførelse af daglig siesta",
+        "Obligatorisk tango på torvet",
+        "Dyrkelse af spaghetti-træer"
+      ],
+      "explanation": "Epoché er et koncept foreslået af Sextus Empiricus, hvilket indebærer en suspendering eller tilbageholdelse af domme om dogmatiske udsagn for at undgå forudindtagethed og fremme en åben, kritisk tænkning."
+    },
+    {
+      "question": "Hvad er 'equipolens' og 'troper' i forbindelse med Sextus Empiricus' metoder?",
+      "correct_answer": "Metoder til at anerkende modargumenter og fremme en ikke-dogmatisk tankegang",
+      "wrong_answers": [
+        "Religiøse ritualer og ceremonier",
+        "Politisk strategi og diplomati",
+        "Former for antik skulptur og arkitektur",
+        "Musikalske genrer og instrumenter",
+        "Gamle handelsruter og søveje"
+      ],
+      "silly_answers": [
+        "Opskrifter på traditionelle græske retter",
+        "Antikke sportsgrene i de olympiske lege",
+        "Navne på berømte gladiatorer"
+      ],
+      "explanation": "Equipolens og troper er metoder, der bruges i den skeptiske filosofi til at fremhæve og anerkende modsætninger i argumenter og fremme en tilgang, der ikke er bundet af dogmatiske overbevisninger."
+    },
+    {
+      "question": "Hvad er målet med skepticismen?",
+      "correct_answer": "Ataraxia, en tilstand af ro og ubekymrethed",
+      "wrong_answers": [
+        "Immateriel rigdom og social status",
+        "Perfektion i kunstneriske udtryk",
+        "Dominans i politisk magt",
+        "Opnåelse af fysisk udødelighed",
+        "Total kontrol over naturen"
+      ],
+      "silly_answers": [
+        "Uendelig chokolade",
+        "Evnen til at tale med dyr",
+        "Tidsrejser"
+      ],
+      "explanation": "Ataraxia, et centralt mål i skepticismen, refererer til en mental tilstand karakteriseret ved ro, frihed fra uro og bekymring, som opnås gennem en ikke-dogmatisk og kritisk tilgang til viden og erfaring."
+    },
+    {
+      "question": "Hvad anbefaler Sextus Empiricus med hensyn til 'hverdagshorisonten'?",
+      "correct_answer": "At leve i overensstemmelse med nomos, physis, og techne",
+      "wrong_answers": [
+        "Fuldstændig afvisning af samfundets regler",
+        "Streng overholdelse af religiøse dogmer",
+        "Ubetinget accept af videnskabelige teorier",
+        "Udelukkende fokus på personlig fornøjelse",
+        "Total isolation fra andre mennesker"
+      ],
+      "silly_answers": [
+        "Daglig dans omkring bål",
+        "Taler til træer for visdom",
+        "Bygning af sandslotte som bolig"
+      ],
+      "explanation": "Ved at leve i overensstemmelse med nomos (love og traditioner), physis (natur og følelser) og techne (teknikker og håndværk), foreslår Sextus Empiricus en praktisk tilgang til livet, der undgår dogmatisme og fremmer ro og ligevægt."
+    },
+    {
+      "question": "Hvad er fokus for kynikerne?",
+      "correct_answer": "En simpel, naturlig levevis baseret på kroppens behov",
+      "wrong_answers": [
+        "Opnåelse af rigdom og magt",
+        "Følge stramme religiøse regler",
+        "Streben efter akademisk viden",
+        "Udvikling af komplekse teknologier",
+        "Dyrkelse af æstetisk skønhed"
+      ],
+      "silly_answers": [
+        "Konstant rejser i luftballoner",
+        "At leve som havfruer og mænd",
+        "Oprettelse af en underjordisk by"
+      ],
+      "explanation": "Kynikerne, en skole af antik græsk filosofi, fremhævede en simpel og naturlig levevis, hvor fokus var på kroppens grundlæggende behov og en tilbagevenden til naturen, ofte i kontrast til samfundets materielle og kulturelle kompleksiteter."
+    },
+    {
+      "question": "Hvem var den mest kendte figur inden for kynismen?",
+      "correct_answer": "Diogenes fra Sinope",
+      "wrong_answers": [
+        "Heraklit",
+        "Zeno fra Citium",
+        "Sokrates",
+        "Pythagoras",
+        "Epicurus"
+      ],
+      "silly_answers": ["Hercules", "Odysseus", "Alexander den Store"],
+      "explanation": "Diogenes fra Sinope er berømt for sin ekstreme og offentlige praksis af kynismens principper, herunder hans enkle livsstil og hans åbenlyse foragt for konventionel etikette og materielt begær."
+    },
+    {
+      "question": "Hvad betyder 'equipolens' i Sextus Empiricus' skepticisme?",
+      "correct_answer": "En metode til at anerkende modargumenter for et sandhedsudsagn",
+      "wrong_answers": [
+        "En teknik til meditation",
+        "En form for logisk fejlslutning",
+        "En filosofisk skole",
+        "En type af skeptisk argument",
+        "En etisk doktrin"
+      ],
+      "silly_answers": [
+        "En gammeldags dansestil",
+        "En mystisk potion fra antikken",
+        "En gammel romersk mønt"
+      ],
+      "explanation": "Equipolens er en metode brugt i Sextus Empiricus' skepticisme til at vise, at for hvert sandhedsudsagn findes der modargumenter."
+    },
+    {
+      "question": "Hvad søger 'troper' at opnå i Sextus Empiricus' filosofi?",
+      "correct_answer": "At påpege modsigelser og modstand i argumenter",
+      "wrong_answers": [
+        "At fremme moralsk udvikling",
+        "At forstå universets natur",
+        "At styrke logiske færdigheder",
+        "At opnå åndelig oplysning",
+        "At afvise religiøse overbevisninger"
+      ],
+      "silly_answers": [
+        "At forbedre madlavningskunsten",
+        "At træne husdyr",
+        "At forudsige vejrforandringer"
+      ],
+      "explanation": "I Sextus Empiricus' skepticisme bruges 'troper' til at fremhæve modsigelser og modstand i argumenter, som en del af den skeptiske metodik."
+    },
+    {
+      "question": "Hvad er målet med at opnå 'ataraxia' i Sextus Empiricus' skepticisme?",
+      "correct_answer": "En tilstand af ro og ubekymrethed",
+      "wrong_answers": [
+        "Intellektuel overlegenhed",
+        "Fysisk udholdenhed",
+        "Spirituel opvågning",
+        "Evig lykke",
+        "Social anerkendelse"
+      ],
+      "silly_answers": [
+        "Tidsrejse evner",
+        "Evnen til at tale med dyr",
+        "Uovervindelighed i skak"
+      ],
+      "explanation": "Ataraxia i Sextus Empiricus' skepticisme henviser til et mål om at opnå en tilstand af mental ro og frihed fra bekymring."
+    },
+    {
+      "question": "Hvordan beskrives kynikernes fokus i hellenistisk tid?",
+      "correct_answer": "På en simpel, naturlig levevis baseret på kroppens behov",
+      "wrong_answers": [
+        "På intellektuel udvikling",
+        "På politisk dominans",
+        "På religiøs oplysning",
+        "På kunstnerisk udtryk",
+        "På økonomisk fremgang"
+      ],
+      "silly_answers": [
+        "På intergalaktisk udforskning",
+        "På at mestre tryllekunster",
+        "På at brygge den perfekte øl"
+      ],
+      "explanation": "Kynikerne i hellenistisk tid fokuserede på en simpel og naturlig levevis, som prioriterede kroppens grundlæggende behov og afviste materielle overskud."
+    },
+    {
+      "question": "Hvem er den mest kendte figur inden for kynisme?",
+      "correct_answer": "Diogenes fra Sinope",
+      "wrong_answers": [
+        "Sokrates",
+        "Platon",
+        "Aristoteles",
+        "Epicurus",
+        "Zeno"
+      ],
+      "silly_answers": ["Leonardo da Vinci", "Julius Cæsar", "Albert Einstein"],
+      "explanation": "Diogenes fra Sinope er kendt som den mest fremtrædende skikkelse inden for kynismen, berømt for sin ekstreme og enkle livsstil."
+    },
+    {
+      "question": "Hvad var centralt for kynikernes livsfilosofi?",
+      "correct_answer": "Kroppen som det centrale holdepunkt i livet",
+      "wrong_answers": [
+        "Sjælens udødelighed",
+        "Sociale hierarkier",
+        "Økonomisk velstand",
+        "Politisk magt",
+        "Religiøs fromhed"
+      ],
+      "silly_answers": [
+        "Udvikling af avanceret teknologi",
+        "Erobring af fjerne lande",
+        "Oprettelse af et globalt netværk af bagerier"
+      ],
+      "explanation": "For kynikerne, især Diogenes, var kroppen det centrale element i deres livsfilosofi, hvilket afspejler deres fokus på fysisk nøjsomhed og naturlighed."
+    },
+    {
+      "question": "Hvad kritiserede kynikerne primært i deres filosofi?",
+      "correct_answer": "Samfundets afhængighed af materielle goder og status",
+      "wrong_answers": [
+        "Aristoteles' metafysik",
+        "Platons ideverden",
+        "Skepticismens usikkerhed",
+        "Stoiske principper",
+        "Epikuræiske livssyn"
+      ],
+      "silly_answers": ["Brugen af smartphones", "Modeindustrien", "Popmusik"],
+      "explanation": "Kynikerne, især Diogenes, kritiserede samfundets fokus på materielle goder og status som et forstyrrende element for det enkle, naturlige liv."
+    },
+    {
+      "question": "Hvem er mest kendt for at praktisere en ekstrem form for simpel levevis i kynismen?",
+      "correct_answer": "Diogenes fra Sinope",
+      "wrong_answers": [
+        "Sokrates",
+        "Zeno fra Citium",
+        "Epiktet",
+        "Sextus Empiricus",
+        "Pyrrho"
+      ],
+      "silly_answers": [
+        "Alexander den Store",
+        "Leonardo da Vinci",
+        "Julius Cæsar"
+      ],
+      "explanation": "Diogenes fra Sinope er berømt for sin ekstreme praksis af kynismens principper, herunder et meget enkelt og naturbaseret liv."
+    },
+    {
+      "question": "Hvad var det centrale holdepunkt i livet ifølge kynikerne?",
+      "correct_answer": "Kroppen",
+      "wrong_answers": [
+        "Sjælen",
+        "Logikken",
+        "Det offentlige liv",
+        "Fornuften",
+        "Naturen"
+      ],
+      "silly_answers": ["Astrologi", "Gastronomi", "Mode"],
+      "explanation": "Kynikerne, især Diogenes, betragtede kroppen som det centrale element i deres filosofi, i modsætning til f.eks. Platons fokus på sjælen."
+    },
+    {
+      "question": "Hvad var formålet med kynikernes kritik af den materielle kultur?",
+      "correct_answer": "At frigøre mennesket fra begær skabt af samfundets værdier",
+      "wrong_answers": [
+        "At fremme teknologisk udvikling",
+        "At understøtte religiøse overbevisninger",
+        "At styrke politisk magt",
+        "At afvise videnskabelige teorier",
+        "At fremme kunstnerisk udtryk"
+      ],
+      "silly_answers": [
+        "At promovere veganisme",
+        "At indføre modeforbud",
+        "At lancere en ny smartphone"
+      ],
+      "explanation": "Kynikerne så en nødvendighed i at tage afstand fra samfundets materielle værdier for at opnå ægte frihed og selvtilstrækkelighed."
+    },
+    {
+      "question": "Hvad indebærer 'askesis' i kynismen?",
+      "correct_answer": "Øvelse i selvbeherskelse og enkelhed",
+      "wrong_answers": [
+        "En form for meditation",
+        "Studie af naturens love",
+        "Religiøs andagt",
+        "Fysisk træning",
+        "Etisk refleksion"
+      ],
+      "silly_answers": ["Gourmetmadlavning", "Vinproduktion", "Mode design"],
+      "explanation": "Askesis i kynismen refererer til praksis af selvbeherskelse og enkel livsførelse, både fysisk og mentalt."
+    },
+    {
+      "question": "Hvad er 'autarkaia' i kynismen?",
+      "correct_answer": "Selvtilstrækkelighed og uafhængighed",
+      "wrong_answers": [
+        "En politisk teori",
+        "En metafysisk doktrin",
+        "En religiøs overbevisning",
+        "En økonomisk model",
+        "En etisk retningslinje"
+      ],
+      "silly_answers": [
+        "En antik bystat",
+        "En kulinarisk ret",
+        "En musikgenre"
+      ],
+      "explanation": "Autarkaia i kynismen betegner en tilstand af selvtilstrækkelighed og uafhængighed, som er målet for den kyniske levevis."
+    },
+
+    {
+      "question": "Hvad hævdede Diogenes om livet efter døden?",
+      "correct_answer": "Der er ikke noget liv efter døden.",
+      "wrong_answers": [
+        "Sjælen lever videre i en anden form.",
+        "Livet efter døden er det vigtigste.",
+        "Der er et paradis efter døden.",
+        "Han nævnte aldrig emnet.",
+        "Sjælen reinkarnerer.",
+        "Der er et helvede efter døden."
+      ],
+      "silly_answers": [
+        "Man bliver en zombie.",
+        "Sjælen tager på ferie.",
+        "Man genfødes som en græsk gud."
+      ],
+      "explanation": "Diogenes, en fremtrædende skikkelse i kynismen, hævdede at der ikke er noget liv efter døden, hvilket afspejler hans fokus på det fysiske og nuværende."
+    },
+    {
+      "question": "Hvad betyder skepticismens agnosticisme?",
+      "correct_answer": "Man kan ikke vide noget med absolut sikkerhed.",
+      "wrong_answers": [
+        "Man kan vide alt med sikkerhed.",
+        "Agnosticisme er uafhængig af skepticisme.",
+        "Kun religiøse sandheder er sande.",
+        "Skepticismen accepterer alle sandheder.",
+        "Agnosticisme er en form for ateisme."
+      ],
+      "silly_answers": [
+        "Agnosticisme er en diæt.",
+        "Det er en gammel græsk sport.",
+        "Det betyder kærlighed til katte."
+      ],
+      "explanation": "Skepticismens agnosticisme indebærer en grundlæggende usikkerhed omkring viden, hvor man erkender, at man ikke kan vide noget med absolut sikkerhed."
+    },
+    {
+      "question": "Hvordan influerede Descartes moderne tænkning med sin brug af skepticisme?",
+      "correct_answer": "Ved at anvende skepticismen som en epistemologisk tilgang.",
+      "wrong_answers": [
+        "Ved at afvise all skepticisme.",
+        "Ved at integrere religion i skepticisme.",
+        "Ved at fokusere udelukkende på matematik.",
+        "Ved at benægte eksistensen af den fysiske verden.",
+        "Ved at etablere en ny form for skepticisme."
+      ],
+      "silly_answers": [
+        "Ved at bruge skepticismen i madlavning.",
+        "Ved at skabe en skeptisk dans.",
+        "Ved at indføre skepticisme i modeverdenen."
+      ],
+      "explanation": "Descartes brugte skepticismen som en metode til at udfordre og teste viden, hvilket influerede den moderne epistemologi."
+    },
+    {
+      "question": "Hvad er det centrale spørgsmål for skepticismen i hellenistisk tid?",
+      "correct_answer": "Spørgsmålet om det gode liv.",
+      "wrong_answers": [
+        "Hvordan universet blev skabt.",
+        "De matematiske grundprincipper.",
+        "De politiske systemers natur.",
+        "Kunstens betydning i samfundet.",
+        "Religionens rolle i menneskets liv."
+      ],
+      "silly_answers": [
+        "Hvordan man laver den perfekte tzatziki.",
+        "Det bedste design af sandaler.",
+        "De bedste teknikker til olivenavl."
+      ],
+      "explanation": "For hellenistiske skeptikere som Sextus Empiricus var spørgsmålet om det gode liv centralt, hvilket handlede om at opnå en tilstand af ro og ubekymrethed."
+    },
+    {
+      "question": "Hvad kritiserede S.E.'s skepticismen vedrørende akademikerne?",
+      "correct_answer": "At man ikke kan vide noget med absolut sikkerhed, men kun med en vis sandsynlighed.",
+      "wrong_answers": [
+        "At akademikerne havde fuldstændig ret.",
+        "At akademikerne var for kritiske.",
+        "At akademikerne ignorerede det fysiske verdensbillede.",
+        "At akademikerne fokuserede for meget på logik.",
+        "At akademikerne var for religiøse."
+      ],
+      "silly_answers": [
+        "At akademikerne spillede for meget fodbold.",
+        "At de brugte for meget tid på teater.",
+        "At de undervurderede værdien af en god siesta."
+      ],
+      "explanation": "Skepticismen, som repræsenteret af Sextus Empiricus, kritiserede akademikerne for deres antagelse, at sandhed kun kan kendes med sandsynlighed, ikke med absolut sikkerhed."
+    },
+    {
+      "question": "Hvad var den dogmatiske tilgang til sandhedssøgning ifølge S.E.?",
+      "correct_answer": "At gå bag fænomenerne for at finde det sande og det falske.",
+      "wrong_answers": [
+        "At acceptere overfladiske fænomener som sande.",
+        "At afvise eksistensen af sandhed.",
+        "At fokusere udelukkende på logiske argumenter.",
+        "At søge sandheden gennem religiøs tro.",
+        "At basere sandhedssøgning på matematiske beviser."
+      ],
+      "silly_answers": [
+        "At bruge terninger til at bestemme sandheden.",
+        "At holde afstemninger om hvad der er sandt.",
+        "At spørge oraklet i Delphi om sandheden."
+      ],
+      "explanation": "Dogmatikere, ifølge Sextus Empiricus, søger sandheden ved at gå bag om fænomenerne, hvilket skaber unødig uro og komplikationer."
+    },
+
+    {
+      "question": "Hvad er Sextus Empiricus' anbefaling for at opnå ro i hverdagen ifølge skepticismen?",
+      "correct_answer": "Suspendere dogmatiske udsagn",
+      "wrong_answers": [
+        "Følge dogmatiske udsagn",
+        "Søge efter absolut sandhed",
+        "Ignorere samfundets normer",
+        "Fokusere på materielle goder",
+        "Leve et asketisk liv"
+      ],
+      "silly_answers": [
+        "Praktisere yoga hver morgen",
+        "Spise kun grøntsager",
+        "Holde en siesta hver dag"
+      ],
+      "explanation": "Ifølge Sextus Empiricus skal man i hverdagen suspendere dogmatiske udsagn for at opnå en tilstand af ro og ubekymrethed."
+    },
+    {
+      "question": "Hvordan beskriver kynikerne det ideelle liv?",
+      "correct_answer": "Et simpelt liv fri for samfundets kompleksiteter",
+      "wrong_answers": [
+        "Et liv fokuseret på materiel rigdom",
+        "Et liv dedikeret til akademisk studie",
+        "Et liv i overensstemmelse med religiøse dogmer",
+        "Et liv i total isolation",
+        "Et liv viet til politisk magt"
+      ],
+      "silly_answers": [
+        "Et liv som en professionel videogamer",
+        "Et liv dedikeret til ostefremstilling",
+        "Et liv som en nomadisk poet"
+      ],
+      "explanation": "Kynikerne, især Diogenes, fremhævede et simpelt og naturligt liv som ideelt, fri for samfundets komplekse strukturer og materielle begær."
+    },
+    {
+      "question": "Hvad er forskellen mellem naturlige og artificielle værdier ifølge kynismen?",
+      "correct_answer": "Naturlige værdier er baseret på basale behov, mens artificielle værdier skabes af samfundet",
+      "wrong_answers": [
+        "Naturlige værdier er spirituelle, mens artificielle værdier er materielle",
+        "Naturlige værdier er universelle, mens artificielle er personlige",
+        "Naturlige værdier er evige, mens artificielle er midlertidige",
+        "Der er ingen forskel",
+        "Artificielle værdier er mere vigtige end naturlige"
+      ],
+      "silly_answers": [
+        "Naturlige værdier handler om at spise sundt, artificielle om fastfood",
+        "Naturlige værdier er elsket af katte, artificielle af hunde",
+        "Naturlige værdier kan kun findes i junglen"
+      ],
+      "explanation": "Ifølge kynikerne skelner man mellem naturlige værdier, der er baseret på menneskets basale behov, og artificielle værdier, som er skabt af og værdsat i samfundet."
+    },
+    {
+      "question": "Hvad er formålet med askesis i kynismen?",
+      "correct_answer": "Øvelse i selvbeherskelse og enkelhed",
+      "wrong_answers": [
+        "Fysisk træning for styrke",
+        "Meditation for åndelig oplysning",
+        "Studie af filosofi for intellektuel udvikling",
+        "Fastholdelse af sociale normer",
+        "Opnåelse af materiel rigdom"
+      ],
+      "silly_answers": [
+        "Forberedelse til maratonløb",
+        "Træning i cirkuskunster",
+        "Øvelse i gourmetmadlavning"
+      ],
+      "explanation": "Askesis i kynismen refererer til praksissen med selvbeherskelse og enkelhed, både fysisk og mentalt, som et middel til at opnå en enkel og selvtilstrækkelig tilværelse."
+    },
+    {
+      "question": "Hvad karakteriserer Sextus Empiricus' syn på menneskets grundtilstand?",
+      "correct_answer": "En tilstand af uligevægt og uro",
+      "wrong_answers": [
+        "En tilstand af harmoni og fred",
+        "En iboende tilbøjelighed til ondskab",
+        "En naturlig tilstand af lykke",
+        "En konstant stræben efter magt",
+        "En iboende drift mod selvdestruktion"
+      ],
+      "silly_answers": [
+        "En konstant trang til at danse",
+        "En medfødt evne til at tale flere sprog",
+        "En naturlig tiltrækning til vand"
+      ],
+      "explanation": "Sextus Empiricus beskriver menneskets grundtilstand som en af uligevægt og uro, hvilket skaber behovet for at finde en vej ud af denne tilstand gennem skepticismens praksis."
+    },
+    {
+      "question": "Hvad er målet med Sextus Empiricus' skepticism?",
+      "correct_answer": "At finde en vej ud af menneskets grundtilstand af uligevægt",
+      "wrong_answers": [
+        "At bekræfte religiøse overbevisninger",
+        "At opnå politisk magt",
+        "At fremme videnskabelig viden",
+        "At opnå materiel rigdom",
+        "At fastholde samfundets traditioner"
+      ],
+      "silly_answers": [
+        "At blive en berømt skuespiller",
+        "At mestre kunsten at jonglere",
+        "At vinde i et reality-tv-show"
+      ],
+      "explanation": "Målet med Sextus Empiricus' skepticism er at finde en måde at overvinde menneskets grundtilstand af uligevægt og uro, hvilket opnås gennem praksissen af skepticismens principper."
+    },
+
+    {
+      "question": "Hvad er målet med Sextus Empiricus' skepticism?",
+      "correct_answer": "At finde en vej ud af menneskets grundtilstand af uligevægt og uro",
+      "wrong_answers": [
+        "At etablere en ny form for dogmatisme",
+        "At styrke Platons filosofi",
+        "At afvise enhver form for filosofisk tænkning",
+        "At bekræfte eksistensen af absolut sandhed",
+        "At fremme materiel rigdom og status"
+      ],
+      "silly_answers": [
+        "At vinde en filosofisk debat med Diogenes",
+        "At åbne en antik café",
+        "At blive den første græske astronaut"
+      ],
+      "explanation": "Sextus Empiricus' skepticism sigter mod at overvinde menneskets naturlige tilstand af uligevægt og uro ved at undgå dogmatisme og søgen efter absolutte sandheder."
+    },
+    {
+      "question": "Hvordan påvirker Descartes' brug af skepticismen den moderne tænkning?",
+      "correct_answer": "Den influerer moderne tænkning ved at fremhæve usikkerheden i al viden",
+      "wrong_answers": [
+        "Den fører til fuldstændig afvisning af videnskabelig metode",
+        "Den bekræfter Platon og Aristoteles' teorier",
+        "Den fører til en stigning i religiøs dogmatisme",
+        "Den ignorerer helt betydningen af skepticismen",
+        "Den understøtter ideen om absolut moral"
+      ],
+      "silly_answers": [
+        "Den inspirerer oprettelsen af skeptiske modebutikker",
+        "Den starter en ny trend med skeptiske madanmeldelser",
+        "Den leder til oprettelsen af en skeptisk sportsliga"
+      ],
+      "explanation": "Descartes' anvendelse af skepticismen i sin epistemologi sætter spørgsmålstegn ved sikkerheden i al viden og influerer dermed dybtgående den måde, moderne tænkning forholder sig til viden og sandhed."
+    },
+    {
+      "question": "Hvad er Sextus Empiricus' grundlag for hans metodiske begreb?",
+      "correct_answer": "At fremme kritisk tænkning og anerkendelse af modargumenter",
+      "wrong_answers": [
+        "At styrke religiøs overbevisning",
+        "At afvise al videnskabelig forskning",
+        "At argumentere for absolut sandhed",
+        "At understøtte politisk autoritet",
+        "At promovere etisk relativisme"
+      ],
+      "silly_answers": [
+        "At opfinde en ny form for antik gymnastik",
+        "At designe en skeptisk brætspil",
+        "At udvikle en gammeldags opskrift på hummus"
+      ],
+      "explanation": "Sextus Empiricus' metoder, som equipolens og troper, var designet til at fremme en kritisk og ikke-dogmatisk tankegang, hvor man anerkender gyldigheden af modargumenter."
+    },
+    {
+      "question": "Hvad er essensen af kynismens praktiske livslære?",
+      "correct_answer": "En simpel og naturlig levevis baseret på kroppens behov",
+      "wrong_answers": [
+        "En kompleks filosofisk doktrin om sjælens udødelighed",
+        "En fokus på materiel rigdom og social status",
+        "En streng overholdelse af religiøse ritualer",
+        "En forkastelse af al fysisk aktivitet",
+        "En tilbagevenden til arkaiske samfundsnormer"
+      ],
+      "silly_answers": [
+        "En diæt bestående udelukkende af oliven og fetaost",
+        "En tilbagevenden til huleboerlivsstilen",
+        "En modebevægelse baseret på antikke tunikaer"
+      ],
+      "explanation": "Kynismen, som praktiseret af figurer som Diogenes, fremhævede en simpel og naturlig levevis, der fokuserede på grundlæggende kropslige behov og frastødte samfundsmæssige kompleksiteter og materiel rigdom."
+    },
+    {
+      "question": "Hvordan levede Diogenes i overensstemmelse med kynismens idealer?",
+      "correct_answer": "Ved at praktisere et enkelt liv og frastøde samfundets kompleksiteter",
+      "wrong_answers": [
+        "Ved at efterstræbe rigdom og politisk magt",
+        "Ved at leve et liv i luksus og overflod",
+        "Ved at tilslutte sig aristokratiske kredse",
+        "Ved at grundlægge en religiøs sekt",
+        "Ved at skrive omfattende filosofiske værker"
+      ],
+      "silly_answers": [
+        "Ved at starte en karriere som stand-up komiker",
+        "Ved at deltage i antikke olympiske lege",
+        "Ved at designe sin egen kollektion af tønder"
+      ],
+      "explanation": "Diogenes fra Sinope er berømt for sin ekstreme fortolkning af kynismen, hvor han levede et meget enkelt og nøjsomt liv, ofte i direkte opposition til samfundsnormer og konventioner."
+    },
+    {
+      "question": "Hvad var Sextus Empiricus' kritik af dogmatikerne?",
+      "correct_answer": "Han mente, at dogmatikere skaber unødig uro ved at insistere på faste sandheder.",
+      "wrong_answers": [
+        "Han mente, at dogmatikere havde ret i alle deres udsagn.",
+        "Han støttede fuldt ud dogmatikernes faste sandheder.",
+        "Han ignorerer dogmatikernes udsagn uden at kritisere dem."
+      ],
+      "silly_answers": [
+        "Han troede, at dogmatikere kunne forudsige fremtiden med deres faste sandheder.",
+        "Han mente, at dogmatikere skulle starte en rockband med faste sandheder som tekst.",
+        "Han forsøgte at overtale dogmatikere til at tage opskaleringen af en stor bjergkæde med faste sandheder som projekt."
+      ],
+      "explanation": "Sextus Empiricus kritiserede dogmatikerne for at skabe uro ved at fastholde deres urokkelige sandheder, hvilket ifølge ham førte til konflikt og stridigheder."
+    },
+    {
+      "question": "Hvilket centralt element fokuserede kynikerne på?",
+      "correct_answer": "Frihed, opnået gennem selvbeherskelse.",
+      "wrong_answers": [
+        "Rigdom og velstand.",
+        "Faste dogmatiske overbevisninger.",
+        "Sociale normer og konformitet."
+      ],
+      "silly_answers": [
+        "At samle så mange materielle ejendele som muligt.",
+        "At bryde alle regler og love.",
+        "At opnå verdensrekord i spisning af hotdogs."
+      ],
+      "explanation": "Kynikerne betragtede frihed som et centralt element i deres filosofi, og de mente, at denne frihed kunne opnås gennem selvbeherskelse og enkelhed."
+    },
+    {
+      "question": "Hvordan udfordrede Diogenes sociale normer?",
+      "correct_answer": "Han udfordrede sociale normer gennem sin livsstil og tilsidesættelse af materielle værdier.",
+      "wrong_answers": [
+        "Han fulgte altid sociale normer nøje.",
+        "Han opfordrede andre til at følge sociale normer.",
+        "Han kæmpede for at opretholde og styrke eksisterende sociale normer."
+      ],
+      "silly_answers": [
+        "Han forsøgte at oprette sin egen samfund med alternative normer.",
+        "Han brugte sociale normer som materiale til sine kunstprojekter.",
+        "Han optrådte som en professionel kritiker af sociale normer i tv-shows."
+      ],
+      "explanation": "Diogenes udfordrede sociale normer ved at leve i tråd med kynismens idealer om enkelhed og ved at tilsidesætte materielle værdier, hvilket gjorde ham til en kontroversiel figur i sin tid."
+    },
+    {
+      "question": "Hvad er den historiske betydning af skepticismen og kynismen?",
+      "correct_answer": "Disse filosofier havde stor indflydelse på tænkning i antikken og senere perioder.",
+      "wrong_answers": [
+        "De havde ingen historisk betydning.",
+        "De blev kun praktiseret af en lille gruppe mennesker.",
+        "Der er ingen dokumentation for deres eksistens."
+      ],
+      "silly_answers": [
+        "De førte til opdagelsen af rumrejser og moderne teknologi.",
+        "De blev inspirationskilde til verdens mest populære reality-tv-show.",
+        "De skabte verdens største samling af badeandefigurer."
+      ],
+      "explanation": "Skepticismen og kynismen havde en betydelig indflydelse på den filosofiske tænkning i antikken og efterfølgende perioder, og deres ideer og principper fortsatte med at påvirke samfund og kultur."
+    }
+  ]
+}

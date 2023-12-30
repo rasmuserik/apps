@@ -1,0 +1,145 @@
+{"title": "Platon",
+ "questions":
+ [
+    {
+        "question": "In which century did Plato live?",
+        "correct_answer": "4th century BC",
+        "wrong_answers": ["5th century BC", "6th century AD", "3rd century BC", "2nd century AD", "1st century BC"],
+        "silly_answers": ["21st century", "During the Jurassic period", "In the future"],
+        "explanation": "Plato lived in Ancient Greece around the 4th century BC."
+    },
+    {
+        "question": "What did Plato found in Athens?",
+        "correct_answer": "The Academy",
+        "wrong_answers": ["The Lyceum", "The Parthenon", "The Agora", "The Olympiad", "The Symposium"],
+        "silly_answers": ["A fast-food chain", "A dance club", "An AI startup"],
+        "explanation": "Plato founded the Academy in Athens, one of the earliest institutions of higher learning in the Western world."
+    },
+    {
+        "question": "Where is the setting of Plato's 'Phaedo'?",
+        "correct_answer": "Socrates' prison cell",
+        "wrong_answers": ["A marketplace in Athens", "A ship at sea", "A banquet hall", "A temple in Delphi", "A farm in the countryside"],
+        "silly_answers": ["On the moon", "In a virtual reality game", "Inside a giant peach"],
+        "explanation": "'Phaedo' is set in the prison cell where Socrates spends his last day before his execution."
+    },
+    {
+        "question": "What form of writing is predominant in Plato's works?",
+        "correct_answer": "Dialogic form",
+        "wrong_answers": ["Poetic form", "Narrative form", "Expository form", "Epistolary form", "Autobiographical form"],
+        "silly_answers": ["Text messages", "Comic strips", "Tweets"],
+        "explanation": "Plato often wrote in a dialogic form, presenting philosophical arguments in a conversational style."
+    },
+    {
+        "question": "What method does Plato often use in his works?",
+        "correct_answer": "Socratic method",
+        "wrong_answers": ["Scientific method", "Inductive reasoning", "Deductive reasoning", "Historical analysis", "Quantitative analysis"],
+        "silly_answers": ["Cooking recipes", "Time travel", "Telepathy"],
+        "explanation": "Plato used the Socratic method in his works, a form of dialogue to stimulate critical thinking."
+    },
+    {
+        "question": "What concept is introduced in 'Phaedo' regarding mind and body?",
+        "correct_answer": "Dualism",
+        "wrong_answers": ["Monism", "Materialism", "Empiricism", "Pragmatism", "Utilitarianism"],
+        "silly_answers": ["Teleportation", "Shape-shifting", "Time dilation"],
+        "explanation": "'Phaedo' introduces the idea of dualism – the mind (or soul) and body are distinct and separable."
+    },
+    {
+        "question": "What is Plato known for, concerning the reality of abstract forms?",
+        "correct_answer": "Theory of Forms",
+        "wrong_answers": ["Theory of Relativity", "Quantum Theory", "Theory of Evolution", "String Theory", "Game Theory"],
+        "silly_answers": ["Theory of Everything", "Alien Conspiracy Theory", "Flat Earth Theory"],
+        "explanation": "Plato's Theory of Forms posits that non-material abstract forms have the highest and most fundamental kind of reality."
+    },
+    {
+        "question": "What does Plato argue for in 'Phaedo' concerning the soul?",
+        "correct_answer": "Immortality of the soul",
+        "wrong_answers": ["Mortality of the soul", "Non-existence of the soul", "Physicality of the soul", "Multiplicity of souls", "Soul as a social construct"],
+        "silly_answers": ["Soul as a musical genre", "Soul-swapping", "Soul as a software program"],
+        "explanation": "In 'Phaedo,' Plato argues for the immortality of the soul, suggesting that the soul does not perish with the body."
+    },
+    {
+        "question": "What is Plato's theory of learning in 'Phaedo'?",
+        "correct_answer": "Recollection Theory",
+        "wrong_answers": ["Observation Theory", "Imitation Theory", "Constructivism", "Behaviorism", "Cognitive Theory"],
+        "silly_answers": ["Learning by osmosis", "Learning by time travel", "Learning by magic spells"],
+        "explanation": "Plato introduces the theory of anamnesis (recollection) in 'Phaedo,' suggesting that learning is recollecting what the soul has known in a previous existence."
+    },
+    {
+        "question": "What type of ruler does Plato describe in 'The Republic'?",
+        "correct_answer": "Philosopher-King",
+        "wrong_answers": ["Democratic leader", "Tyrant", "Oligarch", "Military dictator", "Monarch"],
+        "silly_answers": ["Robot Overlord", "Alien Ruler", "Time-traveling President"],
+        "explanation": "In 'The Republic,' Plato describes his ideal society ruled by philosopher-kings."
+    },
+        {
+            "question": "What famous allegory did Plato present in 'The Republic'?",
+            "correct_answer": "Allegory of the Cave",
+            "wrong_answers": ["Allegory of the Garden", "Allegory of the River", "Allegory of the Sun", "Allegory of the City", "Allegory of the Mountain"],
+            "silly_answers": ["Allegory of the Space Station", "Allegory of the Talking Animals", "Allegory of the Invisible Unicorn"],
+            "explanation": "In 'The Republic,' Plato presents the Allegory of the Cave, illustrating his views on human perception and knowledge."
+        },
+        {
+            "question": "Who was the primary influence on Plato's works?",
+            "correct_answer": "Socrates",
+            "wrong_answers": ["Aristotle", "Homer", "Pythagoras", "Sophocles", "Herodotus"],
+            "silly_answers": ["A time-traveling historian", "An intelligent robot", "A talking parrot"],
+            "explanation": "Plato's works are heavily influenced by his teacher, Socrates, often featuring him as the protagonist."
+        },
+        {
+            "question": "What theme does 'Phaedo' primarily explore?",
+            "correct_answer": "Death",
+            "wrong_answers": ["Love", "War", "Justice", "Education", "Art"],
+            "silly_answers": ["Time travel", "Space exploration", "Culinary arts"],
+            "explanation": "'Phaedo' explores the theme of death and the proper attitude toward death."
+        },
+        {
+            "question": "What type of philosopher is Plato considered?",
+            "correct_answer": "Rationalist",
+            "wrong_answers": ["Empiricist", "Existentialist", "Pragmatist", "Stoic", "Skeptic"],
+            "silly_answers": ["Futurist", "Magician", "Time-traveler"],
+            "explanation": "Plato is considered a rationalist, believing that reason is the primary source of knowledge."
+        },
+        {
+            "question": "How did Plato influence Western philosophy and science?",
+            "correct_answer": "Enormously",
+            "wrong_answers": ["Minimally", "Negatively", "Indirectly", "Only in the Middle Ages", "Only in the Renaissance"],
+            "silly_answers": ["Through telepathic means", "Using a time machine", "With magic spells"],
+            "explanation": "Plato’s philosophy has been enormously influential in the development of Western philosophy and science."
+        },
+        {
+            "question": "What concepts are often explored in Plato's philosophy?",
+            "correct_answer": "Eros and the Good",
+            "wrong_answers": ["Fear and Anger", "Wealth and Poverty", "War and Peace", "Birth and Death", "Science and Religion"],
+            "silly_answers": ["Aliens and UFOs", "Superheroes and Villains", "Zombies and Vampires"],
+            "explanation": "Plato's philosophy often explores the concept of Eros (erotic love) and the pursuit of the Good."
+        },
+        {
+            "question": "Which area besides metaphysics and epistemology did Plato contribute to?",
+            "correct_answer": "Political philosophy",
+            "wrong_answers": ["Biology", "Physics", "Economics", "Linguistics", "Psychology"],
+            "silly_answers": ["Astrology", "Culinary arts", "Time travel theory"],
+            "explanation": "In addition to metaphysics and epistemology, Plato also made significant contributions to political philosophy."
+        },
+        {
+            "question": "What does Platonic Realism focus on?",
+            "correct_answer": "Existence of universals and abstract objects",
+            "wrong_answers": ["Material world only", "Non-existence of universals", "Physical laws", "Biological evolution", "Social structures"],
+            "silly_answers": ["Existence of parallel universes", "Virtual reality", "Magical realms"],
+            "explanation": "Platonic Realism is the belief in the existence of universals and abstract objects, which Plato believed existed in a realm beyond the physical world."
+        },
+        {
+            "question": "What did Plato critique in 'The Republic'?",
+            "correct_answer": "Poetry and Art",
+            "wrong_answers": ["Democracy", "Monarchy", "Technology", "Commerce", "Agriculture"],
+            "silly_answers": ["Social media", "Reality TV shows", "Video games"],
+            "explanation": "In his works, especially 'The Republic,' Plato criticized poetry and art for their lack of truth and potential to mislead."
+        },
+        {
+            "question": "How did Platonic philosophy influence early Christian thinkers?",
+            "correct_answer": "Significantly",
+            "wrong_answers": ["Not at all", "Negatively", "Only in theological disputes", "Only in monastic practices", "Only in church architecture"],
+            "silly_answers": ["Through divine revelations", "In dreams", "Via encrypted messages"],
+            "explanation": "Platonic philosophy influenced early Christian thinkers, blending with Christian doctrine in various ways during the early centuries of the Christian era."
+        }
+    ]
+}
