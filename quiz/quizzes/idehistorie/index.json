@@ -2,7 +2,8 @@
   "title": "Quizzer om Idehistorie",
   "quizzes": [
     "./diogenes-sextus.json",
-    "./platon.json"
+    "./platon.json",
+    "./kierkegaard.json"
   ],
   "messages": {
     "back": "Tilbage til oversigten",

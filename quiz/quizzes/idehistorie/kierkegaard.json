@@ -1,0 +1,239 @@
+{
+  "title": "Kierkegaard",
+  "questions": [
+    {
+      "question": "Hvad er fokus i Kierkegaards eksistentialteologi?",
+      "correct_answer": "Den individuelle religiøse erfaring og paradokset i troen.",
+      "wrong_answers": [
+        "Den universelle sandhed i alle religioner",
+        "Fornuftens overlegenhed over tro",
+        "Historiske begivenheder i kristendommen",
+        "Metafysiske spekulationer uden religiøs tilknytning",
+        "Guds eksistens bekræftet gennem videnskabelig metode"
+      ],
+      "silly_answers": [
+        "Tidsrejser i religiøse tekster",
+        "Kierkegaards hemmelige opskrift på smørrebrød"
+      ],
+      "explanation": "Kierkegaards eksistentialteologi fokuserer på den enkeltes subjektive religiøse erfaring og det paradoks, der opstår i troen, snarere end på universelle eller rationelle sandheder."
+    },
+    {
+      "question": "Hvordan forholder Kierkegaards tænkning sig til religiøs rationalisme?",
+      "correct_answer": "Den afviser religiøs rationalisme og fokuserer på det religiøse som transcendens.",
+      "wrong_answers": [
+        "Den understøtter en streng religiøs rationalisme",
+        "Den ser religiøs rationalisme som den eneste vej til sandhed",
+        "Den er neutral over for religiøs rationalisme",
+        "Den forener religiøs rationalisme med empirisk videnskab",
+        "Den argumenterer for religions uafhængighed fra rationalitet"
+      ],
+      "silly_answers": [
+        "Den foreslår en dansedyst som løsning på teologiske tvister",
+        "Den anbefaler spaghetti som metafor for religiøse overbevisninger"
+      ],
+      "explanation": "Kierkegaard vender sig mod religiøs rationalisme, idet han betragter religion som noget, der er forankret i transcendensen og ikke fuldt ud kan forklares eller begrænses af menneskelig rationalitet."
+    },
+    {
+      "question": "Hvad betyder 'Atologi' i Kierkegaards filosofi?",
+      "correct_answer": "En fokusering på paradokset i religion, hvor det guddommelige går ud over fornuften.",
+      "wrong_answers": [
+        "Studiet af historiske begivenheder",
+        "En gren af biologi, der omhandler fugle",
+        "En filosofisk undersøgelse af kunst og æstetik",
+        "En metode til at forstå universets oprindelse",
+        "En videnskabelig teori om atomernes opførsel"
+      ],
+      "silly_answers": [
+        "En teknik til at bage den perfekte lagkage",
+        "En hemmelig sprog kun talt af filosoffer"
+      ],
+      "explanation": "I Kierkegaards tænkning refererer 'Atologi' til et fokus på religiøse paradokser, især ideen om at det guddommelige ligger ud over menneskelig fornuft og ikke fuldt ud kan forstås gennem rationel tænkning."
+    },
+    {
+      "question": "Hvordan beskriver Kierkegaard forholdet mellem fornuft og tro?",
+      "correct_answer": "Fornuften har en grænse, og når den nås, træder troen i kraft.",
+      "wrong_answers": [
+        "Fornuft og tro er uforenelige og eksisterer separat",
+        "Fornuften er altid overlegen tro",
+        "Tro er et resultat af fornuftig overvejelse",
+        "Fornuft er en illusion og kun troen er sand",
+        "Tro og fornuft er det samme"
+      ],
+      "silly_answers": [
+        "Fornuft og tro er faktisk hemmelige tvillinger",
+        "Tro er en superkraft, der aktiveres af fornuft"
+      ],
+      "explanation": "Kierkegaard hævder, at mens fornuften er væsentlig, har den sine begrænsninger. Når disse grænser nås, kan troen tilbyde en dybere forståelse, der transcenderer ren rationel tænkning."
+    },
+    {
+      "question": "Hvad refererer 'Intellektuelle Paradoks' til i Kierkegaards filosofi?",
+      "correct_answer": "Menneskets evne til at stille eksistentielle spørgsmål, som ikke kan besvares indenfor fornuftens grænser.",
+      "wrong_answers": [
+        "Paradokset i at intellektet kan forstå alt.",
+        "Ideen om at intellektet er begrænset af menneskets sanser.",
+        "Forestillingen om, at fornuft og tro er i konstant konflikt.",
+        "Tanken om at videnskab og religion er uforenelige.",
+        "Troen på at intellektuelle kan opnå fuld erkendelse."
+      ],
+      "silly_answers": [
+        "At filosoffer ofte glemmer, hvor de har lagt deres briller.",
+        "At tænke så hårdt, at man glemmer at spise frokost.",
+        "Kierkegaards uforklarlige lyst til at løse krydsord."
+      ],
+      "explanation": "Kierkegaard betragter det 'Intellektuelle Paradoks' som menneskets tendens til at stille spørgsmål om sin egen eksistens indenfor fornuftens rammer, men anerkender at disse spørgsmål ikke kan besvares alene gennem rationel tænkning, og leder derfor til en grænse, hvor tro bliver relevant."
+    },
+    {
+      "question": "Hvad er Kierkegaards syn på fornuftens grænser?",
+      "correct_answer": "Fornuften har grænser, og når disse nås, træder troen i kraft.",
+      "wrong_answers": [
+        "Fornuften har ingen grænser og kan forklare alt.",
+        "Fornuften er overlegen troen og skal altid prioriteres.",
+        "Mennesket bør kun stole på fornuften og afvise tro.",
+        "Fornuften er irrelevant i forhold til religiøs forståelse.",
+        "Der er ingen grænse mellem fornuft og tro."
+      ],
+      "silly_answers": [
+        "Fornuften stopper, når man løber tør for kaffe.",
+        "Grænsen for fornuft er, når man begynder at tale med sin kat.",
+        "Fornuftens grænse findes ved verdens ende."
+      ],
+      "explanation": "Ifølge Kierkegaard har fornuften grænser, og det er i mødet med disse grænser, at troen bliver relevant. Troen træder i kraft som en ny forståelsesform, når fornuften ikke længere kan give svar."
+    },
+    {
+      "question": "Hvad indebærer begrebet 'Teologi og Inkarnationsloven' i Kierkegaards tænkning?",
+      "correct_answer": "Centreret omkring inkarnationsloven og det guddommelige som transcendent og immanent.",
+      "wrong_answers": [
+        "Inkarnationsloven er irrelevant for moderne teologi.",
+        "Guddommeligheden eksisterer udelukkende i det transcendente.",
+        "Inkarnationsloven er kun en metafor for moralsk opførsel.",
+        "Teologi fokuserer udelukkende på det immanente.",
+        "Inkarnationsloven er en forældet idé uden relevans."
+      ],
+      "silly_answers": [
+        "Inkarnationsloven handler om at blive genfødt som en blæksprutte.",
+        "Det er en lov om at spise chokolade hver søndag.",
+        "En hemmelig lov blandt teologer om at bære sjove hatte."
+      ],
+      "explanation": "For Kierkegaard er inkarnationsloven, som fokuserer på Guds legemliggørelse, central. Denne tankefigur understreger det guddommelige som både transcendent og immanent, hvilket spiller en vigtig rolle i hans forståelse af det religiøse."
+    },
+    {
+      "question": "Hvordan forstår Kierkegaard begrebet 'Teo-Antropologi'?",
+      "correct_answer": "Menneskets eksistens er sat af noget andet end en selv, nemlig Gud.",
+      "wrong_answers": [
+        "Mennesket er det eneste væsen med religiøs forståelse.",
+        "Teo-antropologi er studiet af gamle religiøse tekster.",
+        "Mennesket er fuldstændig uafhængigt af det guddommelige.",
+        "Teo-antropologi er irrelevant for moderne tænkning.",
+        "Mennesket skaber Gud gennem sin forståelse."
+      ],
+      "silly_answers": [
+        "Teo-antropologi er studiet af te-drikkende aber.",
+        "Det er overbevisningen om, at alle teologer er hemmeligt aliens.",
+        "En overbevisning om, at Gud er en stor te-elsker."
+      ],
+      "explanation": "I Kierkegaards teo-antropologi er menneskets eksistens fundamentalt sat af noget andet, nemlig Gud. Dette perspektiv betoner menneskets relationelle natur i forhold til det guddommelige og dets rolle i menneskets forståelse af sin egen eksistens."
+    },
+    {
+      "question": "Hvad menes der med 'Historicitet' i Kierkegaards filosofi?",
+      "correct_answer": "Mennesket er et væsen i konstant udvikling, hvor handlinger og valg former ens identitet.",
+      "wrong_answers": [
+        "Historicitet betyder, at fortiden er irrelevant for nutiden.",
+        "Historicitet er et begreb, der kun gælder for historikere.",
+        "Menneskets identitet er forudbestemt og uforanderlig.",
+        "Historicitet refererer til studiet af historiske begivenheder.",
+        "Historicitet er en illusion skabt af menneskets perception."
+      ],
+      "silly_answers": [
+        "Troen på at historien gentager sig hver mandag.",
+        "Historicitet er en magisk evne til at rejse i tiden.",
+        "En overbevisning om, at dinosaurerne stadig lever iblandt os."
+      ],
+      "explanation": "For Kierkegaard er 'Historicitet' ideen om, at mennesket er et væsen i konstant udvikling. Vores identitet formes af vores handlinger og valg gennem tiden, hvilket understreger menneskets dynamiske og foranderlige natur."
+    },
+    {
+      "question": "Hvad karakteriserer det æstetiske stadie i Kierkegaards filosofi?",
+      "correct_answer": "En livsform præget af umiddelbarhed og nydelsesøgning.",
+      "wrong_answers": [
+        "En livsform fokuseret på streng religiøs praksis.",
+        "Et stadie hvor man primært er optaget af etiske overvejelser.",
+        "Et livsstadie, der involverer dyb meditation og selvforståelse.",
+        "En periode domineret af videnskabelig og rationel tænkning.",
+        "Et stadie fokuseret på fællesskab og sociale relationer."
+      ],
+      "silly_answers": [
+        "En tidsperiode hvor man kun lytter til klassisk musik.",
+        "En fase hvor man samler på frimærker.",
+        "En livsstil dedikeret til at bage kager."
+      ],
+      "explanation": "Det æstetiske stadie i Kierkegaards tænkning er karakteriseret ved umiddelbarhed og nydelse. Det involverer ofte en overfladisk tilgang til livet, hvor man søger øjeblikkelig tilfredsstillelse og undgår dybere eksistentielle spørgsmål."
+    },
+    {
+      "question": "Hvad indebærer det religiøse stadie i Kierkegaards filosofi?",
+      "correct_answer": "En dyb personlig forbindelse med det guddommelige, der går ud over ren fornuft.",
+      "wrong_answers": [
+        "En afvisning af al religion til fordel for videnskabelig rationalisme.",
+        "En tilbagevenden til traditionelle religiøse ritualer og skikke.",
+        "En periode hvor man udelukkende fokuserer på moral og etik.",
+        "En fase præget af agnosticisme og tvivl om eksistensen af en højere magt.",
+        "En overgang til en mere materialistisk og verdslig livsform."
+      ],
+      "silly_answers": [
+        "En daglig rutine med at synge gospelsange i brusebadet.",
+        "En livsfase hvor man klæder sig som en munk eller nonne.",
+        "En periode med intensiv yoga og vegetarisk kost."
+      ],
+      "explanation": "Det religiøse stadie i Kierkegaards tænkning indebærer en dyb, personlig forbindelse til det guddommelige. Det er et stadie, hvor troen går ud over rationel fornuft, og individet engagerer sig personligt og lidenskabeligt i sin religiøse tro og praksis."
+    },
+    {
+      "question": "Hvad er 'Øjeblikket' ifølge Kierkegaard?",
+      "correct_answer": "Et afgørende øjeblik, hvor det guddommelige møder det menneskelige.",
+      "wrong_answers": [
+        "En periode i livet hvor man oplever midtvejskrise.",
+        "Det præcise tidspunkt, hvor man opnår fuld selvrealisering.",
+        "En psykologisk tilstand af fuldstændig klarhed og forståelse.",
+        "En kort periode af ekstrem lykke eller eufori.",
+        "Det øjeblik man beslutter sig for at forlade det æstetiske stadie."
+      ],
+      "silly_answers": [
+        "Det sekund man indser, at man har glemt nøglerne indenfor.",
+        "Øjeblikket hvor man finder den perfekte avokado i supermarkedet.",
+        "Det øjeblik man hører sit yndlingsnummer i radioen."
+      ],
+      "explanation": "'Øjeblikket' hos Kierkegaard refererer til et afgørende øjeblik, hvor det guddommelige og det menneskelige mødes. Det er et tidspunkt af åbenbaring og transformation, hvor det evige bryder ind i det timelige, og individet opnår en dybere forståelse af sin eksistens."
+    },
+    {
+      "question": "Hvad kritiserer Kierkegaard i hans samtids- og kirkekritik?",
+      "correct_answer": "En overfladisk forståelse af kristendom og manglende dybde i kirkens praksis.",
+      "wrong_answers": [
+        "Kirken og samtidens manglende fokus på videnskabelige fremskridt.",
+        "Brugen af musik og kunst i religiøse ceremonier.",
+        "Overdreven fokus på filantropi og samfundsarbejde.",
+        "Manglende modernisering og opdatering af religiøse tekster.",
+        "Kirken og samtidens tilgang til politik og økonomi."
+      ],
+      "silly_answers": [
+        "Præsternes dårlige modevalg.",
+        "Kirkeklokkernes forstyrrende lyd tidligt om morgenen.",
+        "Manglen på glutenfrie alterbrød."
+      ],
+      "explanation": "Kierkegaards samtids- og kirkekritik er rettet mod en overfladisk forståelse af kristendommen i hans tid, samt en manglende dybde og inderlighed i kirkens praksis. Han kritiserer 'kristenheden' for at have en vanekristendom, der mangler personlig engagement og forståelse for det dybt eksistentielle i kristendommen."
+    },
+    {
+      "question": "Hvad er forskellen mellem 'Religiøsitet A' og 'Religiøsitet B' i Kierkegaards filosofi?",
+      "correct_answer": "'A' omhandler en overfladisk forståelse af religion, mens 'B' indebærer en dybere forståelse, der går ud over fornuften.",
+      "wrong_answers": [
+        "'A' repræsenterer en ateistisk tilgang, mens 'B' repræsenterer en teistisk.",
+        "'A' fokuserer på det etiske, mens 'B' fokuserer på det æstetiske.",
+        "'A' er baseret på nydelse, mens 'B' er baseret på lidelse.",
+        "'A' er en ungdomsfase, mens 'B' repræsenterer modenhed.",
+        "'A' understreger individets rolle, mens 'B' fokuserer på fællesskab."
+      ],
+      "silly_answers": [
+        "'A' er for folk, der kan lide ananas på pizza, 'B' er for dem, der ikke gør.",
+        "'A' er for morgenmennesker, mens 'B' er for natteravne.",
+        "'A' er fans af klassisk musik, 'B' er rockmusikelskere."
+      ],
+      "explanation": "I Kierkegaards filosofi repræsenterer 'Religiøsitet A' en overfladisk og fornuftsbaseret forståelse af religion, ofte set i samtidskristendommen. 'Religiøsitet B', derimod, repræsenterer en dybere, mere paradoksal forståelse af religion, der anerkender troens rolle ud over ren fornuft."
+    }
+  ]
+}
