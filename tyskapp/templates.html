@@ -296,14 +296,14 @@
       width: 100%; padding: 0px 20px 40px 20px; margin-top: 20px;
       box-sizing: border-box;
       ">
-        {{#all_answered}}
+        {{#show_explanation}}
         {{{topic.background}}}
-        {{/all_answered}}
-        {{^all_answered}}
+        {{/show_explanation}}
+        {{^show_explanation}}
         <div style="margin-top: 20px">
           {{messages.answer_all}}
         </div>
-        {{/all_answered}}
+        {{/show_explanation}}
       </div>
     </div>
   </div>

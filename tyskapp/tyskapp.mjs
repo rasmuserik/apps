@@ -188,12 +188,14 @@ async function topic() {
   );
   let msgs = local(messages, language);
   let unanswered = 0;
+  let answered = 0;
   if (topic?.people) {
     for (const person of topic.people) {
       let answer = answers[topic_id + "." + person.id];
       if (answer) {
         person.correct_answer = answer === person.country;
         person.wrong_answer = answer !== person.country;
+        ++answered;
       } else {
         unanswered++;
       }
@@ -203,7 +205,7 @@ async function topic() {
   rootElem.innerHTML = template("topic", {
     topic,
     messages: msgs,
-    all_answered: unanswered === 0,
+    show_explanation: (answered > 3) || (unanswered === 0),
   });
   if (topic?.people) {
     for (const { id } of topic.people) {
