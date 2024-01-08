@@ -1,12 +1,12 @@
 {
-  "name": "DE/DK Kultur App",
-  "short_name": "Kultur App",
+  "name": "KulturSchmæck",
+  "short_name": "KulturSchmæck",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#cccccc",
   "background_color": "#cccccc",
-  "description": "Deutsch/Dansk Kultur App",
+  "description": "Deutsch/Dansk Kultur Quiz",
   "icons": [
     {
       "src": "icon.webp",
