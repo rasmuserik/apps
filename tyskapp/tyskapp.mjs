@@ -43,9 +43,9 @@ let messages = {
   app_name: "KulturSchmæck",
   answer_all: {
     da:
-      "Når du har gættet på hvor alle personerne bor kan du læse mere om emnet her.",
+      "Når du har gættet på hvor personerne bor kan du læse mere om emnet her.",
     de:
-      "Wenn Sie geraten haben, wo alle Personen wohnen, können Sie hier mehr über das Thema lesen.",
+      "Wenn Sie geraten haben, wo Personen wohnen, können Sie hier mehr über das Thema lesen.",
   },
   choose_topic: {
     intro: {
@@ -59,7 +59,6 @@ let messages = {
 <p>Tyskstuderende fra Københavns Universitet og danskstuderende fra universiteterne i Göttingen og Frankfurt am Main har interviewet helt almindelige mennesker på gaden om forskellige emner og udvalgt et par interessante udsagn. Du kan høre og læse udsagnene på dansk og tysk. Men hvad er originalen, og hvor bor personen? Prøv dig frem. Det er ikke så let, for som alle andre steder er folk meget forskellige. Men hvad er den ledetråd, der afslører dem?</p>
 <p>Når du har gættet, finder du ud af, hvad andre har gættet, og du kan også få lidt baggrundsinformation, selvfølgelig på både dansk og tysk, lige som du vil.</p>
 <p>God fornøjelse med at gætte!</p>
-<p>Nogle af illustrationerne kan være AI-genererede.</p>
 `,
       de: `
 <h2>Über die App</h2>
@@ -67,7 +66,6 @@ let messages = {
 <p>Deutschstudierende der Kopenhagener Uni und Dänischstudierende der Universitäten Göttingen und Frankfurt am Main haben zusammen ganz normale Menschen auf der Straße zu verschiedenen Themen befragt und ein paar interessante Aussagen ausgewählt. Die Aussagen können Sie auf Dänisch und Deutsch hören und lesen. Aber welche ist das Original und wo wohnt die Person? Probieren Sie es aus. Es ist nicht so einfach, denn wie überall sind die Menschen sehr verschieden. Aber was ist das Indiz, das sie verrät?</p>
 <p>Nachdem Sie geraten haben, erfahren Sie, was andere getippt haben und können auch ein paar Hintergrundinformationen erhalten, natürlich sowohl auf Dänisch als auch auf Deutsch, ganz wie Sie möchten.</p>
 <p>Viel Spaß beim Raten!</p>
-<p>Einige der Illustrationen können KI-generiert sein.</p>
 `,
     },
   },
@@ -169,12 +167,14 @@ async function start_screen() {
   });
 }
 async function choose_topic() {
+  // remove first topic.
+  let topics = getTopics().slice(1);
   let text = {
     messages: local(messages.choose_topic, language),
-    topics: local(getTopics(), language),
+    topics: local(topics, language),
   };
   rootElem.innerHTML = template("choose_topic", text);
-  for (const { id } of getTopics()) {
+  for (const { id } of topics) {
     document.getElementById(id).addEventListener("click", () => {
       topic_id = id;
       topic();
@@ -193,8 +193,8 @@ async function topic() {
     for (const person of topic.people) {
       let answer = answers[topic_id + "." + person.id];
       if (answer) {
-        person.correct_answer = answer === person.country;
-        person.wrong_answer = answer !== person.country;
+        person.correct_answer = answer === (person.country || 'da');
+        person.wrong_answer = answer !== (person.country || 'da');
         ++answered;
       } else {
         unanswered++;
@@ -288,10 +288,10 @@ async function feedback() {
   rootElem.innerHTML = template("feedback", {
     person,
     messages: msg,
-    feedback: response === person.country
+    feedback: response === (person.country || 'da')
       ? msg.feedback.correct
       : msg.feedback.wrong,
-    from: person.country === "de"
+    from: 'de' === (person.country || 'da') 
       ? msg.feedback.from_germany
       : msg.feedback.from_denmark,
     stat_de: Math.round(responses.de * 100 / count),
