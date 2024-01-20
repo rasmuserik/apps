@@ -40,7 +40,7 @@ function local(obj, lang) {
 }
 
 let messages = {
-  app_name: "DE/DK Kultur App",
+  app_name: "KulturSchmæck",
   answer_all: {
     da:
       "Når du har gættet på hvor alle personerne bor kan du læse mere om emnet her.",
