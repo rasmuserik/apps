@@ -19,7 +19,7 @@
           JSON.stringify({
             site_url: query.site_url,
             user_login: query.user_login,
-            password: query.password,
+            password: query.password.replace(/ /g, ""),
           }),
         );
         location.search = location.search
@@ -32,7 +32,9 @@
     }
 
     const auth = authdata();
-    const login_url = `${auth.site_url}/wp-admin/authorize-application.php?app_name=${encodeURI(document.title + ` [${new Date().toISOString()}]`)}&success_url=${location.href}`;
+    const login_url = `${auth.site_url}/wp-admin/authorize-application.php?app_name=${encodeURI(
+      document.title + ` [${new Date().toISOString()}]`,
+    )}&success_url=${location.href}`;
     const rest_url = auth.site_url + "/wp-json/";
 
     v.login = () => (location.href = login_url);
@@ -40,13 +42,16 @@
       localStorage.removeItem("veduz_auth");
       location.reload();
     };
+    v.mycrud.url = rest_url + "veduz/v1/mycrud/";
     v.wpjson = async (endpoint, opt = {}) =>
       (
         await fetch(rest_url + endpoint, {
           ...opt,
           headers: {
             ...opt.headers,
-            Authorization: `Basic ${btoa(`${auth.user_login}:${auth.password}`)}`,
+            Authorization: `Basic ${btoa(
+              `${auth.user_login}:${auth.password}`,
+            )}`,
           },
         })
       ).json();
@@ -55,8 +60,6 @@
 
   v.user.wp = () => v.wpjson("wp/v2/users/me");
   v.user.roles = () => v.wpjson("veduz/v1/roles");
-
-  v.mycrud = v.mycrud || {};
   v.mycrud.get = (path) => v.wpjson("veduz/v1/mycrud/" + path);
   v.mycrud.set = async (path, type, data) => {
     console.log(path, type, data);

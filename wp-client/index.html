@@ -45,6 +45,8 @@
   <script>
     listfiles();
     let auth = JSON.parse(localStorage.getItem("veduz_auth") || "{}");
-    console.log(`Basic ${btoa(`${auth.user_login}:${auth.password}`)}`);
+    console.log(
+      `${auth.user_login || ""}:${auth.password || ""}@${veduz.mycrud.url.replace(/^https.../, "")}`,
+    );
   </script>
 </body>
