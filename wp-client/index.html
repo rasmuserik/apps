@@ -5,8 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-  <button onclick=veduz.login()>login</button>
-  <button onclick=veduz.logout()>logout</button>
-  <script src="veduz.js">
+  <button onclick="veduz.login()">login</button>
+  <button onclick="veduz.logout()">logout</button>
+  <button onclick="listfiles()">get</button>
+  <br />
+  <button onclick="put()">put</button>
+  path: <input style="width: 80%" id="pathInput" /><br /><br />
+  type: <input id="typeInput" /> data: <input id="dataInput" /><br />
+  children:
+  <div id="listing"></div>
+  <button
+    onclick="pathInput.value = pathInput.value.replace(/[/][^/]*$/, ''); listfiles()"
+  >
+    &lt; parent
+  </button>
+  <script>
+    function escape(s) {
+      let t = document.createElement("div");
+      t.textContent = s;
+      return t.innerHTML;
+    }
+    async function put() {
+      let path = pathInput.value;
+      let type = typeInput.value;
+      let data = dataInput.value;
+      let o = await veduz.mycrud.set(path, type, data);
+      console.log(o);
+      listfiles();
+    }
+    async function listfiles(path = "") {
+      if (path) pathInput.value += "/" + path;
+      let o = await veduz.mycrud.get(pathInput.value);
+      typeInput.value = o.type;
+      dataInput.value = o.data;
+      listing.innerHTML = `<ul>${o.children.map((name) => `<li><button onclick=listfiles('${escape(name)}')>${escape(name)}</button></li>`).join("")}</ul>`;
+    }
+  </script>
+  <script src="veduz.js"></script>
+  <script>
+    listfiles();
+    let auth = JSON.parse(localStorage.getItem("veduz_auth") || "{}");
+    console.log(`Basic ${btoa(`${auth.user_login}:${auth.password}`)}`);
   </script>
 </body>
